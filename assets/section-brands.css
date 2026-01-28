@@ -1,0 +1,87 @@
+.brands__groups-wrapper,
+.brand-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--block-padding);
+}
+
+.brand-group:only-child .brand-group__letter-group {
+  display: none;
+}
+
+.brands-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--desktop-columns), minmax(0, 1fr));
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(var(--mobile-columns), minmax(0, 1fr));
+  }
+}
+
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  height: 100%;
+  border-radius: var(--images-and-sections-radius);
+  -webkit-border-radius: var(--images-and-sections-radius);
+  overflow: clip;
+
+  &.brand-card--with-border {
+    border: var(--border-thickness) solid rgb(var(--lines-color));
+  }
+
+  .brands-list:not(:is(.page-grid-gaps, .alternative-grid-gaps, .secondary-grid-gaps)) &.brand-card--with-border {
+    border: calc(var(--border-thickness) / 2) solid rgb(var(--lines-color));
+  }
+
+  .brands-list:not(:is(.page-grid-gaps, .alternative-grid-gaps, .secondary-grid-gaps)) & {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+}
+
+.brand-card__image-wrapper {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: var(--logo-background-color);
+  padding: var(--block-padding);
+}
+
+figure:has(.brand-card__image),
+.brand-card__image {  
+  width: 100%;
+  max-height: var(--logo-height);  
+  transition: transform var(--animation-duration) var(--transition-timing-function);
+}
+
+.brand-card__image {
+  object-fit: contain;
+}
+
+.brand-card__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: var(--block-padding);
+  transition: color var(--animation-duration) var(--transition-timing-function);
+
+  &.brand-card__title--with-background {
+    background-color: var(--logo-background-color);
+  }
+}
+
+@media (hover: hover) {
+  .brand-card:hover .brand-card__title {
+    color: rgba(var(--layout-text-color), var(--hover-opacity));
+  }
+
+  .brand-card:hover figure:has(.brand-card__image),
+  .brand-card:hover :not(figure) > .brand-card__image {
+    transform: scale(1.03);
+  }
+}

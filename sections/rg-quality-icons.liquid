@@ -1,0 +1,186 @@
+{%- liquid
+  assign quality_items = 'plant-based,100% Plant<br>Based|gluten-free,Gluten<br>Free|raw,100%<br>Raw|soy-free,Soy<br>Free|sugar,No Sugar<br>Added|preservatives,No Preser-<br>vatives|cold-pressed,Cold<br>Pressed|dairy-free,Dairy<br>Free|gmo,Non<br>GMO|kosher,Kosher<br>Certified|vegan-verified,Vegan<br>Verified'
+  assign quality_array = quality_items | split: '|'
+-%}
+
+<style>
+  .marquee {
+    --gap: 2rem;
+    display: flex;
+    gap: var(--gap);
+    overflow: hidden;
+    user-select: none;
+  }
+  .marquee__content {
+    animation: scroll 45s linear infinite;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--gap);
+    justify-content: space-around;
+    min-width: 100%;
+  }
+  .marquee:hover .marquee__content {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__content {
+      animation-play-state: paused !important;
+    }
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+</style>
+
+<div class="{{ section.settings.margins }}">
+  <div class="overflow-hidden {{ section.settings.background }} rg-section-pt-{{ section.settings.padding_top }} rg-section-pb-{{ section.settings.padding_bottom }}{% if section.settings.border %} rg-section-border{% endif %}">
+    <div class="leading-4 marquee text-caps-sm text-light">
+      {% for num in (1..2) %}
+        <ul
+          class="list-unstyled marquee__content"
+          {% if num != 1 %}
+            aria-hidden="true"
+          {% endif %}
+        >
+          {% for items in quality_array -%}
+            {% assign item = items | split: ',' %}
+            <li class="flex items-center gap-2">
+              <div class="inline-block shrink-0" style="width: 3.5rem" aria-label="{{ item[1] | strip_html }}">
+                {% render 'quality-icons', icon: item[0] %}
+              </div>
+             <div class="whitespace-nowrap" aria-label="{{ item[1] | strip_html }}">
+              <span aria-hidden="true">{{ item[1] }}</span>
+            </div>
+            </li>
+          {%- endfor %}
+        </ul>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "RG quality icons",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Container"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Background color",
+      "options": [
+        {
+          "value": "bg-light",
+          "label": "Light"
+        },
+        {
+          "value": "bg-light-gradient",
+          "label": "Light gradient"
+        },
+        {
+          "value": "bg-white",
+          "label": "White"
+        }
+      ],
+      "default": "bg-light"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding top",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "sm"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "sm"
+    },
+    {
+      "type": "select",
+      "id": "margins",
+      "label": "Margins",
+      "options": [
+        {
+          "value": "rg-section-margins",
+          "label": "All sides"
+        },
+        {
+          "value": "rg-section-margins rg-section-margins--top",
+          "label": "Top"
+        },
+        {
+          "value": "rg-section-margins rg-section-margins--bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "m-0",
+          "label": "None"
+        }
+      ],
+      "default": "m-0"
+    },
+    {
+      "type": "checkbox",
+      "id": "border",
+      "label": "Show section border",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "RG quality icons"
+    }
+  ]
+}
+{% endschema %}

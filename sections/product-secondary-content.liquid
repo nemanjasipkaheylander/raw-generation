@@ -1,0 +1,433 @@
+{%- if request.design_mode -%}
+  <div class="mb-4 text-sm text-center alert alert--info">
+    <!-- Displays secondary product content from product metafields: <br>
+    Overview, What's Included, Nutrition Facts & Ingredients, Cleansing 101, FAQs -->
+  </div>
+{%- endif -%}
+
+<div class="{{ section.settings.margins }}">
+  <div class="{{ section.settings.width }}">
+    <div class="{{ section.settings.background }} rg-section-pt-{{ section.settings.padding_top }} rg-section-pb-{{ section.settings.padding_bottom }}{% if section.settings.border %} rg-section-border{% endif %}">
+      <div class="mx-auto rg-content-lg">
+        <h2 class="sr-only">Additional product information</h2>
+        <div class="border-b">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'description' -%}
+                {% if product.metafields.custom.long_description != blank %}
+                  <div class="border-t" {{ block.shopify_attributes }}>
+                    <details>
+                      <summary class="sticky top-0 flex items-center py-4 leading-4 bg-white/75 backdrop-blur" style="justify-content: space-between;">
+                        <h3 class="m-0 font-sans text-base">
+                          {{ block.settings.heading | default: block.settings.page.title }}
+                        </h3>
+                        {%- render 'icon-caret' -%}
+                      </summary>
+                      <div class="mb-6 rte">
+                        {{ product.metafields.custom.long_description | metafield_tag }}
+                      </div>
+                    </details>
+                  </div>
+                {%- endif -%}
+
+              {%- when 'nutrition_facts' -%}
+                {%- assign nutrition_facts = product.metafields.content.nutrition_facts.value -%}
+                {% if nutrition_facts %}
+                  <div class="border-t" {{ block.shopify_attributes }}>
+                    <details>
+                      <summary class="sticky top-0 flex items-center py-4 leading-4 bg-white/75 backdrop-blur" style="justify-content: space-between;">
+                        <h3 class="m-0 font-sans text-base">
+                          {{ block.settings.heading | default: block.settings.page.title }}
+                        </h3>
+                        {%- render 'icon-caret' -%}
+                      </summary>
+                      <div class="mb-6">
+                        <div class="flex w-full gap-8 pb-4 overflow-x-auto snap-x overscroll-x-contain snap-mandatory">
+                          {% for metaobject in nutrition_facts %}
+                            {% assign alt = metaobject.title | escape | append: ' nutrition facts' %}
+                            <div class="w-full shrink-0 snap-start{% if nutrition_facts.count > 1 %} max-w-sm{% endif %}">
+                              <h4 class="m-0 text-base font-normal">{{ metaobject.title }}</h4>
+                              {% if metaobject.subtitle.value %}
+                                <p class="m-0 text-caps-sm text-accent">{{ metaobject.subtitle }}</p>
+                              {% endif %}
+                              <div class="grid grid-cols-2 gap-4 mt-4">
+                                {% if metaobject.description.value %}
+                                  <div class="text-sm rte">
+                                    {{ metaobject.description | metafield_tag }}
+                                  </div>
+                                {% endif %}
+                                {{
+                                  metaobject.image.value
+                                  | image_url: width: 800
+                                  | image_tag:
+                                    loading: 'lazy',
+                                    sizes: '200px, (min-width: 800px) 400px, (min-width: 1600px) 800px',
+                                    widths: '200, 400, 800',
+                                    alt: alt
+                                }}
+                              </div>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </details>
+                  </div>
+                {% endif %}
+
+              {%- when 'included_metafield' -%}
+                {%- assign included = product.metafields.content.included -%}
+                {% if included %}
+                  <div class="border-t" {{ block.shopify_attributes }}>
+                    <details>
+                      <summary class="sticky top-0 flex items-center py-4 leading-4 bg-white/75 backdrop-blur" style="justify-content: space-between;">
+                        <h3 class="m-0 font-sans text-base">
+                          {{ block.settings.heading | default: block.settings.page.title }}
+                        </h3>
+                        {%- render 'icon-caret' -%}
+                      </summary>
+                      <div class="mb-6 rte">
+                        {{ included | metafield_tag }}
+                      </div>
+                    </details>
+                  </div>
+                {% endif %}
+
+              {%- when 'faqs_metafield' -%}
+                {%- assign faqs = product.metafields.content.faqs -%}
+                {% if faqs %}
+                  <div class="border-t" {{ block.shopify_attributes }}>
+                    <details>
+                      <summary class="sticky top-0 flex items-center py-4 leading-4 bg-white/75 backdrop-blur" style="justify-content: space-between;">
+                        <h3 class="m-0 font-sans text-base">
+                          {{ block.settings.heading | default: block.settings.page.title }}
+                        </h3>
+                        {%- render 'icon-caret' -%}
+                      </summary>
+                      <div class="mb-6 rte">
+                        {{ faqs | metafield_tag }}
+                        <p><strong>Shipping & Returns</strong></p>
+                        <ul>
+                          <li>Expect 1-3 business day transit time. All orders are shipped Monday - Friday.</li>
+                          <li>Free shipping available with Autoship (does not apply to Hawaii or Alaska).</li>
+                          <li>All juice and smoothie products will arrive frozen for optimal freshness.</li>
+                          <li>Reminder to keep an eye out for multiple shipments if you ordered more than one item.</li>
+                        </ul>
+                      </div>
+                    </details>
+                  </div>
+                {% endif %}
+
+              {%- when 'collapsible_tab' -%}
+                <div class="border-t" {{ block.shopify_attributes }}>
+                  <details>
+                    <summary class="sticky top-0 flex items-center py-4 leading-4 bg-white/75 backdrop-blur" style="justify-content: space-between;">
+                      <h3 class="m-0 font-sans text-base">
+                        {{ block.settings.heading | default: block.settings.page.title }}
+                      </h3>
+                      {%- render 'icon-caret' -%}
+                    </summary>
+                    <div class="mb-6 rte">
+                      {{ block.settings.content }}
+                      {{ block.settings.page.content }}
+                    </div>
+                  </details>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+
+        {%- if section.settings.enable_modal_buttons -%}
+          <div class="flex justify-center gap-2 mt-4">
+            <dialog-opener data-dialog="#why-rg" class="flex-1 max-w-60">
+              <button class="w-full btn-outlined btn--sm">Why Raw Generation?</button>
+            </dialog-opener>
+            {% if product.handle == 'sippers' %}
+              <dialog-opener data-dialog="#why-sippers" class="flex-1 max-w-60">
+                <button class="w-full btn-outlined btn--sm">Why Sippers?</button>
+              </dialog-opener>
+            {% endif %}
+            {% if product.handle == 'best-juice-cleanse-for-weight-loss'
+              or product.handle == 'protein-juice-cleanse'
+              or product.handle == 'lower-sugar-green-protein-cleanse'
+            %}
+              <dialog-opener data-dialog="#compare-cleanses" class="flex-1 max-w-60">
+                <button class="w-full btn-outlined btn--sm">Compare Cleanses</button>
+              </dialog-opener>
+            {% endif %}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- if section.settings.enable_modal_buttons -%}
+  {% comment %}
+    Content is loaded using the section rendering API when the dialog is opened.
+  {% endcomment %}
+  <dialog-modal id="why-rg" data-load="/?section_id=why-raw-generation">
+    <dialog>
+      <div class="p-0 dialog-content"></div>
+      <form method="dialog" class="dialog-close">
+        <button class="border btn-icon">
+          <span class="sr-only">{{ 'accessibility.close' | t }}</span>
+          {%- render 'icon-close' -%}
+        </button>
+      </form>
+    </dialog>
+  </dialog-modal>
+
+  <dialog-modal id="why-sippers" data-load="/?section_id=why-sippers">
+    <dialog>
+      <div class="p-0 dialog-content"></div>
+      <form method="dialog" class="dialog-close">
+        <button class="border btn-icon" autofocus>
+          <span class="sr-only">{{ 'accessibility.close' | t }}</span>
+          {%- render 'icon-close' -%}
+        </button>
+      </form>
+    </dialog>
+  </dialog-modal>
+
+  <dialog-modal id="compare-cleanses" data-load="/?section_id=compare-cleanses">
+    <dialog>
+      <div class="p-0 dialog-content"></div>
+      <form method="dialog" class="dialog-close">
+        <button class="border btn-icon" autofocus>
+          <span class="sr-only">{{ 'accessibility.close' | t }}</span>
+          {%- render 'icon-close' -%}
+        </button>
+      </form>
+    </dialog>
+  </dialog-modal>
+
+  <script src="{{ 'dialog-modal.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product secondary content",
+  "tag": "section",
+  "limit": 1,
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "blocks": [
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Overview",
+          "info": "Show the product description only when short description metafield is used.",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "nutrition_facts",
+      "name": "Nutrition facts metafield",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Nutrition facts",
+          "info": "Display if the Nutrition facts metafield has content.",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "included_metafield",
+      "name": "What's Included metafield",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "What's Included & Ingredients",
+          "info": "Display if the What's included metafield has content.",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "faqs_metafield",
+      "name": "FAQs metafield",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "FAQs",
+          "info": "Display if the FAQs metafield has content.",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "collapsible_tab",
+      "name": "Collapsible tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible row",
+          "info": "Heading for the collapsible content block.",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Page"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_modal_buttons",
+      "label": "Enable modal buttons",
+      "info": "Show buttons to open modals based on the product (Why RG/Sippers, Compare Cleanses).",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Container"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Section width",
+      "options": [
+        {
+          "value": "rg-section-full",
+          "label": "Full width"
+        },
+        {
+          "value": "rg-container",
+          "label": "Page width"
+        }
+      ],
+      "default": "rg-container"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Background color",
+      "options": [
+        {
+          "value": "bg-light",
+          "label": "Light"
+        },
+        {
+          "value": "bg-light-gradient",
+          "label": "Light gradient"
+        },
+        {
+          "value": "bg-white",
+          "label": "White"
+        }
+      ],
+      "default": "bg-white"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "Padding top",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "sm"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "sm"
+    },
+    {
+      "type": "select",
+      "id": "margins",
+      "label": "Margins",
+      "options": [
+        {
+          "value": "rg-section-margins",
+          "label": "All sides"
+        },
+        {
+          "value": "rg-section-margins rg-section-margins--top",
+          "label": "Top"
+        },
+        {
+          "value": "rg-section-margins rg-section-margins--bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "m-0",
+          "label": "None"
+        }
+      ],
+      "default": "m-0"
+    },
+    {
+      "type": "checkbox",
+      "id": "border",
+      "label": "Show section border",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product secondary content"
+    }
+  ]
+}
+{% endschema %}

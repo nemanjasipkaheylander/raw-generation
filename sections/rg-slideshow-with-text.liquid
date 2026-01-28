@@ -1,0 +1,177 @@
+{{ 'rg-slideshow-with-text.css' | asset_url | stylesheet_tag }}
+
+<div class="{{ section.settings.margins }}">
+  <div class="{{ section.settings.width }} {{ section.settings.background }} {% if section.settings.border %}rg-section-border{% endif %}">
+    <div class="rg-container">
+      {% comment %}  {% endcomment %}
+      <div class="gap-8 py-8 lg:py-12 lg:flex lg:items-center">
+        <div>
+          <div class="mx-auto rg-content-sm">
+            <h2 class="mb-0 font-serif h2">{{ section.settings.title }}</h2>
+            <div class="font-sans text-intro ul-list-2-cols">
+              {{ section.settings.body }}
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <div class="mt-8 text-center{% if section.settings.image_breakout %} -mb-16 lg:-my-24{% endif %}">
+            <div class="rg-transition">
+              {%- for block in section.blocks -%}
+                {%- if block.settings.image != blank -%}
+                  {%- liquid
+                    assign classes = ''
+                    assign loading = 'eager'
+                    if forloop.index > 1
+                      assign classes = 'rg-transition__item-initial'
+                      assign loading = 'lazy'
+                    endif
+                  -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 1100
+                    | image_tag:
+                      loading: loading,
+                      sizes: '(max-width: 768px) 350px, (max-width: 1024px) 550px, 1100px',
+                      widths: '350, 550, 1100',
+                      class: classes
+                  }}
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% comment %}  {% endcomment %}
+    </div>
+  </div>
+</div>
+
+<script>
+  {% comment %}
+  TODO: componentize this
+  {% endcomment %}
+  const rgTransition = document.querySelector('.rg-transition');
+  const rgTransitionChildrenLength = rgTransition.children.length;
+  let rgTransitionIndex = 0;
+
+  setInterval(() => {
+    rgTransition.children[rgTransitionIndex].classList.remove('rg-transition__item-in', 'rg-transition__item-initial');
+    rgTransition.children[rgTransitionIndex].classList.add('rg-transition__item-out');
+    rgTransitionIndex = (rgTransitionIndex + 1) % rgTransitionChildrenLength;
+    rgTransition.children[rgTransitionIndex].classList.remove('rg-transition__item-out');
+    rgTransition.children[rgTransitionIndex].classList.add('rg-transition__item-in');
+  }, 5000);
+</script>
+
+{% schema %}
+{
+  "name": "RG Slideshow with text",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Amazingly Fresh Taste"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "default": "<p>We never pasteurize or pressure-treat our juices, ensuring the highest quality, all-natural ingredients with full nutrition, enzymes, and flavor. Our flash-freezing process preserves the freshness of our juice.</p> <ul><li>Plant Protein</li><li>Antioxidants</li><li>Vitamins & Minerals</li><li>Electrolytes</li><li>Probiotics</li><li>Prebiotics</li><li>Chlorophyll</li><li>Enzymes</li><li>Omega Fatty Acids</li><li>Fiber</li></ul>",
+      "label": "Body"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_breakout",
+      "label": "Image breakout",
+      "info": "If enabled, the images will break out of the container",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Container"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Background color",
+      "options": [
+        {
+          "value": "bg-light",
+          "label": "Light"
+        },
+        {
+          "value": "bg-light-gradient",
+          "label": "Light gradient"
+        },
+        {
+          "value": "bg-white",
+          "label": "White"
+        }
+      ],
+      "default": "bg-light-gradient"
+    },
+    {
+      "type": "select",
+      "id": "margins",
+      "label": "Margins",
+      "options": [
+        {
+          "value": "rg-section-margins",
+          "label": "All sides"
+        },
+        {
+          "value": "rg-section-margins rg-section-margins--top",
+          "label": "Top"
+        },
+        {
+          "value": "rg-section-margins rg-section-margins--bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "m-0",
+          "label": "None"
+        }
+      ],
+      "default": "m-0"
+    },
+    {
+      "type": "checkbox",
+      "id": "border",
+      "label": "Show section border",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RG Slideshow with text",
+      "settings": {
+        "background": "bg-light-gradient",
+        "margins": "m-0",
+        "border": true
+      }
+    }
+  ]
+}
+{% endschema %}

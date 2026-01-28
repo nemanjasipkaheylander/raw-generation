@@ -1,0 +1,85 @@
+.quote-box {
+  border: 1px solid var(--c-primary-medium);
+  border-bottom-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  min-height: 200px;
+  position: relative;
+  padding: 1.5rem;
+  margin: 12px; /* for quote marks */
+}
+
+.quote-box .quote::before {
+  display: none;
+}
+
+.quote-box__left-quote,
+.quote-box__right-quote {
+  color: var(--c-primary-medium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 48px;
+  position: absolute;
+}
+
+.quote-box__left-quote svg,
+.quote-box__right-quote svg {
+  width: 24px;
+  height: 24px;
+}
+
+.quote-box__left-quote {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.quote-box__right-quote {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%) rotate(180deg);
+}
+
+.quote-box__title {
+  padding: 0 1rem;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .quote-box {
+    border-bottom-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    padding: 2.5rem 3rem;
+    margin: 48px;
+  }
+  .quote-box__left-quote,
+  .quote-box__right-quote {
+    width: 96px;
+    height: 96px;
+  }
+
+  .quote-box__left-quote svg,
+  .quote-box__right-quote svg {
+    width: 48px;
+    height: 48px;
+  }
+  /* Slideshow overrides */
+  .section-customer-reviews .slider-buttons {
+    margin: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@media (min-width: 820px) {
+  .quote-box {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

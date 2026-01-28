@@ -1,0 +1,63 @@
+/* --------------------
+ * Slideshow with text
+ * --------------------*/
+
+/* TODO: move this if we use it elsewhere */
+.ul-list-2-cols ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+/* Layout */
+.rg-transition {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+.rg-transition img {
+  display: inline-block;
+}
+.rg-transition img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 2023-09-05 Specific to the home page section "Amazingly fresh taste" */
+@media (max-width: 1024px) {
+  .rg-transition {
+    max-width: 500px;
+  }
+}
+
+/* Wipe transition */
+@keyframes wipe-in-bottom-right {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
+  }
+  to {
+    clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
+  }
+}
+
+@keyframes wipe-out-bottom-right {
+  from {
+    clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+  }
+  to {
+    clip-path: polygon(150% 50%, 150% 50%, 50% 150%, 50% 150%);
+  }
+}
+
+.rg-transition__item-in {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-bottom-right both;
+}
+
+.rg-transition__item-out {
+  animation: 3s cubic-bezier(0.25, 1, 0.3, 1) wipe-out-bottom-right both;
+}
+
+.rg-transition__item-initial {
+  clip-path: polygon(150% 50%, 150% 50%, 50% 150%, 50% 150%);
+}

@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main-404": {
+      "type": "main-404",
+      "settings": {
+        "color_scheme": "background-1",
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    }
+  },
+  "order": [
+    "main-404"
+  ]
+}

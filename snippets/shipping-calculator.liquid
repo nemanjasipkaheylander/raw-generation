@@ -1,0 +1,142 @@
+{%- liquid
+  assign uppercase_heading = false
+  if object_settings.shipping_heading_style == 'section-heading' and settings.uppercase_section_headings
+    assign uppercase_heading = true
+  elsif object_settings.shipping_heading_style == 'secondary-heading' and settings.uppercase_secondary_headings
+    assign uppercase_heading = true
+  elsif object_settings.shipping_heading_style == 'subheading-font' and settings.uppercase_subheadings
+    assign uppercase_heading = true
+  elsif object_settings.shipping_heading_style == 'body-font' and settings.uppercase_body
+    assign uppercase_heading = true
+  elsif object_settings.shipping_heading_style == 'caption-font' and settings.uppercase_caption
+    assign uppercase_heading = true
+  endif
+
+  assign heading_text = object_settings.shipping_heading
+  assign processed_text = ''
+  assign split_text = heading_text | split: '['
+
+  for part in split_text
+    if part contains ']'
+      assign split_bracket = part | split: ']'
+      assign highlight_text = split_bracket[0]
+      assign after_bracket = split_bracket[1]
+      assign processed_text = processed_text | append: '<span class="highlight"><span>' | append: highlight_text | append: '</span></span>' | append: after_bracket
+    else
+      assign processed_text = processed_text | append: part
+    endif
+  endfor
+
+  assign final_text = ''
+  assign split_text_curly = processed_text | split: '{'
+
+  for part in split_text_curly
+    if part contains '}'
+      assign split_curly = part | split: '}'
+      assign styled_text = split_curly[0]
+      assign after_curly = split_curly[1]
+      assign final_text = final_text | append: '<span class="styled">' | append: styled_text | append: '</span>' | append: after_curly
+    else
+      assign final_text = final_text | append: part
+    endif
+  endfor
+-%}
+
+<div class="accordion-shipping-calculator accordion-block accordion accordion--compact" {% if block %}{{ block.shopify_attributes }}{% endif %}>
+  <accordion-toggle>
+    <div class="accordion-toggle">
+      <div class="accordion__summary" tabindex="0">
+        <div class="summary__title">
+          <div class="summary__title-name custom-heading {{ object_settings.shipping_heading_style }}{% if uppercase_heading %} uppercase{% endif %}{% if object_settings.shipping_heading_style == 'subheading-font' and settings.use_heading_font_subheadings %} subheading-heading-font{% endif %}">
+            <h3 class="accordion__title">
+              {% if object_settings.shipping_heading_style == 'subheading-font' and settings.bolder_subheadings_font -%}
+                <b>
+              {%- endif -%}
+              {{- final_text }}
+              {% if object_settings.shipping_heading_style == 'subheading-font' and settings.bolder_subheadings_font -%}
+                </b>
+              {%- endif %}
+            </h3>
+          </div>
+          <span class="icon-accordion icon-accordion--close">
+            {%- render 'glyphs_interface', icon: 'plus' -%}
+          </span>
+          <span class="icon-accordion icon-accordion--open">
+            {%- render 'glyphs_interface', icon: 'minus' -%}
+          </span>
+        </div>
+      </div>
+
+      <div class="accordion__panel hide-scrollbar">
+        <div class="accordion__content body-font{% if settings.uppercase_body %} uppercase{% endif %}">
+          <shipping-calculator>
+            <form-state class="fields-wrapper">
+              <div class="field">
+                <label class="label" for="ShippingCalculatorCountry">
+                  {{- 'cart.shipping_country' | t | append: '*' -}}
+                </label>
+                <div class="select flex--row align-center">
+                  <select
+                    id="ShippingCalculatorCountry"
+                    class="input"
+                    data-default="{% if shop.customer_accounts_enabled and customer %}{{ customer.default_address.country }}{% elsif object_settings.shipping_country != '' %}{{ object_settings.shipping_country }}{% endif %}"
+                    autocomplete="country"
+                    data-empty="---"
+                    required
+                  >
+                    {{ country_option_tags }}
+                  </select>
+                  <div class="select-icon flex--row align-center">
+                    {%- render 'glyphs_arrows', icon: 'chevron-down' -%}
+                  </div>
+                </div>
+              </div>
+              <div class="field" id="ShippingCalculatorProvinceContainer" style="display: none">
+                <label class="label" for="ShippingCalculatorProvince">{{ 'cart.shipping_state' | t }}</label>
+                <div class="select flex--row align-center">
+                  <select
+                    id="ShippingCalculatorProvince"
+                    class="input"
+                    data-default="{% if shop.customer_accounts_enabled and customer and customer.default_address.province != '' %}{{ customer.default_address.province }}{% endif %}"
+                    autocomplete="address-level1"
+                  ></select>
+                  <div class="select-icon flex--row align-center">
+                    {%- render 'glyphs_arrows', icon: 'chevron-down' -%}
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label" for="ShippingCalculatorZip">{{ 'cart.zip' | t }}</label>
+                <input
+                  id="ShippingCalculatorZip"
+                  class="input input--text input-style--big"
+                  type="text"
+                  {% if shop.customer_accounts_enabled and customer %}
+                    value="{{ customer.default_address.zip }}"
+                  {% endif %}
+                  autocapitalize="characters"
+                  autocomplete="postal-code"
+                  placeholder="{{ 'cart.zip_placeholder' | t }}"
+                >
+              </div>
+              <div class="field form__message errors hidden error-color" id="ShippingCalculatorErrors">
+                <div class="errors"></div>
+              </div>
+              <div class="shipping-button">
+                <button
+                  class="button solid-button body-font button--secondary{% if settings.use_heading_font_secondary_buttons %} heading-font-style{% endif %}{% if settings.uppercase_secondary_buttons %} uppercase{% endif %} button--submit"
+                  type="button"
+                >
+                  {% if settings.bolder_secondary_buttons_font %}<b>{% endif -%}
+                  {{- 'cart.estimate' | t -}}
+                  {%- if settings.bolder_secondary_buttons_font %}</b>{% endif %}
+                </button>
+              </div>
+            </form-state>
+            <div class="field form__message hidden" id="ShippingCalculatorSuccess"></div>
+          </shipping-calculator>
+        </div>
+      </div>
+    </div>
+  </accordion-toggle>
+</div>

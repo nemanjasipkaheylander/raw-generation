@@ -1,0 +1,1471 @@
+{
+  "sections": {
+    "image_banner_XyRe3p": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.name",
+      "settings": {
+        "link": "",
+        "target_blank": false,
+        "overlap": "disable",
+        "content_on_hover": false,
+        "first_image": "shopify:\/\/shop_images\/WebBanner-Sale-1225-1-1_ff006e58-ce3c-47e6-b46e-60a44f012344.jpg",
+        "desktop_height_type": "adapt",
+        "desktop_pixels_height": 560,
+        "center_text": true,
+        "vertical_content_position": "center",
+        "horizontal_content_position": "center",
+        "content_width": "regular",
+        "fill_content": false,
+        "overlay_opacity": 0,
+        "mobile_overlay_opacity": 0,
+        "mobile_image": "shopify:\/\/shop_images\/ChatGPT_Image_Dec_25_2025_03_03_41_PM.png",
+        "mobile_height_type": "adapt",
+        "mobile_pixels_height": 200,
+        "content_under_image": false,
+        "only_first_image": false,
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "banner_color_scheme": "",
+        "overlapped_header_color_scheme": "",
+        "logo_style": "overlapped",
+        "mobile_color_scheme": "",
+        "mobile_banner_color_scheme": "",
+        "mobile_overlapped_header_color_scheme": "",
+        "mobile_logo_style": "overlapped",
+        "section_framing": "disable",
+        "enable_sticky_content": false,
+        "sticky_offset": 24,
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "slideshow_kg8QdU": {
+      "type": "slideshow",
+      "blocks": {
+        "image_zmfVYf": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/WEB-SkinnyFamily-1280x568.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/WEB-SkinnyFamily-360x640_bb51b423-770f-4a6c-ad1b-aa262534e9ee.png",
+            "link": "",
+            "target_blank": false,
+            "icon": "",
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "context_image_width": 120,
+            "context_media_ratio": "auto",
+            "context_image_radius": "0px",
+            "context_image_link": "",
+            "context_target_blank": false,
+            "heading": "Weight Loss & Detox Solutions  that work for you.",
+            "heading_style": "secondary-heading",
+            "heading_tag": "h1",
+            "text": "<p>Lose weight, detoxify your body, and achieve your wellness goals fast with nutritionist-designed cleanses and diet reset programs.<\/p>",
+            "text_style": "body-font",
+            "richtext_heading_style": "section-heading",
+            "countdown_enable": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_expiration_action": "hide_timer",
+            "countdown_complete_message": "",
+            "countdown_enable_animation": true,
+            "countdown_timer_style": "subheading-font",
+            "countdown_make_timer_font_bolder": false,
+            "countdown_text_color": "#000000",
+            "countdown_show_background": true,
+            "countdown_background_color": "#e8e8e8",
+            "countdown_background_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
+            "countdown_corner_radius": 0,
+            "countdown_show_outline": true,
+            "countdown_outline_color": "#dcdcdc",
+            "countdown_show_labels": true,
+            "countdown_labels_style": "body-font",
+            "countdown_make_labels_font_bolder": false,
+            "countdown_make_labels_uppercase": false,
+            "countdown_labels_color": "#565656",
+            "button_label_1": "JUICE CLEANSES",
+            "button_icon_1": "",
+            "swap_button_icon_1": false,
+            "button_style_1": "solid",
+            "button_link_1": "shopify:\/\/collections\/weight-loss-cleanses",
+            "button_target_blank_1": false,
+            "use_main_button": false,
+            "button_label_2": "WEIGHT LOSS SYSTEMS",
+            "button_icon_2": "",
+            "swap_button_icon_2": false,
+            "button_style_2": "solid",
+            "button_link_2": "shopify:\/\/collections\/weight-loss-systems",
+            "button_target_blank_2": false,
+            "button_label_3": "QUIZ: Which Solution is Perfect For Me?",
+            "button_icon_3": "",
+            "swap_button_icon_3": false,
+            "button_style_3": "outlined",
+            "button_link_3": "shopify:\/\/pages\/quiz",
+            "button_target_blank_3": false,
+            "center_text": true,
+            "vertical_content_position": "start",
+            "horizontal_content_position": "right_center",
+            "content_width": "narrow",
+            "fill_content": false,
+            "overlay_opacity": 30,
+            "mobile_overlay_opacity": 30,
+            "color_scheme": "background-1",
+            "banner_color_scheme": "background-1",
+            "overlapped_header_color_scheme": "background-1",
+            "logo_style": "regular",
+            "mobile_color_scheme": "background-1",
+            "mobile_banner_color_scheme": "background-1",
+            "mobile_overlapped_header_color_scheme": "background-1",
+            "mobile_logo_style": "overlapped"
+          }
+        },
+        "loop_video_thHiwi": {
+          "type": "loop_video",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "target_blank": false,
+            "icon": "",
+            "color": "#ffffff",
+            "mobile_color": "#ffffff",
+            "context_image_width": 120,
+            "context_media_ratio": "auto",
+            "context_image_radius": "default",
+            "context_image_link": "",
+            "context_target_blank": false,
+            "heading": "[Weight loss and wellness solutions {that work}.]",
+            "heading_style": "page-title",
+            "heading_tag": "h1",
+            "text": "<p><br\/>Achieve your weight loss and wellness goals fast and build a routine that fits into your life—making it easier to stay on track, maintain your progress, and keep moving toward your best self.<\/p>",
+            "text_style": "secondary-heading",
+            "richtext_heading_style": "section-heading",
+            "countdown_enable": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_expiration_action": "hide_timer",
+            "countdown_complete_message": "",
+            "countdown_enable_animation": true,
+            "countdown_timer_style": "subheading-font",
+            "countdown_make_timer_font_bolder": false,
+            "countdown_text_color": "#000000",
+            "countdown_show_background": true,
+            "countdown_background_color": "#e8e8e8",
+            "countdown_background_gradient": "linear-gradient(180deg, rgba(235, 235, 235, 1), rgba(255, 255, 255, 1) 100%)",
+            "countdown_corner_radius": 2,
+            "countdown_show_outline": true,
+            "countdown_outline_color": "#dcdcdc",
+            "countdown_show_labels": true,
+            "countdown_labels_style": "body-font",
+            "countdown_make_labels_font_bolder": false,
+            "countdown_make_labels_uppercase": false,
+            "countdown_labels_color": "#565656",
+            "button_label_1": "CLEANSE",
+            "button_icon_1": "",
+            "swap_button_icon_1": false,
+            "button_style_1": "solid",
+            "button_link_1": "",
+            "button_target_blank_1": false,
+            "use_main_button": true,
+            "button_label_2": "MAINTAIN",
+            "button_icon_2": "",
+            "swap_button_icon_2": false,
+            "button_style_2": "solid",
+            "button_link_2": "",
+            "button_target_blank_2": false,
+            "button_label_3": "TAKE QUIZ",
+            "button_icon_3": "",
+            "swap_button_icon_3": false,
+            "button_style_3": "outlined",
+            "button_link_3": "",
+            "button_target_blank_3": false,
+            "center_text": true,
+            "vertical_content_position": "center",
+            "horizontal_content_position": "center",
+            "content_width": "wide",
+            "fill_content": false,
+            "overlay_opacity": 50,
+            "mobile_overlay_opacity": 30,
+            "enable_mute": false,
+            "enable_pause": true,
+            "control_horizontal_position": "flex-end",
+            "color_scheme": "background-5",
+            "banner_color_scheme": "background-5",
+            "overlapped_header_color_scheme": "background-5",
+            "logo_style": "overlapped",
+            "mobile_color_scheme": "background-5",
+            "mobile_banner_color_scheme": "background-5",
+            "mobile_overlapped_header_color_scheme": "background-5",
+            "mobile_logo_style": "overlapped"
+          }
+        }
+      },
+      "block_order": [
+        "image_zmfVYf",
+        "loop_video_thHiwi"
+      ],
+      "settings": {
+        "overlap": "desktop",
+        "desktop_height_type": "pixels",
+        "desktop_pixels_height": 720,
+        "mobile_height_type": "pixels",
+        "mobile_pixels_height": 630,
+        "enable_autoplay": false,
+        "autoplay_speed": 5,
+        "effect": "coverflow",
+        "transition_duration": 1200,
+        "bullets_size": "60px",
+        "show_arrows": false,
+        "desktop_content_under_media": false,
+        "mobile_content_under_media": false,
+        "full_width": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "section_framing": "disable",
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "featured_collection_with_media_hUX7ap": {
+      "type": "featured-collection-with-media",
+      "blocks": {
+        "icon_Cz3FhW": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "icon": "",
+            "icon_size": 36,
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "mobile_icon_size": 36,
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "subheading_UiTfGJ": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "QUICK RESULTS",
+            "subheading_style": "body-font",
+            "subheading_tag": "h3"
+          }
+        },
+        "heading_9JYtHV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Juice Cleanses for Weight Loss",
+            "heading_style": "page-title",
+            "heading_tag": "h2"
+          }
+        },
+        "custom_liquid_XTqUEk": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<br>In 3 to 10 days, you can lose up to 10 pounds, detoxify your body, reset your diet, eliminate bloating, reduce sugar cravings, and increase your energy.",
+            "text_style": "body-font"
+          }
+        },
+        "button_NAxtnT": {
+          "type": "button",
+          "settings": {
+            "button_label": "QUIZ: Which Solution is Right For Me?",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify:\/\/pages\/quiz",
+            "target_blank": false,
+            "button_style": "outlined",
+            "use_main_button": false
+          }
+        },
+        "button_FDfAxT": {
+          "type": "button",
+          "settings": {
+            "button_label": "ALL CLEANSES",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify:\/\/collections\/weight-loss-cleanses",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "icon_Cz3FhW",
+        "subheading_UiTfGJ",
+        "heading_9JYtHV",
+        "custom_liquid_XTqUEk",
+        "button_NAxtnT",
+        "button_FDfAxT"
+      ],
+      "settings": {
+        "collection": "weight-loss-cleanses",
+        "media": "only_desktop",
+        "image": "shopify:\/\/shop_images\/PDP_Main-_DDC-3.png",
+        "focal_point": "center center",
+        "enable_mute": false,
+        "enable_pause": false,
+        "control_horizontal_position": "center",
+        "swap_media_position": false,
+        "media_size": "small",
+        "media_ratio": "1\/1",
+        "mobile_media_ratio": "1\/1",
+        "content_width": "regular",
+        "vertical_text_alignment": "center",
+        "horizontal_text_alignment": "center",
+        "grid_type": "slider",
+        "products_per_page": 14,
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "pagination_button_label": "ALL JUICE CLEANSES",
+        "pagination_button_icon": "",
+        "swap_pagination_button_icon": false,
+        "pagination_button_style": "outlined",
+        "use_main_button_pagination": false,
+        "products_to_show": 15,
+        "desktop_item_width": 4,
+        "alignment_fewer_items": "center",
+        "mobile_item_min_width": 150,
+        "show_arrows": false,
+        "show_scrollbar": true,
+        "hover_behavior": "slider",
+        "show_bullets": false,
+        "autoplay_speed": 3,
+        "desktop_options": "enable",
+        "mobile_options": "enable",
+        "card_content_style": "small",
+        "quick_buy": "enable",
+        "price_position": "bottom",
+        "options_position": "bottom",
+        "show_vendor": "disable",
+        "show_title": true,
+        "max_product_name_characters": 100,
+        "show_rating": true,
+        "show_short_description": true,
+        "show_pickup_availability": false,
+        "show_product_card_border": true,
+        "info_card_style": "show",
+        "info_card_position": "first",
+        "info_card_focal_point": "center center",
+        "info_card_center_text": false,
+        "info_card_link": "",
+        "info_card_target_blank": false,
+        "info_card_subheading": "",
+        "info_card_subheading_style": "subheading-font",
+        "info_card_subheading_tag": "h3",
+        "info_card_heading": "",
+        "info_card_heading_style": "secondary-heading",
+        "info_card_heading_tag": "h2",
+        "info_card_text": "",
+        "info_card_text_style": "body-font",
+        "info_card_button_style": "solid",
+        "info_card_button_radius": "default",
+        "info_card_overlay_opacity": 50,
+        "full_width": false,
+        "grid_style": "alternative",
+        "disable_max_width": false,
+        "disable_grid_gaps": false,
+        "show_bottom_line": false,
+        "color_scheme": "background-3",
+        "product_grid_color_scheme": "background-3",
+        "product_card_color_scheme": "background-3",
+        "info_card_color_scheme": "",
+        "section_framing": "disable",
+        "enable_sticky_content": false,
+        "sticky_offset": 120,
+        "top_spacing": 0.6,
+        "bottom_spacing": 0.8
+      }
+    },
+    "icons_with_text_PUxJa6": {
+      "type": "icons-with-text",
+      "blocks": {
+        "item_EqWXgh": {
+          "type": "item",
+          "settings": {
+            "icon": "glyphs\/signs\/done",
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "heading": "LOSE WEIGHT",
+            "heading_style": "body-font",
+            "text": "<p>Juice cleansing is the fastest (and healthiest) way to boost your metabolism and shed pounds and inches. <\/p>",
+            "text_style": "body-font",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "page_content_in_popup": true,
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "item_JCCErA": {
+          "type": "item",
+          "settings": {
+            "icon": "glyphs\/signs\/done",
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "heading": "DETOXIFY YOUR BODY",
+            "heading_style": "body-font",
+            "text": "<p>Give your body what it needs to naturally detoxify, reduce inflammation, and eliminate sugar cravings.<\/p>",
+            "text_style": "body-font",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "page_content_in_popup": true,
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "item_QJyahz": {
+          "type": "item",
+          "settings": {
+            "icon": "glyphs\/signs\/done",
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "heading": "BOOST YOUR METABOLISM",
+            "heading_style": "body-font",
+            "text": "<p>Jumpstart a faster metabolism in just a few days with a nutrient dense juice cleanse. <\/p>",
+            "text_style": "body-font",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "page_content_in_popup": true,
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "item_xtwJMP": {
+          "type": "item",
+          "settings": {
+            "icon": "glyphs\/signs\/done",
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "heading": "RESET YOUR DIET",
+            "heading_style": "body-font",
+            "text": "<p>Nutritionist-designed solutions to give you a clean break from processed foods and to jumpstart healthier eating habits.<\/p>",
+            "text_style": "body-font",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "page_content_in_popup": true,
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        }
+      },
+      "block_order": [
+        "item_EqWXgh",
+        "item_JCCErA",
+        "item_QJyahz",
+        "item_xtwJMP"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_style": "section-heading",
+        "heading_tag": "h2",
+        "grid_type": "slider",
+        "desktop_item_width": 3,
+        "alignment_fewer_items": "center",
+        "mobile_item_min_width": 250,
+        "show_arrows": false,
+        "show_scrollbar": true,
+        "desktop_columns": "3",
+        "mobile_columns": "1",
+        "center_text": true,
+        "icon_or_image_size": 48,
+        "fill_container": false,
+        "image_radius": "default",
+        "full_width": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "background-3",
+        "section_framing": "disable",
+        "top_spacing": 0.8,
+        "bottom_spacing": 0.3
+      }
+    },
+    "featured_collection_with_media_Gn77xy": {
+      "type": "featured-collection-with-media",
+      "blocks": {
+        "icon_dP3UE6": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "icon": "",
+            "icon_size": 36,
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "mobile_icon_size": 36,
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "subheading_6cajAz": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "LASTING RESULTS",
+            "subheading_style": "body-font",
+            "subheading_tag": "h3"
+          }
+        },
+        "heading_HdFj8K": {
+          "type": "heading",
+          "settings": {
+            "heading": "Weekly Weight Loss Systems",
+            "heading_style": "page-title",
+            "heading_tag": "h2"
+          }
+        },
+        "custom_liquid_yierAB": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<\/br>\n<b>Lose up to 3 pounds per week, every week.<\/br>NO calorie counting. NO extreme dieting. NO deprivation.<\/b> \n<\/br><\/br>\nThese nutritionist-developed programs are designed to help you shed body weight, overcome cravings, and develop healthy eating habits for long-term results.",
+            "text_style": "body-font"
+          }
+        },
+        "button_MqNQwn": {
+          "type": "button",
+          "settings": {
+            "button_label": "QUIZ: Which Solution is Right For Me?",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify:\/\/pages\/quiz",
+            "target_blank": false,
+            "button_style": "outlined",
+            "use_main_button": false
+          }
+        },
+        "button_eDkkiz": {
+          "type": "button",
+          "settings": {
+            "button_label": "ALL WEIGHT LOSS SYSTEMS",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify:\/\/collections\/weight-loss-systems",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "icon_dP3UE6",
+        "subheading_6cajAz",
+        "heading_HdFj8K",
+        "custom_liquid_yierAB",
+        "button_MqNQwn",
+        "button_eDkkiz"
+      ],
+      "settings": {
+        "collection": "weight-loss-systems",
+        "media": "only_desktop",
+        "image": "shopify:\/\/shop_images\/pureveganfood-Protein-VanillaCashew-1_21d31211-22fb-4cbf-aafa-463d09d498c9.jpg",
+        "focal_point": "center center",
+        "enable_mute": false,
+        "enable_pause": false,
+        "control_horizontal_position": "center",
+        "swap_media_position": true,
+        "media_size": "small",
+        "media_ratio": "1\/1",
+        "mobile_media_ratio": "1\/1",
+        "content_width": "regular",
+        "vertical_text_alignment": "center",
+        "horizontal_text_alignment": "center",
+        "grid_type": "slider",
+        "products_per_page": 3,
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "pagination_button_label": "ALL WEIGHT LOSS SYSTEMS",
+        "pagination_button_icon": "",
+        "swap_pagination_button_icon": false,
+        "pagination_button_style": "outlined",
+        "use_main_button_pagination": false,
+        "products_to_show": 8,
+        "desktop_item_width": 4,
+        "alignment_fewer_items": "center",
+        "mobile_item_min_width": 150,
+        "show_arrows": false,
+        "show_scrollbar": true,
+        "hover_behavior": "slider",
+        "show_bullets": true,
+        "autoplay_speed": 3,
+        "desktop_options": "enable",
+        "mobile_options": "disable",
+        "card_content_style": "small",
+        "quick_buy": "enable",
+        "price_position": "bottom",
+        "options_position": "bottom",
+        "show_vendor": "disable",
+        "show_title": true,
+        "max_product_name_characters": 100,
+        "show_rating": true,
+        "show_short_description": true,
+        "show_pickup_availability": false,
+        "show_product_card_border": true,
+        "info_card_style": "hide",
+        "info_card_position": "first",
+        "info_card_focal_point": "center center",
+        "info_card_center_text": false,
+        "info_card_link": "",
+        "info_card_target_blank": false,
+        "info_card_subheading": "",
+        "info_card_subheading_style": "subheading-font",
+        "info_card_subheading_tag": "h3",
+        "info_card_heading": "",
+        "info_card_heading_style": "secondary-heading",
+        "info_card_heading_tag": "h2",
+        "info_card_text": "",
+        "info_card_text_style": "body-font",
+        "info_card_button_style": "solid",
+        "info_card_button_radius": "default",
+        "info_card_overlay_opacity": 50,
+        "full_width": false,
+        "grid_style": "alternative",
+        "disable_max_width": false,
+        "disable_grid_gaps": false,
+        "show_bottom_line": false,
+        "color_scheme": "background-1",
+        "product_grid_color_scheme": "background-1",
+        "product_card_color_scheme": "background-1",
+        "info_card_color_scheme": "",
+        "section_framing": "disable",
+        "enable_sticky_content": false,
+        "sticky_offset": 120,
+        "top_spacing": 0.8,
+        "bottom_spacing": 0.8
+      }
+    },
+    "rich_text_K9648y": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FiRQme": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Life Transformations",
+            "heading_style": "page-title",
+            "heading_tag": "h2"
+          }
+        },
+        "text_wtVMf3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From first-time cleansers to fitness fanatics and brides-to-be to busy moms, each journey started with a simple decision: <em>to say YES to themselves.<\/em><\/p>",
+            "richtext_heading_style": "section-heading",
+            "text_style": "body-font"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FiRQme",
+        "text_wtVMf3"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "center_text": true,
+        "content_width": "narrow",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "background-3",
+        "section_framing": "disable",
+        "top_spacing": 1.2,
+        "bottom_spacing": 0.6
+      }
+    },
+    "ss_before_after_image_12_PxkJkd": {
+      "type": "ss-before-after-image-12",
+      "blocks": {
+        "heading_yrETdU": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<h1>Real Results in Days<\/h1>",
+            "heading_custom": true,
+            "heading_font": "lora_n4",
+            "heading_size": 34,
+            "heading_size_mobile": 28,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_align": "center",
+            "heading_align_mobile": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "card_HmcwdG": {
+          "type": "card",
+          "name": "Kristin L.",
+          "settings": {
+            "toggle_image": "shopify:\/\/shop_images\/Frame_7_ebb4ac8b-16f7-40d5-a037-4d53cd3017d0.png",
+            "before_image": "shopify:\/\/shop_images\/BA-TSR-Kristin-1B.jpg",
+            "before_text": "BEFORE",
+            "after_image": "shopify:\/\/shop_images\/BA-TSR-Kristin-1A.jpg",
+            "after_text": "AFTER",
+            "title": "<p>\"I kept the weight off after my cleanse and continued to lose weight with the Skinny Method. I've lost over 10 pounds in total. My goal is to continue it, I feel so good!”<\/p>",
+            "caption": "Kristin L. - Verified Customer",
+            "tags": "WEIGHT LOSS, DIET RESET",
+            "bottom_main_text": "",
+            "bottom_text": ""
+          }
+        },
+        "card_eCY3Ey": {
+          "type": "card",
+          "name": "Kristen D.",
+          "settings": {
+            "toggle_image": "shopify:\/\/shop_images\/Frame_5.png",
+            "before_image": "shopify:\/\/shop_images\/BA-10Day-ProteinCleanse-KristenDemeter-1B.jpg",
+            "before_text": "BEFORE",
+            "after_image": "shopify:\/\/shop_images\/BA-10Day-ProteinCleanse-KristenDemeter-1A.jpg",
+            "after_text": "AFTER",
+            "title": "<p> \"I lost 10.6 pounds! I loved how this made me feel! My bloating decreased, my energy increased, and I felt full.”<\/p>",
+            "caption": "Kristen D.- Verified Customer",
+            "tags": "WEIGHT LOSS, ENERGY, LESS BLOATING, NO HUNGER",
+            "bottom_main_text": "",
+            "bottom_text": ""
+          }
+        },
+        "card_3bHMjy": {
+          "type": "card",
+          "name": "Keri H.",
+          "settings": {
+            "toggle_image": "shopify:\/\/shop_images\/Frame_8_8f7accc8-76d8-4c41-879c-c55da5ed0652.png",
+            "before_image": "shopify:\/\/shop_images\/BA-10Day-Skinny-Keri-2B.jpg",
+            "before_text": "BEFORE",
+            "after_image": "shopify:\/\/shop_images\/BA-10Day-Skinny-Keri-2A.jpg",
+            "after_text": "AFTER",
+            "title": "<p><em>“I’ve lost 9 pounds and noticed a more patient mood. Less bloat, definitely mental clarity as well as more time (not having to prepare dinner, clean dishes, etc LOL) .. Also felt less stiff in the morning.”<\/em><\/p>",
+            "caption": "Keri H. - Verified Customer",
+            "tags": "WEIGHT LOSS, GOOD MOOD, LESS BLOATING, MENTAL CLARITY",
+            "bottom_main_text": "",
+            "bottom_text": ""
+          }
+        },
+        "card_QitAPa": {
+          "type": "card",
+          "name": "Jason W.",
+          "settings": {
+            "toggle_image": "shopify:\/\/shop_images\/Frame_6_979cb424-e845-466b-8ac8-7d3eaa648a31.png",
+            "before_image": "shopify:\/\/shop_images\/BA-3Day-Protein-JasonWilkes-2B.jpg",
+            "before_text": "BEFORE",
+            "after_image": "shopify:\/\/shop_images\/BA-3Day-Protein-JasonWilkes-2A.jpg",
+            "after_text": "AFTER",
+            "title": "<p>\" I lost a little over 3 pounds in 3 days. I was not as hungry as I thought I might be. I was less bloated and noticed I was in a better mood and had good energy.”<\/p>",
+            "caption": "Jason W.",
+            "tags": "WEIGHT LOSS, ENERGY, GOOD MOOD, NO HUNGER",
+            "bottom_main_text": "",
+            "bottom_text": ""
+          }
+        },
+        "card_JeHMyi": {
+          "type": "card",
+          "name": "Julie W.",
+          "settings": {
+            "toggle_image": "shopify:\/\/shop_images\/Frame_9_b94e83cc-f9e2-450c-9f64-8c81481702ed.png",
+            "before_image": "shopify:\/\/shop_images\/BA-5Day-Skinny-JuliaWieselberg-2B.jpg",
+            "before_text": "BEFORE",
+            "after_image": "shopify:\/\/shop_images\/BA-5Day-Skinny-JuliaWieselberg-2A.jpg",
+            "after_text": "AFTER",
+            "title": "<p>\"I loved the cleanse.... I lost over 6 pounds in 5 days. The structure was easy to follow and the drinks were delicious. I even slept better and noticed my mood was more even. I wish I had signed up for longer!\"<\/p>",
+            "caption": "Julie W. - Verified Customer",
+            "tags": "WEIGHT LOSS, DELICIOUS, BETTER SLEEP, GOOD MOOD",
+            "bottom_main_text": "",
+            "bottom_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_yrETdU",
+        "card_HmcwdG",
+        "card_eCY3Ey",
+        "card_3bHMjy",
+        "card_QitAPa",
+        "card_JeHMyi"
+      ],
+      "name": "SS - Before\/after image #12",
+      "settings": {
+        "autoplay": true,
+        "toggles_autoplay_delay": 15,
+        "toggles_mt": 0,
+        "toggles_mt_mobile": 16,
+        "toggle_size": 60,
+        "toggle_size_mobile": 60,
+        "arrow_size": 28,
+        "arrow_size_mobile": 24,
+        "arrow_icon_size": 12,
+        "arrow_icon_size_mobile": 9,
+        "arrow_border_thickness": 1,
+        "arrow_radius": 0,
+        "toggles_gap": 14,
+        "toggles_gap_mobile": 14,
+        "arrow_hover_effect": "scale",
+        "arrow_show_desktop": true,
+        "arrow_show_mobile": false,
+        "slider_mt": 30,
+        "slider_mt_mobile": 0,
+        "card_border_thickness": 0,
+        "card_radius": 0,
+        "image_ratio": "portrait",
+        "image_ratio_mobile": "portrait",
+        "badge_custom": true,
+        "badge_font": "cardo_n4",
+        "badge_size": 30,
+        "badge_size_mobile": 20,
+        "badge_height": 100,
+        "badge_padding_horizontal": 12,
+        "badge_padding_horizontal_mobile": 8,
+        "badge_padding_vertical": 12,
+        "badge_padding_vertical_mobile": 8,
+        "badge_radius": 2,
+        "badge_border_thickness": 0,
+        "content_padding_horizontal": 32,
+        "content_padding_horizontal_mobile": 16,
+        "content_padding_vertical": 62,
+        "content_padding_vertical_mobile": 36,
+        "content_align": "left",
+        "content_align_mobile": "left",
+        "title_custom": true,
+        "title_font": "jost_n4",
+        "title_size": 20,
+        "title_size_mobile": 18,
+        "title_height": 150,
+        "caption_custom": true,
+        "caption_font": "jost_n4",
+        "caption_size": 16,
+        "caption_size_mobile": 12,
+        "caption_height": 150,
+        "caption_mt": 16,
+        "caption_mt_mobile": 16,
+        "tags_custom": true,
+        "tags_font": "jost_n4",
+        "tags_size": 20,
+        "tags_size_mobile": 12,
+        "tags_height": 100,
+        "tags_padding_horizontal": 10,
+        "tags_padding_horizontal_mobile": 10,
+        "tags_padding_vertical": 8,
+        "tags_padding_vertical_mobile": 6,
+        "tags_radius": 2,
+        "tags_border_thickness": 0,
+        "tags_mt": 20,
+        "tags_mt_mobile": 20,
+        "bottom_main_text_custom": true,
+        "bottom_main_text_font": "jost_n4",
+        "bottom_main_text_size": 16,
+        "bottom_main_text_size_mobile": 14,
+        "bottom_main_text_height": 150,
+        "bottom_main_text_mt": 4,
+        "bottom_main_text_mt_mobile": 4,
+        "bottom_text_custom": true,
+        "bottom_text_font": "cardo_n4",
+        "bottom_text_size": 12,
+        "bottom_text_size_mobile": 12,
+        "bottom_text_height": 150,
+        "bottom_text_mt": 8,
+        "bottom_text_mt_mobile": 8,
+        "circle_color": "#f7f7f7",
+        "circle_active_color": "#bb7dff",
+        "arrow_color": "#121212",
+        "arrow_hover_color": "#ffffff",
+        "arrow_bg_color": "#ffffff",
+        "arrow_bg_hover_color": "#121212",
+        "arrow_border_color": "#121212",
+        "arrow_border_hover_color": "#121212",
+        "card_bg_color": "rgba(0,0,0,0)",
+        "card_border_color": "#121212",
+        "badge_color": "#121212",
+        "badge_bg_color": "#f7f7f7",
+        "badge_border_color": "#121212",
+        "title_color": "#121212",
+        "caption_color": "#121212",
+        "bottom_main_text_color": "#000000",
+        "bottom_main_text_active_color": "#a200f9",
+        "bottom_text_color": "#121212",
+        "tags_color": "#121212",
+        "tags_bg_color": "#f7f7f7",
+        "tags_border_color": "#121212",
+        "background_color": "#f2f2f2",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "testimonials_tqMTcT": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_NNwFBc": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "Down 30 pounds!",
+            "heading_style": "section-heading",
+            "heading_tag": "h2",
+            "text": "<p>\"I’ve lost 30 lbs since I started Raw Generation. I use the Protein Cleanse to stay full and energized. My body looks leaner and I feel stronger than ever.\"<\/p>",
+            "text_style": "caption-font",
+            "author_name": "Melissa F.",
+            "author_position": "<p>PROTEIN CLEANSE<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_FieG8p": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "Lost 25 lbs total!",
+            "heading_style": "section-heading",
+            "heading_tag": "h3",
+            "text": "<p>\"I did 3 rounds of cleansing and lost 25 lbs total. It helped me kick my sugar habit and change my relationship with food. The juices taste amazing!\"<\/p>",
+            "text_style": "caption-font",
+            "author_name": "Jennifer T.",
+            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_Bxpzxr": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "18 lbs in a month!",
+            "heading_style": "section-heading",
+            "heading_tag": "h3",
+            "text": "<p>\"Started with the Protein Cleanse and fell in love. I lost 18 lbs in a month without feeling deprived. My bloating disappeared and I’ve kept the momentum going.\"<\/p>",
+            "text_style": "caption-font",
+            "author_name": "Liz S.",
+            "author_position": "<p>PROTEIN CLEANSE<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_mdRptc": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "Down 50 pounds!",
+            "heading_style": "section-heading",
+            "heading_tag": "h3",
+            "text": "<p>\"The Skinny Cleanse has truly changed my life! I’ve lost 50 lbs in total since starting and kept it off. I feel better, have more energy, and have eliminated my sugar cravings.\"<\/p>",
+            "text_style": "caption-font",
+            "author_name": "Angela G.",
+            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_Ee8L8k": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "Lost 17 lbs in 2 weeks!",
+            "heading_style": "section-heading",
+            "heading_tag": "h3",
+            "text": "<p>\"This was the best decision I made all year. I’ve lost 17 pounds in two weeks and feel completely reset. I’m eating better and have more confidence than ever.\"<\/p>",
+            "text_style": "body-font",
+            "author_name": "Dana R.",
+            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_G7XtwJ": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "15 pounds down!",
+            "heading_style": "section-heading",
+            "heading_tag": "h3",
+            "text": "<p>\"I lost 15 lbs using Raw Generation. I’ve tried everything, and this was the first time the weight stayed off. I feel lighter and more energized.\"<\/p>",
+            "text_style": "caption-font",
+            "author_name": "Vanessa K.",
+            "author_position": "<p>SKINNY METHOD<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_B8J47G": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "Lost 12 lbs in 5 days!",
+            "heading_style": "section-heading",
+            "heading_tag": "h3",
+            "text": "<p>\"I couldn’t believe the scale. I lost 12 lbs in just 5 days. I was nervous at first, but the Skinny Cleanse was actually enjoyable and easy to stick with.\"<\/p>",
+            "text_style": "caption-font",
+            "author_name": "Carla M.",
+            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_FkP6cU": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "8 pounds in 3 days!",
+            "heading_style": "section-heading",
+            "heading_tag": "h3",
+            "text": "<p>\"The Skinny Cleanse helped me lose 8 pounds in 3 days. It was the jumpstart I needed to get back on track with my health.\"<\/p>",
+            "text_style": "caption-font",
+            "author_name": "Rachel N.",
+            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_mXFErx": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "7 lbs & bloating gone!",
+            "heading_style": "section-heading",
+            "heading_tag": "h3",
+            "text": "<p>\"I lost 7 lbs and had way more energy. My stomach looked flatter, and I wasn’t craving junk anymore. This was just what I needed.\"<\/p>",
+            "text_style": "caption-font",
+            "author_name": "Mariah C.",
+            "author_position": "<p>DETOX CLEANSE<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_ka8FGa": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "10 lbs in one week!",
+            "heading_style": "section-heading",
+            "heading_tag": "h3",
+            "text": "<p>\"This cleanse WORKS. I dropped 10 pounds in a week before vacation and felt amazing in my clothes. It also helped me stop snacking at night.\"<\/p>",
+            "text_style": "body-font",
+            "author_name": "Stephanie J.",
+            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_NNwFBc",
+        "testimonial_FieG8p",
+        "testimonial_Bxpzxr",
+        "testimonial_mdRptc",
+        "testimonial_Ee8L8k",
+        "testimonial_G7XtwJ",
+        "testimonial_B8J47G",
+        "testimonial_FkP6cU",
+        "testimonial_mXFErx",
+        "testimonial_ka8FGa"
+      ],
+      "name": "t:sections.testimonials.name",
+      "settings": {
+        "show_rating": true,
+        "heading": "",
+        "heading_style": "page-title",
+        "heading_tag": "h2",
+        "button_label": "",
+        "button_icon": "",
+        "swap_button_icon": false,
+        "button_link": "",
+        "target_blank": false,
+        "button_style": "solid",
+        "testimonial_label": "Show full review",
+        "center_text": false,
+        "media_ratio": "1\/1",
+        "image_radius": "default",
+        "desktop_item_width": 4,
+        "alignment_fewer_items": "center",
+        "mobile_item_min_width": 210,
+        "show_arrows": true,
+        "show_scrollbar": true,
+        "full_width": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "background-3",
+        "section_framing": "disable",
+        "top_spacing": 0.8,
+        "bottom_spacing": 1.5
+      }
+    },
+    "featured_collection_grid_QHATex": {
+      "type": "featured-collection-grid",
+      "blocks": {
+        "collection_jYcTXB": {
+          "type": "collection",
+          "settings": {
+            "collection": "shop-weight-loss"
+          }
+        },
+        "collection_jLcm9y": {
+          "type": "collection",
+          "settings": {
+            "collection": "get-strong-lean"
+          }
+        },
+        "collection_HKLxep": {
+          "type": "collection",
+          "settings": {
+            "collection": "detox"
+          }
+        }
+      },
+      "block_order": [
+        "collection_jYcTXB",
+        "collection_jLcm9y",
+        "collection_HKLxep"
+      ],
+      "name": "t:sections.featured-collection-grid.name",
+      "settings": {
+        "heading": "",
+        "heading_style": "section-heading",
+        "heading_tag": "h2",
+        "center_text": false,
+        "desktop_columns": "3",
+        "on_mobile_show": 3,
+        "show_more_button_label": "",
+        "show_more_button_icon": "",
+        "swap_show_more_button_icon": false,
+        "show_more_button_style": "solid",
+        "show_collection_card_border": false,
+        "media_ratio": "1\/1",
+        "full_width": true,
+        "grid_style": "alternative",
+        "disable_max_width": false,
+        "disable_grid_gaps": true,
+        "show_bottom_line": false,
+        "color_scheme": "background-1",
+        "collection_card_color_scheme": "background-1",
+        "section_framing": "disable",
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "media_with_text_6mJhzQ": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_eJXqnf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meet Lisa Testa, M.S.",
+            "heading_style": "secondary-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "empty_space_yUjmhn": {
+          "type": "empty_space",
+          "settings": {
+            "desktop_height": 1,
+            "mobile_height": 1
+          }
+        },
+        "subheading_GRiqkA": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Chief Nutrition Officer & Head of Product Development",
+            "subheading_style": "subheading-font",
+            "subheading_tag": "h3"
+          }
+        },
+        "text_j49Ygm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>I’ve been a Holistic Nutritionist since 2008, helping hundreds of clients lose weight and reverse poor health - all without counting calories or feeling deprived.<br\/><br\/>After struggling with my own weight for over 10 years, I learned that I didn’t need a “diet” at all.  <em>I just needed to learn the right way to eat.<br\/><br\/><\/em>Long-term restrictive behaviors only lead to inevitable frustration and failure - not to mention damaging a woman’s hormones and metabolism.<\/p><p>That’s why Raw Generation programs are so effective. They are designed to give your body the nutrition it needs in a way that works, so that losing weight is no longer a struggle.<\/p>",
+            "text_style": "body-font"
+          }
+        },
+        "button_fDgxcC": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Discover",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_eJXqnf",
+        "empty_space_yUjmhn",
+        "subheading_GRiqkA",
+        "text_j49Ygm",
+        "button_fDgxcC"
+      ],
+      "name": "t:sections.media-with-text.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/LisaHeadshot.png",
+        "media_ratio": "1\/1",
+        "mobile_image": "shopify:\/\/shop_images\/LisaHeadshot.png",
+        "mobile_media_ratio": "1\/1",
+        "link": "",
+        "target_blank": false,
+        "focal_point": "center center",
+        "enable_mute": false,
+        "enable_pause": false,
+        "control_horizontal_position": "flex-end",
+        "swap_media_position": false,
+        "media_size": "half",
+        "content_width": "narrow",
+        "vertical_text_alignment": "center",
+        "horizontal_text_alignment": "left",
+        "full_width": false,
+        "grid_style": "secondary",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "background-1",
+        "section_framing": "disable",
+        "enable_sticky_content": true,
+        "sticky_offset": 126,
+        "top_spacing": 0.3,
+        "bottom_spacing": 0.4
+      }
+    },
+    "icons_with_text_J7LE6r": {
+      "type": "icons-with-text",
+      "blocks": {
+        "item_YFfDbG": {
+          "type": "item",
+          "settings": {
+            "icon": "glyphs\/signs\/cherry",
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "heading": "REAL INGREDIENTS",
+            "heading_style": "body-font",
+            "text": "<p>All products are made from real fruits and vegetables. We NEVER use artificial ingredients.<br\/><br\/><\/p>",
+            "text_style": "body-font",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "page_content_in_popup": true,
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "item_V8kd7U": {
+          "type": "item",
+          "settings": {
+            "icon": "glyphs\/interface\/heart-filled",
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "heading": "MADE TO TASTE GREAT",
+            "heading_style": "body-font",
+            "text": "<p>We believe you shouldn't suffer through anything. Healthy can (and should) taste great.<\/p>",
+            "text_style": "body-font",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "page_content_in_popup": true,
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "item_QcJdbW": {
+          "type": "item",
+          "settings": {
+            "icon": "glyphs\/signs\/chat",
+            "color": "#000000",
+            "mobile_color": "#000000",
+            "heading": "NUTRITIONIST SUPPORT",
+            "heading_style": "body-font",
+            "text": "<p>You’re never on your own—our nutritionist is here to support you with expert guidance.<\/p>",
+            "text_style": "body-font",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "page_content_in_popup": true,
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        }
+      },
+      "block_order": [
+        "item_YFfDbG",
+        "item_V8kd7U",
+        "item_QcJdbW"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_style": "section-heading",
+        "heading_tag": "h2",
+        "grid_type": "slider",
+        "desktop_item_width": 4,
+        "alignment_fewer_items": "center",
+        "mobile_item_min_width": 250,
+        "show_arrows": true,
+        "show_scrollbar": true,
+        "desktop_columns": "3",
+        "mobile_columns": "1",
+        "center_text": true,
+        "icon_or_image_size": 32,
+        "fill_container": false,
+        "image_radius": "default",
+        "full_width": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "background-1",
+        "section_framing": "disable",
+        "top_spacing": 0,
+        "bottom_spacing": 0.7
+      }
+    },
+    "line_EdBMX9": {
+      "type": "line",
+      "settings": {
+        "grid_style": "page",
+        "disable_max_width": false,
+        "make_full_width": false,
+        "color_scheme": "",
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "ss_scrolling_logo_cloud_g8HY7P": {
+      "type": "ss-scrolling-logo-cloud",
+      "blocks": {
+        "slide_TFpXLY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PureWow.png",
+            "link": ""
+          }
+        },
+        "slide_fp9iYd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/unnamed.png",
+            "link": ""
+          }
+        },
+        "slide_MQnYjp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NYPost_2.png",
+            "link": ""
+          }
+        },
+        "slide_j3dEPk": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PopSugar_0bab6206-dcf6-4ad0-bb70-198d3f4384fb.png",
+            "link": ""
+          }
+        },
+        "slide_YVcNGj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TheEveryGirl.png",
+            "link": ""
+          }
+        },
+        "slide_KezKqQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_81b84b68-e629-4b55-aa80-b2acd620781c.jpg",
+            "link": ""
+          }
+        },
+        "slide_T6kpfK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OK_Magazine.png",
+            "link": ""
+          }
+        },
+        "slide_nYBDcW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/People.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_TFpXLY",
+        "slide_fp9iYd",
+        "slide_MQnYjp",
+        "slide_j3dEPk",
+        "slide_YVcNGj",
+        "slide_KezKqQ",
+        "slide_T6kpfK",
+        "slide_nYBDcW"
+      ],
+      "name": "SS - Scrolling Logo Cloud",
+      "settings": {
+        "ss-title": "",
+        "heading_custom": true,
+        "heading_font": "cardo_n4",
+        "header_size": 34,
+        "header_align": "center",
+        "scrolling_velocity": 32,
+        "pause_hover": true,
+        "shadow": false,
+        "sliders_mt": 0,
+        "logo_padding_top": 0,
+        "logo_padding_bottom": 0,
+        "slider_gap": 66,
+        "slider_gap_mobile": 40,
+        "slider_direction": "left",
+        "icon_width": 130,
+        "header_color": "#121212",
+        "border_color": "#ffffff",
+        "background-color": "#ffffff",
+        "slider-background-color": "rgba(0,0,0,0)",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    }
+  },
+  "order": [
+    "image_banner_XyRe3p",
+    "slideshow_kg8QdU",
+    "featured_collection_with_media_hUX7ap",
+    "icons_with_text_PUxJa6",
+    "featured_collection_with_media_Gn77xy",
+    "rich_text_K9648y",
+    "ss_before_after_image_12_PxkJkd",
+    "testimonials_tqMTcT",
+    "featured_collection_grid_QHATex",
+    "media_with_text_6mJhzQ",
+    "icons_with_text_J7LE6r",
+    "line_EdBMX9",
+    "ss_scrolling_logo_cloud_g8HY7P"
+  ]
+}

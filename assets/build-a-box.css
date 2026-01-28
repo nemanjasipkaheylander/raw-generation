@@ -1,0 +1,225 @@
+.page-title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.bab-pack {
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.bab-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+  align-items: end;
+  /* overflow-y: scroll; */
+}
+
+/* Focus are most popular */
+/* .single-pack--2 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 2;
+} */
+ .single-pack.single-pack--4 p.pack-price {
+    color: #a200f9;
+    font-weight: 600;
+}
+
+.badge-block {
+  display: flex;
+  justify-content: center;
+}
+
+.badge-text {
+  background-color: #fff;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  font-size: 11px;
+  justify-content: center;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0;
+  padding: 4px 12px 0 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pack-block {
+  background-color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.pack-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.pack-price {
+  margin: 0;
+  font-size: 13px;
+}
+
+.offer-text {
+  font-size: 13px;
+  margin: 0.75rem 0 0 0;
+  text-align: center;
+}
+
+li.rb-filter-item {
+  text-transform: capitalize;
+}
+
+input.rb-input{
+    height: 40px;
+}
+
+.rb-progress-bar-guide {
+    background-color: #a200f900 !important;
+    border-color: #a200f942 !important;
+    color: #a200f9 !important;
+}
+.rb-progress-bar {
+    background-color: #a200f9 !important;
+    border-color: #a200f9 !important;
+    color: #a200f9 !important;
+}
+.bab-pack.bg-primary {
+    background-color: #f5edea !important;
+        max-width: 1230px;
+    margin: 0 auto;
+}
+ 
+button.rb-btn.tnowrap, .rb-btn{
+  background-color: #a200f9 !important;
+  color:#fff !imporant;
+}
+.rb-btn span, .offer-text{
+  color:#fff !important;
+}
+.bab-pack.bg-primary .offer-text{
+color: #000 !important;
+}
+.rb-frequency-wrapper .tooltip{
+      display: none !important;
+}
+.rg-container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+h2.al-buy {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .pack-block {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .bab-pack {
+    padding: 16px;
+  }
+  .bab-wrap {
+    grid-gap: 16px;
+  }
+  .pack-title {
+    font-size: 24px;
+  }
+  .pack-price {
+    font-size: 16px;
+  }
+  .badge-text {
+    font-size: 13px;
+  }
+  .offer-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bab-wrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .page-title {
+    font-size: 40px;
+  }
+  .pack-title {
+    font-size: 28px;
+  }
+  .single-pack--2 {
+    grid-column: 2 / span 1;
+  }
+}
+@media (max-width: 768px) {
+h2.al-buy {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+}
+
+/*
+Hiding from BAB to reserve for current subscribers
+- Fresh Greens: 4786551455806
+- Mellow Melon: 6587373223998
+- Cacao Hemp: 4786551160894
+- Mango Carrot: 6996561395774
+*/
+[data-rb-item-id='4786551455806'],
+[data-rb-item-id='6587373223998'],
+[data-rb-item-id='4786551160894'],
+[data-rb-item-id='6996561395774'] {
+  display: none !important;
+}
+
+/*
+Recharge bundle tempalte overrides
+*/
+
+p.rb-price {
+  font-weight: 600;
+  color: black;
+}
+p.rb-price .tstrike {
+  font-weight: 400;
+  color: black;
+}
+
+a.rb-close {
+  opacity: 1;
+  cursor: pointer;
+}
+.rb-filters-ns,
+.rb-filters-nav {
+  margin-bottom: 1rem;
+}
+
+.rb-filters-nav .rb-link {
+  color: var(--c-text-medium);
+}
+
+.rb-filters-label {
+  display: none;
+}
+
+.rb-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.rb-field .rb-label {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+.rb-select {
+  padding: 0.25rem;
+}
+.rb-progress-bar-wrapper {
+  margin-bottom: 0.5rem;
+}
+
+

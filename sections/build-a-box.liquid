@@ -1,0 +1,181 @@
+{{ 'build-a-box.css' | asset_url | stylesheet_tag }}
+
+<div class="bab">
+  <div class="page-width">
+      <h1 class="page-title">Build a Box</h1> 
+
+    <div class="bab-pack bg-primary">
+      <h2 class="al-buy">BUY MORE ~ SAVE MORE</h2>
+      <div class="bab-wrap">
+        {% for block in section.blocks %}
+          <div class="single-pack single-pack--{{ forloop.index }}">
+            <div class="badge-block">
+              {% if block.settings.pack_badge != blank %}
+                <p class="badge-text">{{ block.settings.pack_badge }}</p>
+              {% endif %}
+            </div>
+            <div class="pack-block">
+              <h2 class="pack-title">{{ block.settings.pack_title }}</h2>
+              <p class="pack-price">{{ block.settings['pack-price'] }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <p class="offer-text">{{ section.settings['offer-text'] }}</p>
+    </div>
+  </div>
+</div>
+
+<div id="selling-plan-tip" class="flex items-center hidden gap-4 px-4 text-sm text-white rounded tooltip">
+  <div class="py-2">You're saving 15% with Subscribe and Save.</div>
+  <button type="button" id="close-selling-plan-tip" class="flex items-center justify-center w-10 h-10 text-white button-unstyled">
+    <span class="sr-only">{{ 'accessibility.close' | t }}</span>
+    {%- render 'icon-close' -%}
+  </button>
+</div>
+
+<style>
+    /* CLS Fix: Reserve space for Recharge Bundles Widget */
+
+/* Modern browser support */
+#shopify-section-template--16974199160894__build_a_box_APFJY7 {
+  contain: layout style paint;
+  contain-intrinsic-size: 768px 4900px;
+}
+
+/* Larger screen adjustment */
+@media (min-width: 48em) {
+ #shopify-section-template--16974199160894__build_a_box_APFJY7 {
+    contain-intrinsic-size: 1300px 3100px;
+  }
+}
+
+/* Fallback for older browsers */
+#recharge-bundles {
+  min-height: 3100px;
+}
+@media (max-width: 48em) {
+  #recharge-bundles {
+    min-height: 4900px;
+  }
+}
+
+
+  #shopify-section-template--16974199160894__build_a_box_APFJY7 #recharge-bundles {
+    padding-top: 0rem;
+}
+
+  .rb-bundle-title{
+  display:none;
+  }
+  #build-a-box > div > div.rb-header.tpt3-ns.tpt2 > div > p > span > span > span{
+    display:none;
+  }
+  .tooltip {
+    background-color: rgba(0, 0, 0, 0.9);
+    left: 50%;
+    min-width: 200px;
+    position: absolute;
+    position: absolute;
+    top: 116%;
+    margin-left: -50%;
+    z-index: 2;
+  }
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.9) transparent;
+  }
+</style>
+
+<script>
+  const sellingPlanList = '#selling-plan-list';
+  const sellingPlanTip = document.getElementById('selling-plan-tip');
+  const closeSellingPlanTip = document.getElementById('close-selling-plan-tip');
+
+  function removeToolTip() {
+    sellingPlanTip.classList.add('hidden');
+  }
+
+  function showToolTip(sellingPlansSelect) {
+    sellingPlansSelect.parentNode.style.position = 'relative';
+    sellingPlansSelect.parentNode.appendChild(sellingPlanTip);
+
+    sellingPlanTip.classList.remove('hidden');
+    sellingPlanTip.classList.add('animate-slideInUp');
+  }
+
+  function delayRemoveToolTip(sellingPlansSelect) {
+    setTimeout(() => removeToolTip(), 8000);
+  }
+
+  closeSellingPlanTip.addEventListener('click', () => removeToolTip());
+
+  // Delay so Recharge BAB has time to load
+  setTimeout(() => {
+    const sellingPlansSelect = document.querySelector(sellingPlanList);
+    if (sellingPlansSelect) {
+      showToolTip(sellingPlansSelect);
+      delayRemoveToolTip(sellingPlansSelect);
+    }
+  }, 3000);
+</script>
+
+{% schema %}
+{
+  "name": "Build A Box",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Build-A-Box"
+    },
+    {
+      "type": "text",
+      "id": "offer-text",
+      "label": "Offer Text",
+      "default": "<span>Save 15% More</span> plus FREE SHIPPING when you choose Autoship"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Pack Blocks",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "pack_title",
+          "label": "Pack Title",
+          "default": "12-Pack"
+        },
+        {
+          "type": "text",
+          "id": "pack-price",
+          "label": "Pack Price",
+          "default": "$9.99/per bottle"
+        },
+        {
+          "type": "text",
+          "id": "pack_badge",
+          "label": "Pack Badge",
+          "default": "Most-Popular"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Build-A-Box Section"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,32 @@
+{% comment %}
+  Renders a list of benefits for Autoship (subscription) products
+
+  This may or may not be needed
+  Accepts:
+  - extra_discount: {Boolean} Show extra discount message
+
+  Usage:
+  {% render 'autoship-details' %}
+{% endcomment %}
+<ul class="flex flex-col gap-2 px-3 py-4 text-sm list-none border">
+  <li class="flex items-baseline gap-2">
+    <span class="text-primary">💵</span>
+    <span><strong>Subscribe now and get <span style="background:#A200F9;color:white">10% OFF</span></strong></span>
+  </li>
+  <li class="flex items-baseline gap-2">
+    <span class="text-primary">🚛</span>
+    <span>Get FREE shipping</span>
+  </li>
+  <li class="flex items-baseline gap-2">
+    <span class="text-primary">🎙️</span>
+    <span>LIVE monthly group webinar with our Nutritionist</span>
+  </li>
+  <li class="flex items-baseline gap-2">
+    <span class="text-primary">🖥️</span>
+    <span>Access to private Facebook group for extra support.</span>
+  </li>
+  <li class="flex items-baseline gap-2">
+    <span class="text-primary">✋</span>
+    <span>Pause or swap products anytime.</span>
+  </li>
+</ul>

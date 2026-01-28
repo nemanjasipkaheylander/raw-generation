@@ -1,0 +1,375 @@
+<link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-left: {{ section.settings.padding_left | times: 0.75 | round: 0 }}px;
+    padding-right: {{ section.settings.padding_right | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-left: {{ section.settings.padding_left }}px;
+      padding-right: {{ section.settings.padding_right }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% liquid
+  assign show_add_to_cart = true
+  assign product = section.settings.sigreset
+
+  for item in cart.items
+    if item.id == product.selected_or_first_available_variant.id
+      assign show_add_to_cart = false
+    endif
+  endfor
+%}
+
+<div
+  class="isolate{% unless section.settings.full_width %} page-width{% endunless %}"
+  id="{{- section.settings.redirect_section_id -}}"
+>
+  <div class="rich-text section-{{ section.id }}-padding  content-container color-{{ section.settings.color_scheme }}{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
+      <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2 class="rich-text__heading rte {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                {{ block.settings.heading | replace: 'p>', 'span>' }}
+              </h2>
+            {%- when 'caption' -%}
+              <p
+                class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.caption | escape }}
+              </p>
+            {%- when 'text' -%}
+              <div class="rich-text__text rte" style="font-size: 1rem;" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+
+            {%- when 'addToCart' -%}
+              {% assign section_id = section.id %}
+              {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
+              {% assign card_product = section.settings.sigreset %}
+
+              {% comment %}
+                Additional products
+                - signature ecourse: 39959731175486
+                - welcome pack: 39964818702398
+                - signature reset skinny cleanse: 39963585118270
+
+                Add to cart URL for multiple products and selling plan
+                https://{SHOP}.myshopify.com/cart/add?
+                  items[][id]=39959731175486&
+                  items[][id]=39964818702398&
+                  items[][id]=39963585118270&
+                  items[][id]=39959712333886&
+                  items[][selling_plan]=3283288126
+              {% endcomment %}
+              <div class="w-full my-8">
+                {% if show_add_to_cart %}
+                  <a
+                    href="/cart/add?items[][id]=39959731175486&items[][id]=39964818702398&items[][id]=39963585118270&items[][id]={{ card_product.selected_or_first_available_variant.id }}&items[][selling_plan]={{ card_product.selling_plan_groups[0].selling_plans[0].id }}"
+                    class="btn button"
+                  >
+                    {{ block.settings['button-text'] }}
+                  </a>
+                {% else %}
+                  <div class="p-4 text-green-800 rounded rte bg-green-50">
+                    <p>This product is already in <a href="/cart">your cart</a></p>
+                  </div>
+                {% endif %}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Signature Reset Block",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "redirect_section_id",
+      "label": "Custom Section Id",
+      "info": "This id will be used redirect/scroll to"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "center",
+          "label": "center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "center",
+      "label": "center",
+      "info": "Desktop Content position"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "center",
+          "label": "center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "center",
+      "label": "Center"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "accent 1"
+        },
+        {
+          "value": "accent-2",
+          "label": "accent 2"
+        },
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "background-3",
+          "label": "Background 3"
+        },
+        {
+          "value": "inverse",
+          "label": "Inverse"
+        }
+      ],
+      "default": "background-1",
+      "label": "Color Label"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "Full width"
+    },
+    {
+      "type": "header",
+      "content": "Padding heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "label": "Left Padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "label": "Right Padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "product",
+      "id": "sigreset",
+      "label": "Product",
+      "info": "Add Signature Reset Product"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "default": "<p>Talk about your brand</p>",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "h2"
+            },
+            {
+              "value": "h1",
+              "label": "h1"
+            },
+            {
+              "value": "h0",
+              "label": "h0"
+            },
+            {
+              "value": "hxl",
+              "label": "hxl"
+            }
+          ],
+          "default": "h1",
+          "label": "h1"
+        }
+      ]
+    },
+    {
+      "type": "caption",
+      "name": "Caption",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "Add a tagline",
+          "label": "Tagline"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "subtitle",
+              "label": "Subtitle"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "Caption with letter spacing"
+            }
+          ],
+          "default": "caption-with-letter-spacing",
+          "label": "Caption Spacing"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "small",
+              "label": "small"
+            },
+            {
+              "value": "medium",
+              "label": "medium"
+            },
+            {
+              "value": "large",
+              "label": "large"
+            }
+          ],
+          "default": "medium",
+          "label": "Caption"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "Text Label"
+        }
+      ]
+    },
+
+    {
+      "type": "addToCart",
+      "name": "Add to Cart Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button-text",
+          "label": "Button Text",
+          "default": "  START NOW FOR $1299 "
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Signature Reset Block",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "addToCart"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
