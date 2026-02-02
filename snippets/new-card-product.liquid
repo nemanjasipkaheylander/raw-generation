@@ -896,6 +896,9 @@
             {% endunless %}
             
         </div>
+        <div class="custom-label">
+            {{ card_product.metafields.custom.custom_labele }} 
+        </div>
         {% if quick_buy == 'on_desktop' or quick_buy == 'enable' %}
                      <div class="atc-add card__extras flex--row{% if quick_buy == 'on_desktop'%} card__extras--mobile-hidden{% endif %}">
                             {% if card_product.variants.size < 2 %}
