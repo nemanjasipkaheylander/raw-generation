@@ -57,7 +57,7 @@ class QuickViewButton extends HTMLElement {
       let drawer = document.querySelector('quick-view-drawer')
 
       if (drawer) {
-        drawer.querySelector('quick-view').setAttribute('data-product-url', `${this.dataset.productVariantUrl}`)
+        drawer.querySelector('new-quick-view').setAttribute('data-product-url', `${this.dataset.productVariantUrl}`)
         drawer.querySelector('summary').click();
         document.dispatchEvent(new CustomEvent('quickview:open', {
           detail: {
