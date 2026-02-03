@@ -478,7 +478,16 @@
         </details>
       </quick-view-drawer>
     {%  endunless %}
-
+     {% if template contains 'custom-popup' %}
+     <quick-view-drawer>
+        <details>
+            <summary class="quick-view__summary" tabindex="-1"></summary>
+            <new-quick-view class="quick-view">
+                <div role="dialog" aria-modal="true" class="quick-view__content" tabindex="-1"></div>
+            </new-quick-view>
+        </details>
+      </quick-view-drawer>
+      {%  endif %}
         <script>
           window.shopUrl = '{{ request.origin }}';
           window.routes = {
