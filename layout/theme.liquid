@@ -466,6 +466,9 @@
       </overlap-header>
       <div class="overlay overlay-scheme--{{ settings.overlay_scheme_color }}" data-modal-toggle></div>
       <div class="overlay quick-view-overlay overlay-scheme--{{ settings.overlay_scheme_color }}"></div>
+
+
+    {% unless template contains 'custom-popup' %}
       <quick-view-drawer>
         <details>
             <summary class="quick-view__summary" tabindex="-1"></summary>
@@ -474,6 +477,8 @@
             </quick-view>
         </details>
       </quick-view-drawer>
+    {%  endunless %}
+
         <script>
           window.shopUrl = '{{ request.origin }}';
           window.routes = {
@@ -525,6 +530,7 @@
           }
         </script>
         <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
+        <script src="{{ 'quick-view-v2.js' | asset_url }}" defer="defer"></script>
         {% if settings.enable_quick_search %}
           <script src="{{ 'search-modal.js' | asset_url }}" defer="defer"></script>
           <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
