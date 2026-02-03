@@ -55,7 +55,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-{% if template.suffix != 'quick-view' %}<modal-window>{% endif %}
+{% if template.suffix != 'new-quick-view' %}<modal-window>{% endif %}
 <div class="popup hide-scrollbar modal open color-{{ settings.popup_color_scheme }} {% if settings.modal_enable_shadow %}modal--shadow{% endif %} popup-wrapper__quick-view wide">
   <div class="scroll-area hide-scrollbar">   
     <div class="button-wrapper">

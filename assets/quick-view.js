@@ -164,5 +164,5 @@ class QuickViewButton extends HTMLElement {
       this.closest('details').removeAttribute('open')
     }
   }
-customElements.define('quick-view', QuickView);
+customElements.define('new-quick-view', QuickView);
   
