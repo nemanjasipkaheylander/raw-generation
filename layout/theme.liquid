@@ -538,8 +538,12 @@
             unmute: `{{ 'accessibility.unmute' | t }}`
           }
         </script>
+        {% unless template contains 'custom-popup' %}
         <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
+        {% endunless %}
+        {% if template contains 'custom-popup' %}
         <script src="{{ 'quick-view-v2.js' | asset_url }}" defer="defer"></script>
+        {% endif %}
         {% if settings.enable_quick_search %}
           <script src="{{ 'search-modal.js' | asset_url }}" defer="defer"></script>
           <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
