@@ -6,6 +6,7 @@
 .l {
     max-width: 1240px;
     padding: 0 20px;
+    margin: 0 auto;
 }
 
 .custom-popup__header-wrapper {
@@ -61,7 +62,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 6px;
     flex-wrap: wrap;
 }
 .custom-popup__title span:last-of-type {
@@ -91,6 +92,7 @@
     .custom-popup__title {
         font-size: 38px;
         line-height: 130%;
+        gap: 10px;
     }
     .custom-popup__subtitle p {
         text-align: center;
