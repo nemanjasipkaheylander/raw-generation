@@ -62,8 +62,11 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
-
+.custom-popup__title span:last-of-type {
+    flex-basis: 100%;
+}
 .purple {
     color: #a200f9;
     font-weight: 700;
