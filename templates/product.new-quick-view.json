@@ -116,7 +116,7 @@
             "mobile_top_spacing": 1
           }
         },
-        "recharge_subscriptions_subscription_widget_bigdd4": {
+        "recharge_subscriptions_subscription_widget_mcPkkm": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {
             "product": "{{product}}"
@@ -177,7 +177,7 @@
         "price_YaeqyC",
         "linked_products_kAT7Wz",
         "variant_picker_TmkK4J",
-        "recharge_subscriptions_subscription_widget_bigdd4",
+        "recharge_subscriptions_subscription_widget_mcPkkm",
         "buy_buttons_wRdkjC",
         "more_details_6j8xhY",
         "complementary_products_aFtYHE"
