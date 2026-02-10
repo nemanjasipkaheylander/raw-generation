@@ -242,6 +242,7 @@ quick-view-button {
     line-height: 130%;
     text-align: center;
     color: #6C00A7;
+    margin-bottom: 16px;
 }
 
 .card-product__media-wrapper img {border-radius: 12px;}
