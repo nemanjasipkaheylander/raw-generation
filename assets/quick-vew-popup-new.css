@@ -1,0 +1,10 @@
+quick-view-drawer {
+    .product__title.section-heading {
+        color: black;
+        font-family: Jost;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 130%;
+        text-transform: uppercase;
+    }
+}
