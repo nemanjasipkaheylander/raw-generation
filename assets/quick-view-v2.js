@@ -103,7 +103,7 @@ class QuickViewButton extends HTMLElement {
       const selector = '.quick-view__content';
       const drawerContent = document.querySelector(selector);
       if(!this.closest('.collection__grid-container')) this.productUrl = this.dataset.productUrl;
-      this.sectionUrl = `${this.productUrl}&view=quick-view`;
+      this.sectionUrl = `${this.productUrl}&view=new-quick-view`;
 
       
       fetch(this.sectionUrl)
