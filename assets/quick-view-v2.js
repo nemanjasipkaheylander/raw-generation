@@ -107,9 +107,10 @@ class QuickViewButton extends HTMLElement {
           this.productUrl = this.dataset.productUrl;
         }
         
-        // Extract just the product URL without variant parameter
-        const baseUrl = this.productUrl.split('?')[0];
-        this.sectionUrl = `${baseUrl}?view=new-quick-view`;
+        // Parse the URL properly
+        const url = new URL(this.productUrl, window.location.origin);
+        url.searchParams.set('view', 'new-quick-view');
+        this.sectionUrl = url.toString().replace(window.location.origin, '');
         
         console.log('Fetching from:', this.sectionUrl);
 
