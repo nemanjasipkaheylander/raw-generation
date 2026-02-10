@@ -116,6 +116,24 @@
             "mobile_top_spacing": 1
           }
         },
+        "recharge_subscriptions_gifting_widget_EftbwM": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/gifting-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "rc_show_sender_name": true,
+            "rc_show_send_date": true,
+            "rc_gift_months_max": 24,
+            "rc_disable_add_to_cart": true,
+            "rc_gift_recipient_block_title": "Recipient information",
+            "rc_gift_sender_name_text_input": "Sender name",
+            "rc_gift_recipient_firstname_text_input": "First name",
+            "rc_gift_recipient_lastname_text_input": "Last name",
+            "rc_gift_recipient_email_text_input": "Email",
+            "rc_gift_message_text_input": "Message",
+            "rc_gift_send_date_text_input": "When should we tell the recipient about their gift?",
+            "rc_gift_name_wrapper": "{property_name}",
+            "rc_gift_form_wrapper": false
+          }
+        },
         "recharge_subscriptions_subscription_widget_bigdd4": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {
@@ -177,6 +195,7 @@
         "price_YaeqyC",
         "linked_products_kAT7Wz",
         "variant_picker_TmkK4J",
+        "recharge_subscriptions_gifting_widget_EftbwM",
         "recharge_subscriptions_subscription_widget_bigdd4",
         "buy_buttons_wRdkjC",
         "more_details_6j8xhY",
