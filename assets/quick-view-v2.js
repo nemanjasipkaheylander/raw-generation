@@ -100,19 +100,10 @@ class QuickViewButton extends HTMLElement {
     handleIntersection(entries, _observer) {
       if (!entries[0].isIntersecting) return;
 
-        const selector = '.quick-view__content';
-        const drawerContent = document.querySelector(selector);
-        
-        if(!this.closest('.collection__grid-container')) {
-          this.productUrl = this.dataset.productUrl;
-        }
-        
-        // Parse the URL properly
-        const url = new URL(this.productUrl, window.location.origin);
-        url.searchParams.set('view', 'new-quick-view');
-        this.sectionUrl = url.toString().replace(window.location.origin, '');
-        
-        console.log('Fetching from:', this.sectionUrl);
+      const selector = '.quick-view__content';
+      const drawerContent = document.querySelector(selector);
+      if(!this.closest('.collection__grid-container')) this.productUrl = this.dataset.productUrl;
+      this.sectionUrl = `${this.productUrl}&view=quick-view`;
 
       
       fetch(this.sectionUrl)
