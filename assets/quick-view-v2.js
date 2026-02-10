@@ -100,28 +100,29 @@ class QuickViewButton extends HTMLElement {
     handleIntersection(entries, _observer) {
       if (!entries[0].isIntersecting) return;
 
-      const selector = '.quick-view__content';
-      const drawerContent = document.querySelector(selector);
-      if(!this.closest('.collection__grid-container')) this.productUrl = this.dataset.productUrl;
-      this.sectionUrl = `${this.productUrl}&view=new-quick-view`;
-      
-      console.log('Fetching from:', this.sectionUrl); // DEBUG
+        const selector = '.quick-view__content';
+        const drawerContent = document.querySelector(selector);
+        
+        if(!this.closest('.collection__grid-container')) {
+          this.productUrl = this.dataset.productUrl;
+        }
+        
+        // Extract just the product URL without variant parameter
+        const baseUrl = this.productUrl.split('?')[0];
+        this.sectionUrl = `${baseUrl}?view=new-quick-view`;
+        
+        console.log('Fetching from:', this.sectionUrl);
+
       
       fetch(this.sectionUrl)
         .then(response => {
-          console.log('Response status:', response.status); // DEBUG
-          console.log('Response OK:', response.ok); // DEBUG
           return response.text();
         })
         .then(responseText => {
-          console.log('Response text length:', responseText.length); // DEBUG
-          console.log('Response first 500 chars:', responseText.substring(0, 500)); // DEBUG
           
           setTimeout(() => {
             const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
-            console.log('Parsed HTML:', responseHTML); // DEBUG
             const productElement = responseHTML.querySelector(selector);
-            console.log('Found productElement:', productElement); // DEBUG
             
             if (!productElement) {
               console.error('ERROR: Could not find .quick-view__content in response!');
