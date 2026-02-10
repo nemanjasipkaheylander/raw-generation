@@ -244,6 +244,22 @@ quick-view-button {
     color: #6C00A7;
     margin-bottom: 16px;
 }
+
+.card__badges-item.card__badges-item--sale {
+    background: #FFFFFF;
+    color: #A200F9;
+    font-family: Jost;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    border-radius: 48px;
+    padding-top: 4px;
+    padding-right: 14px;
+    padding-bottom: 4px;
+    padding-left: 14px;
+    border: 1px solid #EBEBEB;
+}
+
 .product__grid-container, .product__grid-container-wrapper {
     padding: 0 !important;
 }
