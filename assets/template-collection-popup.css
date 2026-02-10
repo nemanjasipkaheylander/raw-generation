@@ -82,10 +82,10 @@
     border: 1px solid #636161;
     background: #F4F2F5;
     width: 100%;
-    padding-top: 40px;
-    padding-right: 32px;
-    padding-bottom: 40px;
-    padding-left: 32px;
+    padding-top: 24px;
+    padding-right: 18px;
+    padding-bottom: 24px;
+    padding-left: 18px;
     border-radius: 20px;
     border-width: 1px;
     text-align: center;
@@ -102,9 +102,9 @@
 .custom-popup_quiz a {
     display: inline-block;
     padding-top: 10px;
-    padding-right: 30px;
+    padding-right: 25px;
     padding-bottom: 10px;
-    padding-left: 30x;
+    padding-left: 25px;
     border-radius: 10px;
     border-width: 1px;
     background: #A200F9;
