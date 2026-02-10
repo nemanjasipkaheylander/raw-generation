@@ -4447,6 +4447,14 @@
         }
       }
     },
+    "new-quick-view": {
+      "name": "New Quick view",
+      "blocks": {
+        "more_details": {
+          "name": "More details"
+        }
+      }
+    },
     "featured-product": {
       "name": "Featured product",
       "settings": {
