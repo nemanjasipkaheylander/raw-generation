@@ -105,12 +105,29 @@ class QuickViewButton extends HTMLElement {
       if(!this.closest('.collection__grid-container')) this.productUrl = this.dataset.productUrl;
       this.sectionUrl = `${this.productUrl}&view=new-quick-view`;
       
+      console.log('Fetching from:', this.sectionUrl); // DEBUG
+      
       fetch(this.sectionUrl)
-        .then(response => response.text())
+        .then(response => {
+          console.log('Response status:', response.status); // DEBUG
+          console.log('Response OK:', response.ok); // DEBUG
+          return response.text();
+        })
         .then(responseText => {
+          console.log('Response text length:', responseText.length); // DEBUG
+          console.log('Response first 500 chars:', responseText.substring(0, 500)); // DEBUG
+          
           setTimeout(() => {
             const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
+            console.log('Parsed HTML:', responseHTML); // DEBUG
             const productElement = responseHTML.querySelector(selector);
+            console.log('Found productElement:', productElement); // DEBUG
+            
+            if (!productElement) {
+              console.error('ERROR: Could not find .quick-view__content in response!');
+              console.log('Full response body:', responseHTML.body.innerHTML);
+            }
+            
             this.setInnerHTML(drawerContent, productElement.innerHTML);
   
             if (window.Shopify && Shopify.PaymentButton) {
