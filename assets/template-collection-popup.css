@@ -96,6 +96,8 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 130%;
+    max-width: 280px;
+    margin: 0 auto;
     margin-bottom: 16px;
 }
 
@@ -150,6 +152,7 @@
         font-size: 32px;
         line-height: 100%;
         margin-bottom: 16px;
+        max-width: 100%;
     }
     .custom-popup_quiz {
         padding-top: 40px;
