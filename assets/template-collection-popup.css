@@ -11,6 +11,10 @@
 .custom-popup__header-wrapper {
     max-width: 745px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
 }
 
 .custom-popup__subtitle {
@@ -48,6 +52,28 @@
     font-size: 13px;
 }
 
+.custom-popup__title {
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 130%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.purple {
+    color: #a200f9;
+    font-weight: 700;
+}
+
+.custom-popup__subtitle p {
+    text-align: center;
+    font-size: 16px;
+}
+
 @media (min-width: 768px) {
     .review-text-two {
         margin-left: 12px;
@@ -57,5 +83,13 @@
     .review-text-one {
         margin-right: 12px;
         font-size: 16px;
+    }
+
+    .custom-popup__title {
+        font-size: 38px;
+    }
+    .custom-popup__subtitle p {
+        text-align: center;
+        font-size: 18px;
     }
 }
