@@ -56,7 +56,7 @@
     font-family: Jost;
     font-weight: 400;
     font-size: 28px;
-    line-height: 130%;
+    line-height: 110%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -87,6 +87,7 @@
 
     .custom-popup__title {
         font-size: 38px;
+        line-height: 130%;
     }
     .custom-popup__subtitle p {
         text-align: center;
