@@ -107,17 +107,9 @@ class QuickViewButton extends HTMLElement {
 
       
       fetch(this.sectionUrl)
-        .then(responseText => {
-          console.log('Response contains "quick-view__content":', responseText.includes('quick-view__content'));
-          console.log('Response contains "popup new-popup-style":', responseText.includes('popup new-popup-style'));
-          console.log('Response HTML preview:', responseText.substring(0, 500));
-          
-          // Check for specific elements
-          const hasMediaGallery = responseText.includes('product-media-gallery');
-          const hasProductInfo = responseText.includes('product__info-wrapper');
-          console.log('Has media gallery:', hasMediaGallery);
-          console.log('Has product info:', hasProductInfo);
-        });
+        .then(response => {
+          return response.text();
+        })
         .then(responseText => {
           
           setTimeout(() => {
