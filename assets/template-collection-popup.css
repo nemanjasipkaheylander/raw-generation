@@ -244,6 +244,9 @@ quick-view-button {
     color: #6C00A7;
     margin-bottom: 16px;
 }
+.product__grid-container, .product__grid-container-wrapper {
+    padding: 0 !important;
+}
 
 .card-product__media-wrapper img {border-radius: 12px;}
 
