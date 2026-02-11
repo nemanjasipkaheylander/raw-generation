@@ -272,4 +272,24 @@
     position: relative;
     min-height: 340px;
     }
+
+    button.button-close.close-popup.icon--large {
+    background: #E6D2FF;
+    border-radius: 50%;
+    border: none;
+    width: 33px !important;
+    height: 33px !important;
+    min-width: unset;
+    min-height: unset;
+    padding: 0;
+}
+
+    button.button-close.close-popup.icon--large svg path {
+    fill: #a200f9;
+    }
+
+    button.button-close.close-popup.icon--large svg {
+    width: 16px;
+    height: 16px;
+    }
 }
