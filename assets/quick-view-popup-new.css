@@ -1,4 +1,6 @@
 .new-popup-style {
+    max-width: 940px;
+    
     .product__title.section-heading {
         color: black;
         font-family: Jost;
