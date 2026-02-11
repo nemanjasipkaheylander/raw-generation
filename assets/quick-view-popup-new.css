@@ -312,4 +312,25 @@
         .new-popup-style.popup .scroll-area {
             padding-bottom: 100px;
         }
+        .new-popup-style quantity-input.quantity.flex--row {
+            gap: 20px;
+        }
+        .new-popup-style input#Quantity-template--18115684827198__new-quick-view {
+            width: 18px;
+        }
+        .new-popup-style .product__title.section-heading {
+            font-size: 24px;
+
+        }
+        .new-popup-style .product-form__submit.solid-button {
+            max-width: 100%;
+            height: 46px;
+        }
+        .new-popup-style quantity-input.quantity.flex--row {
+            max-width: 100%;
+            height: 46px;
+        }
+        .new-popup-style .product-form__submit-wrapper {
+                flex-direction: column;
+            }
     }
