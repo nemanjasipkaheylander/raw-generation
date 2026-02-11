@@ -307,5 +307,8 @@
         .new-popup-style .flex--row.main-product.main-product--left.main-product--6.page-grid {
             gap: 0;
         }
+        .popup .scroll-area {
+            padding-bottom: 100px;
+        }
     }
 }
