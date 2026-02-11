@@ -150,7 +150,7 @@
 
     .product-form__input select {
     border: 1px solid #E0E2E4;
-    border-radius: 16px;
+    border-radius: 10px;
     min-height: 46px;
     box-shadow: 0px 2px 0px 0px #D8D8D8;
     font-family: Jost;
@@ -178,6 +178,7 @@
     .recharge-subscription-widget .rc-widget {
     border: none;
     margin-block: 20px;
+    margin-bottom: 10px;
     }
 
     .recharge-subscription-widget .rc-radio.rc-radio--active {
