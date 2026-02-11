@@ -271,6 +271,9 @@
     .product__media, .product__media-item {
     position: relative;
     min-height: 340px;
+    height: 100% !important;
+    width: 100%;
+    aspect-ratio: unset;
     }
 
     button.button-close.close-popup.icon--large {
