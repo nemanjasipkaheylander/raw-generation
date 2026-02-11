@@ -170,7 +170,7 @@
     .recharge-subscription-widget {}
 
     .recharge-subscription-widget .rc-radio-group__options {
-    gap: 12px;
+    gap: 8px;
     display: flex;
     flex-direction: column;
     }
