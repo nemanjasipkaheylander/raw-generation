@@ -333,4 +333,8 @@
         .new-popup-style .product-form__submit-wrapper {
                 flex-direction: column;
             }
+        .new-popup-style span.discount-label {
+            font-size: 13px;
+        
+        }
     }
