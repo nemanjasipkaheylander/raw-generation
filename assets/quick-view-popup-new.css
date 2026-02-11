@@ -300,5 +300,12 @@
         .popup-content {
             padding: 20px 20px !important;
     }
+            .product__media-wrapper.body-font {
+            width: 100%;
+        }
+
+        .new-popup-style .flex--row.main-product.main-product--left.main-product--6.page-grid {
+            gap: 0;
+        }
     }
 }
