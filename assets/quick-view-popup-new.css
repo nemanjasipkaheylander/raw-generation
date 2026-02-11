@@ -1,5 +1,6 @@
 .popup.wide.new-popup-style {
     max-width: 940px;
+        border-radius: 20px;
 }
 
 .new-popup-style {
