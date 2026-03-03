@@ -1,1 +1,407 @@
-{"type":"header","name":"Header","sections":{"announcement_bar_qMi3jc":{"type":"announcement-bar","blocks":{"text_dbJU6Q":{"type":"text","settings":{"desktop_text":"<h5>WINTER STORM ADVISORY - PLEASE ALLOW <strong>24-48 HOURS<\/strong> FOR TRACKING NUMBER TO UPDATE<\/h5>","mobile_text":"<h5>WINTER STORM ADVISORY - PLEASE ALLOW <strong>24-48 HOURS<\/strong> FOR TRACKING NUMBER TO UPDATE<\/h5>","icon":"","color":"#ffffff","mobile_color":"#ffffff","color_scheme":"scheme-668b6994-040f-4764-b709-5d6c2ef75a1d"}}},"block_order":["text_dbJU6Q"],"disabled":true,"settings":{"announcement_bar":"show","menu":"","dropdown_icon":"disable","dropdown_event_type":"hover","highlight_menu_item":"","text_style":"caption-font","uppercase":false,"bolder_font":false,"show_bottom_line":false,"center_text":true,"enable_autoplay":false,"autoplay_speed":10,"media_ratio":"auto","image_width":20,"image_radius":"default","enable_store_selector":false,"store_selector_icon":"glyphs\/signs\/shop","show_social_icons":false,"enable_language":false,"short_language":true,"enable_country":false,"short_country":true,"show_localization_outline":false,"show_localization_chevron":false,"show_localization_flag":false,"localization_radius":"0px","grid_style":"page","disable_max_width":false,"color_scheme":"scheme-668b6994-040f-4764-b709-5d6c2ef75a1d","spacing":4}},"replo_countdown_8ziBe4":{"type":"replo-countdown","name":"Countdown","settings":{"replo_text_ec9801bd-1056-4b52-8af1-26ed8df58745":"<p>DYS<\/p>","replo_text_99b74824-73dc-47b1-bc6c-0d32fb7bd5b0":"<p>:<\/p>","replo_text_531ebf75-0e83-4a41-8ccd-a89b792b89fd":"<p>HRS<\/p>","replo_text_f512fa85-8df8-4549-8fed-40ff18311d49":"<p>:<\/p>","replo_text_e4e0b078-00a2-4a9a-baad-4992c8f87470":"<p>MIN<\/p>","replo_text_55be3160-d3a7-4ce8-9217-f18e88a0c89d":"<p>:<\/p>","replo_text_5ee2acd2-147b-49af-b10a-cea2f575779c":"<p>SEC<\/p>"}},"header-updated":{"type":"header-updated","blocks":{"logo_UXh8R3":{"type":"logo","settings":{"logo_type":"image","image_logo":"shopify:\/\/shop_images\/Copy_of_Raw_Generation_a52b1f14-041f-488e-ac90-0365b35f576e.png","desktop_logo_width":220,"mobile_logo_width":120,"text_logo":"","logo_font":"prompt_n5","desktop_logo_font_size":20,"mobile_logo_font_size":12}}},"block_order":["logo_UXh8R3"],"custom_css":[],"settings":{"header_layout":"logo_center_menu_left","sticky_header":"always","menu":"main-menu-volume-theme","parent_menu":false,"dropdown_icon":"disable","dropdown_event_type":"hover","link_style":"caption-font","uppercase":false,"bolder_font":false,"highlight_menu_item":"","bottom_menu":"","bottom_dropdown_icon":"disable","bottom_dropdown_event_type":"hover","bottom_link_style":"body-font","bottom_uppercase":false,"bottom_bolder_font":false,"bottom_menu_alignment":"center","bottom_show_line":false,"show_burger":false,"burger_style":"icon","burger_position":"left","enable_store_selector":false,"store_selector_icon":"","show_search":true,"search_style":"icon","fill_search_background":false,"search_make_translucent":false,"show_search_outline":false,"search_field_radius":"40px","show_account":true,"account_style":"icon","cart_style":"icon","enable_language":false,"short_language":false,"enable_country":false,"short_country":false,"show_localization_outline":false,"show_localization_chevron":false,"show_localization_flag":true,"localization_radius":"0px","elements_text_style":"body-font","elements_uppercase":false,"elements_bolder_font":false,"mobile_header_layout":"logo_center_burger_left","enable_search_field":true,"grid_style":"page","disable_max_width":false,"color_scheme":"background-1","bottom_color_scheme":"background-1","hide_header_bg":false,"show_header_bg_on_hover":true,"show_bottom_line":false,"desktop_top_and_bottom_spacing":10,"mobile_top_and_bottom_spacing":8,"middle_spacing":4,"mobile_middle_spacing":2,"header_button_text":"START LOSING WEIGHT","header_button_link":"https:\/\/www.rawgeneration.com\/pages\/quiz","header_button_target":false,"header_button_bg_color":"#a200f9","header_button_text_color":"#ffffff","header_button_border_color":"#000000","header_button_border_width":0,"header_button_border_radius":5,"header_button_font_size":16,"header_button_font_weight":"600","header_button_padding_x":24,"header_button_padding_y":11,"header_button_bg_hover_color":"#b32cfc","header_button_text_hover_color":"#ffffff","header_button_border_hover_color":"#333333"}}},"order":["announcement_bar_qMi3jc","replo_countdown_8ziBe4","header-updated"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement_bar_qMi3jc": {
+      "type": "announcement-bar",
+      "blocks": {
+        "text_dbJU6Q": {
+          "type": "text",
+          "settings": {
+            "desktop_text": "<h5>WINTER STORM ADVISORY - PLEASE ALLOW <strong>24-48 HOURS</strong> FOR TRACKING NUMBER TO UPDATE</h5>",
+            "mobile_text": "<h5>WINTER STORM ADVISORY - PLEASE ALLOW <strong>24-48 HOURS</strong> FOR TRACKING NUMBER TO UPDATE</h5>",
+            "icon": "",
+            "color": "#ffffff",
+            "mobile_color": "#ffffff",
+            "color_scheme": "scheme-668b6994-040f-4764-b709-5d6c2ef75a1d"
+          }
+        }
+      },
+      "block_order": [
+        "text_dbJU6Q"
+      ],
+      "disabled": true,
+      "settings": {
+        "announcement_bar": "show",
+        "menu": "",
+        "dropdown_icon": "disable",
+        "dropdown_event_type": "hover",
+        "highlight_menu_item": "",
+        "text_style": "caption-font",
+        "uppercase": false,
+        "bolder_font": false,
+        "show_bottom_line": false,
+        "center_text": true,
+        "enable_autoplay": false,
+        "autoplay_speed": 10,
+        "media_ratio": "auto",
+        "image_width": 20,
+        "image_radius": "default",
+        "enable_store_selector": false,
+        "store_selector_icon": "glyphs/signs/shop",
+        "show_social_icons": false,
+        "enable_language": false,
+        "short_language": true,
+        "enable_country": false,
+        "short_country": true,
+        "show_localization_outline": false,
+        "show_localization_chevron": false,
+        "show_localization_flag": false,
+        "localization_radius": "0px",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "color_scheme": "scheme-668b6994-040f-4764-b709-5d6c2ef75a1d",
+        "spacing": 4
+      }
+    },
+    "replo_countdown_8ziBe4": {
+      "type": "replo-countdown",
+      "name": "Countdown",
+      "settings": {
+        "replo_text_ec9801bd-1056-4b52-8af1-26ed8df58745": "<p>DYS</p>",
+        "replo_text_99b74824-73dc-47b1-bc6c-0d32fb7bd5b0": "<p>:</p>",
+        "replo_text_531ebf75-0e83-4a41-8ccd-a89b792b89fd": "<p>HRS</p>",
+        "replo_text_f512fa85-8df8-4549-8fed-40ff18311d49": "<p>:</p>",
+        "replo_text_e4e0b078-00a2-4a9a-baad-4992c8f87470": "<p>MIN</p>",
+        "replo_text_55be3160-d3a7-4ce8-9217-f18e88a0c89d": "<p>:</p>",
+        "replo_text_5ee2acd2-147b-49af-b10a-cea2f575779c": "<p>SEC</p>"
+      }
+    },
+    "header-updated": {
+      "type": "header-updated",
+      "blocks": {
+        "logo_UXh8R3": {
+          "type": "logo",
+          "settings": {
+            "logo_type": "image",
+            "image_logo": "shopify://shop_images/Copy_of_Raw_Generation_a52b1f14-041f-488e-ac90-0365b35f576e.png",
+            "desktop_logo_width": 220,
+            "mobile_logo_width": 120,
+            "text_logo": "",
+            "logo_font": "prompt_n5",
+            "desktop_logo_font_size": 20,
+            "mobile_logo_font_size": 12
+          }
+        }
+      },
+      "block_order": [
+        "logo_UXh8R3"
+      ],
+      "custom_css": [],
+      "settings": {
+        "header_layout": "logo_left_menu_center",
+        "sticky_header": "always",
+        "menu": "new-mega-menu",
+        "parent_menu": false,
+        "dropdown_icon": "disable",
+        "dropdown_event_type": "hover",
+        "link_style": "caption-font",
+        "uppercase": false,
+        "bolder_font": false,
+        "highlight_menu_item": "",
+        "bottom_menu": "",
+        "bottom_dropdown_icon": "disable",
+        "bottom_dropdown_event_type": "hover",
+        "bottom_link_style": "body-font",
+        "bottom_uppercase": false,
+        "bottom_bolder_font": false,
+        "bottom_menu_alignment": "center",
+        "bottom_show_line": false,
+        "show_burger": false,
+        "burger_style": "icon",
+        "burger_position": "left",
+        "enable_store_selector": false,
+        "store_selector_icon": "",
+        "show_search": true,
+        "search_style": "icon",
+        "fill_search_background": false,
+        "search_make_translucent": false,
+        "show_search_outline": false,
+        "search_field_radius": "40px",
+        "show_account": true,
+        "account_style": "icon",
+        "cart_style": "icon",
+        "enable_language": false,
+        "short_language": false,
+        "enable_country": false,
+        "short_country": false,
+        "show_localization_outline": false,
+        "show_localization_chevron": false,
+        "show_localization_flag": true,
+        "localization_radius": "0px",
+        "elements_text_style": "body-font",
+        "elements_uppercase": false,
+        "elements_bolder_font": false,
+        "mobile_header_layout": "logo_center_burger_left",
+        "enable_search_field": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "color_scheme": "background-1",
+        "bottom_color_scheme": "background-1",
+        "hide_header_bg": false,
+        "show_header_bg_on_hover": true,
+        "show_bottom_line": false,
+        "desktop_top_and_bottom_spacing": 10,
+        "mobile_top_and_bottom_spacing": 8,
+        "middle_spacing": 4,
+        "mobile_middle_spacing": 2,
+        "header_button_text": "Find Your Plan",
+        "header_button_link": "https://www.rawgeneration.com/pages/quiz",
+        "header_button_target": false,
+        "header_button_bg_color": "#a200f9",
+        "header_button_text_color": "#ffffff",
+        "header_button_border_color": "#000000",
+        "header_button_border_width": 0,
+        "header_button_border_radius": 5,
+        "header_button_font_size": 16,
+        "header_button_font_weight": "600",
+        "header_button_padding_x": 24,
+        "header_button_padding_y": 11,
+        "header_button_bg_hover_color": "#b32cfc",
+        "header_button_text_hover_color": "#ffffff",
+        "header_button_border_hover_color": "#333333"
+      }
+    },
+    "mega_menu_one_yKwezG": {
+      "type": "mega-menu-one",
+      "blocks": {
+        "product_XzmKPA": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "best-juice-cleanse-for-weight-loss",
+            "mmo_label_text": "Bestseller",
+            "mmo_label_color": "#16a249",
+            "mmo_product_title": "Skinny Cleanse",
+            "mmo_product_subtitle": "Weight management",
+            "mmo_image": "shopify://shop_images/2025Website-Main-SC-SM-Bundle-V5.jpg"
+          }
+        },
+        "product_7zFxbE": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "protein-juice-cleanse",
+            "mmo_label_text": "Active",
+            "mmo_label_color": "#f43b85",
+            "mmo_product_title": "Protein Cleanse",
+            "mmo_product_subtitle": "Workout support",
+            "mmo_image": "shopify://shop_images/2025Website-Main-SC-SM-Bundle-V5.jpg"
+          }
+        },
+        "product_4chdFL": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "deep-detox-cleanse",
+            "mmo_label_text": "Intesive",
+            "mmo_label_color": "#9e02f7",
+            "mmo_product_title": "Deep Detox",
+            "mmo_product_subtitle": "Nutritional reset",
+            "mmo_image": "shopify://shop_images/2025Website-Main-SC-SM-Bundle-V5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "product_XzmKPA",
+        "product_7zFxbE",
+        "product_4chdFL"
+      ],
+      "name": "Mega menu first link",
+      "settings": {
+        "section_target": "",
+        "bg_color": "",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "padding_top_desk": "",
+        "padding_bottom_desk": "",
+        "column_title_one": "Most popular cleanses",
+        "column_title_two": "Shop by duration",
+        "column_two_links": "product-menu",
+        "column_title_third": "Build Your Own",
+        "column_third_image": "shopify://shop_images/WebBanner-Sale-1225-1-1.jpg",
+        "column_title_third_title": "Build Your Own Box",
+        "column_title_third_subtitle": "Create your custom assortmnet",
+        "column_title_third_button_text": "Start Building",
+        "column_title_third_button_url": "#"
+      }
+    },
+    "mega_menu_two_jrbXrQ": {
+      "type": "mega-menu-two",
+      "blocks": {
+        "product_NndfVm": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "apple-celery-lower-sugar",
+            "mmo_label_text": "Best Value",
+            "mmo_label_color": "#16a249",
+            "mmo_product_title": "Skinny Cleanse & Method Bundle",
+            "mmo_product_subtitle": "Weight support method & comprehensive nutritionist-developed lifestyle guides",
+            "mmo_image": "shopify://shop_images/PDP2026-SkinnyMethod_-Main_e95e7e23-da19-4a50-9a9e-547cd7cfa6b5.jpg"
+          }
+        },
+        "product_hRUqNp": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "apple-celery-lower-sugar",
+            "mmo_label_text": "Best Value",
+            "mmo_label_color": "#16a249",
+            "mmo_product_title": "Skinny Cleanse & Method Bundle",
+            "mmo_product_subtitle": "Weight support method & comprehensive nutritionist-developed lifestyle guides",
+            "mmo_image": "shopify://shop_images/PDP2026-SkinnyMethod_-Main_e95e7e23-da19-4a50-9a9e-547cd7cfa6b5.jpg"
+          }
+        },
+        "product_bKN3V6": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "apple-celery-lower-sugar",
+            "mmo_label_text": "Best Value",
+            "mmo_label_color": "#16a249",
+            "mmo_product_title": "Skinny Cleanse & Method Bundle",
+            "mmo_product_subtitle": "Weight support method & comprehensive nutritionist-developed lifestyle guides",
+            "mmo_image": "shopify://shop_images/PDP2026-SkinnyMethod_-Main_e95e7e23-da19-4a50-9a9e-547cd7cfa6b5.jpg"
+          }
+        },
+        "product_TrMjhb": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "apple-celery-lower-sugar",
+            "mmo_label_text": "Best Value",
+            "mmo_label_color": "#16a249",
+            "mmo_product_title": "Skinny Cleanse & Method Bundle",
+            "mmo_product_subtitle": "Weight support method & comprehensive nutritionist-developed lifestyle guides",
+            "mmo_image": "shopify://shop_images/PDP2026-SkinnyMethod_-Main_e95e7e23-da19-4a50-9a9e-547cd7cfa6b5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "product_NndfVm",
+        "product_hRUqNp",
+        "product_bKN3V6",
+        "product_TrMjhb"
+      ],
+      "name": "Mega menu second link",
+      "settings": {
+        "section_target": "",
+        "bg_color": "",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "padding_top_desk": "",
+        "padding_bottom_desk": "",
+        "column_third_image": "shopify://shop_images/LisaHeadshot.png",
+        "column_title_third_title": "Lisa Testa, M.S.",
+        "column_title_third_subtitle": "Subscribe for 10% off + free shipping, monthly virtual consultations with our Chief Nutrition Officer, and access to a private community for ongoing wellness support."
+      }
+    },
+    "mega_menu_three_7rMQgD": {
+      "type": "mega-menu-three",
+      "name": "Mega menu third link",
+      "settings": {
+        "section_target": "",
+        "bg_color": "",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "padding_top_desk": "",
+        "padding_bottom_desk": "",
+        "column_title_one": "SHOP BY TYPE",
+        "column_one_links": "footer-menu-1",
+        "column_title_two": "SHOP BY GOAL",
+        "column_two_links": "mobile-menu",
+        "column_title_third": "BUILD YOUR OWN",
+        "column_third_image": "shopify://shop_images/WebBanner-Sale-1225-1-1.jpg",
+        "column_title_third_title": "Build Your Own Box",
+        "column_title_third_subtitle": "Create your custom assortment",
+        "column_title_third_button_text": "Start Building",
+        "column_title_third_button_url": "shopify://collections/get-healthy",
+        "column_fourth_image": "shopify://shop_images/PDP_2026_-_Celery_Juice_-_7.png"
+      }
+    },
+    "mega_menu_four_GrgLqr": {
+      "type": "mega-menu-four",
+      "blocks": {
+        "product_R4gxw3": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "#",
+            "mmo_label_text": "how to",
+            "mmo_label_color": "#a200f9",
+            "mmo_product_title": "Instructions & Guides",
+            "mmo_product_subtitle": "Step-by-step cleanse tips",
+            "mmo_image": "shopify://shop_images/PDP_2026_-_Celery_Juice_-_7.png"
+          }
+        },
+        "product_WVBbyE": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "#",
+            "mmo_label_text": "how to",
+            "mmo_label_color": "#a200f9",
+            "mmo_product_title": "Instructions & Guides",
+            "mmo_product_subtitle": "Step-by-step cleanse tips",
+            "mmo_image": "shopify://shop_images/PDP_2026_-_Celery_Juice_-_7.png"
+          }
+        },
+        "product_wGnKp7": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "#",
+            "mmo_label_text": "how to",
+            "mmo_label_color": "#a200f9",
+            "mmo_product_title": "Instructions & Guides",
+            "mmo_product_subtitle": "Step-by-step cleanse tips",
+            "mmo_image": "shopify://shop_images/PDP_2026_-_Celery_Juice_-_7.png"
+          }
+        },
+        "product_4BD7p8": {
+          "type": "product",
+          "settings": {
+            "mmo_product": "#",
+            "mmo_label_text": "how to",
+            "mmo_label_color": "#a200f9",
+            "mmo_product_title": "Instructions & Guides",
+            "mmo_product_subtitle": "Step-by-step cleanse tips",
+            "mmo_image": "shopify://shop_images/PDP_2026_-_Celery_Juice_-_7.png"
+          }
+        }
+      },
+      "block_order": [
+        "product_R4gxw3",
+        "product_WVBbyE",
+        "product_wGnKp7",
+        "product_4BD7p8"
+      ],
+      "name": "Mega menu Fourth link",
+      "settings": {
+        "section_target": "",
+        "bg_color": "",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "padding_top_desk": "",
+        "padding_bottom_desk": ""
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_qMi3jc",
+    "replo_countdown_8ziBe4",
+    "header-updated",
+    "mega_menu_one_yKwezG",
+    "mega_menu_two_jrbXrQ",
+    "mega_menu_three_7rMQgD",
+    "mega_menu_four_GrgLqr"
+  ]
+}

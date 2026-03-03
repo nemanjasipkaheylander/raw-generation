@@ -1,0 +1,238 @@
+
+
+
+{{ '' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign section_target = section.settings.section_target
+  assign bg_color = section.settings.bg_color
+  assign bg_gradient_1 = section.settings.bg_gradient_1
+  assign bg_gradient_2 = section.settings.bg_gradient_2
+  assign padding_top = section.settings.padding_top
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_top_desk = section.settings.padding_top_desk
+  assign padding_bottom_desk = section.settings.padding_bottom_desk
+%}
+
+{% style %}
+  .{{ section.id }} {
+    position: relative;
+    background-color: {{ bg_color }};
+    background-image: linear-gradient(to bottom, {{ bg_gradient_1 }} 0%, {{ bg_gradient_2 }} 100%);
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+  }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ padding_top_desk }}px;
+      padding-bottom: {{ padding_bottom_desk }}px;
+    }
+  }
+{% endstyle %}
+
+<section class="{{ section.id }} mega-menu-one" id="{{ section_target }}">
+   <div class="l">
+      {% if section.blocks.size > 0 %}
+         <div class="mega-menu-one__container-one">
+           {% for block in section.blocks %}
+              <div class="mega-menu-one__product-card">
+                  <div class="mega-menu-one__column_title">{{ section.settings.column_title_one }}</div>
+                  <div class="mega-menu-one__product-label" style="background-color: {{ block.settings.mmo_label_color }};">{{ block.settings.mmo_label_text}}</div>
+                  <a href="{{ block.settings.mmo_product.url }}" title="{{block.settings.mmo_product.title}}">
+                  <figure class="mega-menu-one__product-image">
+                     {{ block.settings.mmo_image | image_url: width: 320 | image_tag: class: 'meganav__gallery__img', loading: 'lazy' }}
+                  </figure>
+                  <h2 class="mega-menu-one__product-title">{{ block.settings.mmo_product_title}}</h2>
+                  <p class="mega-menu-one__product-subtitle">{{ block.settings.mmo_product_subtitle}}</p>
+                  </a>
+              </div>
+             
+           {% endfor %}
+          
+           </div> 
+      {% endif %}
+           <div class="mega-menu-one__container-two">
+             <div class="mega-menu-one__column_title">{{ section.settings.column_title_two }}</div>
+             {% if section.settings.column_two_links != blank %}
+              {% assign menu_handle = section.settings.column_two_links %}
+              {% assign menu = linklists[menu_handle] %}
+
+              {% if menu.links.size > 0 %}
+                <ul class="mega-menu-one__custom-menu">
+                  {% for link in menu.links %}
+                    <li class="mega-menu-one__custom-menu-item">
+                      <a href="{{ link.url }}" class="mega-menu-one__custom-menu-link">
+                        {{ link.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endif %}
+          </div>
+          <div class="mega-menu-one__container-three">
+            <div class="mega-menu-one__column_title">{{ section.settings.column_title_third }}</div>
+            <div class="mega-menu-one__container-box">
+            <figure class="mega-menu-one__image">
+                     {{ section.settings.column_third_image | image_url: width: 320 | image_tag: class: 'meganav__img', loading: 'lazy' }}
+            </figure>
+            <h2 class="mega-menu-one__container-title">{{ section.settings.column_title_third_title }}</h2>
+            <p class="mega-menu-one__container-subtitle">{{ section.settings.column_title_third_subtitle }}</p>
+             <a href="{{ section.settings.column_title_third_button_url }}" title="{{ section.settings.column_title_third_button_text }}">{{ section.settings.column_title_third_button_text }}</a>
+            </div>
+          </div>
+   </div>
+</section>
+
+{% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
+
+{% schema %}
+  {
+    "name": "Mega menu first link",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "text",
+        "id": "section_target",
+        "label": "Section Target"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Section background color"
+      },
+      {
+        "type": "color",
+        "id": "bg_gradient_1",
+        "label": "Section gradient color first"
+      }, {
+        "type": "color",
+        "id": "bg_gradient_2",
+        "label": "Section gradient color second"
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Section padding top - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Section padding bottom - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_top_desk",
+        "label": "Section padding top - large screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom_desk",
+        "label": "Section padding bottom - large screens"
+      },
+      {
+        "type": "header",
+        "content": "mega menu first column"
+      },
+      {
+        "type": "text",
+        "id": "column_title_one",
+        "label": "Enter first column title"
+      },
+       {
+        "type": "header",
+        "content": "mega menu second column"
+      },
+      {
+        "type": "text",
+        "id": "column_title_two",
+        "label": "Enter second column title"
+      },
+      {
+        "type": "link_list",
+        "id": "column_two_links",
+        "label": "Choose menu"
+      },
+      {
+        "type": "header",
+        "content": "mega menu third column"
+      },
+      {
+        "type": "text",
+        "id": "column_title_third",
+        "label": "Enter Third column title"
+      },
+      {
+        "type": "image_picker",
+        "id": "column_third_image",
+        "label": "Upload image"
+      },
+      {
+        "type": "text",
+        "id": "column_title_third_title",
+        "label": "Enter box title"
+      },
+      {
+        "type": "text",
+        "id": "column_title_third_subtitle",
+        "label": "Enter box subtitle"
+      },
+      {
+        "type": "text",
+        "id": "column_title_third_button_text",
+        "label": "Enter button text"
+      },
+      {
+        "type": "url",
+        "id": "column_title_third_button_url",
+        "label": "Enter button text"
+      }
+
+    ],
+    "blocks": [
+        {
+            "name": "Product",
+            "type": "product",
+            "settings": [
+                       {
+                        "type": "product",
+                        "id": "mmo_product",
+                        "label": "Chose product"
+                       },
+                       {
+                        "type": "text",
+                        "id": "mmo_label_text",
+                        "label": "Enter  text"
+                        },
+                        {
+                        "type": "color",
+                        "id": "mmo_label_color",
+                        "label": "Chose color"
+                        },
+                        {
+                        "type": "text",
+                        "id": "mmo_product_title",
+                        "label": "Enter text"
+                        },
+                        {
+                        "type": "text",
+                        "id": "mmo_product_subtitle",
+                        "label": "Enter text"
+                        },
+                        {
+                        "type": "image_picker",
+                        "id": "mmo_image",
+                        "label": "Upload iamge"
+                        }
+
+
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Mega menu first link"
+      }
+    ]
+  }
+{% endschema %}
