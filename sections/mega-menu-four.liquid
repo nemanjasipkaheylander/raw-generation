@@ -42,8 +42,10 @@
                   <figure class="mega-menu-four__product-image">
                      {{ block.settings.mmo_image | image_url: width: 320 | image_tag: class: 'meganav__gallery__img', loading: 'lazy' }}
                   </figure>
-                  <h2 class="mega-menu-four__product-title">{{ block.settings.mmo_product_title}}</h2>
-                  <p class="mega-menu-four__product-subtitle">{{ block.settings.mmo_product_subtitle}}</p>
+                  <div class="mega-menu-four__content">
+                    <h2 class="mega-menu-four__product-title">{{ block.settings.mmo_product_title}}</h2>
+                    <p class="mega-menu-four__product-subtitle">{{ block.settings.mmo_product_subtitle}}</p>
+                  </div>
                   </a>
               </div>
              
