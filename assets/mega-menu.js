@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
         '#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr'  // for 5th item (index 4)
     ];
     
-    // Variable to track if any menu is open
+    // Variables to track state
     let isAnyMenuOpen = false;
+    let lastScrollTop = 0;
+    let scrollTimeout;
     
     // Function to close all menus
     function closeAllMenus() {
@@ -25,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to open specific menu
     function openMenu(menuSelector) {
+        // Close any open menus first
+        closeAllMenus();
+        
         const menu = document.querySelector(menuSelector);
         if (menu) {
             // Apply transition
@@ -38,16 +43,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Function to handle scroll start
-    function handleScrollStart() {
-        if (isAnyMenuOpen) {
-            closeAllMenus();
-            console.log('Scrolling started - menus closed');
+    // Function to handle scroll
+    function handleScroll() {
+        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Clear any pending timeout
+        clearTimeout(scrollTimeout);
+        
+        // Check if actually scrolling (not just the event firing)
+        if (currentScrollTop !== lastScrollTop) {
+            // User is actively scrolling
+            if (isAnyMenuOpen) {
+                closeAllMenus();
+                console.log('Scrolling - menus closed');
+            }
+            
+            // Update last scroll position
+            lastScrollTop = currentScrollTop;
+            
+            // Set timeout to detect when scrolling stops
+            scrollTimeout = setTimeout(function() {
+                // Scrolling has stopped, but we don't reopen menus automatically
+                console.log('Scrolling stopped - ready for new clicks');
+                // Do NOT reopen menus here
+            }, 150);
         }
     }
     
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScrollStart, { passive: true });
+    // Add scroll event listener with throttle for better performance
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
     
     // Add click handlers to menu items
     menuItems.forEach((item, index) => {
@@ -73,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Optional: Close menus when clicking outside
+    // Close menus when clicking outside
     document.addEventListener('click', function(event) {
         const isMenuItem = event.target.closest('.menu__item');
         const isMenuSection = event.target.closest('[id^="shopify-section-sections--18072930287678__mega_menu"]');
@@ -83,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Optional: Close menus on escape key
+    // Close menus on escape key
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && isAnyMenuOpen) {
             closeAllMenus();
