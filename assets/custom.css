@@ -200,26 +200,16 @@ ul.menu-level-2 li {
     display: none !important;
 }
 
-#shopify-section-sections--18072930287678__mega_menu_one_yKwezG {
+#shopify-section-sections--18072930287678__mega_menu_one_yKwezG,
+#shopify-section-sections--18072930287678__mega_menu_two_jrbXrQ,
+#shopify-section-sections--18072930287678__mega_menu_three_7rMQgD,
+#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr
+ {
     opacity: 0;
     visibility: hidden;
     display: none;
-}
-
-#shopify-section-sections--18072930287678__mega_menu_two_jrbXrQ {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-}
-
-#shopify-section-sections--18072930287678__mega_menu_three_7rMQgD {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-}
-
-#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 140px;
 }
