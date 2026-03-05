@@ -1,8 +1,8 @@
-.mega-menu-three__container-three {
+.mega-menu-third__container-three {
     max-width: 570px;
     width: 100%;
 }
-.mega-menu-three__column_title {
+.mega-menu-third__column_title {
     font-family: Jost;
     font-weight: 600;
     font-size: 14px;
@@ -12,11 +12,11 @@
     text-align: left;
     margin-bottom: 20px;
 }
-.mega-menu-three__container-box {
+.mega-menu-third__container-box {
     position: relative;
     width: 100%;
 }
-.mega-menu-three__content-box {
+.mega-menu-third__content-box {
     position: absolute;
     left: 20px;
     bottom: 20px;
