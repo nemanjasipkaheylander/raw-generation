@@ -439,7 +439,47 @@
                                 {%- assign lazy_load = 'lazy' -%}
                               {%- endif -%}
                               <li class="grid-item">
-                                {% render 'new-card-product',
+                                {% if product.metafields.custom.no_popup == true %}
+                                      {% render 'snippet-card-debil' 
+                                      card_product: product,
+                                       show_vendor: section.settings.show_vendor,
+                                  show_title: section.settings.show_title,
+                                  hover_behavior: section.settings.hover_behavior,
+                                  force_hover_behavior_none: force_hover_behavior_none,
+                                  quick_buy: section.settings.quick_buy,
+                                  price_position: section.settings.price_position,
+                                  options_position: section.settings.options_position,
+                                  desktop_options: section.settings.desktop_options,
+                                  mobile_options: section.settings.mobile_options,
+                                  max_product_name_characters: section.settings.max_product_name_characters,
+                                  show_short_description: section.settings.show_short_description,
+                                  show_rating: section.settings.show_rating,
+                                  lazy_load: lazy_load,
+                                  max_width: max_width,
+                                  disable_max_width: disable_max_width,
+                                  accent_price: accent_price,
+                                  desktop_columns: section.settings.desktop_columns,
+                                  mobile_columns: section.settings.mobile_columns,
+                                  autoplay_speed: section.settings.autoplay_speed,
+                                  product_card_color_scheme: section.settings.product_card_color_scheme,
+                                  show_product_card_border: section.settings.show_product_card_border,
+                                  index: forloop.index,
+                                  complementary_block: false,
+                                  card_content_style: section.settings.card_content_style,
+                                  compare_at_price_color: compare_at_price_color,
+                                  use_accent_color_for_price: use_accent_color_for_price,
+                                  parent_color_scheme: section.settings.color_scheme,
+                                  full_width: full_width,
+                                  selector_container: selector_container,
+                                  show_bullets: section.settings.show_bullets,
+                                  grid_type: 'grid',
+                                  is_in_main_collection_product_grid: true,
+                                  show_pickup_availability: section.settings.show_pickup_availability
+
+                                      %}
+                                          
+                                      {% else %}
+                                         {% render 'new-card-product',
                                   card_product: product,
                                   show_vendor: section.settings.show_vendor,
                                   show_title: section.settings.show_title,
@@ -475,6 +515,8 @@
                                   is_in_main_collection_product_grid: true,
                                   show_pickup_availability: section.settings.show_pickup_availability
                                 %}
+                                {% endif %}
+                               
                               </li>
                             {%- endfor -%}
                           </ul>
