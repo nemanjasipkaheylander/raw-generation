@@ -1,6 +1,6 @@
 .l.menu-wrapper {
     display: flex;
-    padding: 0 24px;
+    padding: 20px 24px;
     gap: 40px;
     justify-content: space-between;
     max-width: 1392px;
