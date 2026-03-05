@@ -22,3 +22,31 @@
     color: #fff;
     padding: 4px 12px;
 }
+.mega-menu-four__content {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+h2.mega-menu-four__product-title {
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: white;
+}
+
+p.mega-menu-four__product-subtitle {
+    font-family: Jost;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: -1%;
+    color: white;
+}
+
+.mega-menu-four__product-card a {
+    border-radius: 15px;
+}
