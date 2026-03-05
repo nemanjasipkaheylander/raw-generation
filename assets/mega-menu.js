@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         '#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr'  // for 5th item (index 4)
     ];
     
-    // Variable to track scroll timeout
-    let scrollTimeout;
+    // Variable to track if any menu is open
+    let isAnyMenuOpen = false;
     
     // Function to close all menus
     function closeAllMenus() {
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.style.visibility = 'hidden';
             menu.style.display = 'none';
         });
+        isAnyMenuOpen = false;
     }
     
     // Function to open specific menu
@@ -33,30 +34,20 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.offsetHeight;
             menu.style.opacity = '1';
             menu.style.visibility = 'visible';
+            isAnyMenuOpen = true;
         }
     }
     
-    // Function to handle scroll events
-    function handleScroll() {
-        // Clear previous timeout
-        clearTimeout(scrollTimeout);
-        
-        // Close menus immediately when scrolling starts
-        closeAllMenus();
-        
-        // Optional: Set a timeout to reopen menus if scrolling stops
-        // Uncomment if you want this behavior
-        
-        scrollTimeout = setTimeout(function() {
-            // You could add logic here to reopen the last opened menu
-            // if scrolling stops and menu was previously open
-            console.log('Scrolling stopped');
-        }, 150);
-        
+    // Function to handle scroll start
+    function handleScrollStart() {
+        if (isAnyMenuOpen) {
+            closeAllMenus();
+            console.log('Scrolling started - menus closed');
+        }
     }
     
-    // Add scroll event listener with passive option for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScrollStart, { passive: true });
     
     // Add click handlers to menu items
     menuItems.forEach((item, index) => {
@@ -64,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // First 3 items (indices 0,1,2) and 5th item (index 4) open menus
             if (index < 3 || index === 4) {
                 event.preventDefault(); // Prevent default link behavior
-                closeAllMenus();
                 
                 // Map index to appropriate menu section
                 if (index < 3) {
@@ -88,30 +78,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const isMenuItem = event.target.closest('.menu__item');
         const isMenuSection = event.target.closest('[id^="shopify-section-sections--18072930287678__mega_menu"]');
         
-        if (!isMenuItem && !isMenuSection) {
+        if (!isMenuItem && !isMenuSection && isAnyMenuOpen) {
             closeAllMenus();
         }
     });
     
     // Optional: Close menus on escape key
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
+        if (event.key === 'Escape' && isAnyMenuOpen) {
             closeAllMenus();
         }
     });
-    
-    // Optional: Throttled scroll version for better performance
-    // Uncomment this version and comment out the simple handleScroll above if you want throttling
-    /*
-    let isScrolling = false;
-    window.addEventListener('scroll', function() {
-        if (!isScrolling) {
-            window.requestAnimationFrame(function() {
-                closeAllMenus();
-                isScrolling = false;
-            });
-            isScrolling = true;
-        }
-    }, { passive: true });
-    */
 });
