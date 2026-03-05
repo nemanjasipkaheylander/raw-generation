@@ -15,9 +15,11 @@
 
 .mega-menu-one__container-two {
     max-width: 210px;
+    width: 100%;
 }
 .mega-menu-one__container-three {
     max-width: 570px;
+    width: 100%;
 }
 .mega-menu-one__product-card {
     max-width: 160px;
