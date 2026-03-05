@@ -22,6 +22,9 @@
 .mega-menu-one__product-card {
     max-width: 160px;
     width: 100%;
+    position: relative;
+    padding: 10px;
+    border-radius: 15px;
 }
 .mega-menu-one__column_title {
     font-family: Jost;
@@ -114,4 +117,32 @@
 .mega-menu-one__image img {
     width: auto;
     height: auto;
+}
+.mega-menu-one__content-box {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+h2.mega-menu-one__container-title {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Jost';
+    color: #000;
+}
+
+p.mega-menu-one__container-subtitle {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.mega-menu-one__content-box a {
+    margin-top: 20px;
+    display: inline-block;
+    background: #A200F9;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
 }
