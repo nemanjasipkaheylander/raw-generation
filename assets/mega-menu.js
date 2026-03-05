@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
         '#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr'  // for 5th item (index 4)
     ];
     
+    // Variable to track scroll timeout
+    let scrollTimeout;
+    
     // Function to close all menus
     function closeAllMenus() {
         document.querySelectorAll('[id^="shopify-section-sections--18072930287678__mega_menu"]').forEach(menu => {
@@ -32,6 +35,28 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.style.visibility = 'visible';
         }
     }
+    
+    // Function to handle scroll events
+    function handleScroll() {
+        // Clear previous timeout
+        clearTimeout(scrollTimeout);
+        
+        // Close menus immediately when scrolling starts
+        closeAllMenus();
+        
+        // Optional: Set a timeout to reopen menus if scrolling stops
+        // Uncomment if you want this behavior
+        /*
+        scrollTimeout = setTimeout(function() {
+            // You could add logic here to reopen the last opened menu
+            // if scrolling stops and menu was previously open
+            console.log('Scrolling stopped');
+        }, 150);
+        */
+    }
+    
+    // Add scroll event listener with passive option for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     // Add click handlers to menu items
     menuItems.forEach((item, index) => {
@@ -74,4 +99,19 @@ document.addEventListener('DOMContentLoaded', function() {
             closeAllMenus();
         }
     });
+    
+    // Optional: Throttled scroll version for better performance
+    // Uncomment this version and comment out the simple handleScroll above if you want throttling
+    /*
+    let isScrolling = false;
+    window.addEventListener('scroll', function() {
+        if (!isScrolling) {
+            window.requestAnimationFrame(function() {
+                closeAllMenus();
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    }, { passive: true });
+    */
 });
