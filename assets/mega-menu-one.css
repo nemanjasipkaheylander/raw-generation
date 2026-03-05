@@ -1,0 +1,35 @@
+.l.menu-wrapper {
+    display: flex;
+    padding: 0 24px;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 1392px;
+    margin: 0 auto;
+}
+
+.mega-menu-one__container-one {
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.mega-menu-one__container-two {
+    max-width: 210px;
+}
+.mega-menu-one__container-three {
+    max-width: 570px;
+}
+.mega-menu-one__product-card {
+    max-width: 160px;
+    width: 100%;
+}
+.mega-menu-one__column_title {
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #A200F9;
+    text-align: left;
+    margin-bottom: 20px;
+}
