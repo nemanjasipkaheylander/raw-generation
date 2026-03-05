@@ -50,3 +50,6 @@ p.mega-menu-four__product-subtitle {
 .mega-menu-four__product-card a {
     border-radius: 15px;
 }
+figure.mega-menu-four__product-image img {
+    border-radius: 15px;
+}
