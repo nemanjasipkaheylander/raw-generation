@@ -73,6 +73,7 @@ figure.mega-menu-third__image-cont img {
 }
 
 figure.mega-menu-third__image {
+    max-height: 230px;
     height: 100%;
 }
 
