@@ -208,8 +208,8 @@ ul.menu-level-2 li {
     opacity: 0;
     visibility: hidden;
     display: none;
-    position: sticky;
+    position: absolute;
     left: 0;
     right: 0;
-    top: 60px;
+    top: 140px;
 }
