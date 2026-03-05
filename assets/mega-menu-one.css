@@ -33,3 +33,85 @@
     text-align: left;
     margin-bottom: 20px;
 }
+.mega-menu-one__product-title {
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    text-transform: capitalize;
+    color: #000;
+    margin-bottom: 3px;
+    margin-top: 10px;
+}
+
+.mega-menu-one__product-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    border-radius: 100px;
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    text-align: center;
+    color: white;
+    padding: 4px 12px;
+}
+
+.mega-menu-one__product-subtitle {
+    font-family: Jost;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0%;
+}
+
+.mega-menu-one__custom-menu-item {
+    background: #A200F91A;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.mega-menu-one__custom-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mega-menu-one__custom-menu-item a {
+    color: #000;
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: inline-block;
+    width: 100%;
+    padding: 7px 20px;
+}
+
+.mega-menu-one__container-one {
+    max-width: 500px;
+    width: 100%;
+}
+
+.mega-menu-one__custom-menu-item a:hover {
+    font-family: Jost;
+    font-weight: 500;
+    font-size: 16px;
+    color: #A200F9;
+}
+
+.mega-menu-one__custom-menu-item:hover {
+    border-color: #A200F9;
+}
+
+.mega-menu-one__container-box {
+    position: relative;
+    width: 100%;
+}
+
+.mega-menu-one__image img {
+    width: auto;
+    height: auto;
+}
