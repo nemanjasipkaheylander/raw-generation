@@ -216,7 +216,7 @@
       "name": "Mega menu first link",
       "settings": {
         "section_target": "",
-        "bg_color": "",
+        "bg_color": "#FFFFFF",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
         "padding_top": "",
@@ -291,7 +291,7 @@
       "name": "Mega menu second link",
       "settings": {
         "section_target": "",
-        "bg_color": "",
+        "bg_color": "#FFFFFF",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
         "padding_top": "",
@@ -308,7 +308,7 @@
       "name": "Mega menu third link",
       "settings": {
         "section_target": "",
-        "bg_color": "",
+        "bg_color": "#FFFFFF",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
         "padding_top": "",
