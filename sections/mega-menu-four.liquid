@@ -30,20 +30,20 @@
   }
 {% endstyle %}
 
-<section class="{{ section.id }} mega-menu-one" id="{{ section_target }}">
+<section class="{{ section.id }} mega-menu-four" id="{{ section_target }}">
    <div class="l menu-wrapper">
       {% if section.blocks.size > 0 %}
-         <div class="mega-menu-one__container-one">
+         <div class="mega-menu-four__container-one">
            {% for block in section.blocks %}
-              <div class="mega-menu-one__product-card">
-                  <div class="mega-menu-one__column_title">{{ section.settings.column_title_one }}</div>
-                  <div class="mega-menu-one__product-label" style="background-color: {{ block.settings.mmo_label_color }};">{{ block.settings.mmo_label_text}}</div>
+              <div class="mega-menu-four__product-card">
+                  <div class="mega-menu-four__column_title">{{ section.settings.column_title_one }}</div>
+                  <div class="mega-menu-four__product-label" style="background-color: {{ block.settings.mmo_label_color }};">{{ block.settings.mmo_label_text}}</div>
                   <a href="{{ block.settings.mmo_product }}" title="{{block.settings.mmo_product_title}}">
-                  <figure class="mega-menu-one__product-image">
+                  <figure class="mega-menu-four__product-image">
                      {{ block.settings.mmo_image | image_url: width: 320 | image_tag: class: 'meganav__gallery__img', loading: 'lazy' }}
                   </figure>
-                  <h2 class="mega-menu-one__product-title">{{ block.settings.mmo_product_title}}</h2>
-                  <p class="mega-menu-one__product-subtitle">{{ block.settings.mmo_product_subtitle}}</p>
+                  <h2 class="mega-menu-four__product-title">{{ block.settings.mmo_product_title}}</h2>
+                  <p class="mega-menu-four__product-subtitle">{{ block.settings.mmo_product_subtitle}}</p>
                   </a>
               </div>
              
