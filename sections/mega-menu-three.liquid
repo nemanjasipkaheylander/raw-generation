@@ -73,12 +73,14 @@
           <div class="mega-menu-third__container-three">
             <div class="mega-menu-third__column_title">{{ section.settings.column_title_third }}</div>
             <div class="mega-menu-third__container-box">
-            <figure class="mega-menu-third__image">
-                     {{ section.settings.column_third_image | image_url: width: 320 | image_tag: class: 'meganav__img', loading: 'lazy' }}
-            </figure>
-            <h2 class="mega-menu-third__container-title">{{ section.settings.column_title_third_title }}</h2>
-            <p class="mega-menu-third__container-subtitle">{{ section.settings.column_title_third_subtitle }}</p>
-             <a href="{{ section.settings.column_title_third_button_url }}" title="{{ section.settings.column_title_third_button_text }}">{{ section.settings.column_title_third_button_text }}</a>
+              <figure class="mega-menu-third__image">
+                      {{ section.settings.column_third_image | image_url: width: 320 | image_tag: class: 'meganav__img', loading: 'lazy' }}
+              </figure>
+              <div class="mega-menu-third__content-box">
+                <h2 class="mega-menu-third__container-title">{{ section.settings.column_title_third_title }}</h2>
+                <p class="mega-menu-third__container-subtitle">{{ section.settings.column_title_third_subtitle }}</p>
+                <a href="{{ section.settings.column_title_third_button_url }}" title="{{ section.settings.column_title_third_button_text }}">{{ section.settings.column_title_third_button_text }}</a>
+              </div>
             </div>
           </div>
           <div class="mega-menu-third__container-four">
