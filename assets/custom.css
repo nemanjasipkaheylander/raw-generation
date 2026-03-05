@@ -199,3 +199,27 @@ ul.menu-level-2 li {
 .price-block .product__payment-terms.caption-font {
     display: none !important;
 }
+
+#shopify-section-sections--18072930287678__mega_menu_one_yKwezG {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+#shopify-section-sections--18072930287678__mega_menu_two_jrbXrQ {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#shopify-section-sections--18072930287678__mega_menu_three_7rMQgD {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
