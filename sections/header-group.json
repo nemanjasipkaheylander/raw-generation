@@ -385,7 +385,7 @@
       "name": "Mega menu Fourth link",
       "settings": {
         "section_target": "",
-        "bg_color": "",
+        "bg_color": "#FFFFFF",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
         "padding_top": "",
