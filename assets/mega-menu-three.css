@@ -41,3 +41,43 @@ h2.mega-menu-third__container-title {
     font-family: Jost;
     color: #000;
 }
+.mega-menu-third__container-four {
+    max-width: 270px;
+}
+
+.mega-menu-third__container-two {
+    max-width: 204px;
+    width: 100%;
+}
+
+.mega-menu-third__container-one {
+    max-width: 204px;
+    width: 100%;
+}
+
+li.mega-menu-third__custom-menu-item {
+    min-height: 40px;
+}
+
+li.mega-menu-third__custom-menu-item a {
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: black;
+}
+
+figure.mega-menu-third__image-cont img {
+    border-radius: 15px;
+}
+
+figure.mega-menu-third__image {
+    height: 100%;
+}
+
+figure.mega-menu-third__image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
