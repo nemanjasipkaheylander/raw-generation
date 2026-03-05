@@ -34,21 +34,23 @@
    <div class="l menu-wrapper">
       {% if section.blocks.size > 0 %}
          <div class="mega-menu-one__container-one">
-           <div class="mega-menu-one__column_title">{{ section.settings.column_title_one }}</div>
-           <div class="mega-menu-one__products">
-              {% for block in section.blocks %}
-                <div class="mega-menu-one__product-card">
-                    <div class="mega-menu-one__product-label" style="background-color: {{ block.settings.mmo_label_color }};">{{ block.settings.mmo_label_text}}</div>
-                    <a href="{{ block.settings.mmo_product.url }}" title="{{block.settings.mmo_product.title}}">
-                    <figure class="mega-menu-one__product-image">
-                      {{ block.settings.mmo_image | image_url: width: 320 | image_tag: class: 'meganav__gallery__img', loading: 'lazy' }}
-                    </figure>
-                    <h2 class="mega-menu-one__product-title">{{ block.settings.mmo_product_title}}</h2>
-                    <p class="mega-menu-one__product-subtitle">{{ block.settings.mmo_product_subtitle}}</p>
-                    </a>
+           <div class="mega-menu-one__content">
+              <div class="mega-menu-one__column_title">{{ section.settings.column_title_one }}</div>
+              <div class="mega-menu-one__products">
+                  {% for block in section.blocks %}
+                    <div class="mega-menu-one__product-card">
+                        <div class="mega-menu-one__product-label" style="background-color: {{ block.settings.mmo_label_color }};">{{ block.settings.mmo_label_text}}</div>
+                        <a href="{{ block.settings.mmo_product.url }}" title="{{block.settings.mmo_product.title}}">
+                        <figure class="mega-menu-one__product-image">
+                          {{ block.settings.mmo_image | image_url: width: 320 | image_tag: class: 'meganav__gallery__img', loading: 'lazy' }}
+                        </figure>
+                        <h2 class="mega-menu-one__product-title">{{ block.settings.mmo_product_title}}</h2>
+                        <p class="mega-menu-one__product-subtitle">{{ block.settings.mmo_product_subtitle}}</p>
+                        </a>
+                    </div>
+                  {% endfor %}
                 </div>
-              {% endfor %}
-              </div>
+            </div>
            </div> 
       {% endif %}
            <div class="mega-menu-one__container-two">
