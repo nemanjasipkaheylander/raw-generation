@@ -46,13 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Optional: Set a timeout to reopen menus if scrolling stops
         // Uncomment if you want this behavior
-        /*
+        
         scrollTimeout = setTimeout(function() {
             // You could add logic here to reopen the last opened menu
             // if scrolling stops and menu was previously open
             console.log('Scrolling stopped');
         }, 150);
-        */
+        
     }
     
     // Add scroll event listener with passive option for better performance
