@@ -161,6 +161,7 @@ p.mega-menu-one__container-subtitle {
     }
     .l.menu-wrapper {
         flex-direction: column;
+        padding: 0;
     }
     .mega-menu-one__product-card a {
         flex-direction: column;
