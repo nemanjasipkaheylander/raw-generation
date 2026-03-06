@@ -82,3 +82,27 @@ figure.mega-menu-third__image img {
     width: 100%;
     border-radius: 15px;
 }
+.meganav__gallery__img_mob {
+        display: none;
+}
+.meganav__img {
+    display: block;
+}
+@media (max-width: 1024px) {
+    .mega-menu-one__products {
+        flex-wrap: wrap;
+    }
+    .l.menu-wrapper {
+        flex-direction: column;
+        padding: 0;
+    }
+    .mega-menu-one__product-card a {
+        flex-direction: column;
+    }
+    .meganav__img {
+        display: none;
+    }
+    .meganav__gallery__img_mob {
+        display: block;
+    }
+}
