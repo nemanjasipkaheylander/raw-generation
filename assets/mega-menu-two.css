@@ -129,10 +129,10 @@
         gap: 10px;
     }
     .mega-menu-two__container-subtitle {
-        text-transform initial;
+        text-transform: initial;
     }
     .mega-menu-two__container-title {
-        text-transform initial;
+        text-transform: initial;
         text-align: left;
     }
 }
