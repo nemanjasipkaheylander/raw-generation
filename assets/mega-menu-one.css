@@ -179,4 +179,7 @@ p.mega-menu-one__container-subtitle {
     p.mega-menu-one__product-subtitle {
         font-size: 13px;
     }
+    .meganav__gallery__img_mob, .meganav__img-showcase_mob {
+        display: block;
+    }
 }
