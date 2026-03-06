@@ -158,6 +158,7 @@ p.mega-menu-one__container-subtitle {
     .l.menu-wrapper {
         flex-direction: column;
         padding: 0;
+        gap: 16px;
     }
     .mega-menu-one__product-card a {
         flex-direction: column;

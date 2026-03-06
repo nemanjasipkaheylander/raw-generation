@@ -87,3 +87,25 @@
     height: 160px;
     object-fit: contain;
 }
+@media (max-width: 1024px) {
+    .mega-menu-two__product-image img {
+        height: 120px;
+    }
+    .mega-menu-two__product-card a {
+        flex-direction: column;
+    }
+    .mega-menu-two__container-one {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        display: grid;
+    }
+    .mega-menu-two__product-subtitle {
+        font-size: 13px;
+    }
+    .mega-menu-two__product-title {
+        font-size: 14px;
+    }
+    .mega-menu-two__container-box {
+        max-width: 100%;
+    }
+}
