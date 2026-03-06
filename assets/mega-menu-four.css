@@ -53,3 +53,22 @@ p.mega-menu-four__product-subtitle {
 figure.mega-menu-four__product-image img {
     border-radius: 15px;
 }
+@media (max-width: 1024px) {
+    .mega-menu-four__product-card a {
+        padding: 0;
+    }
+    .mega-menu-four__container-one {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    h2.mega-menu-four__product-title {
+        font-size: 14px;
+    }
+    p.mega-menu-four__product-subtitle {
+        font-size: 13px;
+    }
+    .mega-menu-four__content {
+        left: 10px;
+    }
+}
