@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             activeMenuIndex = index;
             
             // On mobile, you might want to prevent body scroll
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 1024) {
                 document.body.style.overflow = 'hidden';
             }
         }
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateMenuTopPosition();
         
         // Handle responsive behavior
-        if (window.innerWidth > 768 && isAnyMenuOpen) {
+        if (window.innerWidth > 1024 && isAnyMenuOpen) {
             document.body.style.overflow = '';
         }
     });
