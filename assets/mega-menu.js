@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get all menu items
-    const menuItems = document.querySelectorAll('.menu__item');
+    const menuItems = document.querySelectorAll('header .menu__item');
     
     // Menu sections mapping (indices 0,1,2 for first 3, index 4 for 5th item)
     const menuSections = [
