@@ -1,5 +1,49 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all menu items
+    // Move mega menu sections under their corresponding menu items
+    function repositionMegaMenus() {
+        const menuSections = [
+            '#shopify-section-sections--18072930287678__mega_menu_one_yKwezG',
+            '#shopify-section-sections--18072930287678__mega_menu_two_jrbXrQ',
+            '#shopify-section-sections--18072930287678__mega_menu_three_7rMQgD',
+            '#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr'
+        ];
+        
+        const menuContainer = document.querySelector('.menu-level-1');
+        if (!menuContainer) return;
+        
+        const menuItems = menuContainer.children; // Get all <li> elements
+        
+        // Move first 3 mega menus under their respective <li> (indices 0, 1, 2)
+        for (let i = 0; i < 3; i++) {
+            const megaMenu = document.querySelector(menuSections[i]);
+            const targetMenuItem = menuItems[i];
+            
+            if (megaMenu && targetMenuItem) {
+                // Check if mega menu is already under this menu item
+                if (!targetMenuItem.contains(megaMenu)) {
+                    // Move the mega menu element
+                    targetMenuItem.appendChild(megaMenu);
+                    console.log(`Moved mega menu ${i+1} under menu item ${i+1}`);
+                }
+            }
+        }
+        
+        // Move the 4th mega menu under the 5th <li> (index 4)
+        const fourthMegaMenu = document.querySelector(menuSections[3]);
+        const fifthMenuItem = menuItems[4]; // 5th item (index 4)
+        
+        if (fourthMegaMenu && fifthMenuItem) {
+            if (!fifthMenuItem.contains(fourthMegaMenu)) {
+                fifthMenuItem.appendChild(fourthMegaMenu);
+                console.log('Moved 4th mega menu under 5th menu item');
+            }
+        }
+    }
+    
+    // Call the reposition function
+    repositionMegaMenus();
+    
+    // Rest of your existing code remains the same...
     const menuItems = document.querySelectorAll('.menu__item');
     
     // Menu sections mapping (indices 0,1,2 for first 3, index 4 for 5th item)
@@ -51,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Apply transition
             menu.style.transition = 'opacity 0.3s ease, visibility 0.3s ease, top 0.2s ease';
-            menu.style.display = 'block'; // or 'flex' depending on your layout
+            menu.style.display = 'block';
             // Force reflow to ensure transition works
             menu.offsetHeight;
             menu.style.opacity = '1';
