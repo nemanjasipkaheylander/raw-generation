@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial desktop position
     updateDesktopMenuTopPosition();
     
-    // ========== MOBILE MENU LOGIC ==========
+    // ========== MOBILE MENU LOGIC (Revised) ==========
     
     // Move mega menu sections under mobile menu items
     function repositionMobileMenus() {
@@ -181,11 +181,11 @@ document.addEventListener('DOMContentLoaded', function() {
             '#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr'
         ];
         
-        // Find mobile menu container - adjust selector based on your mobile menu structure
-        const mobileMenuContainer = document.querySelector('.mobile-menu .menu-level-1, .drawer__menu .menu-level-1, [data-mobile-menu] .menu-level-1');
-        if (!mobileMenuContainer) return;
+        // Find mobile menu container using your suggested selector
+        const mobileMenuList = document.querySelector('ul.menu-level-1');
+        if (!mobileMenuList) return;
         
-        const mobileMenuItems = mobileMenuContainer.children; // Get all <li> elements
+        const mobileMenuItems = mobileMenuList.children; // Get all <li> elements
         
         // Move first 3 mega menus under their respective mobile <li> (indices 0, 1, 2)
         for (let i = 0; i < 3; i++) {
@@ -193,12 +193,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetMenuItem = mobileMenuItems[i];
             
             if (megaMenu && targetMenuItem) {
-                // Clone the mega menu for mobile to avoid moving it from desktop
-                if (!targetMenuItem.querySelector(`#${megaMenu.id}`)) {
-                    const mobileMegaMenu = megaMenu.cloneNode(true);
-                    mobileMegaMenu.id = mobileMegaMenu.id + '-mobile';
-                    mobileMegaMenu.classList.add('mobile-mega-menu');
-                    targetMenuItem.appendChild(mobileMegaMenu);
+                // Check if mega menu is already under this menu item
+                if (!targetMenuItem.contains(megaMenu)) {
+                    // Move the mega menu element (not clone)
+                    targetMenuItem.appendChild(megaMenu);
+                    console.log(`Mobile: Moved mega menu ${i+1} under menu item ${i+1}`);
                 }
             }
         }
@@ -208,11 +207,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const fifthMobileMenuItem = mobileMenuItems[4]; // 5th item (index 4)
         
         if (fourthMegaMenu && fifthMobileMenuItem) {
-            if (!fifthMobileMenuItem.querySelector(`#${fourthMegaMenu.id}-mobile`)) {
-                const mobileFourthMegaMenu = fourthMegaMenu.cloneNode(true);
-                mobileFourthMegaMenu.id = fourthMegaMenu.id + '-mobile';
-                mobileFourthMegaMenu.classList.add('mobile-mega-menu');
-                fifthMobileMenuItem.appendChild(mobileFourthMegaMenu);
+            if (!fifthMobileMenuItem.contains(fourthMegaMenu)) {
+                fifthMobileMenuItem.appendChild(fourthMegaMenu);
+                console.log('Mobile: Moved 4th mega menu under 5th menu item');
             }
         }
     }
@@ -220,15 +217,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Call mobile reposition function
     repositionMobileMenus();
     
-    // Mobile menu items - adjust selector based on your mobile menu structure
-    const mobileMenuItems = document.querySelectorAll('.mobile-menu .menu__item, .drawer__menu .menu__item, [data-mobile-menu] .menu__item');
+    // Mobile menu items using your suggested selector
+    const mobileMenuItems = document.querySelectorAll('.menu-item');
     
-    // Mobile menu sections mapping (using the mobile versions we created)
+    // Mobile menu sections mapping (using the same IDs since we moved them)
     const mobileMenuSections = [
-        '#shopify-section-sections--18072930287678__mega_menu_one_yKwezG-mobile',  // for 1st item
-        '#shopify-section-sections--18072930287678__mega_menu_two_jrbXrQ-mobile',  // for 2nd item
-        '#shopify-section-sections--18072930287678__mega_menu_three_7rMQgD-mobile', // for 3rd item
-        '#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr-mobile'  // for 5th item
+        '#shopify-section-sections--18072930287678__mega_menu_one_yKwezG',  // for 1st item (index 0)
+        '#shopify-section-sections--18072930287678__mega_menu_two_jrbXrQ',  // for 2nd item (index 1)
+        '#shopify-section-sections--18072930287678__mega_menu_three_7rMQgD', // for 3rd item (index 2)
+        '#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr'  // for 5th item (index 4)
     ];
     
     // Mobile variables
@@ -236,10 +233,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to close all mobile menus
     function closeAllMobileMenus() {
-        document.querySelectorAll('.mobile-mega-menu').forEach(menu => {
-            menu.style.opacity = '0';
-            menu.style.visibility = 'hidden';
-            menu.style.display = 'none';
+        document.querySelectorAll('[id^="shopify-section-sections--18072930287678__mega_menu"]').forEach(menu => {
+            // Only hide menus that are inside mobile menu items
+            if (menu.closest('.menu-item, ul.menu-level-1')) {
+                menu.style.opacity = '0';
+                menu.style.visibility = 'hidden';
+                menu.style.display = 'none';
+            }
         });
         isAnyMobileMenuOpen = false;
     }
@@ -250,15 +250,23 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const menu = document.querySelector(menuSelector);
         if (menu) {
-            // Mobile-specific styling
+            // Mobile-specific styling - adjust based on your mobile layout
             menu.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
             menu.style.display = 'block';
-            menu.style.position = 'relative'; // or 'static' depending on your layout
+            menu.style.position = 'relative';
             menu.style.width = '100%';
+            menu.style.left = '0';
+            menu.style.top = '0';
+            menu.style.margin = '0';
+            menu.style.padding = '1rem';
+            menu.style.backgroundColor = '#fff';
+            menu.style.boxShadow = 'none';
             menu.offsetHeight;
             menu.style.opacity = '1';
             menu.style.visibility = 'visible';
             isAnyMobileMenuOpen = true;
+            
+            console.log('Mobile menu opened:', menuSelector);
         }
     }
     
@@ -266,10 +274,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileMenuItems.length > 0) {
         mobileMenuItems.forEach((item, index) => {
             item.addEventListener('click', function(event) {
+                console.log('Mobile item clicked:', index);
+                
                 // First 3 items (indices 0,1,2) and 5th item (index 4) open menus
                 if (index < 3 || index === 4) {
                     event.preventDefault();
-                    event.stopPropagation(); // Prevent event bubbling
+                    event.stopPropagation();
                     
                     // Map index to appropriate mobile menu section
                     if (index < 3) {
@@ -285,43 +295,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+    } else {
+        console.log('No mobile menu items found with selector .menu-item');
     }
     
     // Close mobile menus when clicking outside
     document.addEventListener('click', function(event) {
-        const isMobileMenuItem = event.target.closest('.mobile-menu .menu__item, .drawer__menu .menu__item');
-        const isMobileMenuSection = event.target.closest('.mobile-mega-menu');
+        const isMobileMenuItem = event.target.closest('.menu-item');
+        const isMobileMenuSection = event.target.closest('[id^="shopify-section-sections--18072930287678__mega_menu"]');
         
         if (!isMobileMenuItem && !isMobileMenuSection && isAnyMobileMenuOpen) {
             closeAllMobileMenus();
+            console.log('Mobile menus closed by outside click');
         }
     });
     
-    // Close mobile menus when mobile drawer closes (if applicable)
-    const mobileDrawerCloseButtons = document.querySelectorAll('.drawer__close, [data-drawer-close]');
-    mobileDrawerCloseButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            closeAllMobileMenus();
-        });
-    });
-    
-    // Close mobile menus on escape key
+    // Close mobile menus when escape key is pressed
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
             if (isAnyMobileMenuOpen) {
                 closeAllMobileMenus();
+                console.log('Mobile menus closed by escape key');
             }
             if (isAnyDesktopMenuOpen) {
                 closeAllDesktopMenus();
             }
         }
     });
-    
-    // Optional: Close mobile menus when scrolling (if mobile menu is fixed)
-    window.addEventListener('scroll', function() {
-        if (isAnyMobileMenuOpen) {
-            // You can decide if you want to close mobile menus on scroll
-            // closeAllMobileMenus();
-        }
-    }, { passive: true });
+
 });
