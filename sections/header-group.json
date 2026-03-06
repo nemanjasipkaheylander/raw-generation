@@ -327,7 +327,8 @@
         "column_title_third_subtitle": "Create your custom assortment",
         "column_title_third_button_text": "Start Building",
         "column_title_third_button_url": "shopify://collections/get-healthy",
-        "column_fourth_image": "shopify://shop_images/Frame_2087327427.png"
+        "column_fourth_image": "shopify://shop_images/Frame_2087327427.png",
+        "column_fourth_image_mob": "shopify://shop_images/Frame_2087327427_1.png"
       }
     },
     "mega_menu_four_GrgLqr": {
