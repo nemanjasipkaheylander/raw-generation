@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Create wrapper divs for mobile
+    const mobileWrappers = new Map();
+    
     // Variables to track state
     let isAnyMenuOpen = false;
     let lastScrollTop = 0;
@@ -65,19 +68,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (triggerLi) {
-                // Insert menu right after the trigger li in the ul
-                triggerLi.parentNode.insertBefore(menu, triggerLi.nextSibling);
+                // Create a wrapper div if it doesn't exist
+                if (!mobileWrappers.has(selector)) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'mega-menu--mobile';
+                    mobileWrappers.set(selector, wrapper);
+                }
                 
-                // Add mobile-specific classes
-                menu.classList.add('mega-menu--mobile');
-                menu.classList.add('mega-menu--in-list');
+                const wrapper = mobileWrappers.get(selector);
                 
-                // Style for proper display in the list
+                // Move the menu into the wrapper
+                wrapper.appendChild(menu);
+                
+                // Insert the wrapper right after the trigger li
+                triggerLi.parentNode.insertBefore(wrapper, triggerLi.nextSibling);
+                
+                // Ensure the wrapper has the correct styles
+                wrapper.style.display = 'none';
+                
+                // The menu inside should be visible when wrapper is shown
                 menu.style.position = 'relative';
                 menu.style.top = '0';
                 menu.style.left = '0';
                 menu.style.right = 'auto';
                 menu.style.width = '100%';
+                menu.style.margin = '0';
             }
         });
     }
@@ -87,19 +102,24 @@ document.addEventListener('DOMContentLoaded', function() {
         menuSections.forEach(selector => {
             const menu = document.querySelector(selector);
             const originalParent = originalParents.get(selector);
+            const wrapper = mobileWrappers.get(selector);
             
             if (menu && originalParent) {
+                // Remove from wrapper
+                if (wrapper && wrapper.parentNode) {
+                    wrapper.parentNode.removeChild(wrapper);
+                }
+                
                 // Move back to original location
                 originalParent.appendChild(menu);
                 
-                // Remove mobile-specific classes and styles
-                menu.classList.remove('mega-menu--mobile');
-                menu.classList.remove('mega-menu--in-list');
+                // Reset menu styles
                 menu.style.position = '';
                 menu.style.top = '';
                 menu.style.left = '';
                 menu.style.right = '';
                 menu.style.width = '';
+                menu.style.margin = '';
             }
         });
     }
@@ -126,11 +146,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to close all menus
     function closeAllMenus() {
+        // Hide all mobile wrappers
+        mobileWrappers.forEach(wrapper => {
+            wrapper.style.display = 'none';
+        });
+        
+        // Hide all desktop menus
         document.querySelectorAll('[id^="shopify-section-sections--18072930287678__mega_menu"]').forEach(menu => {
             menu.style.opacity = '0';
             menu.style.visibility = 'hidden';
             menu.style.display = 'none';
         });
+        
         isAnyMenuOpen = false;
         activeMenuIndex = null;
         
@@ -141,9 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
         desktopMenuItems.forEach(item => {
             item.classList.remove('active');
         });
-        
-        // Re-enable body scroll on mobile
-        document.body.style.overflow = '';
     }
     
     // Function to open specific menu
@@ -151,33 +175,51 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close any open menus first
         closeAllMenus();
         
-        const menu = document.querySelector(menuSelector);
-        if (menu) {
-            // Update position before showing (desktop only)
-            if (!isMobile) {
-                updateMenuTopPosition();
-            }
-            
-            // Add active class to the clicked trigger
-            if (triggerElement) {
-                triggerElement.classList.add('active');
-            }
-            
-            // Apply transition
-            menu.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
-            menu.style.display = 'block'; // or 'flex' depending on your layout
-            // Force reflow to ensure transition works
-            menu.offsetHeight;
-            menu.style.opacity = '1';
-            menu.style.visibility = 'visible';
-            isAnyMenuOpen = true;
-            activeMenuIndex = index;
-            
-            // On mobile, scroll to the menu
-            if (isMobile) {
+        if (isMobile) {
+            // Mobile: Show the wrapper
+            const wrapper = mobileWrappers.get(menuSelector);
+            if (wrapper) {
+                wrapper.style.display = 'block';
+                
+                // The menu inside should be visible
+                const menu = wrapper.firstElementChild;
+                if (menu) {
+                    menu.style.display = 'block';
+                    menu.style.opacity = '1';
+                    menu.style.visibility = 'visible';
+                }
+                
+                isAnyMenuOpen = true;
+                activeMenuIndex = index;
+                
+                // Add active class to trigger
+                if (triggerElement) {
+                    triggerElement.classList.add('active');
+                }
+                
+                // Scroll to the menu
                 setTimeout(() => {
-                    menu.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }, 100);
+            }
+        } else {
+            // Desktop: Show the menu directly
+            const menu = document.querySelector(menuSelector);
+            if (menu) {
+                updateMenuTopPosition();
+                
+                menu.style.transition = 'opacity 0.3s ease, visibility 0.3s ease, top 0.2s ease';
+                menu.style.display = 'block';
+                menu.offsetHeight;
+                menu.style.opacity = '1';
+                menu.style.visibility = 'visible';
+                
+                isAnyMenuOpen = true;
+                activeMenuIndex = index;
+                
+                if (triggerElement) {
+                    triggerElement.classList.add('active');
+                }
             }
         }
     }
@@ -213,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Add scroll event listener with throttle for better performance
+    // Add scroll event listener with throttle
     let ticking = false;
     window.addEventListener('scroll', function() {
         if (!ticking) {
@@ -230,9 +272,8 @@ document.addEventListener('DOMContentLoaded', function() {
         handleResponsiveLayout();
         updateMenuTopPosition();
         
-        // Handle responsive behavior
         if (!isMobile && isAnyMenuOpen) {
-            document.body.style.overflow = '';
+            closeAllMenus();
         }
     });
     
@@ -277,8 +318,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const isDesktopMenuItem = event.target.closest('.menu__item');
         const isMobileMenuItem = event.target.closest('.menu-item');
         const isMenuSection = event.target.closest('[id^="shopify-section-sections--18072930287678__mega_menu"]');
+        const isMobileWrapper = event.target.closest('.mega-menu--mobile');
         
-        if (!isDesktopMenuItem && !isMobileMenuItem && !isMenuSection && isAnyMenuOpen) {
+        if (!isDesktopMenuItem && !isMobileMenuItem && !isMenuSection && !isMobileWrapper && isAnyMenuOpen) {
             closeAllMenus();
         }
     });
@@ -294,35 +336,48 @@ document.addEventListener('DOMContentLoaded', function() {
     handleResponsiveLayout();
     updateMenuTopPosition();
     
-    // Add CSS for mobile mega menus inside the list
+    // Add CSS for mobile mega menus
     const style = document.createElement('style');
     style.textContent = `
         @media (max-width: 1024px) {
             ul.menu-level-1 {
                 position: relative;
+                list-style: none;
+                padding: 0;
+                margin: 0;
             }
             
-            .mega-menu--mobile.mega-menu--in-list {
-                position: relative;
-                top: 0;
-                left: 0;
-                right: 0;
-                width: 100%;
-                margin: 0;
-                padding: 20px;
-                background: #fff;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                z-index: 10;
-                box-sizing: border-box;
+            .menu-item {
+                padding: 15px 20px;
+                border-bottom: 1px solid #eee;
             }
             
             .menu-item.active {
                 background-color: #f5f5f5;
             }
             
-            .menu-item.active + .mega-menu--mobile {
-                border-top: 1px solid #eee;
+            .mega-menu--mobile {
+                width: 100%;
+                background: #fff;
                 border-bottom: 1px solid #eee;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .mega-menu--mobile > div {
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            
+            .mega-menu--mobile > div[class*="shopify-section"] {
+                opacity: 1 !important;
+                visibility: visible !important;
+                display: block !important;
+                position: relative !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
             }
         }
     `;
