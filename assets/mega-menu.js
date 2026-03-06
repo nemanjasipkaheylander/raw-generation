@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!isMobile) {
                 // Desktop positioning
                 if (scrollPosition > 70) {
-                    menu.style.top = '140px';
+                    menu.style.top = '66px';
                 } else {
                     menu.style.top = '138px';
                 }
