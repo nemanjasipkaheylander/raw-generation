@@ -114,4 +114,10 @@
         max-width: 40px;
         height: 40px;
     }
+    figure.mega-menu-two__image {
+        width: 50px;
+    }
+    .mega-menu-two__product-card-content {
+        width: 100%;
+    }
 }

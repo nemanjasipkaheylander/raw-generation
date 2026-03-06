@@ -213,3 +213,13 @@ ul.menu-level-2 li {
     right: 0;
     top: 138px;
 }
+
+@media (max-width: 1024px) {
+    #shopify-section-sections--18072930287678__mega_menu_one_yKwezG,
+#shopify-section-sections--18072930287678__mega_menu_two_jrbXrQ,
+#shopify-section-sections--18072930287678__mega_menu_three_7rMQgD,
+#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr
+ {
+    top: 0;
+}
+}
