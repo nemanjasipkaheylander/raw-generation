@@ -304,7 +304,9 @@ body:has(main .shopify-section:first-child .section) .shopify-section-header-hid
 search-element {
     display: block;
 }
-
+.menu-item svg {
+        fill: transparent;
+    }
 @media screen and (min-width: 1025px) and (hover: hover) {
     .header--transparent.header--filled:hover > div {
         background: rgb(var(--bg-gradient));
