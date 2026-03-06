@@ -105,5 +105,7 @@ figure.mega-menu-third__image img {
     .meganav__gallery__img_mob, .meganav__img-showcase_mob {
         display: block;
     }
-
+    .mega-menu-third__container-four {
+        max-width: 100%;
+    }
 }
