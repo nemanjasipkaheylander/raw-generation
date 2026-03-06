@@ -87,6 +87,11 @@
     height: 160px;
     object-fit: contain;
 }
+.mega-menu-two__product-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20PX;
+}
 @media (max-width: 1024px) {
     .mega-menu-two__product-image img {
         height: 120px;
@@ -120,5 +125,7 @@
     }
     .mega-menu-two__product-card-content {
         width: 100%;
+        flex-direction: row;
+        gap: 10px;
     }
 }
