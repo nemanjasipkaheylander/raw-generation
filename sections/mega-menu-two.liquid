@@ -42,10 +42,10 @@
                   <figure class="mega-menu-two__product-image">
                      {{ block.settings.mmo_image | image_url: width: 320 | image_tag: class: 'meganav__gallery__img_product', loading: 'lazy' }}
                   </figure>
-                  <div class="mega-menu-two__product-card-content">
+                 
                     <h2 class="mega-menu-two__product-title">{{ block.settings.mmo_product_title}}</h2>
                     <p class="mega-menu-two__product-subtitle">{{ block.settings.mmo_product_subtitle}}</p>
-                  </div>
+                
                   </a>
               </div>
              
@@ -59,8 +59,10 @@
             <figure class="mega-menu-two__image">
                      {{ section.settings.column_third_image | image_url: width: 320 | image_tag: class: 'author__img', loading: 'lazy' }}
             </figure>
+             <div class="mega-menu-two__product-card-content">
             <h2 class="mega-menu-two__container-title">{{ section.settings.column_title_third_title }}</h2>
             <p class="mega-menu-two__container-subtitle">{{ section.settings.column_title_third_subtitle }}</p>
+              </div>
            </div>
           </div>
    </div>
