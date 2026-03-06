@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get all menu items
-    const menuItems = document.querySelectorAll('drawer .menu__item');
+    const menuItemsMob = document.querySelectorAll('drawer .menu__item');
     
     // Menu sections mapping (indices 0,1,2 for first 3, index 4 for 5th item)
-    const menuSections = [
+    const menuSectionsMob = [
         '#shopify-section-sections--18072930287678__mega_menu_one_yKwezG',  // for 1st item (index 0)
         '#shopify-section-sections--18072930287678__mega_menu_two_jrbXrQ',  // for 2nd item (index 1)
         '#shopify-section-sections--18072930287678__mega_menu_three_7rMQgD', // for 3rd item (index 2)
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add click handlers to menu items
-    menuItems.forEach((item, index) => {
+    menuItemsMob.forEach((item, index) => {
         item.addEventListener('click', function(event) {
             // First 3 items (indices 0,1,2) and 5th item (index 4) open menus
             if (index < 3 || index === 4) {
@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Map index to appropriate menu section
                 if (index < 3) {
                     // First 3 items use first 3 menu sections
-                    openMenu(menuSections[index]);
+                    openMenu(menuSectionsMob[index]);
                 } else if (index === 4) {
                     // 5th item uses the 4th menu section
-                    openMenu(menuSections[3]);
+                    openMenu(menuSectionsMob[3]);
                 }
             }
             // 4th item (index 3) - regular link
