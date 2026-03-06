@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (scrollPosition > 70) {
                 menu.style.top = '66px';
             } else {
-                menu.style.top = '138px';
+                menu.style.top = '132px';
             }
         });
     }
