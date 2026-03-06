@@ -98,9 +98,7 @@
                                     endif
                                 %}
                                 <a href="{{ link.url }}" class="link-metafield-{{ current_metafield_category }} link-{{ downcased_link_title }} link-{{ downcased_title }} link-{{ link.title | downcase }}{% if active_parent_link %} active-parent-link{% endif %}{% if link.current %} link--current{% endif %}{% if link.links.size <= 0 %} link--single{% endif %}{% if highlight_item and downcased_highlighted_items contains downcased_link_title %} link--highlighted{% endif %}" {% if link.url contains 'http://' or link.url contains 'https://' %}target="_blank"{% endif %}>{% if bolder_font %}<b>{% endif %}{{ link.title }}{% if bolder_font %}</b>{% endif %}
-                                    <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.5 0.5L4.5 4.5L8.5 0.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
+                                   
                                 </a>
                                 {% if dropdown_icon != 'disable' %}
                                     {% liquid
