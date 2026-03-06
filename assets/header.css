@@ -470,7 +470,9 @@ search-element {
         justify-content: space-between;
         align-items: center;
     }
-
+    .menu-item svg {
+        fill: transparent;
+    }
     .menu-item a.open {
         font-weight: 700;
     }
