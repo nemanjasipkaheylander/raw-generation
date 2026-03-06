@@ -220,6 +220,6 @@ ul.menu-level-2 li {
 #shopify-section-sections--18072930287678__mega_menu_three_7rMQgD,
 #shopify-section-sections--18072930287678__mega_menu_four_GrgLqr
  {
-    top: 0;
+    top: 0 !important;
 }
 }
