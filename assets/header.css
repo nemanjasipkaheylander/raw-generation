@@ -467,6 +467,8 @@ search-element {
     .menu-level-1 .menu-item .menu-link  {
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         padding: 18px 0;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .menu-item a.open {
