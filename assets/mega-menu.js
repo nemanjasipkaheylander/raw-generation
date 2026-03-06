@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all menu items
-    const menuItems = document.querySelectorAll('header .menu__item');
+    // Get all menu items for both desktop and mobile
+    const desktopMenuItems = document.querySelectorAll('.menu__item');
+    const mobileMenuItems = document.querySelectorAll('.menu-item');
+    
+    // Combine all triggers
+    const allMenuTriggers = [...desktopMenuItems, ...mobileMenuItems];
     
     // Menu sections mapping (indices 0,1,2 for first 3, index 4 for 5th item)
     const menuSections = [
@@ -14,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let isAnyMenuOpen = false;
     let lastScrollTop = 0;
     let scrollTimeout;
+    let activeMenuIndex = null;
     
     // Function to update menu top position based on scroll
     function updateMenuTopPosition() {
@@ -37,10 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.style.display = 'none';
         });
         isAnyMenuOpen = false;
+        activeMenuIndex = null;
     }
     
     // Function to open specific menu
-    function openMenu(menuSelector) {
+    function openMenu(menuSelector, index) {
         // Close any open menus first
         closeAllMenus();
         
@@ -57,6 +63,12 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.style.opacity = '1';
             menu.style.visibility = 'visible';
             isAnyMenuOpen = true;
+            activeMenuIndex = index;
+            
+            // On mobile, you might want to prevent body scroll
+            if (window.innerWidth <= 768) {
+                document.body.style.overflow = 'hidden';
+            }
         }
     }
     
@@ -75,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // User is actively scrolling
             if (isAnyMenuOpen) {
                 closeAllMenus();
+                // Re-enable body scroll on mobile
+                document.body.style.overflow = '';
                 console.log('Scrolling - menus closed');
             }
             
@@ -104,39 +118,61 @@ document.addEventListener('DOMContentLoaded', function() {
     // Also update position on resize in case header height changes
     window.addEventListener('resize', function() {
         updateMenuTopPosition();
+        
+        // Handle responsive behavior
+        if (window.innerWidth > 768 && isAnyMenuOpen) {
+            document.body.style.overflow = '';
+        }
     });
     
-    // Add click handlers to menu items
-    menuItems.forEach((item, index) => {
+    // Function to handle trigger clicks
+    function handleTriggerClick(event, index) {
+        // First 3 items (indices 0,1,2) and 5th item (index 4) open menus
+        if (index < 3 || index === 4) {
+            event.preventDefault(); // Prevent default link behavior
+            
+            // Map index to appropriate menu section
+            if (index < 3) {
+                // First 3 items use first 3 menu sections
+                openMenu(menuSections[index], index);
+            } else if (index === 4) {
+                // 5th item uses the 4th menu section
+                openMenu(menuSections[3], index);
+            }
+        }
+        // 4th item (index 3) - regular link
+        else {
+            // Let the default link behavior happen
+            console.log('Regular link clicked (4th item)');
+        }
+    }
+    
+    // Add click handlers to desktop menu items
+    desktopMenuItems.forEach((item, index) => {
         item.addEventListener('click', function(event) {
-            // First 3 items (indices 0,1,2) and 5th item (index 4) open menus
-            if (index < 3 || index === 4) {
-                event.preventDefault(); // Prevent default link behavior
-                
-                // Map index to appropriate menu section
-                if (index < 3) {
-                    // First 3 items use first 3 menu sections
-                    openMenu(menuSections[index]);
-                } else if (index === 4) {
-                    // 5th item uses the 4th menu section
-                    openMenu(menuSections[3]);
-                }
-            }
-            // 4th item (index 3) - regular link
-            else {
-                // Let the default link behavior happen
-                console.log('Regular link clicked (4th item)');
-            }
+            handleTriggerClick(event, index);
+        });
+    });
+    
+    // Add click handlers to mobile menu items
+    mobileMenuItems.forEach((item, index) => {
+        item.addEventListener('click', function(event) {
+            // Note: Mobile menu might have different structure
+            // If mobile menu has different ordering, you might need to map indices differently
+            handleTriggerClick(event, index);
         });
     });
     
     // Close menus when clicking outside
     document.addEventListener('click', function(event) {
-        const isMenuItem = event.target.closest('.menu__item');
+        const isDesktopMenuItem = event.target.closest('.menu__item');
+        const isMobileMenuItem = event.target.closest('.menu-item');
         const isMenuSection = event.target.closest('[id^="shopify-section-sections--18072930287678__mega_menu"]');
         
-        if (!isMenuItem && !isMenuSection && isAnyMenuOpen) {
+        if (!isDesktopMenuItem && !isMobileMenuItem && !isMenuSection && isAnyMenuOpen) {
             closeAllMenus();
+            // Re-enable body scroll on mobile
+            document.body.style.overflow = '';
         }
     });
     
@@ -144,9 +180,42 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && isAnyMenuOpen) {
             closeAllMenus();
+            // Re-enable body scroll on mobile
+            document.body.style.overflow = '';
         }
+    });
+    
+    // Handle mobile drawer close events (if your mobile drawer has a close button)
+    const mobileDrawerCloseButtons = document.querySelectorAll('.drawer__close, [data-drawer-close]');
+    mobileDrawerCloseButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (isAnyMenuOpen) {
+                closeAllMenus();
+                document.body.style.overflow = '';
+            }
+        });
     });
     
     // Initial position set
     updateMenuTopPosition();
+    
+    // Optional: Add touch event handling for mobile
+    if ('ontouchstart' in window) {
+        let touchStartY = 0;
+        
+        document.addEventListener('touchstart', function(event) {
+            touchStartY = event.touches[0].clientY;
+        }, { passive: true });
+        
+        document.addEventListener('touchmove', function(event) {
+            const touchCurrentY = event.touches[0].clientY;
+            const touchDiff = Math.abs(touchCurrentY - touchStartY);
+            
+            // If user is scrolling with touch and menu is open, close it
+            if (touchDiff > 10 && isAnyMenuOpen) {
+                closeAllMenus();
+                document.body.style.overflow = '';
+            }
+        }, { passive: true });
+    }
 });
