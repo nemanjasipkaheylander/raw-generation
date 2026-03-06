@@ -14,11 +14,81 @@ document.addEventListener('DOMContentLoaded', function() {
         '#shopify-section-sections--18072930287678__mega_menu_four_GrgLqr'  // for 5th item (index 4)
     ];
     
+    // Store original parent for each menu section (to restore on resize)
+    const originalParents = new Map();
+    menuSections.forEach(selector => {
+        const menu = document.querySelector(selector);
+        if (menu) {
+            originalParents.set(selector, menu.parentNode);
+        }
+    });
+    
     // Variables to track state
     let isAnyMenuOpen = false;
     let lastScrollTop = 0;
     let scrollTimeout;
     let activeMenuIndex = null;
+    let isMobile = window.innerWidth <= 768;
+    
+    // Function to check if mobile and reposition menus accordingly
+    function handleResponsiveLayout() {
+        const wasMobile = isMobile;
+        isMobile = window.innerWidth <= 768;
+        
+        if (isMobile !== wasMobile) {
+            if (isMobile) {
+                // Switching to mobile - move menus below triggers
+                moveMenusToMobile();
+            } else {
+                // Switching to desktop - restore menus to original positions
+                restoreMenusToDesktop();
+                // Close any open menus
+                closeAllMenus();
+            }
+        }
+    }
+    
+    // Function to move menus below their triggers on mobile
+    function moveMenusToMobile() {
+        menuSections.forEach((selector, index) => {
+            const menu = document.querySelector(selector);
+            if (!menu) return;
+            
+            // Find corresponding trigger (for mobile, use mobile menu items)
+            let trigger = null;
+            if (index < 3) {
+                // First 3 menus correspond to first 3 mobile items
+                trigger = mobileMenuItems[index];
+            } else if (index === 3) {
+                // 4th menu corresponds to 5th mobile item (index 4)
+                trigger = mobileMenuItems[4];
+            }
+            
+            if (trigger) {
+                // Insert menu right after the trigger in the DOM
+                trigger.parentNode.insertBefore(menu, trigger.nextSibling);
+                
+                // Add mobile-specific class for styling
+                menu.classList.add('mega-menu--mobile');
+            }
+        });
+    }
+    
+    // Function to restore menus to original positions on desktop
+    function restoreMenusToDesktop() {
+        menuSections.forEach(selector => {
+            const menu = document.querySelector(selector);
+            const originalParent = originalParents.get(selector);
+            
+            if (menu && originalParent) {
+                // Move back to original location
+                originalParent.appendChild(menu);
+                
+                // Remove mobile-specific class
+                menu.classList.remove('mega-menu--mobile');
+            }
+        });
+    }
     
     // Function to update menu top position based on scroll
     function updateMenuTopPosition() {
@@ -26,10 +96,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const menuElements = document.querySelectorAll('[id^="shopify-section-sections--18072930287678__mega_menu"]');
         
         menuElements.forEach(menu => {
-            if (scrollPosition > 70) {
-                menu.style.top = '66px';
+            if (!isMobile) {
+                // Desktop positioning
+                if (scrollPosition > 70) {
+                    menu.style.top = '140px';
+                } else {
+                    menu.style.top = '138px';
+                }
+                menu.style.position = 'absolute';
             } else {
-                menu.style.top = '138px';
+                // Mobile positioning - will be handled by CSS
+                menu.style.top = '';
+                menu.style.position = 'relative';
             }
         });
     }
@@ -43,6 +121,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         isAnyMenuOpen = false;
         activeMenuIndex = null;
+        
+        // Re-enable body scroll on mobile
+        document.body.style.overflow = '';
     }
     
     // Function to open specific menu
@@ -56,7 +137,11 @@ document.addEventListener('DOMContentLoaded', function() {
             updateMenuTopPosition();
             
             // Apply transition
-            menu.style.transition = 'opacity 0.3s ease, visibility 0.3s ease, top 0.2s ease';
+            menu.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
+            if (!isMobile) {
+                menu.style.transition += ', top 0.2s ease';
+            }
+            
             menu.style.display = 'block'; // or 'flex' depending on your layout
             // Force reflow to ensure transition works
             menu.offsetHeight;
@@ -65,9 +150,14 @@ document.addEventListener('DOMContentLoaded', function() {
             isAnyMenuOpen = true;
             activeMenuIndex = index;
             
-            // On mobile, you might want to prevent body scroll
-            if (window.innerWidth <= 1024) {
+            // On mobile, prevent body scroll and scroll to menu
+            if (isMobile) {
                 document.body.style.overflow = 'hidden';
+                
+                // Scroll to the menu with a small delay
+                setTimeout(() => {
+                    menu.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
             }
         }
     }
@@ -79,16 +169,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear any pending timeout
         clearTimeout(scrollTimeout);
         
-        // Update menu positions based on scroll
-        updateMenuTopPosition();
+        // Update menu positions based on scroll (desktop only)
+        if (!isMobile) {
+            updateMenuTopPosition();
+        }
         
         // Check if actually scrolling (not just the event firing)
         if (currentScrollTop !== lastScrollTop) {
             // User is actively scrolling
-            if (isAnyMenuOpen) {
+            if (isAnyMenuOpen && !isMobile) {
                 closeAllMenus();
-                // Re-enable body scroll on mobile
-                document.body.style.overflow = '';
                 console.log('Scrolling - menus closed');
             }
             
@@ -115,12 +205,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, { passive: true });
     
-    // Also update position on resize in case header height changes
+    // Handle resize events
     window.addEventListener('resize', function() {
+        handleResponsiveLayout();
         updateMenuTopPosition();
         
         // Handle responsive behavior
-        if (window.innerWidth > 1024 && isAnyMenuOpen) {
+        if (!isMobile && isAnyMenuOpen) {
             document.body.style.overflow = '';
         }
     });
@@ -157,8 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click handlers to mobile menu items
     mobileMenuItems.forEach((item, index) => {
         item.addEventListener('click', function(event) {
-            // Note: Mobile menu might have different structure
-            // If mobile menu has different ordering, you might need to map indices differently
             handleTriggerClick(event, index);
         });
     });
@@ -171,8 +260,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (!isDesktopMenuItem && !isMobileMenuItem && !isMenuSection && isAnyMenuOpen) {
             closeAllMenus();
-            // Re-enable body scroll on mobile
-            document.body.style.overflow = '';
         }
     });
     
@@ -180,42 +267,44 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && isAnyMenuOpen) {
             closeAllMenus();
-            // Re-enable body scroll on mobile
-            document.body.style.overflow = '';
         }
     });
     
-    // Handle mobile drawer close events (if your mobile drawer has a close button)
+    // Handle mobile drawer close events
     const mobileDrawerCloseButtons = document.querySelectorAll('.drawer__close, [data-drawer-close]');
     mobileDrawerCloseButtons.forEach(button => {
         button.addEventListener('click', function() {
             if (isAnyMenuOpen) {
                 closeAllMenus();
-                document.body.style.overflow = '';
             }
         });
     });
     
-    // Initial position set
+    // Initial setup
+    handleResponsiveLayout();
     updateMenuTopPosition();
     
-    // Optional: Add touch event handling for mobile
-    if ('ontouchstart' in window) {
-        let touchStartY = 0;
-        
-        document.addEventListener('touchstart', function(event) {
-            touchStartY = event.touches[0].clientY;
-        }, { passive: true });
-        
-        document.addEventListener('touchmove', function(event) {
-            const touchCurrentY = event.touches[0].clientY;
-            const touchDiff = Math.abs(touchCurrentY - touchStartY);
-            
-            // If user is scrolling with touch and menu is open, close it
-            if (touchDiff > 10 && isAnyMenuOpen) {
-                closeAllMenus();
-                document.body.style.overflow = '';
+    // Add some CSS for mobile mega menus
+    const style = document.createElement('style');
+    style.textContent = `
+        @media (max-width: 1024px) {
+            .mega-menu--mobile {
+                width: 100%;
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                background: white;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                z-index: 1000;
             }
-        }, { passive: true });
-    }
+            
+            .menu-item.active + .mega-menu--mobile {
+                display: block;
+            }
+        }
+    `;
+    document.head.appendChild(style);
 });
