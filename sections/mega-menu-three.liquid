@@ -75,6 +75,7 @@
             <div class="mega-menu-third__container-box">
               <figure class="mega-menu-third__image">
                       {{ section.settings.column_third_image | image_url: width: 1040 | image_tag: class: 'meganav__img', loading: 'lazy' }}
+                      {{ section.settings.column_third_image_mob | image_url: width: 1040 | image_tag: class: 'meganav__img', loading: 'lazy' }}
               </figure>
               <div class="mega-menu-third__content-box">
                 <h2 class="mega-menu-third__container-title">{{ section.settings.column_title_third_title }}</h2>
@@ -178,6 +179,11 @@
         "type": "image_picker",
         "id": "column_third_image",
         "label": "Upload image"
+      },
+      {
+        "type": "image_picker",
+        "id": "column_third_image_mob",
+        "label": "Upload image Mob"
       },
       {
         "type": "text",
