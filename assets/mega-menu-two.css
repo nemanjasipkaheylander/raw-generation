@@ -125,7 +125,7 @@
     }
     .mega-menu-two__product-card-content {
         width: 100%;
-        flex-direction: row;
+        flex-direction: column;
         gap: 10px;
     }
 }
