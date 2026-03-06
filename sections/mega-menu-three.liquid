@@ -87,6 +87,7 @@
           <div class="mega-menu-third__container-four">
                <figure class="mega-menu-third__image-cont">
                      {{ section.settings.column_fourth_image | image_url: width: 1080 | image_tag: class: 'meganav__img-showcase', loading: 'lazy' }}
+                     {{ section.settings.column_fourth_image_mob | image_url: width: 1080 | image_tag: class: 'meganav__img-showcase_mob', loading: 'lazy' }}
             </figure>
           </div>
    </div>
@@ -213,6 +214,11 @@
         "type": "image_picker",
         "id": "column_fourth_image",
         "label": "Upload image"
+      },
+      {
+        "type": "image_picker",
+        "id": "column_fourth_image_mob",
+        "label": "Upload image Mob"
       }
 
     ],
