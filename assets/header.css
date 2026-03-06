@@ -459,11 +459,14 @@ search-element {
         text-align: center;
     }
     .menu-item a {
-        padding: 18px 0;
+        padding: 10px 0;
         display: flex;
         text-transform: capitalize;
         font-size: 14px;
+    }
+    .menu-level-1 .menu-item .menu-link  {
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 18px 0;
     }
 
     .menu-item a.open {
