@@ -121,6 +121,9 @@
     width: auto;
     height: auto;
 }
+.meganav__gallery__img {
+    display: block;
+}
 .mega-menu-one__content-box {
     position: absolute;
     left: 20px;
@@ -149,6 +152,9 @@ p.mega-menu-one__container-subtitle {
     text-transform: uppercase;
     font-weight: 600;
 }
+.meganav__gallery__img_mob {
+        display: none;
+}
 @media screen (max-width: 1024px) {
     .mega-menu-one__products {
         flex-wrap: wrap;
@@ -158,5 +164,11 @@ p.mega-menu-one__container-subtitle {
     }
     .mega-menu-one__product-card a {
         flex-direction: column;
+    }
+    .meganav__gallery__img {
+        display: none;
+    }
+    .meganav__gallery__img_mob {
+        display: block;
     }
 }
