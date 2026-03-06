@@ -121,7 +121,7 @@
     width: auto;
     height: auto;
 }
-.meganav__gallery__img {
+.meganav__img {
     display: block;
 }
 .mega-menu-one__content-box {
@@ -166,7 +166,7 @@ p.mega-menu-one__container-subtitle {
     .mega-menu-one__product-card a {
         flex-direction: column;
     }
-    .meganav__gallery__img {
+    .meganav__img {
         display: none;
     }
     .meganav__gallery__img_mob {
