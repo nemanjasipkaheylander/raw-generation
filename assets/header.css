@@ -307,6 +307,9 @@ search-element {
 .menu__item-title svg {
         fill: transparent;
     }
+.menu__list.flex--row li.menu__item:nth-child(4) svg {
+    display: none;
+}
 @media screen and (min-width: 1025px) and (hover: hover) {
     .header--transparent.header--filled:hover > div {
         background: rgb(var(--bg-gradient));
