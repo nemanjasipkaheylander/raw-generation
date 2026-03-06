@@ -258,7 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.style.left = '0';
             menu.style.top = '0';
             menu.style.margin = '0';
-            menu.style.padding = '1rem';
             menu.style.backgroundColor = '#fff';
             menu.style.boxShadow = 'none';
             menu.offsetHeight;
