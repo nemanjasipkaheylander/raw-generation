@@ -82,10 +82,10 @@ figure.mega-menu-third__image img {
     width: 100%;
     border-radius: 15px;
 }
-.meganav__gallery__img_mob {
+.meganav__gallery__img_mob, .meganav__img-showcase_mob {
         display: none;
 }
-.meganav__img {
+.meganav__img, .meganav__img-showcase {
     display: block;
 }
 @media (max-width: 1024px) {
@@ -99,10 +99,11 @@ figure.mega-menu-third__image img {
     .mega-menu-one__product-card a {
         flex-direction: column;
     }
-    .meganav__img {
+    .meganav__img, .meganav__img-showcase {
         display: none;
     }
-    .meganav__gallery__img_mob {
+    .meganav__gallery__img_mob, .meganav__img-showcase_mob {
         display: block;
     }
+
 }
