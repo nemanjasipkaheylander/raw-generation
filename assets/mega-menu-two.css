@@ -107,6 +107,8 @@
     }
     .mega-menu-two__container-box {
         max-width: 100%;
+        flex-direction: row;
+        gap: 10px;
     }
     .mega-menu-two__image img {
         max-width: 40px;
