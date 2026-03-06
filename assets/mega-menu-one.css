@@ -169,4 +169,10 @@ p.mega-menu-one__container-subtitle {
     .meganav__gallery__img_mob {
         display: block;
     }
+    h2.mega-menu-one__product-title {
+        font-size: 14px;
+    }
+    p.mega-menu-one__product-subtitle {
+        font-size: 13px;
+    }
 }
