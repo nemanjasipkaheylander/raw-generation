@@ -21,37 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Create wrapper divs for mobile
-    const mobileWrappers = new Map();
-    
     // Variables to track state
     let isAnyMenuOpen = false;
     let lastScrollTop = 0;
     let scrollTimeout;
     let activeMenuIndex = null;
-    let isMobile = window.innerWidth <= 1024;
-    
-    // Function to check if mobile and reposition menus accordingly
-    function handleResponsiveLayout() {
-        const wasMobile = isMobile;
-        isMobile = window.innerWidth <= 1024;
-        
-        if (isMobile !== wasMobile) {
-            if (isMobile) {
-                // Switching to mobile - move menus inside the mobile menu list
-                moveMenusToMobile();
-            } else {
-                // Switching to desktop - restore menus to original positions
-                restoreMenusToDesktop();
-                // Close any open menus
-                closeAllMenus();
-            }
-        }
-    }
+    let isMobile = window.innerWidth < 1024;
     
     // Function to move menus inside the mobile menu list below corresponding li
     function moveMenusToMobile() {
         if (!mobileMenuList) return;
+        
+        console.log('Moving menus to mobile position');
         
         menuSections.forEach((selector, index) => {
             const menu = document.querySelector(selector);
@@ -68,60 +49,69 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (triggerLi) {
-                // Create a wrapper div if it doesn't exist
-                if (!mobileWrappers.has(selector)) {
-                    const wrapper = document.createElement('div');
-                    wrapper.className = 'mega-menu--mobile';
-                    mobileWrappers.set(selector, wrapper);
-                }
+                // Insert menu right after the trigger li in the ul
+                triggerLi.parentNode.insertBefore(menu, triggerLi.nextSibling);
                 
-                const wrapper = mobileWrappers.get(selector);
+                // Add mobile class for styling
+                menu.classList.add('mega-menu--mobile');
                 
-                // Move the menu into the wrapper
-                wrapper.appendChild(menu);
+                // Ensure menu is hidden initially
+                menu.style.display = 'none';
+                menu.style.opacity = '0';
+                menu.style.visibility = 'hidden';
                 
-                // Insert the wrapper right after the trigger li
-                triggerLi.parentNode.insertBefore(wrapper, triggerLi.nextSibling);
-                
-                // Ensure the wrapper has the correct styles
-                wrapper.style.display = 'none';
-                
-                // The menu inside should be visible when wrapper is shown
+                // Set mobile positioning
                 menu.style.position = 'relative';
                 menu.style.top = '0';
                 menu.style.left = '0';
                 menu.style.right = 'auto';
                 menu.style.width = '100%';
-                menu.style.margin = '0';
             }
         });
     }
     
     // Function to restore menus to original positions on desktop
     function restoreMenusToDesktop() {
+        console.log('Restoring menus to desktop position');
+        
         menuSections.forEach(selector => {
             const menu = document.querySelector(selector);
             const originalParent = originalParents.get(selector);
-            const wrapper = mobileWrappers.get(selector);
             
             if (menu && originalParent) {
-                // Remove from wrapper
-                if (wrapper && wrapper.parentNode) {
-                    wrapper.parentNode.removeChild(wrapper);
-                }
-                
                 // Move back to original location
                 originalParent.appendChild(menu);
                 
-                // Reset menu styles
+                // Remove mobile class and styles
+                menu.classList.remove('mega-menu--mobile');
                 menu.style.position = '';
                 menu.style.top = '';
                 menu.style.left = '';
                 menu.style.right = '';
                 menu.style.width = '';
-                menu.style.margin = '';
+                
+                // Reset to hidden state
+                menu.style.display = 'none';
+                menu.style.opacity = '0';
+                menu.style.visibility = 'hidden';
             }
         });
+    }
+    
+    // Function to check screen size and reposition menus
+    function handleResponsiveLayout() {
+        const wasMobile = isMobile;
+        isMobile = window.innerWidth < 1024;
+        
+        console.log('Screen size check:', { isMobile, wasMobile, width: window.innerWidth });
+        
+        if (isMobile && !wasMobile) {
+            // Just switched to mobile - move menus
+            moveMenusToMobile();
+        } else if (!isMobile && wasMobile) {
+            // Just switched to desktop - restore menus
+            restoreMenusToDesktop();
+        }
     }
     
     // Function to update menu top position based on scroll (desktop only)
@@ -146,18 +136,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to close all menus
     function closeAllMenus() {
-        // Hide all mobile wrappers
-        mobileWrappers.forEach(wrapper => {
-            wrapper.style.display = 'none';
-        });
-        
-        // Hide all desktop menus
         document.querySelectorAll('[id^="shopify-section-sections--18072930287678__mega_menu"]').forEach(menu => {
             menu.style.opacity = '0';
             menu.style.visibility = 'hidden';
             menu.style.display = 'none';
         });
-        
         isAnyMenuOpen = false;
         activeMenuIndex = null;
         
@@ -175,51 +158,39 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close any open menus first
         closeAllMenus();
         
-        if (isMobile) {
-            // Mobile: Show the wrapper
-            const wrapper = mobileWrappers.get(menuSelector);
-            if (wrapper) {
-                wrapper.style.display = 'block';
-                
-                // The menu inside should be visible
-                const menu = wrapper.firstElementChild;
-                if (menu) {
-                    menu.style.display = 'block';
-                    menu.style.opacity = '1';
-                    menu.style.visibility = 'visible';
-                }
-                
-                isAnyMenuOpen = true;
-                activeMenuIndex = index;
-                
-                // Add active class to trigger
-                if (triggerElement) {
-                    triggerElement.classList.add('active');
-                }
-                
-                // Scroll to the menu
-                setTimeout(() => {
-                    wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
+        const menu = document.querySelector(menuSelector);
+        if (menu) {
+            console.log('Opening menu:', menuSelector, 'on mobile:', isMobile);
+            
+            // Add active class to the clicked trigger
+            if (triggerElement) {
+                triggerElement.classList.add('active');
             }
-        } else {
-            // Desktop: Show the menu directly
-            const menu = document.querySelector(menuSelector);
-            if (menu) {
+            
+            // Apply transition
+            menu.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
+            
+            if (!isMobile) {
+                // Desktop: update position
                 updateMenuTopPosition();
-                
-                menu.style.transition = 'opacity 0.3s ease, visibility 0.3s ease, top 0.2s ease';
-                menu.style.display = 'block';
-                menu.offsetHeight;
-                menu.style.opacity = '1';
-                menu.style.visibility = 'visible';
-                
-                isAnyMenuOpen = true;
-                activeMenuIndex = index;
-                
-                if (triggerElement) {
-                    triggerElement.classList.add('active');
-                }
+                menu.style.transition += ', top 0.2s ease';
+            }
+            
+            // Show the menu
+            menu.style.display = 'block';
+            // Force reflow
+            menu.offsetHeight;
+            menu.style.opacity = '1';
+            menu.style.visibility = 'visible';
+            
+            isAnyMenuOpen = true;
+            activeMenuIndex = index;
+            
+            // On mobile, scroll to the menu
+            if (isMobile) {
+                setTimeout(() => {
+                    menu.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
             }
         }
     }
@@ -236,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
             updateMenuTopPosition();
         }
         
-        // Check if actually scrolling (not just the event firing)
+        // Check if actually scrolling
         if (currentScrollTop !== lastScrollTop) {
             // User is actively scrolling - close menus on desktop only
             if (isAnyMenuOpen && !isMobile) {
@@ -268,13 +239,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { passive: true });
     
     // Handle resize events
+    let resizeTimeout;
     window.addEventListener('resize', function() {
-        handleResponsiveLayout();
-        updateMenuTopPosition();
-        
-        if (!isMobile && isAnyMenuOpen) {
-            closeAllMenus();
-        }
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            handleResponsiveLayout();
+            updateMenuTopPosition();
+            
+            if (!isMobile && isAnyMenuOpen) {
+                closeAllMenus();
+            }
+        }, 250);
     });
     
     // Function to handle trigger clicks
@@ -318,9 +293,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const isDesktopMenuItem = event.target.closest('.menu__item');
         const isMobileMenuItem = event.target.closest('.menu-item');
         const isMenuSection = event.target.closest('[id^="shopify-section-sections--18072930287678__mega_menu"]');
-        const isMobileWrapper = event.target.closest('.mega-menu--mobile');
         
-        if (!isDesktopMenuItem && !isMobileMenuItem && !isMenuSection && !isMobileWrapper && isAnyMenuOpen) {
+        if (!isDesktopMenuItem && !isMobileMenuItem && !isMenuSection && isAnyMenuOpen) {
             closeAllMenus();
         }
     });
@@ -360,24 +334,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 width: 100%;
                 background: #fff;
                 border-bottom: 1px solid #eee;
-                padding: 0;
-                margin: 0;
-            }
-            
-            .mega-menu--mobile > div {
-                width: 100%;
                 padding: 20px;
+                margin: 0;
                 box-sizing: border-box;
-            }
-            
-            .mega-menu--mobile > div[class*="shopify-section"] {
-                opacity: 1 !important;
-                visibility: visible !important;
-                display: block !important;
                 position: relative !important;
                 top: 0 !important;
                 left: 0 !important;
                 right: 0 !important;
+            }
+            
+            .mega-menu--mobile[id^="shopify-section-sections--18072930287678__mega_menu"] {
+                display: none;
+            }
+            
+            .mega-menu--mobile[id^="shopify-section-sections--18072930287678__mega_menu"][style*="opacity: 1"],
+            .mega-menu--mobile[id^="shopify-section-sections--18072930287678__mega_menu"][style*="visibility: visible"] {
+                display: block;
             }
         }
     `;
