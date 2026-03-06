@@ -149,3 +149,14 @@ p.mega-menu-one__container-subtitle {
     text-transform: uppercase;
     font-weight: 600;
 }
+@media screen (max-width: 1024px) {
+    .mega-menu-one__products {
+        flex-wrap: wrap;
+    }
+    .l.menu-wrapper {
+        flex-direction: column;
+    }
+    .mega-menu-one__product-card a {
+        flex-direction: column;
+    }
+}
