@@ -155,7 +155,7 @@ p.mega-menu-one__container-subtitle {
 .meganav__gallery__img_mob {
         display: none;
 }
-@media screen (max-width: 1024px) {
+@media (max-width: 1024px) {
     .mega-menu-one__products {
         flex-wrap: wrap;
     }
