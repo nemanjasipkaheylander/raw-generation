@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         menuElements.forEach(menu => {
             if (scrollPosition > 70) {
-                menu.style.top = '68px';
+                menu.style.top = '66px';
             } else {
                 menu.style.top = '138px';
             }
