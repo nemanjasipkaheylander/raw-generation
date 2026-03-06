@@ -1,7 +1,7 @@
 
 
 
-{{ '' | asset_url | stylesheet_tag }}
+{{ 'mega-menu-two.css' | asset_url | stylesheet_tag }}
 
 {% liquid
   assign section_target = section.settings.section_target
@@ -40,7 +40,7 @@
                   <div class="mega-menu-two__product-label" style="background-color: {{ block.settings.mmo_label_color }};">{{ block.settings.mmo_label_text}}</div>
                   <a href="{{ block.settings.mmo_product.url }}" title="{{block.settings.mmo_product.title}}">
                   <figure class="mega-menu-two__product-image">
-                     {{ block.settings.mmo_image | image_url: width: 320 | image_tag: class: 'meganav__gallery__img', loading: 'lazy' }}
+                     {{ block.settings.mmo_image | image_url: width: 320 | image_tag: class: 'meganav__gallery__img_product', loading: 'lazy' }}
                   </figure>
                   <h2 class="mega-menu-two__product-title">{{ block.settings.mmo_product_title}}</h2>
                   <p class="mega-menu-two__product-subtitle">{{ block.settings.mmo_product_subtitle}}</p>
