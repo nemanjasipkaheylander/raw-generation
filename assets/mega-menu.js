@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (index < 2) {
                         menuSelector = mobileMenuSections[index];
                     } else if (index === 3) {
-                        menuSelector = mobileMenuSections[4];
+                        menuSelector = mobileMenuSections[3];
                     }
                     
                     // Check if this mobile menu is already open
