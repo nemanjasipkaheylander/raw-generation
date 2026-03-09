@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (index < 2) {
                     menuSelector = desktopMenuSections[index];
                 } else if (index === 3) {
-                    menuSelector = desktopMenuSections[4];
+                    menuSelector = desktopMenuSections[3];
                 }
                 
                 // Check if this menu is already open
