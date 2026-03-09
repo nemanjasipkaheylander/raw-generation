@@ -1,5 +1,5 @@
 .menu__list {
-    gap: 8px 24px;
+    gap: 8px 40px;
     flex-wrap: wrap;
     justify-content: var(--hor-menu-alignment);
     align-items: center;
