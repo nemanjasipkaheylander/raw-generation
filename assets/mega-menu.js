@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (index < 2) {
                     menuSelector = desktopMenuSections[index];
                 } else if (index === 3) {
-                    menuSelector = desktopMenuSections[3];
+                    menuSelector = desktopMenuSections[4];
                 }
                 
                 // Check if this menu is already open
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (index < 2) {
                         menuSelector = mobileMenuSections[index];
                     } else if (index === 3) {
-                        menuSelector = mobileMenuSections[2];
+                        menuSelector = mobileMenuSections[4];
                     }
                     
                     // Check if this mobile menu is already open
