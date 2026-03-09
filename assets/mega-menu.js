@@ -142,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentlyOpenDesktopMenu = null;
     let desktopLastScrollTop = 0;
     let desktopScrollTimeout;
+    let hoverTimeout = null;
     
     // Function to update desktop menu top position
     function updateDesktopMenuTopPosition() {
@@ -240,14 +241,22 @@ document.addEventListener('DOMContentLoaded', function() {
         updateDesktopMenuTopPosition();
     });
     
-    // Desktop click handlers
+    // DESKTOP HOVER HANDLERS (replacing click handlers)
     desktopMenuItems.forEach((item, index) => {
-        item.addEventListener('click', function(event) {
-            // Only handle desktop clicks in desktop view
-            if (isMobileView()) return;
-            
-            if (index < 2 || index === 3) {
-                event.preventDefault();
+        // Only add hover behavior to menu items that should have mega menus (1st, 2nd, and 5th items)
+        const isMegaMenuItem = index < 2 || index === 3;
+        
+        if (isMegaMenuItem) {
+            // Mouse enter - open menu
+            item.addEventListener('mouseenter', function(event) {
+                // Only handle desktop hovers in desktop view
+                if (isMobileView()) return;
+                
+                // Clear any pending close timeout
+                if (hoverTimeout) {
+                    clearTimeout(hoverTimeout);
+                    hoverTimeout = null;
+                }
                 
                 let menuSelector;
                 if (index < 2) {
@@ -256,20 +265,58 @@ document.addEventListener('DOMContentLoaded', function() {
                     menuSelector = desktopMenuSections[3];
                 }
                 
-                // Check if this menu is already open
-                if (currentlyOpenDesktopMenu === menuSelector) {
-                    closeSpecificDesktopMenu(menuSelector);
-                    console.log('Desktop: Closing menu (same trigger clicked)');
-                } else {
+                // Close any other open menu and open this one
+                if (currentlyOpenDesktopMenu !== menuSelector) {
                     closeAllDesktopMenus();
                     openDesktopMenu(menuSelector);
-                    console.log('Desktop: Opening menu', menuSelector);
+                    console.log('Desktop: Opening menu on hover', menuSelector);
                 }
+            });
+            
+            // Mouse leave - close menu after a short delay
+            item.addEventListener('mouseleave', function(event) {
+                // Only handle desktop hovers in desktop view
+                if (isMobileView()) return;
+                
+                // Set a timeout to close the menu
+                hoverTimeout = setTimeout(() => {
+                    // Check if we're still hovering over the menu section
+                    const activeElement = document.querySelector(':hover');
+                    const menuSection = currentlyOpenDesktopMenu ? document.querySelector(currentlyOpenDesktopMenu) : null;
+                    
+                    // Only close if not hovering over the menu section
+                    if (menuSection && !menuSection.contains(activeElement)) {
+                        closeAllDesktopMenus();
+                        console.log('Desktop: Closing menu on mouse leave');
+                    }
+                    hoverTimeout = null;
+                }, 300); // 300ms delay before closing
+            });
+        }
+    });
+    
+    // Keep menu open when hovering over the mega menu itself
+    const allMegaMenus = document.querySelectorAll('[id^="shopify-section-sections--18072930287678__mega_menu"]');
+    allMegaMenus.forEach(menu => {
+        menu.addEventListener('mouseenter', function() {
+            // Clear the close timeout if we hover back into the menu
+            if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = null;
             }
+        });
+        
+        menu.addEventListener('mouseleave', function() {
+            // Set timeout to close when leaving the mega menu
+            hoverTimeout = setTimeout(() => {
+                closeAllDesktopMenus();
+                console.log('Desktop: Closing menu on mouse leave from mega menu');
+                hoverTimeout = null;
+            }, 300);
         });
     });
     
-    // Desktop close when clicking outside
+    // Desktop close when clicking outside (keep this as a backup)
     document.addEventListener('click', function(event) {
         if (isMobileView()) return;
         
@@ -296,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial desktop position
     updateDesktopMenuTopPosition();
     
-    // ========== MOBILE MENU LOGIC ==========
+    // ========== MOBILE MENU LOGIC (unchanged - still uses click) ==========
     
     // Mobile menu items
     const mobileMenuItems = document.querySelectorAll('.menu-item');
