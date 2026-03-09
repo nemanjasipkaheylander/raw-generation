@@ -246,14 +246,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // Only handle desktop clicks in desktop view
             if (isMobileView()) return;
             
-            if (index < 3 || index === 4) {
+            if (index < 2 || index === 3) {
                 event.preventDefault();
                 
                 let menuSelector;
-                if (index < 3) {
+                if (index < 2) {
                     menuSelector = desktopMenuSections[index];
-                } else if (index === 4) {
-                    menuSelector = desktopMenuSections[3];
+                } else if (index === 3) {
+                    menuSelector = desktopMenuSections[2];
                 }
                 
                 // Check if this menu is already open
@@ -371,15 +371,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 console.log('Mobile item clicked:', index);
                 
-                if (index < 3 || index === 4) {
+                if (index < 2 || index === 3) {
                     event.preventDefault();
                     event.stopPropagation();
                     
                     let menuSelector;
-                    if (index < 3) {
+                    if (index < 2) {
                         menuSelector = mobileMenuSections[index];
-                    } else if (index === 4) {
-                        menuSelector = mobileMenuSections[3];
+                    } else if (index === 3) {
+                        menuSelector = mobileMenuSections[2];
                     }
                     
                     // Check if this mobile menu is already open
