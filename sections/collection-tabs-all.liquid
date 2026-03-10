@@ -442,7 +442,7 @@
                             {%- endif -%}
                             <li class="grid-item swiper-slide">
                               {% if product.metafields.custom.no_popup == true %}
-                                {% render 'snippet-card-box' 
+                                {% render 'snippet-card-box-v2' 
  card_product: product
                                   ,
  show_vendor: section.settings.show_vendor
@@ -513,7 +513,7 @@
                                 %}
 
                               {% else %}
-                                {% render 'new-card-product'
+                                {% render 'new-card-product-v2'
                                   ,
  card_product: product
                                   ,
