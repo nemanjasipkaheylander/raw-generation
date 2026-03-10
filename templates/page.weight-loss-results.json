@@ -1,1 +1,424 @@
-{"sections":{"main-page":{"type":"main-page","disabled":true,"settings":{"heading":"","heading_style":"section-heading","hide_heading":false,"center_text":true,"rte_heading_style":"page-title","page_style":"body-font","content_width":"regular","grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","top_spacing":1,"bottom_spacing":1}},"rich_text_WfVEtr":{"type":"rich-text","blocks":{"subheading_hrmNYa":{"type":"subheading","settings":{"subheading":"RAW GENERATION CUSTOMER SURVEY","subheading_style":"body-font","subheading_tag":"h3"}},"heading_XL7tdR":{"type":"heading","settings":{"heading":"<p>Weight Loss Results<\/p>","heading_style":"page-title","heading_tag":"h1"}},"text_8LFmeG":{"type":"text","settings":{"text":"<p>At Raw Generation, we believe in the power of raw fruits and vegetables to help you lose weight, detox, reset your diet, boost energy & immunity, and so much more. But we also have the research to back up our beliefs, as every product we launch is rigorously tested with real consumers to ensure it is effective.<\/p>","richtext_heading_style":"subheading-font","text_style":"body-font"}},"button_yJbRK4":{"type":"button","settings":{"button_label":"CLEANSES","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/collections\/weight-loss-cleanses","target_blank":false,"button_style":"solid","use_main_button":false}},"button_bBAGWP":{"type":"button","settings":{"button_label":"GUIDED PROGRAMS","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/collections\/weight-loss-systems","target_blank":false,"button_style":"outlined","use_main_button":false}}},"block_order":["subheading_hrmNYa","heading_XL7tdR","text_8LFmeG","button_yJbRK4","button_bBAGWP"],"name":"t:sections.rich-text.name","settings":{"center_text":true,"content_width":"narrow","grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","top_spacing":1,"bottom_spacing":1}},"media_with_text_xBMY4i":{"type":"media-with-text","blocks":{"heading_xRYGkp":{"type":"heading","settings":{"heading":"In a survey conducted with 3,901 of our customers...","heading_style":"secondary-heading","heading_tag":"h2"}},"text_XAXGVt":{"type":"text","settings":{"text":"<ul><li>98% were satisfied with their product experience<\/li><li>95% would recommend Raw Generation to a friend<\/li><li>95% enjoyed the taste of our juices & smoothies<\/li><li>91% plan to purchase again from Raw Generation<\/li><\/ul>","text_style":"body-font"}}},"block_order":["heading_xRYGkp","text_XAXGVt"],"name":"t:sections.media-with-text.name","settings":{"image":"shopify:\/\/shop_images\/Cool-Greens_1005_ingredients_square_540x_1080x_135b6749-c9fd-45d4-809f-4113b926a74b.webp","media_ratio":"1\/1","mobile_image":"shopify:\/\/shop_images\/Cool-Greens_1005_ingredients_square_540x_1080x_135b6749-c9fd-45d4-809f-4113b926a74b.webp","mobile_media_ratio":"1\/1","link":"","target_blank":false,"focal_point":"center center","enable_mute":false,"enable_pause":false,"control_horizontal_position":"flex-end","swap_media_position":false,"media_size":"half","content_width":"wide","vertical_text_alignment":"center","horizontal_text_alignment":"left","full_width":false,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","enable_sticky_content":true,"sticky_offset":24,"top_spacing":0,"bottom_spacing":0.3}},"media_with_text_9rLB64":{"type":"media-with-text","blocks":{"heading_FjK838":{"type":"heading","settings":{"heading":"Consumers agree that Raw Generation is effective in helping them achieve their health goals.","heading_style":"secondary-heading","heading_tag":"h2"}},"text_9A9AHh":{"type":"text","settings":{"text":"<ul><li>84% lose weight<\/li><li>93% jumpstart a healthier diet or lifestyle<\/li><li>84% feel more energetic<\/li><li>89% see benefits from detoxifying<\/li><li>92% use a cleanse to prepare for an event<\/li><li>84% achieve better gut health<\/li><\/ul>","text_style":"body-font"}}},"block_order":["heading_FjK838","text_9A9AHh"],"name":"t:sections.media-with-text.name","settings":{"image":"shopify:\/\/shop_images\/nikaylascott_-_Skinny_Cleanse.jpg","media_ratio":"1\/1","mobile_image":"shopify:\/\/shop_images\/nikaylascott_-_Skinny_Cleanse.jpg","mobile_media_ratio":"1\/1","link":"","target_blank":false,"focal_point":"center center","enable_mute":false,"enable_pause":false,"control_horizontal_position":"flex-end","swap_media_position":true,"media_size":"half","content_width":"wide","vertical_text_alignment":"center","horizontal_text_alignment":"left","full_width":false,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","enable_sticky_content":true,"sticky_offset":24,"top_spacing":0,"bottom_spacing":0.3}},"media_with_text_4Uh6Hz":{"type":"media-with-text","blocks":{"heading_f7Bekm":{"type":"heading","settings":{"heading":"Juice Cleanses: A Natural Reset for Your Body","heading_style":"secondary-heading","heading_tag":"h2"}},"text_U3B4yP":{"type":"text","settings":{"text":"<p>Juice cleanses are more than just a trend—they’re rooted in science. By flooding your body with nutrients while giving your digestive system a break, cleanses can lead to weight loss, improved digestion, and a stronger immune system.<\/p><p><strong>Research Findings:<\/strong><\/p><p>Over 60 recipients in our controlled study achieved the following weight loss: <\/p><ul><li>6 pounds for a 3-day cleanse<\/li><li>8 pounds for a 5-day cleanse<\/li><li>Over 10 pounds for 7-day and 10-day cleanses<\/li><li>Up to 4 pounds for our Instant Smoothie Powder Detox 3-day cleanse<\/li><\/ul><p><em>Participants reported reduced bloating, enhanced energy, and better digestion after completing their cleanse.<\/em><\/p>","text_style":"body-font"}},"button_kernAm":{"type":"button","settings":{"button_label":"CHOOSE MY CLEANSE","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/collections\/cleanses","target_blank":false,"button_style":"solid","use_main_button":false}}},"block_order":["heading_f7Bekm","text_U3B4yP","button_kernAm"],"name":"t:sections.media-with-text.name","settings":{"image":"shopify:\/\/shop_images\/IMG_2914.jpg","media_ratio":"1\/1","mobile_image":"shopify:\/\/shop_images\/IMG_2914.jpg","mobile_media_ratio":"1\/1","link":"","target_blank":false,"focal_point":"center center","enable_mute":false,"enable_pause":false,"control_horizontal_position":"flex-end","swap_media_position":false,"media_size":"half","content_width":"narrow","vertical_text_alignment":"center","horizontal_text_alignment":"left","full_width":false,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","enable_sticky_content":true,"sticky_offset":24,"top_spacing":0,"bottom_spacing":0.3}},"media_with_text_LdLEhK":{"type":"media-with-text","blocks":{"heading_Yb4Nnr":{"type":"heading","settings":{"heading":"Weight Loss Systems: Sustainable Weight Management","heading_style":"secondary-heading","heading_tag":"h2"}},"text_BW8HUr":{"type":"text","settings":{"text":"<p>Our weight loss systems, including the Stay Skinny Method™, are designed to simplify the journey to a healthier body by combining nutrient-dense juices, satisfying meal replacements, and clean eating guidelines.<\/p><p><strong>Research Findings:<\/strong><\/p><ul><li>Participants tried the Stay Skinny Method or Protein Method over a period of 4 weeks<\/li><li>They lost an average of 2-3 pounds per week<\/li><\/ul><p>Research supports the effectiveness of whole-food-based diets in promoting steady, sustainable weight loss. The inclusion of key nutrients, chlorophyll, plant-based protein and fiber helped curb cravings, boost metabolism, and promote weight loss.<\/p>","text_style":"body-font"}},"button_jD6t9b":{"type":"button","settings":{"button_label":"CHOOSE MY PROGRAM","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/collections\/weight-loss-systems","target_blank":false,"button_style":"solid","use_main_button":false}}},"block_order":["heading_Yb4Nnr","text_BW8HUr","button_jD6t9b"],"name":"t:sections.media-with-text.name","settings":{"image":"shopify:\/\/shop_images\/Copy_of_IMG_3817.jpg","media_ratio":"1\/1","mobile_image":"shopify:\/\/shop_images\/Copy_of_IMG_3817.jpg","mobile_media_ratio":"1\/1","link":"","target_blank":false,"focal_point":"center center","enable_mute":false,"enable_pause":false,"control_horizontal_position":"flex-end","swap_media_position":true,"media_size":"half","content_width":"wide","vertical_text_alignment":"center","horizontal_text_alignment":"left","full_width":false,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","enable_sticky_content":true,"sticky_offset":24,"top_spacing":0.3,"bottom_spacing":0.5}},"line_LEYa6T":{"type":"line","name":"t:blocks.line.name","settings":{"grid_style":"page","disable_max_width":false,"make_full_width":false,"color_scheme":"background-1","top_spacing":0,"bottom_spacing":0}},"rich_text_fMHkqb":{"type":"rich-text","blocks":{"heading_tQLdgH":{"type":"heading","settings":{"heading":"<p>Start your health & weight loss journey today!<\/p>","heading_style":"page-title","heading_tag":"h2"}},"text_Pe9eT4":{"type":"text","settings":{"text":"<p><br\/>At Raw Generation, your health and well-being are always at the forefront. Whether you're seeking weight loss, better digestion, more energy, or simply a reset, our products are crafted with purpose and backed by results. Real people are experiencing real transformations, and you're just one step away from starting your journey. <br\/><br\/><\/p>","richtext_heading_style":"section-heading","text_style":"body-font"}},"button_J7Xd6R":{"type":"button","settings":{"button_label":"CLEANSES","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/collections\/weight-loss-cleanses","target_blank":false,"button_style":"solid","use_main_button":false}},"button_8DGHaT":{"type":"button","settings":{"button_label":"GUIDED PROGRAMS","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/collections\/weight-loss-systems","target_blank":false,"button_style":"outlined","use_main_button":false}}},"block_order":["heading_tQLdgH","text_Pe9eT4","button_J7Xd6R","button_8DGHaT"],"name":"t:sections.rich-text.name","settings":{"center_text":true,"content_width":"narrow","grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","top_spacing":1.3,"bottom_spacing":1.6}}},"order":["main-page","rich_text_WfVEtr","media_with_text_xBMY4i","media_with_text_9rLB64","media_with_text_4Uh6Hz","media_with_text_LdLEhK","line_LEYa6T","rich_text_fMHkqb"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_style": "section-heading",
+        "hide_heading": false,
+        "center_text": true,
+        "rte_heading_style": "page-title",
+        "page_style": "body-font",
+        "content_width": "regular",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    },
+    "rich_text_WfVEtr": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_hrmNYa": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "RAW GENERATION CUSTOMER SURVEY",
+            "subheading_style": "body-font",
+            "subheading_tag": "h3"
+          }
+        },
+        "heading_XL7tdR": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Weight Loss Results</p>",
+            "heading_style": "page-title",
+            "heading_tag": "h1"
+          }
+        },
+        "text_8LFmeG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Raw Generation, we believe in the power of raw fruits and vegetables to help you lose weight, detox, reset your diet, boost energy & immunity, and so much more. But we also have the research to back up our beliefs, as every product we launch is rigorously tested with real consumers to ensure it is effective.</p>",
+            "richtext_heading_style": "subheading-font",
+            "text_style": "body-font"
+          }
+        },
+        "button_yJbRK4": {
+          "type": "button",
+          "settings": {
+            "button_label": "CLEANSES",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://collections/juice-cleanses",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        },
+        "button_bBAGWP": {
+          "type": "button",
+          "settings": {
+            "button_label": "GUIDED PROGRAMS",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://collections/weight-loss-systems",
+            "target_blank": false,
+            "button_style": "outlined",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_hrmNYa",
+        "heading_XL7tdR",
+        "text_8LFmeG",
+        "button_yJbRK4",
+        "button_bBAGWP"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "center_text": true,
+        "content_width": "narrow",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    },
+    "media_with_text_xBMY4i": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_xRYGkp": {
+          "type": "heading",
+          "settings": {
+            "heading": "In a survey conducted with 3,901 of our customers...",
+            "heading_style": "secondary-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "text_XAXGVt": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>98% were satisfied with their product experience</li><li>95% would recommend Raw Generation to a friend</li><li>95% enjoyed the taste of our juices & smoothies</li><li>91% plan to purchase again from Raw Generation</li></ul>",
+            "text_style": "body-font"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xRYGkp",
+        "text_XAXGVt"
+      ],
+      "name": "t:sections.media-with-text.name",
+      "settings": {
+        "image": "shopify://shop_images/Cool-Greens_1005_ingredients_square_540x_1080x_135b6749-c9fd-45d4-809f-4113b926a74b.webp",
+        "media_ratio": "1/1",
+        "mobile_image": "shopify://shop_images/Cool-Greens_1005_ingredients_square_540x_1080x_135b6749-c9fd-45d4-809f-4113b926a74b.webp",
+        "mobile_media_ratio": "1/1",
+        "link": "",
+        "target_blank": false,
+        "focal_point": "center center",
+        "enable_mute": false,
+        "enable_pause": false,
+        "control_horizontal_position": "flex-end",
+        "swap_media_position": false,
+        "media_size": "half",
+        "content_width": "wide",
+        "vertical_text_alignment": "center",
+        "horizontal_text_alignment": "left",
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "enable_sticky_content": true,
+        "sticky_offset": 24,
+        "top_spacing": 0,
+        "bottom_spacing": 0.3
+      }
+    },
+    "media_with_text_9rLB64": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_FjK838": {
+          "type": "heading",
+          "settings": {
+            "heading": "Consumers agree that Raw Generation is effective in helping them achieve their health goals.",
+            "heading_style": "secondary-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "text_9A9AHh": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>84% lose weight</li><li>93% jumpstart a healthier diet or lifestyle</li><li>84% feel more energetic</li><li>89% see benefits from detoxifying</li><li>92% use a cleanse to prepare for an event</li><li>84% achieve better gut health</li></ul>",
+            "text_style": "body-font"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FjK838",
+        "text_9A9AHh"
+      ],
+      "name": "t:sections.media-with-text.name",
+      "settings": {
+        "image": "shopify://shop_images/nikaylascott_-_Skinny_Cleanse.jpg",
+        "media_ratio": "1/1",
+        "mobile_image": "shopify://shop_images/nikaylascott_-_Skinny_Cleanse.jpg",
+        "mobile_media_ratio": "1/1",
+        "link": "",
+        "target_blank": false,
+        "focal_point": "center center",
+        "enable_mute": false,
+        "enable_pause": false,
+        "control_horizontal_position": "flex-end",
+        "swap_media_position": true,
+        "media_size": "half",
+        "content_width": "wide",
+        "vertical_text_alignment": "center",
+        "horizontal_text_alignment": "left",
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "enable_sticky_content": true,
+        "sticky_offset": 24,
+        "top_spacing": 0,
+        "bottom_spacing": 0.3
+      }
+    },
+    "media_with_text_4Uh6Hz": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_f7Bekm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Juice Cleanses: A Natural Reset for Your Body",
+            "heading_style": "secondary-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "text_U3B4yP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Juice cleanses are more than just a trend—they’re rooted in science. By flooding your body with nutrients while giving your digestive system a break, cleanses can lead to weight loss, improved digestion, and a stronger immune system.</p><p><strong>Research Findings:</strong></p><p>Over 60 recipients in our controlled study achieved the following weight loss: </p><ul><li>6 pounds for a 3-day cleanse</li><li>8 pounds for a 5-day cleanse</li><li>Over 10 pounds for 7-day and 10-day cleanses</li><li>Up to 4 pounds for our Instant Smoothie Powder Detox 3-day cleanse</li></ul><p><em>Participants reported reduced bloating, enhanced energy, and better digestion after completing their cleanse.</em></p>",
+            "text_style": "body-font"
+          }
+        },
+        "button_kernAm": {
+          "type": "button",
+          "settings": {
+            "button_label": "CHOOSE MY CLEANSE",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://collections/cleanses",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_f7Bekm",
+        "text_U3B4yP",
+        "button_kernAm"
+      ],
+      "name": "t:sections.media-with-text.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_2914.jpg",
+        "media_ratio": "1/1",
+        "mobile_image": "shopify://shop_images/IMG_2914.jpg",
+        "mobile_media_ratio": "1/1",
+        "link": "",
+        "target_blank": false,
+        "focal_point": "center center",
+        "enable_mute": false,
+        "enable_pause": false,
+        "control_horizontal_position": "flex-end",
+        "swap_media_position": false,
+        "media_size": "half",
+        "content_width": "narrow",
+        "vertical_text_alignment": "center",
+        "horizontal_text_alignment": "left",
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "enable_sticky_content": true,
+        "sticky_offset": 24,
+        "top_spacing": 0,
+        "bottom_spacing": 0.3
+      }
+    },
+    "media_with_text_LdLEhK": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_Yb4Nnr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Weight Loss Systems: Sustainable Weight Management",
+            "heading_style": "secondary-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "text_BW8HUr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our weight loss systems, including the Stay Skinny Method™, are designed to simplify the journey to a healthier body by combining nutrient-dense juices, satisfying meal replacements, and clean eating guidelines.</p><p><strong>Research Findings:</strong></p><ul><li>Participants tried the Stay Skinny Method or Protein Method over a period of 4 weeks</li><li>They lost an average of 2-3 pounds per week</li></ul><p>Research supports the effectiveness of whole-food-based diets in promoting steady, sustainable weight loss. The inclusion of key nutrients, chlorophyll, plant-based protein and fiber helped curb cravings, boost metabolism, and promote weight loss.</p>",
+            "text_style": "body-font"
+          }
+        },
+        "button_jD6t9b": {
+          "type": "button",
+          "settings": {
+            "button_label": "CHOOSE MY PROGRAM",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://collections/weight-loss-systems",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Yb4Nnr",
+        "text_BW8HUr",
+        "button_jD6t9b"
+      ],
+      "name": "t:sections.media-with-text.name",
+      "settings": {
+        "image": "shopify://shop_images/Copy_of_IMG_3817.jpg",
+        "media_ratio": "1/1",
+        "mobile_image": "shopify://shop_images/Copy_of_IMG_3817.jpg",
+        "mobile_media_ratio": "1/1",
+        "link": "",
+        "target_blank": false,
+        "focal_point": "center center",
+        "enable_mute": false,
+        "enable_pause": false,
+        "control_horizontal_position": "flex-end",
+        "swap_media_position": true,
+        "media_size": "half",
+        "content_width": "wide",
+        "vertical_text_alignment": "center",
+        "horizontal_text_alignment": "left",
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "enable_sticky_content": true,
+        "sticky_offset": 24,
+        "top_spacing": 0.3,
+        "bottom_spacing": 0.5
+      }
+    },
+    "line_LEYa6T": {
+      "type": "line",
+      "name": "t:blocks.line.name",
+      "settings": {
+        "grid_style": "page",
+        "disable_max_width": false,
+        "make_full_width": false,
+        "color_scheme": "background-1",
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "rich_text_fMHkqb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tQLdgH": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Start your health & weight loss journey today!</p>",
+            "heading_style": "page-title",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Pe9eT4": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/>At Raw Generation, your health and well-being are always at the forefront. Whether you're seeking weight loss, better digestion, more energy, or simply a reset, our products are crafted with purpose and backed by results. Real people are experiencing real transformations, and you're just one step away from starting your journey. <br/><br/></p>",
+            "richtext_heading_style": "section-heading",
+            "text_style": "body-font"
+          }
+        },
+        "button_J7Xd6R": {
+          "type": "button",
+          "settings": {
+            "button_label": "CLEANSES",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://collections/juice-cleanses",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        },
+        "button_8DGHaT": {
+          "type": "button",
+          "settings": {
+            "button_label": "GUIDED PROGRAMS",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://collections/weight-loss-systems",
+            "target_blank": false,
+            "button_style": "outlined",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tQLdgH",
+        "text_Pe9eT4",
+        "button_J7Xd6R",
+        "button_8DGHaT"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "center_text": true,
+        "content_width": "narrow",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 1.3,
+        "bottom_spacing": 1.6
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_WfVEtr",
+    "media_with_text_xBMY4i",
+    "media_with_text_9rLB64",
+    "media_with_text_4Uh6Hz",
+    "media_with_text_LdLEhK",
+    "line_LEYa6T",
+    "rich_text_fMHkqb"
+  ]
+}

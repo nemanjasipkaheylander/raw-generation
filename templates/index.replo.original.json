@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_XyRe3p": {
@@ -8,7 +17,7 @@
         "target_blank": false,
         "overlap": "disable",
         "content_on_hover": false,
-        "first_image": "shopify:\/\/shop_images\/WebBanner-Sale-1225-1-1_ff006e58-ce3c-47e6-b46e-60a44f012344.jpg",
+        "first_image": "shopify://shop_images/WebBanner-Sale-1225-1-1_ff006e58-ce3c-47e6-b46e-60a44f012344.jpg",
         "desktop_height_type": "adapt",
         "desktop_pixels_height": 560,
         "center_text": true,
@@ -18,7 +27,7 @@
         "fill_content": false,
         "overlay_opacity": 0,
         "mobile_overlay_opacity": 0,
-        "mobile_image": "shopify:\/\/shop_images\/ChatGPT_Image_Dec_25_2025_03_03_41_PM.png",
+        "mobile_image": "shopify://shop_images/ChatGPT_Image_Dec_25_2025_03_03_41_PM.png",
         "mobile_height_type": "adapt",
         "mobile_pixels_height": 200,
         "content_under_image": false,
@@ -48,8 +57,8 @@
         "image_zmfVYf": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/WEB-SkinnyFamily-1280x568.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/WEB-SkinnyFamily-360x640_bb51b423-770f-4a6c-ad1b-aa262534e9ee.png",
+            "desktop_image": "shopify://shop_images/WEB-SkinnyFamily-1280x568.jpg",
+            "mobile_image": "shopify://shop_images/WEB-SkinnyFamily-360x640_bb51b423-770f-4a6c-ad1b-aa262534e9ee.png",
             "link": "",
             "target_blank": false,
             "icon": "",
@@ -63,7 +72,7 @@
             "heading": "Weight Loss & Detox Solutions  that work for you.",
             "heading_style": "secondary-heading",
             "heading_tag": "h1",
-            "text": "<p>Lose weight, detoxify your body, and achieve your wellness goals fast with nutritionist-designed cleanses and diet reset programs.<\/p>",
+            "text": "<p>Lose weight, detoxify your body, and achieve your wellness goals fast with nutritionist-designed cleanses and diet reset programs.</p>",
             "text_style": "body-font",
             "richtext_heading_style": "section-heading",
             "countdown_enable": false,
@@ -90,20 +99,20 @@
             "button_icon_1": "",
             "swap_button_icon_1": false,
             "button_style_1": "solid",
-            "button_link_1": "shopify:\/\/collections\/weight-loss-cleanses",
+            "button_link_1": "shopify://collections/juice-cleanses",
             "button_target_blank_1": false,
             "use_main_button": false,
             "button_label_2": "WEIGHT LOSS SYSTEMS",
             "button_icon_2": "",
             "swap_button_icon_2": false,
             "button_style_2": "solid",
-            "button_link_2": "shopify:\/\/collections\/weight-loss-systems",
+            "button_link_2": "shopify://collections/weight-loss-systems",
             "button_target_blank_2": false,
             "button_label_3": "QUIZ: Which Solution is Perfect For Me?",
             "button_icon_3": "",
             "swap_button_icon_3": false,
             "button_style_3": "outlined",
-            "button_link_3": "shopify:\/\/pages\/quiz",
+            "button_link_3": "shopify://pages/quiz",
             "button_target_blank_3": false,
             "center_text": true,
             "vertical_content_position": "start",
@@ -139,7 +148,7 @@
             "heading": "[Weight loss and wellness solutions {that work}.]",
             "heading_style": "page-title",
             "heading_tag": "h1",
-            "text": "<p><br\/>Achieve your weight loss and wellness goals fast and build a routine that fits into your life—making it easier to stay on track, maintain your progress, and keep moving toward your best self.<\/p>",
+            "text": "<p><br/>Achieve your weight loss and wellness goals fast and build a routine that fits into your life—making it easier to stay on track, maintain your progress, and keep moving toward your best self.</p>",
             "text_style": "secondary-heading",
             "richtext_heading_style": "section-heading",
             "countdown_enable": false,
@@ -274,7 +283,7 @@
             "button_label": "QUIZ: Which Solution is Right For Me?",
             "button_icon": "",
             "swap_button_icon": false,
-            "button_link": "shopify:\/\/pages\/quiz",
+            "button_link": "shopify://pages/quiz",
             "target_blank": false,
             "button_style": "outlined",
             "use_main_button": false
@@ -286,7 +295,7 @@
             "button_label": "ALL CLEANSES",
             "button_icon": "",
             "swap_button_icon": false,
-            "button_link": "shopify:\/\/collections\/weight-loss-cleanses",
+            "button_link": "shopify://collections/juice-cleanses",
             "target_blank": false,
             "button_style": "solid",
             "use_main_button": false
@@ -302,17 +311,17 @@
         "button_FDfAxT"
       ],
       "settings": {
-        "collection": "weight-loss-cleanses",
+        "collection": "juice-cleanses",
         "media": "only_desktop",
-        "image": "shopify:\/\/shop_images\/PDP_Main-_DDC-3.png",
+        "image": "shopify://shop_images/PDP_Main-_DDC-3.png",
         "focal_point": "center center",
         "enable_mute": false,
         "enable_pause": false,
         "control_horizontal_position": "center",
         "swap_media_position": false,
         "media_size": "small",
-        "media_ratio": "1\/1",
-        "mobile_media_ratio": "1\/1",
+        "media_ratio": "1/1",
+        "mobile_media_ratio": "1/1",
         "content_width": "regular",
         "vertical_text_alignment": "center",
         "horizontal_text_alignment": "center",
@@ -386,12 +395,12 @@
         "item_EqWXgh": {
           "type": "item",
           "settings": {
-            "icon": "glyphs\/signs\/done",
+            "icon": "glyphs/signs/done",
             "color": "#000000",
             "mobile_color": "#000000",
             "heading": "LOSE WEIGHT",
             "heading_style": "body-font",
-            "text": "<p>Juice cleansing is the fastest (and healthiest) way to boost your metabolism and shed pounds and inches. <\/p>",
+            "text": "<p>Juice cleansing is the fastest (and healthiest) way to boost your metabolism and shed pounds and inches. </p>",
             "text_style": "body-font",
             "page": "",
             "rte_heading_style": "section-heading",
@@ -403,12 +412,12 @@
         "item_JCCErA": {
           "type": "item",
           "settings": {
-            "icon": "glyphs\/signs\/done",
+            "icon": "glyphs/signs/done",
             "color": "#000000",
             "mobile_color": "#000000",
             "heading": "DETOXIFY YOUR BODY",
             "heading_style": "body-font",
-            "text": "<p>Give your body what it needs to naturally detoxify, reduce inflammation, and eliminate sugar cravings.<\/p>",
+            "text": "<p>Give your body what it needs to naturally detoxify, reduce inflammation, and eliminate sugar cravings.</p>",
             "text_style": "body-font",
             "page": "",
             "rte_heading_style": "section-heading",
@@ -420,12 +429,12 @@
         "item_QJyahz": {
           "type": "item",
           "settings": {
-            "icon": "glyphs\/signs\/done",
+            "icon": "glyphs/signs/done",
             "color": "#000000",
             "mobile_color": "#000000",
             "heading": "BOOST YOUR METABOLISM",
             "heading_style": "body-font",
-            "text": "<p>Jumpstart a faster metabolism in just a few days with a nutrient dense juice cleanse. <\/p>",
+            "text": "<p>Jumpstart a faster metabolism in just a few days with a nutrient dense juice cleanse. </p>",
             "text_style": "body-font",
             "page": "",
             "rte_heading_style": "section-heading",
@@ -437,12 +446,12 @@
         "item_xtwJMP": {
           "type": "item",
           "settings": {
-            "icon": "glyphs\/signs\/done",
+            "icon": "glyphs/signs/done",
             "color": "#000000",
             "mobile_color": "#000000",
             "heading": "RESET YOUR DIET",
             "heading_style": "body-font",
-            "text": "<p>Nutritionist-designed solutions to give you a clean break from processed foods and to jumpstart healthier eating habits.<\/p>",
+            "text": "<p>Nutritionist-designed solutions to give you a clean break from processed foods and to jumpstart healthier eating habits.</p>",
             "text_style": "body-font",
             "page": "",
             "rte_heading_style": "section-heading",
@@ -519,7 +528,7 @@
         "custom_liquid_yierAB": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<\/br>\n<b>Lose up to 3 pounds per week, every week.<\/br>NO calorie counting. NO extreme dieting. NO deprivation.<\/b> \n<\/br><\/br>\nThese nutritionist-developed programs are designed to help you shed body weight, overcome cravings, and develop healthy eating habits for long-term results.",
+            "custom_liquid": "</br>\n<b>Lose up to 3 pounds per week, every week.</br>NO calorie counting. NO extreme dieting. NO deprivation.</b> \n</br></br>\nThese nutritionist-developed programs are designed to help you shed body weight, overcome cravings, and develop healthy eating habits for long-term results.",
             "text_style": "body-font"
           }
         },
@@ -529,7 +538,7 @@
             "button_label": "QUIZ: Which Solution is Right For Me?",
             "button_icon": "",
             "swap_button_icon": false,
-            "button_link": "shopify:\/\/pages\/quiz",
+            "button_link": "shopify://pages/quiz",
             "target_blank": false,
             "button_style": "outlined",
             "use_main_button": false
@@ -541,7 +550,7 @@
             "button_label": "ALL WEIGHT LOSS SYSTEMS",
             "button_icon": "",
             "swap_button_icon": false,
-            "button_link": "shopify:\/\/collections\/weight-loss-systems",
+            "button_link": "shopify://collections/weight-loss-systems",
             "target_blank": false,
             "button_style": "solid",
             "use_main_button": false
@@ -559,15 +568,15 @@
       "settings": {
         "collection": "weight-loss-systems",
         "media": "only_desktop",
-        "image": "shopify:\/\/shop_images\/pureveganfood-Protein-VanillaCashew-1_21d31211-22fb-4cbf-aafa-463d09d498c9.jpg",
+        "image": "shopify://shop_images/pureveganfood-Protein-VanillaCashew-1_21d31211-22fb-4cbf-aafa-463d09d498c9.jpg",
         "focal_point": "center center",
         "enable_mute": false,
         "enable_pause": false,
         "control_horizontal_position": "center",
         "swap_media_position": true,
         "media_size": "small",
-        "media_ratio": "1\/1",
-        "mobile_media_ratio": "1\/1",
+        "media_ratio": "1/1",
+        "mobile_media_ratio": "1/1",
         "content_width": "regular",
         "vertical_text_alignment": "center",
         "horizontal_text_alignment": "center",
@@ -649,7 +658,7 @@
         "text_wtVMf3": {
           "type": "text",
           "settings": {
-            "text": "<p>From first-time cleansers to fitness fanatics and brides-to-be to busy moms, each journey started with a simple decision: <em>to say YES to themselves.<\/em><\/p>",
+            "text": "<p>From first-time cleansers to fitness fanatics and brides-to-be to busy moms, each journey started with a simple decision: <em>to say YES to themselves.</em></p>",
             "richtext_heading_style": "section-heading",
             "text_style": "body-font"
           }
@@ -679,7 +688,7 @@
           "type": "heading",
           "disabled": true,
           "settings": {
-            "heading": "<h1>Real Results in Days<\/h1>",
+            "heading": "<h1>Real Results in Days</h1>",
             "heading_custom": true,
             "heading_font": "lora_n4",
             "heading_size": 34,
@@ -696,12 +705,12 @@
           "type": "card",
           "name": "Kristin L.",
           "settings": {
-            "toggle_image": "shopify:\/\/shop_images\/Frame_7_ebb4ac8b-16f7-40d5-a037-4d53cd3017d0.png",
-            "before_image": "shopify:\/\/shop_images\/BA-TSR-Kristin-1B.jpg",
+            "toggle_image": "shopify://shop_images/Frame_7_ebb4ac8b-16f7-40d5-a037-4d53cd3017d0.png",
+            "before_image": "shopify://shop_images/BA-TSR-Kristin-1B.jpg",
             "before_text": "BEFORE",
-            "after_image": "shopify:\/\/shop_images\/BA-TSR-Kristin-1A.jpg",
+            "after_image": "shopify://shop_images/BA-TSR-Kristin-1A.jpg",
             "after_text": "AFTER",
-            "title": "<p>\"I kept the weight off after my cleanse and continued to lose weight with the Skinny Method. I've lost over 10 pounds in total. My goal is to continue it, I feel so good!”<\/p>",
+            "title": "<p>\"I kept the weight off after my cleanse and continued to lose weight with the Skinny Method. I've lost over 10 pounds in total. My goal is to continue it, I feel so good!”</p>",
             "caption": "Kristin L. - Verified Customer",
             "tags": "WEIGHT LOSS, DIET RESET",
             "bottom_main_text": "",
@@ -712,12 +721,12 @@
           "type": "card",
           "name": "Kristen D.",
           "settings": {
-            "toggle_image": "shopify:\/\/shop_images\/Frame_5.png",
-            "before_image": "shopify:\/\/shop_images\/BA-10Day-ProteinCleanse-KristenDemeter-1B.jpg",
+            "toggle_image": "shopify://shop_images/Frame_5.png",
+            "before_image": "shopify://shop_images/BA-10Day-ProteinCleanse-KristenDemeter-1B.jpg",
             "before_text": "BEFORE",
-            "after_image": "shopify:\/\/shop_images\/BA-10Day-ProteinCleanse-KristenDemeter-1A.jpg",
+            "after_image": "shopify://shop_images/BA-10Day-ProteinCleanse-KristenDemeter-1A.jpg",
             "after_text": "AFTER",
-            "title": "<p> \"I lost 10.6 pounds! I loved how this made me feel! My bloating decreased, my energy increased, and I felt full.”<\/p>",
+            "title": "<p> \"I lost 10.6 pounds! I loved how this made me feel! My bloating decreased, my energy increased, and I felt full.”</p>",
             "caption": "Kristen D.- Verified Customer",
             "tags": "WEIGHT LOSS, ENERGY, LESS BLOATING, NO HUNGER",
             "bottom_main_text": "",
@@ -728,12 +737,12 @@
           "type": "card",
           "name": "Keri H.",
           "settings": {
-            "toggle_image": "shopify:\/\/shop_images\/Frame_8_8f7accc8-76d8-4c41-879c-c55da5ed0652.png",
-            "before_image": "shopify:\/\/shop_images\/BA-10Day-Skinny-Keri-2B.jpg",
+            "toggle_image": "shopify://shop_images/Frame_8_8f7accc8-76d8-4c41-879c-c55da5ed0652.png",
+            "before_image": "shopify://shop_images/BA-10Day-Skinny-Keri-2B.jpg",
             "before_text": "BEFORE",
-            "after_image": "shopify:\/\/shop_images\/BA-10Day-Skinny-Keri-2A.jpg",
+            "after_image": "shopify://shop_images/BA-10Day-Skinny-Keri-2A.jpg",
             "after_text": "AFTER",
-            "title": "<p><em>“I’ve lost 9 pounds and noticed a more patient mood. Less bloat, definitely mental clarity as well as more time (not having to prepare dinner, clean dishes, etc LOL) .. Also felt less stiff in the morning.”<\/em><\/p>",
+            "title": "<p><em>“I’ve lost 9 pounds and noticed a more patient mood. Less bloat, definitely mental clarity as well as more time (not having to prepare dinner, clean dishes, etc LOL) .. Also felt less stiff in the morning.”</em></p>",
             "caption": "Keri H. - Verified Customer",
             "tags": "WEIGHT LOSS, GOOD MOOD, LESS BLOATING, MENTAL CLARITY",
             "bottom_main_text": "",
@@ -744,12 +753,12 @@
           "type": "card",
           "name": "Jason W.",
           "settings": {
-            "toggle_image": "shopify:\/\/shop_images\/Frame_6_979cb424-e845-466b-8ac8-7d3eaa648a31.png",
-            "before_image": "shopify:\/\/shop_images\/BA-3Day-Protein-JasonWilkes-2B.jpg",
+            "toggle_image": "shopify://shop_images/Frame_6_979cb424-e845-466b-8ac8-7d3eaa648a31.png",
+            "before_image": "shopify://shop_images/BA-3Day-Protein-JasonWilkes-2B.jpg",
             "before_text": "BEFORE",
-            "after_image": "shopify:\/\/shop_images\/BA-3Day-Protein-JasonWilkes-2A.jpg",
+            "after_image": "shopify://shop_images/BA-3Day-Protein-JasonWilkes-2A.jpg",
             "after_text": "AFTER",
-            "title": "<p>\" I lost a little over 3 pounds in 3 days. I was not as hungry as I thought I might be. I was less bloated and noticed I was in a better mood and had good energy.”<\/p>",
+            "title": "<p>\" I lost a little over 3 pounds in 3 days. I was not as hungry as I thought I might be. I was less bloated and noticed I was in a better mood and had good energy.”</p>",
             "caption": "Jason W.",
             "tags": "WEIGHT LOSS, ENERGY, GOOD MOOD, NO HUNGER",
             "bottom_main_text": "",
@@ -760,12 +769,12 @@
           "type": "card",
           "name": "Julie W.",
           "settings": {
-            "toggle_image": "shopify:\/\/shop_images\/Frame_9_b94e83cc-f9e2-450c-9f64-8c81481702ed.png",
-            "before_image": "shopify:\/\/shop_images\/BA-5Day-Skinny-JuliaWieselberg-2B.jpg",
+            "toggle_image": "shopify://shop_images/Frame_9_b94e83cc-f9e2-450c-9f64-8c81481702ed.png",
+            "before_image": "shopify://shop_images/BA-5Day-Skinny-JuliaWieselberg-2B.jpg",
             "before_text": "BEFORE",
-            "after_image": "shopify:\/\/shop_images\/BA-5Day-Skinny-JuliaWieselberg-2A.jpg",
+            "after_image": "shopify://shop_images/BA-5Day-Skinny-JuliaWieselberg-2A.jpg",
             "after_text": "AFTER",
-            "title": "<p>\"I loved the cleanse.... I lost over 6 pounds in 5 days. The structure was easy to follow and the drinks were delicious. I even slept better and noticed my mood was more even. I wish I had signed up for longer!\"<\/p>",
+            "title": "<p>\"I loved the cleanse.... I lost over 6 pounds in 5 days. The structure was easy to follow and the drinks were delicious. I even slept better and noticed my mood was more even. I wish I had signed up for longer!\"</p>",
             "caption": "Julie W. - Verified Customer",
             "tags": "WEIGHT LOSS, DELICIOUS, BETTER SLEEP, GOOD MOOD",
             "bottom_main_text": "",
@@ -781,7 +790,7 @@
         "card_QitAPa",
         "card_JeHMyi"
       ],
-      "name": "SS - Before\/after image #12",
+      "name": "SS - Before/after image #12",
       "settings": {
         "autoplay": true,
         "toggles_autoplay_delay": 15,
@@ -911,10 +920,10 @@
             "heading": "Down 30 pounds!",
             "heading_style": "section-heading",
             "heading_tag": "h2",
-            "text": "<p>\"I’ve lost 30 lbs since I started Raw Generation. I use the Protein Cleanse to stay full and energized. My body looks leaner and I feel stronger than ever.\"<\/p>",
+            "text": "<p>\"I’ve lost 30 lbs since I started Raw Generation. I use the Protein Cleanse to stay full and energized. My body looks leaner and I feel stronger than ever.\"</p>",
             "text_style": "caption-font",
             "author_name": "Melissa F.",
-            "author_position": "<p>PROTEIN CLEANSE<\/p>",
+            "author_position": "<p>PROTEIN CLEANSE</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -928,10 +937,10 @@
             "heading": "Lost 25 lbs total!",
             "heading_style": "section-heading",
             "heading_tag": "h3",
-            "text": "<p>\"I did 3 rounds of cleansing and lost 25 lbs total. It helped me kick my sugar habit and change my relationship with food. The juices taste amazing!\"<\/p>",
+            "text": "<p>\"I did 3 rounds of cleansing and lost 25 lbs total. It helped me kick my sugar habit and change my relationship with food. The juices taste amazing!\"</p>",
             "text_style": "caption-font",
             "author_name": "Jennifer T.",
-            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "author_position": "<p>SKINNY CLEANSE</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -945,10 +954,10 @@
             "heading": "18 lbs in a month!",
             "heading_style": "section-heading",
             "heading_tag": "h3",
-            "text": "<p>\"Started with the Protein Cleanse and fell in love. I lost 18 lbs in a month without feeling deprived. My bloating disappeared and I’ve kept the momentum going.\"<\/p>",
+            "text": "<p>\"Started with the Protein Cleanse and fell in love. I lost 18 lbs in a month without feeling deprived. My bloating disappeared and I’ve kept the momentum going.\"</p>",
             "text_style": "caption-font",
             "author_name": "Liz S.",
-            "author_position": "<p>PROTEIN CLEANSE<\/p>",
+            "author_position": "<p>PROTEIN CLEANSE</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -962,10 +971,10 @@
             "heading": "Down 50 pounds!",
             "heading_style": "section-heading",
             "heading_tag": "h3",
-            "text": "<p>\"The Skinny Cleanse has truly changed my life! I’ve lost 50 lbs in total since starting and kept it off. I feel better, have more energy, and have eliminated my sugar cravings.\"<\/p>",
+            "text": "<p>\"The Skinny Cleanse has truly changed my life! I’ve lost 50 lbs in total since starting and kept it off. I feel better, have more energy, and have eliminated my sugar cravings.\"</p>",
             "text_style": "caption-font",
             "author_name": "Angela G.",
-            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "author_position": "<p>SKINNY CLEANSE</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -979,10 +988,10 @@
             "heading": "Lost 17 lbs in 2 weeks!",
             "heading_style": "section-heading",
             "heading_tag": "h3",
-            "text": "<p>\"This was the best decision I made all year. I’ve lost 17 pounds in two weeks and feel completely reset. I’m eating better and have more confidence than ever.\"<\/p>",
+            "text": "<p>\"This was the best decision I made all year. I’ve lost 17 pounds in two weeks and feel completely reset. I’m eating better and have more confidence than ever.\"</p>",
             "text_style": "body-font",
             "author_name": "Dana R.",
-            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "author_position": "<p>SKINNY CLEANSE</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -996,10 +1005,10 @@
             "heading": "15 pounds down!",
             "heading_style": "section-heading",
             "heading_tag": "h3",
-            "text": "<p>\"I lost 15 lbs using Raw Generation. I’ve tried everything, and this was the first time the weight stayed off. I feel lighter and more energized.\"<\/p>",
+            "text": "<p>\"I lost 15 lbs using Raw Generation. I’ve tried everything, and this was the first time the weight stayed off. I feel lighter and more energized.\"</p>",
             "text_style": "caption-font",
             "author_name": "Vanessa K.",
-            "author_position": "<p>SKINNY METHOD<\/p>",
+            "author_position": "<p>SKINNY METHOD</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -1013,10 +1022,10 @@
             "heading": "Lost 12 lbs in 5 days!",
             "heading_style": "section-heading",
             "heading_tag": "h3",
-            "text": "<p>\"I couldn’t believe the scale. I lost 12 lbs in just 5 days. I was nervous at first, but the Skinny Cleanse was actually enjoyable and easy to stick with.\"<\/p>",
+            "text": "<p>\"I couldn’t believe the scale. I lost 12 lbs in just 5 days. I was nervous at first, but the Skinny Cleanse was actually enjoyable and easy to stick with.\"</p>",
             "text_style": "caption-font",
             "author_name": "Carla M.",
-            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "author_position": "<p>SKINNY CLEANSE</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -1030,10 +1039,10 @@
             "heading": "8 pounds in 3 days!",
             "heading_style": "section-heading",
             "heading_tag": "h3",
-            "text": "<p>\"The Skinny Cleanse helped me lose 8 pounds in 3 days. It was the jumpstart I needed to get back on track with my health.\"<\/p>",
+            "text": "<p>\"The Skinny Cleanse helped me lose 8 pounds in 3 days. It was the jumpstart I needed to get back on track with my health.\"</p>",
             "text_style": "caption-font",
             "author_name": "Rachel N.",
-            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "author_position": "<p>SKINNY CLEANSE</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -1047,10 +1056,10 @@
             "heading": "7 lbs & bloating gone!",
             "heading_style": "section-heading",
             "heading_tag": "h3",
-            "text": "<p>\"I lost 7 lbs and had way more energy. My stomach looked flatter, and I wasn’t craving junk anymore. This was just what I needed.\"<\/p>",
+            "text": "<p>\"I lost 7 lbs and had way more energy. My stomach looked flatter, and I wasn’t craving junk anymore. This was just what I needed.\"</p>",
             "text_style": "caption-font",
             "author_name": "Mariah C.",
-            "author_position": "<p>DETOX CLEANSE<\/p>",
+            "author_position": "<p>DETOX CLEANSE</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -1064,10 +1073,10 @@
             "heading": "10 lbs in one week!",
             "heading_style": "section-heading",
             "heading_tag": "h3",
-            "text": "<p>\"This cleanse WORKS. I dropped 10 pounds in a week before vacation and felt amazing in my clothes. It also helped me stop snacking at night.\"<\/p>",
+            "text": "<p>\"This cleanse WORKS. I dropped 10 pounds in a week before vacation and felt amazing in my clothes. It also helped me stop snacking at night.\"</p>",
             "text_style": "body-font",
             "author_name": "Stephanie J.",
-            "author_position": "<p>SKINNY CLEANSE<\/p>",
+            "author_position": "<p>SKINNY CLEANSE</p>",
             "page": "",
             "rte_heading_style": "section-heading",
             "popup_style": "popover",
@@ -1101,7 +1110,7 @@
         "button_style": "solid",
         "testimonial_label": "Show full review",
         "center_text": false,
-        "media_ratio": "1\/1",
+        "media_ratio": "1/1",
         "image_radius": "default",
         "desktop_item_width": 4,
         "alignment_fewer_items": "center",
@@ -1158,7 +1167,7 @@
         "swap_show_more_button_icon": false,
         "show_more_button_style": "solid",
         "show_collection_card_border": false,
-        "media_ratio": "1\/1",
+        "media_ratio": "1/1",
         "full_width": true,
         "grid_style": "alternative",
         "disable_max_width": false,
@@ -1200,7 +1209,7 @@
         "text_j49Ygm": {
           "type": "text",
           "settings": {
-            "text": "<p>I’ve been a Holistic Nutritionist since 2008, helping hundreds of clients lose weight and reverse poor health - all without counting calories or feeling deprived.<br\/><br\/>After struggling with my own weight for over 10 years, I learned that I didn’t need a “diet” at all.  <em>I just needed to learn the right way to eat.<br\/><br\/><\/em>Long-term restrictive behaviors only lead to inevitable frustration and failure - not to mention damaging a woman’s hormones and metabolism.<\/p><p>That’s why Raw Generation programs are so effective. They are designed to give your body the nutrition it needs in a way that works, so that losing weight is no longer a struggle.<\/p>",
+            "text": "<p>I’ve been a Holistic Nutritionist since 2008, helping hundreds of clients lose weight and reverse poor health - all without counting calories or feeling deprived.<br/><br/>After struggling with my own weight for over 10 years, I learned that I didn’t need a “diet” at all.  <em>I just needed to learn the right way to eat.<br/><br/></em>Long-term restrictive behaviors only lead to inevitable frustration and failure - not to mention damaging a woman’s hormones and metabolism.</p><p>That’s why Raw Generation programs are so effective. They are designed to give your body the nutrition it needs in a way that works, so that losing weight is no longer a struggle.</p>",
             "text_style": "body-font"
           }
         },
@@ -1227,10 +1236,10 @@
       ],
       "name": "t:sections.media-with-text.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/LisaHeadshot.png",
-        "media_ratio": "1\/1",
-        "mobile_image": "shopify:\/\/shop_images\/LisaHeadshot.png",
-        "mobile_media_ratio": "1\/1",
+        "image": "shopify://shop_images/LisaHeadshot.png",
+        "media_ratio": "1/1",
+        "mobile_image": "shopify://shop_images/LisaHeadshot.png",
+        "mobile_media_ratio": "1/1",
         "link": "",
         "target_blank": false,
         "focal_point": "center center",
@@ -1260,12 +1269,12 @@
         "item_YFfDbG": {
           "type": "item",
           "settings": {
-            "icon": "glyphs\/signs\/cherry",
+            "icon": "glyphs/signs/cherry",
             "color": "#000000",
             "mobile_color": "#000000",
             "heading": "REAL INGREDIENTS",
             "heading_style": "body-font",
-            "text": "<p>All products are made from real fruits and vegetables. We NEVER use artificial ingredients.<br\/><br\/><\/p>",
+            "text": "<p>All products are made from real fruits and vegetables. We NEVER use artificial ingredients.<br/><br/></p>",
             "text_style": "body-font",
             "page": "",
             "rte_heading_style": "section-heading",
@@ -1277,12 +1286,12 @@
         "item_V8kd7U": {
           "type": "item",
           "settings": {
-            "icon": "glyphs\/interface\/heart-filled",
+            "icon": "glyphs/interface/heart-filled",
             "color": "#000000",
             "mobile_color": "#000000",
             "heading": "MADE TO TASTE GREAT",
             "heading_style": "body-font",
-            "text": "<p>We believe you shouldn't suffer through anything. Healthy can (and should) taste great.<\/p>",
+            "text": "<p>We believe you shouldn't suffer through anything. Healthy can (and should) taste great.</p>",
             "text_style": "body-font",
             "page": "",
             "rte_heading_style": "section-heading",
@@ -1294,12 +1303,12 @@
         "item_QcJdbW": {
           "type": "item",
           "settings": {
-            "icon": "glyphs\/signs\/chat",
+            "icon": "glyphs/signs/chat",
             "color": "#000000",
             "mobile_color": "#000000",
             "heading": "NUTRITIONIST SUPPORT",
             "heading_style": "body-font",
-            "text": "<p>You’re never on your own—our nutritionist is here to support you with expert guidance.<\/p>",
+            "text": "<p>You’re never on your own—our nutritionist is here to support you with expert guidance.</p>",
             "text_style": "body-font",
             "page": "",
             "rte_heading_style": "section-heading",
@@ -1357,56 +1366,56 @@
         "slide_TFpXLY": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PureWow.png",
+            "image": "shopify://shop_images/PureWow.png",
             "link": ""
           }
         },
         "slide_fp9iYd": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/unnamed.png",
+            "image": "shopify://shop_images/unnamed.png",
             "link": ""
           }
         },
         "slide_MQnYjp": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/NYPost_2.png",
+            "image": "shopify://shop_images/NYPost_2.png",
             "link": ""
           }
         },
         "slide_j3dEPk": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PopSugar_0bab6206-dcf6-4ad0-bb70-198d3f4384fb.png",
+            "image": "shopify://shop_images/PopSugar_0bab6206-dcf6-4ad0-bb70-198d3f4384fb.png",
             "link": ""
           }
         },
         "slide_YVcNGj": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/TheEveryGirl.png",
+            "image": "shopify://shop_images/TheEveryGirl.png",
             "link": ""
           }
         },
         "slide_KezKqQ": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/download_81b84b68-e629-4b55-aa80-b2acd620781c.jpg",
+            "image": "shopify://shop_images/download_81b84b68-e629-4b55-aa80-b2acd620781c.jpg",
             "link": ""
           }
         },
         "slide_T6kpfK": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/OK_Magazine.png",
+            "image": "shopify://shop_images/OK_Magazine.png",
             "link": ""
           }
         },
         "slide_nYBDcW": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/People.png",
+            "image": "shopify://shop_images/People.png",
             "link": ""
           }
         }
