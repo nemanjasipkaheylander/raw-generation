@@ -75,11 +75,31 @@
   }
 
   .card-product__content.flex--column.body-font {
-    margin-bottom: 0;
+    margin-bottom: 16px;
+    height: 100%;
   }
 
   .card__price {
     margin-top: 30px;
+  }
+
+  .custom-label {
+    max-width: fit-content;
+    margin: 10px auto 0;
+    border: 1px solid #e0b0fa;
+    border-radius: 200px;
+    padding: 4px 8px;
+    background: #f4eaff;
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    text-align: center;
+    color: #6c00a7;
+  }
+
+  .card__short-description {
+    margin-bottom: auto;
   }
 }
 
@@ -162,7 +182,8 @@
     }
 
     .card-product__content.flex--column.body-font {
-      margin-bottom: 0;
+      margin-bottom: 16px;
+      height: 100%;
     }
 
     .card__price {
