@@ -18,8 +18,21 @@
             "collection_tab": "daily-wellness-packs-2-0"
           }
         },
+        "collection_KbUiEh": {
+          "type": "Collection",
+          "settings": {
+            "collection_tab": "wellness-program"
+          }
+        },
+        "collection_Uxeq4n": {
+          "type": "Collection",
+          "settings": {
+            "collection_tab": "other"
+          }
+        },
         "collection_i7YkpG": {
           "type": "Collection",
+          "disabled": true,
           "settings": {
             "collection_tab": "all"
           }
@@ -27,6 +40,8 @@
       },
       "block_order": [
         "collection_wBrDDK",
+        "collection_KbUiEh",
+        "collection_Uxeq4n",
         "collection_i7YkpG"
       ],
       "name": "CP Tabs Selection Grid",
