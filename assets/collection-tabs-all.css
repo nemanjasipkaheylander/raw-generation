@@ -165,7 +165,7 @@
       font-size: 15px;
     }
 
-    .product-grid {
+    .swiper-initialized .product-grid {
       gap: 0;
       display: flex !important;
     }
