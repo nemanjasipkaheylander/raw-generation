@@ -63,6 +63,7 @@
     text-align: center;
     color: white;
     padding: 4px 12px;
+    display: none;
 }
 
 .mega-menu-one__product-subtitle {
