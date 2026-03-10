@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (shouldEnableSlider() && !swiperInstance) {
         swiperInstance = new Swiper(container, {
           // Optional parameters
-          loop: true,
+          loop: false,
           slidesPerView: "auto",
           slidesPerGroup: 1,
           spaceBetween: 20,
