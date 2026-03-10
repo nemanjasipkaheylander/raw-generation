@@ -306,6 +306,7 @@
     },
     "mega_menu_three_7rMQgD": {
       "type": "mega-menu-three",
+      "disabled": true,
       "name": "Mega menu third link",
       "settings": {
         "section_target": "",
