@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Move the 4th mega menu under the 5th <li> (index 4)
         const fourthMegaMenu = document.querySelector(menuSections[3]);
-        const fifthMenuItem = menuItems[4];
+        const fifthMenuItem = menuItems[3];
         
         if (fourthMegaMenu && fifthMenuItem) {
             if (!fifthMenuItem.contains(fourthMegaMenu)) {
