@@ -371,7 +371,7 @@
         "product_4BD7p8": {
           "type": "product",
           "settings": {
-            "mmo_product": "shopify://pages/recipes",
+            "mmo_product": "shopify://blogs/ill-start-monday",
             "mmo_label_text": "Lifestyle",
             "mmo_label_color": "#a200f9",
             "mmo_product_title": "Wellness Hub",
