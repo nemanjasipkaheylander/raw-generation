@@ -152,7 +152,13 @@ p.mega-menu-one__container-subtitle {
 .meganav__gallery__img_mob, .meganav__img_mob {
         display: none;
 }
+.mega-menu-one__product-image {
+    height: 145px;
+}
 
+.mega-menu-one__product-image img {
+    object-fit: contain;
+}
 @media (max-width: 1024px) {
     .mega-menu-one__products {
         display: grid;
