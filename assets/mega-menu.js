@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial desktop position
     updateDesktopMenuTopPosition();
     
-    // ========== MOBILE MENU LOGIC (unchanged - still uses click) ==========
+    // ========== MOBILE MENU LOGIC ==========
     
     // Mobile menu items
     const mobileMenuItems = document.querySelectorAll('.menu-item');
@@ -409,12 +409,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Mobile click handlers with toggle functionality
+    // Mobile click handlers with toggle functionality - WITH FIX FOR LINKS
     if (mobileMenuItems.length > 0) {
         mobileMenuItems.forEach((item, index) => {
             item.addEventListener('click', function(event) {
                 // Only handle mobile clicks in mobile view
                 if (!isMobileView()) return;
+                
+                // FIX: Don't toggle if clicking on a link inside the mega menu
+                if (event.target.tagName === 'A' || event.target.closest('a')) {
+                    // Let the link work normally, don't toggle menu
+                    // But optionally close the menu after a tiny delay for better UX
+                    setTimeout(() => {
+                        closeAllMobileMenus();
+                    }, 50);
+                    return;
+                }
                 
                 console.log('Mobile item clicked:', index);
                 
