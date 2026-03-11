@@ -241,7 +241,7 @@
         "product_NndfVm": {
           "type": "product",
           "settings": {
-            "mmo_product": "apple-celery-lower-sugar",
+            "mmo_product": "skinny-cleanse-stay-skinny-method-bundle",
             "mmo_label_text": "Best Value",
             "mmo_label_color": "#16a249",
             "mmo_product_title": "Skinny Cleanse & Method Bundle",
@@ -252,33 +252,33 @@
         "product_hRUqNp": {
           "type": "product",
           "settings": {
-            "mmo_product": "apple-celery-lower-sugar",
+            "mmo_product": "stay-skinny-method",
             "mmo_label_text": "Best Value",
             "mmo_label_color": "#16a249",
             "mmo_product_title": "Skinny Cleanse & Method Bundle",
-            "mmo_product_subtitle": "Weight support method & comprehensive nutritionist-developed lifestyle guides",
+            "mmo_product_subtitle": "Daily juice & smoothie plan for weight management, including clean-eating recipes",
             "mmo_image": "shopify://shop_images/PDP2026-SkinnyMethod_-Main_e95e7e23-da19-4a50-9a9e-547cd7cfa6b5.jpg"
           }
         },
         "product_bKN3V6": {
           "type": "product",
           "settings": {
-            "mmo_product": "apple-celery-lower-sugar",
+            "mmo_product": "protein-method",
             "mmo_label_text": "Best Value",
             "mmo_label_color": "#16a249",
             "mmo_product_title": "Skinny Cleanse & Method Bundle",
-            "mmo_product_subtitle": "Weight support method & comprehensive nutritionist-developed lifestyle guides",
+            "mmo_product_subtitle": "Workout support system with macro-calculated eating plan",
             "mmo_image": "shopify://shop_images/PDP2026-SkinnyMethod_-Main_e95e7e23-da19-4a50-9a9e-547cd7cfa6b5.jpg"
           }
         },
         "product_TrMjhb": {
           "type": "product",
           "settings": {
-            "mmo_product": "apple-celery-lower-sugar",
+            "mmo_product": "detox-method",
             "mmo_label_text": "Best Value",
             "mmo_label_color": "#16a249",
             "mmo_product_title": "Skinny Cleanse & Method Bundle",
-            "mmo_product_subtitle": "Weight support method & comprehensive nutritionist-developed lifestyle guides",
+            "mmo_product_subtitle": "Nutritional reset and eating plan to support natural weight management.",
             "mmo_image": "shopify://shop_images/PDP2026-SkinnyMethod_-Main_e95e7e23-da19-4a50-9a9e-547cd7cfa6b5.jpg"
           }
         }
