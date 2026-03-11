@@ -479,7 +479,7 @@ search-element {
     .menu-item svg {
         fill: transparent;
     }
-    .menu-level-1 .menu-item:nth-child(4) svg {
+    .menu-level-1 .menu-item:nth-child(3) svg {
     display: none;
 }
     .menu-item a.open {
