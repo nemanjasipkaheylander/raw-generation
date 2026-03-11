@@ -21,6 +21,7 @@
     text-align: center;
     color: #fff;
     padding: 4px 12px;
+    text-transform: capitalize;
 }
 .mega-menu-four__content {
     position: absolute;
