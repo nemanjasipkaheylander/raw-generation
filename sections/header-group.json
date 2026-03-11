@@ -338,7 +338,7 @@
         "product_R4gxw3": {
           "type": "product",
           "settings": {
-            "mmo_product": "#",
+            "mmo_product": "shopify://pages/instructions",
             "mmo_label_text": "how to",
             "mmo_label_color": "#a200f9",
             "mmo_product_title": "Instructions & Guides",
@@ -349,33 +349,33 @@
         "product_WVBbyE": {
           "type": "product",
           "settings": {
-            "mmo_product": "#",
+            "mmo_product": "shopify://pages/frequently-asked-questions",
             "mmo_label_text": "how to",
             "mmo_label_color": "#a200f9",
-            "mmo_product_title": "Instructions & Guides",
-            "mmo_product_subtitle": "Step-by-step cleanse tips",
+            "mmo_product_title": "FAQs",
+            "mmo_product_subtitle": "Your questions answered",
             "mmo_image": "shopify://shop_images/Frame_2087327431.png"
           }
         },
         "product_wGnKp7": {
           "type": "product",
           "settings": {
-            "mmo_product": "#",
+            "mmo_product": "shopify://pages/why-we-do-this",
             "mmo_label_text": "how to",
             "mmo_label_color": "#a200f9",
-            "mmo_product_title": "Instructions & Guides",
-            "mmo_product_subtitle": "Step-by-step cleanse tips",
+            "mmo_product_title": "Our Story",
+            "mmo_product_subtitle": "Farm-to-bottle journey",
             "mmo_image": "shopify://shop_images/Frame_2087327425.png"
           }
         },
         "product_4BD7p8": {
           "type": "product",
           "settings": {
-            "mmo_product": "#",
+            "mmo_product": "shopify://pages/recipes",
             "mmo_label_text": "how to",
             "mmo_label_color": "#a200f9",
-            "mmo_product_title": "Instructions & Guides",
-            "mmo_product_subtitle": "Step-by-step cleanse tips",
+            "mmo_product_title": "Wellness Hub",
+            "mmo_product_subtitle": "Health tips & recipes",
             "mmo_image": "shopify://shop_images/Frame_2087327430.png"
           }
         }
