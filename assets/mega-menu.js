@@ -409,17 +409,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Mobile click handlers with toggle functionality - WITH FIX FOR LINKS
+    // Mobile click handlers with toggle functionality - CORRECTED FIX
     if (mobileMenuItems.length > 0) {
         mobileMenuItems.forEach((item, index) => {
             item.addEventListener('click', function(event) {
                 // Only handle mobile clicks in mobile view
                 if (!isMobileView()) return;
                 
-                // FIX: Don't toggle if clicking on a link inside the mega menu
-                if (event.target.tagName === 'A' || event.target.closest('a')) {
+                // Check if the clicked element is inside a mega menu
+                const isInsideMegaMenu = event.target.closest('[id^="shopify-section-sections--18072930287678__mega_menu"]');
+                
+                // If clicking on a link that's inside a mega menu, let it navigate
+                if (isInsideMegaMenu && (event.target.tagName === 'A' || event.target.closest('a'))) {
                     // Let the link work normally, don't toggle menu
-                    // But optionally close the menu after a tiny delay for better UX
+                    // Close the menu after a tiny delay for better UX
                     setTimeout(() => {
                         closeAllMobileMenus();
                     }, 50);
@@ -428,8 +431,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 console.log('Mobile item clicked:', index);
                 
+                // Only handle clicks on the menu items that should have mega menus (1st, 2nd, and 5th items)
                 if (index < 2 || index === 3) {
-                    event.preventDefault();
+                    event.preventDefault(); // Prevent navigation on the menu item itself
                     event.stopPropagation();
                     
                     let menuSelector;
