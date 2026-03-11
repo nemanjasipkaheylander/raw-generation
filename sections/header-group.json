@@ -339,7 +339,7 @@
           "type": "product",
           "settings": {
             "mmo_product": "shopify://pages/instructions",
-            "mmo_label_text": "how to",
+            "mmo_label_text": "How-To",
             "mmo_label_color": "#a200f9",
             "mmo_product_title": "Instructions & Guides",
             "mmo_product_subtitle": "Step-by-step cleanse tips",
@@ -350,7 +350,7 @@
           "type": "product",
           "settings": {
             "mmo_product": "shopify://pages/frequently-asked-questions",
-            "mmo_label_text": "how to",
+            "mmo_label_text": "Support",
             "mmo_label_color": "#a200f9",
             "mmo_product_title": "FAQs",
             "mmo_product_subtitle": "Your questions answered",
@@ -361,7 +361,7 @@
           "type": "product",
           "settings": {
             "mmo_product": "shopify://pages/why-we-do-this",
-            "mmo_label_text": "how to",
+            "mmo_label_text": "About Us",
             "mmo_label_color": "#a200f9",
             "mmo_product_title": "Our Story",
             "mmo_product_subtitle": "Farm-to-bottle journey",
@@ -372,7 +372,7 @@
           "type": "product",
           "settings": {
             "mmo_product": "shopify://pages/recipes",
-            "mmo_label_text": "how to",
+            "mmo_label_text": "Lifestyle",
             "mmo_label_color": "#a200f9",
             "mmo_product_title": "Wellness Hub",
             "mmo_product_subtitle": "Health tips & recipes",
