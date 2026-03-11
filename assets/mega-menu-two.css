@@ -1,8 +1,9 @@
 .mega-menu-two__container-one {
-    display: flex;
-    gap: 10px;
     width: 100%;
     max-width: 1068px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
 .mega-menu-two__product-card {
