@@ -10,7 +10,7 @@
 .mega-menu-one__products {
     display: flex;
     gap: 10px;
-    max-width: 500px;
+    max-width: 643px;
 }
 
 .mega-menu-one__container-two {
@@ -18,11 +18,11 @@
     width: 100%;
 }
 .mega-menu-one__container-three {
-    max-width: 570px;
+    max-width: 427px;
     width: 100%;
 }
 .mega-menu-one__product-card {
-    max-width: 160px;
+    max-width: 210px;
     width: 100%;
     position: relative;
     padding: 10px;
@@ -98,7 +98,7 @@
 }
 
 .mega-menu-one__container-one {
-    max-width: 500px;
+    max-width: 643px;
     width: 100%;
 }
 
