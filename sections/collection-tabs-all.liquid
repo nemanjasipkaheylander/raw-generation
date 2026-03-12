@@ -342,12 +342,13 @@
               data-tab-target="tab-{{ forloop.index }}">
               {{ collection.title }}
             </button>
+            <div class="custom-popup__subtitle">
+              {{ col.settings.custom_subtitle }}
+            </div>
           {% endfor %}
         {% endif %}
       </div>
-      <div class="custom-popup__subtitle">
-        {{ section.settings.custom_subtitle }}
-      </div>
+      
     </div>
     {% for col in section.blocks %}
       {% assign collection = col.settings.collection_tab %}
@@ -737,11 +738,7 @@
         "label": "Enter title two",
         "default": "10 Pounds"
       },
-      {
-        "type": "richtext",
-        "id": "custom_subtitle",
-        "label": "Enter subtitle"
-      }, {
+       {
         "type": "header",
         "content": "Section settings",
         "info": "Enter content"
@@ -1465,7 +1462,12 @@
             "type": "collection",
             "id": "collection_tab",
             "label": "Choose collection"
-          }
+          },
+          {
+        "type": "richtext",
+        "id": "custom_subtitle",
+        "label": "Enter subtitle"
+      }
         ]
       }
     ],
