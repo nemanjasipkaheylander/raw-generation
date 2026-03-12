@@ -1,0 +1,185 @@
+
+
+
+
+{{ '' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign section_target = section.settings.section_target
+  assign bg_color = section.settings.bg_color
+  assign bg_gradient_1 = section.settings.bg_gradient_1
+  assign bg_gradient_2 = section.settings.bg_gradient_2
+  assign padding_top = section.settings.padding_top
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_top_desk = section.settings.padding_top_desk
+  assign padding_bottom_desk = section.settings.padding_bottom_desk
+%}
+
+{% style %}
+  .{{ section.id }} {
+    position: relative;
+    background-color: {{ bg_color }};
+    background-image: linear-gradient(to bottom, {{ bg_gradient_1 }} 0%, {{ bg_gradient_2 }} 100%);
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+  }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ padding_top_desk }}px;
+      padding-bottom: {{ padding_bottom_desk }}px;
+    }
+  }
+{% endstyle %}
+
+<section class="{{ section.id }}" class="routine" id="{{ section_target }}">
+    <div class="l">
+          <div class="routine__header">
+              <h2 class="routine__title">{{ section.settings.section_title_one }} <span class="routine__purple">{{ section.settings.section_title_two }}</span></h2>
+                {% if section.settings.section_button_url != blank %}
+                <div class="routine__button-desc">
+                   <a href="{{ section.settings.section_button_url }}" title="{{ section.settings.section_button_text }}">{{ section.settings.section_button_text }}</a>
+                </div>
+              {% endif %}
+         </div> 
+         <div class="routine__content-wrapper">
+             {% for block in section.blocks %}
+                  <div class="routine__card">
+                      <figure class="routine__image">
+                          {{ block.settings.routine_img | image_url: width: 320 | image_tag: class: 'routine_img', loading: 'lazy' }}
+                      </figure>
+                      <div class="routine__header-card">
+                          <div class="routine__time">{{ block.settings.routine_time }}
+                             <div class="routine__time-icon">
+                              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_622)">
+                                    <path d="M7.49998 13.9287C11.0504 13.9287 13.9286 11.0506 13.9286 7.50011C13.9286 3.9497 11.0504 1.07153 7.49998 1.07153C3.94958 1.07153 1.07141 3.9497 1.07141 7.50011C1.07141 11.0506 3.94958 13.9287 7.49998 13.9287Z" stroke="#EB51FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.50044 5.02759V7.50012L5.02747 9.97264" stroke="#EB51FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1_622">
+                                    <rect width="15" height="15" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                            </div>
+                            <div class="routine_title">{{ block.settings.routine_title }}</div>
+                          </div>
+                         <div class="routine__content">
+                            {{ block.settings.routine_text }}
+                         </div>
+                      </div>
+                  </div>
+             {% endfor %}
+         </div>
+       
+    </div>
+</section>
+
+{% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
+
+{% schema %}
+  {
+    "name": "Routine",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "text",
+        "id": "section_target",
+        "label": "Section Target"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Section background color"
+      },
+      {
+        "type": "color",
+        "id": "bg_gradient_1",
+        "label": "Section gradient color first"
+      }, {
+        "type": "color",
+        "id": "bg_gradient_2",
+        "label": "Section gradient color second"
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Section padding top - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Section padding bottom - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_top_desk",
+        "label": "Section padding top - large screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom_desk",
+        "label": "Section padding bottom - large screens"
+      },
+      {
+        "type": "header",
+        "content": "Section Content"
+      },
+      {
+        "type": "text",
+        "id": "section_title_one",
+        "label": "Enter title one"
+      },
+      {
+        "type": "text",
+        "id": "section_title_two",
+        "label": "Enter title two"
+      },
+      {
+        "type": "text",
+        "id": "section_button_text",
+        "label": "Enter button text"
+      },
+      {
+        "type": "url",
+        "id": "section_button_url",
+        "label": "Paste URL"
+      }
+      
+    ],
+    "blocks": [
+        {
+            "name": "Routine",
+            "type": "text",
+            "settings": [ 
+                        {
+                            "type": "text",
+                            "id": "routine_title",
+                            "label": "Enter title"
+                        },
+                        {
+                            "type": "text",
+                            "id": "routine_time",
+                            "label": "Enter text"
+                        },
+                        {
+                            "type": "text",
+                            "id": "routine_text",
+                            "label": "Enter text"
+                        },
+                        {
+                            "type": "image_picker",
+                            "id": "routine_img",
+                            "label": "Upload image"
+                        }
+
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Routine"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,6 +1,7 @@
 
 
 
+
 {{ '' | asset_url | stylesheet_tag }}
 
 {% liquid
@@ -30,27 +31,31 @@
   }
 {% endstyle %}
 
-<section class="{{ section.id }}" class="icon-text" id="{{ section_target }}">
+<section class="{{ section.id }}" class="text-with-image" id="{{ section_target }}">
     <div class="l">
-      {% if section.settings.section_title_one and section.settings.section_title_two and section.settings.section_title_third  %}
-         <div class="icon-text__title-container">
-            <h2 class="title-icon-text">{{ section.settings.section_title_one }} <span class="purpple">{{ section.settings.section_title_two }}</span> <span>{{ section.settings.section_title_third }}</span></h2>
-        </div>
-      {% endif %}
-      
-          {% if section.blocks.size > 0 %}
-              <div class="icon-text__container">
-                 {% for block in section.blocks %}
-                       <div class="icon-text__card">
-                             <figure class="icon-text__image">
-                                 {{ block.settings.icon_text_img | image_url: width: 320 | image_tag: class: 'it_icon', loading: 'lazy' }}
-                             </figure>
-                             <h2 class="icon-text__title">{{ block.settings.icon_text_title }}</h2>
-                             <p class="icont-text__content">{{ block.settings.icon_text_content }}</p>
-                       </div>
-                 {% endfor %}
-              </div>
-          {% endif %}
+          <div class="text-with-image__right-side">
+              <div class="text-with-image__tagline">{{ section.settings.section_tagline }}</div>
+              <h2 class="text-with-image__title">{{ section.settings.section_title }}</h2>
+              <p class="text-with-image__content-one">{{ section.settings.section_content_one }}</p>
+              <p class="text-with-image__content-two">{{ section.settings.section_content_two }}</p>
+
+              {% if section.settings.section_button_url != blank %}
+                <div class="text-with-image__button">
+                   <a href="{{ section.settings.section_button_url }}" title="{{ section.settings.section_button_text }}">{{ section.settings.section_button_text }}</a>
+                </div>
+              {% endif %}
+              <p class="text-with-image__button-after">{{ section.settings.section_after_button }}</p>
+          </div> 
+           
+          <div class="text-with-image__image-container">
+             <figure class="text-with-image__image">
+                {{ section.settings.section_image| image_url: width: 320 | image_tag: class: 'main_author_img', loading: 'lazy' }}
+             </figure>
+          </div>
+
+          <div class="faq__button-mob">
+                   <a href="{{ section.settings.section_button_url }}" title="{{ section.settings.section_button_text }}">{{ section.settings.section_button_text }}</a>
+          </div>
     </div>
 </section>
 
@@ -58,7 +63,7 @@
 
 {% schema %}
   {
-    "name": "Icon with text cards",
+    "name": "Text with image",
     "settings": [
       {
         "type": "header",
@@ -106,46 +111,50 @@
       },
       {
         "type": "text",
-        "id": "section_title_one",
-        "label": "Enter title first word"
+        "id": "section_tagline",
+        "label": "Enter title"
       },
       {
         "type": "text",
-        "id": "section_title_two",
-        "label": "Enter title highlighted word"
+        "id": "section_title",
+        "label": "Enter title"
+      },
+      {
+        "type": "textarea",
+        "id": "section_content_one",
+        "label": "Enter text"
+      },
+      {
+        "type": "textarea",
+        "id": "section_content_two",
+        "label": "Enter text"
       },
       {
         "type": "text",
-        "id": "section_title_third",
-        "label": "Enter title rest"
+        "id": "section_button_text",
+        "label": "Enter button text"
+      },
+      {
+        "type": "url",
+        "id": "section_button_url",
+        "label": "Paste URL"
+      },
+      {
+        "type": "text",
+        "id": "section_after_button",
+        "label": "Enter text"
+      },
+       {
+        "type": "text",
+        "id": "section_image",
+        "label": "Upload image"
       }
+      
     ],
-    "blocks": [
-        {
-            "name": "icon-text",
-            "type": "text",
-            "settings": [ 
-                        {
-                            "type": "image_picker",
-                            "id": "icon_text_img",
-                            "label": "Upload icon"
-                        },
-                        {
-                            "type": "text",
-                            "id": "icont_text_title",
-                            "label": "Enter title"
-                        },
-                        {
-                            "type": "text",
-                            "id": "icont_text_content",
-                            "label": "Enter content"
-                        }
-            ]
-        }
-    ],
+    
     "presets": [
       {
-        "name": "Icon with text cards"
+        "name": "Text with image"
       }
     ]
   }
