@@ -15,26 +15,30 @@
         "collection_wBrDDK": {
           "type": "Collection",
           "settings": {
-            "collection_tab": "juice-cleanses"
+            "collection_tab": "juice-cleanses",
+            "custom_subtitle": ""
           }
         },
         "collection_KbUiEh": {
           "type": "Collection",
           "settings": {
-            "collection_tab": "wellness-program"
+            "collection_tab": "wellness-program",
+            "custom_subtitle": ""
           }
         },
         "collection_Uxeq4n": {
           "type": "Collection",
           "settings": {
-            "collection_tab": "other"
+            "collection_tab": "other",
+            "custom_subtitle": ""
           }
         },
         "collection_i7YkpG": {
           "type": "Collection",
           "disabled": true,
           "settings": {
-            "collection_tab": "all"
+            "collection_tab": "all",
+            "custom_subtitle": ""
           }
         }
       },
@@ -46,9 +50,8 @@
       ],
       "name": "CP Tabs Selection Grid",
       "settings": {
-        "custom_title_one": "Choose Your Program",
-        "custom_title_two": "Program",
-        "custom_subtitle": "<p><strong>The ultimate 3–10 day reset</strong>. Detoxify your body, eliminate stubborn bloating, crush sugar cravings, and boost your energy—all without feeling starved.</p>",
+        "custom_title_one": "Choose Your",
+        "custom_title_two": "Plan",
         "products_per_page": 15,
         "desktop_columns": "3",
         "mobile_columns": "2",
