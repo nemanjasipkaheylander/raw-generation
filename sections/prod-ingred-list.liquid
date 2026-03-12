@@ -1,0 +1,179 @@
+
+
+
+
+{{ '' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign section_target = section.settings.section_target
+  assign bg_color = section.settings.bg_color
+  assign bg_gradient_1 = section.settings.bg_gradient_1
+  assign bg_gradient_2 = section.settings.bg_gradient_2
+  assign padding_top = section.settings.padding_top
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_top_desk = section.settings.padding_top_desk
+  assign padding_bottom_desk = section.settings.padding_bottom_desk
+%}
+
+{% style %}
+  .{{ section.id }} {
+    position: relative;
+    background-color: {{ bg_color }};
+    background-image: linear-gradient(to bottom, {{ bg_gradient_1 }} 0%, {{ bg_gradient_2 }} 100%);
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+  }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ padding_top_desk }}px;
+      padding-bottom: {{ padding_bottom_desk }}px;
+    }
+  }
+{% endstyle %}
+
+<section class="{{ section.id }}" class="ingredients-list" id="{{ section_target }}">
+    <div class="l">
+        <div class="ingredients-list__title-container">
+            <h2 class="title-ingredients-list">{{ section.settings.section_title_one }} <span class="purpple">{{ section.settings.section_title_two }}</span> <span>{{ section.settings.section_title_third }}</span></h2>
+        </div>
+        {% assign counter = 0 %}
+          {% if section.blocks.size > 0 %}
+              <div class="ingredients-list__container">
+                 {% for block in section.blocks %}
+                       {% if counter < 3 %}
+                        
+                       
+                       <div class="ingredients-list__card">
+                             <figure class="ingredients-list__image">
+                                 {{ block.settings.ingredients_list_img | image_url: width: 320 | image_tag: class: 'icon-list_img', loading: 'lazy' }}
+                             </figure>
+                             <h2 class="ingredients-list__title">{{ block.settings.ingredients_list_title }}</h2>
+                             
+                       </div>
+                       {% endif %}
+                       {% assign counter = counter |  plus: forloop.index %}
+                 {% endfor %}
+                   
+              </div>
+                <div class="ingredients-list__main-img">
+                    <figure class="ingredients-image">
+                        {{ section.settings.main_img | image_url: width: 320 | image_tag: class: 'main_img', loading: 'lazy' }}
+                    </figure>
+                </div>
+              <div class="ingredients-list__container">
+                 {% for block in section.blocks %}
+                       {% if counter > 3 %}
+                        
+                       
+                       <div class="ingredients-list__card">
+                             <figure class="ingredients-list__image">
+                                 {{ block.settings.ingredients_list_img | image_url: width: 320 | image_tag: class: 'icon-list_img', loading: 'lazy' }}
+                             </figure>
+                             <h2 class="ingredients-list__title">{{ block.settings.ingredients_list_title }}</h2>
+                             
+                       </div>
+                       {% endif %}
+                       {% assign counter = counter |  plus: forloop.index %}
+                 {% endfor %}
+                   
+              </div>
+          {% endif %}
+    </div>
+</section>
+
+{% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
+
+{% schema %}
+  {
+    "name": "Ingredients list",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "text",
+        "id": "section_target",
+        "label": "Section Target"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Section background color"
+      },
+      {
+        "type": "color",
+        "id": "bg_gradient_1",
+        "label": "Section gradient color first"
+      }, {
+        "type": "color",
+        "id": "bg_gradient_2",
+        "label": "Section gradient color second"
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Section padding top - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Section padding bottom - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_top_desk",
+        "label": "Section padding top - large screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom_desk",
+        "label": "Section padding bottom - large screens"
+      },
+      {
+        "type": "header",
+        "content": "Section Content"
+      },
+      {
+        "type": "text",
+        "id": "section_title_one",
+        "label": "Enter title first word"
+      },
+      {
+        "type": "text",
+        "id": "section_title_two",
+        "label": "Enter title highlighted word"
+      },
+      {
+        "type": "text",
+        "id": "section_title_third",
+        "label": "Enter title rest"
+      },
+      {
+        "type": "image_picker",
+        "id": "main_img",
+        "label": "Upload icon"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "ingredients-text",
+            "type": "text",
+            "settings": [ 
+                        {
+                            "type": "image_picker",
+                            "id": "ingredients_list_img",
+                            "label": "Upload icon"
+                        },
+                        {
+                            "type": "text",
+                            "id": "ingredients_list_title",
+                            "label": "Enter title"
+                        }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Ingredients list"
+      }
+    ]
+  }
+{% endschema %}
