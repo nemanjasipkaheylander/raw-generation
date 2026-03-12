@@ -149,7 +149,7 @@ ul.menu-level-2 li {
 }
 .card-product__content .card__short-description p {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
