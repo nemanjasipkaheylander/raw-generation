@@ -334,21 +334,27 @@
       </h1>
       <div class="collection-tab-button__wrapper">
         {% if section.blocks.size > 0 %}
-          {% for col in section.blocks %}
-            {% assign collection = col.settings.collection_tab %}
-            <button
-              type="button"
-              class="collection-tab-button{% if forloop.first %} is-active{% endif %}"
-              data-tab-target="tab-{{ forloop.index }}">
-              {{ collection.title }}
-            </button>
-            <div class="custom-popup__subtitle">
-              {{ col.settings.custom_subtitle }}
-            </div>
-          {% endfor %}
+          <div class="collection-tab-buttons">
+            {% for col in section.blocks %}
+              {% assign collection = col.settings.collection_tab %}
+              <button
+                type="button"
+                class="collection-tab-button{% if forloop.first %} is-active{% endif %}"
+                data-tab-target="tab-{{ forloop.index }}">
+                {{ collection.title }}
+              </button>
+            {% endfor %}
+          </div>
+          <div class="collection-tab-subtitles">
+            {% for col in section.blocks %}
+              <div class="custom-popup__subtitle{% if forloop.first %} is-active{% endif %}" data-subtitle="tab-{{ forloop.index }}">
+                {{ col.settings.custom_subtitle }}
+              </div>
+            {% endfor %}
+          </div>
         {% endif %}
       </div>
-      
+
     </div>
     {% for col in section.blocks %}
       {% assign collection = col.settings.collection_tab %}
@@ -669,6 +675,28 @@
   .collection-tab.is-active {
     display: block;
   }
+
+  #shopify-section-{{ section.id }}
+  .collection-tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  #shopify-section-{{ section.id }}
+  .collection-tab-subtitles {
+    margin-top: 16px;
+  }
+
+  #shopify-section-{{ section.id }}
+  .custom-popup__subtitle {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }}
+  .custom-popup__subtitle.is-active {
+    display: block;
+  }
 {% endstyle %}
 
 <script>
@@ -682,6 +710,8 @@
   
       if (!buttons.length || !tabs.length) return;
   
+      var subtitles = section.querySelectorAll('.custom-popup__subtitle');
+  
       buttons.forEach(function(button) {
         button.addEventListener('click', function() {
           var target = button.getAttribute('data-tab-target');
@@ -694,11 +724,20 @@
             tab.classList.remove('is-active');
           });
   
+          subtitles.forEach(function(subtitle) {
+            subtitle.classList.remove('is-active');
+          });
+  
           button.classList.add('is-active');
   
           var activeTab = section.querySelector('.collection-tab[data-tab-content="' + target + '"]');
           if (activeTab) {
             activeTab.classList.add('is-active');
+          }
+  
+          var activeSubtitle = section.querySelector('.custom-popup__subtitle[data-subtitle="' + target + '"]');
+          if (activeSubtitle) {
+            activeSubtitle.classList.add('is-active');
           }
         });
       });
@@ -738,7 +777,7 @@
         "label": "Enter title two",
         "default": "10 Pounds"
       },
-       {
+      {
         "type": "header",
         "content": "Section settings",
         "info": "Enter content"
@@ -1462,12 +1501,11 @@
             "type": "collection",
             "id": "collection_tab",
             "label": "Choose collection"
-          },
-          {
-        "type": "richtext",
-        "id": "custom_subtitle",
-        "label": "Enter subtitle"
-      }
+          }, {
+            "type": "richtext",
+            "id": "custom_subtitle",
+            "label": "Enter subtitle"
+          }
         ]
       }
     ],
