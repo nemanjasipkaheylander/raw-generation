@@ -31,7 +31,7 @@
   }
 {% endstyle %}
 
-<section class="{{ section.id }}" class="routine" id="{{ section_target }}">
+<section class="{{ section.id }} routine" id="{{ section_target }}">
     <div class="l">
           <div class="routine__header">
               <h2 class="routine__title">{{ section.settings.section_title_one }} <span class="routine__purple">{{ section.settings.section_title_two }}</span></h2>
@@ -41,35 +41,42 @@
                 </div>
               {% endif %}
          </div> 
-         <div class="routine__content-wrapper">
-             {% for block in section.blocks %}
-                  <div class="routine__card">
-                      <figure class="routine__image">
-                          {{ block.settings.routine_img | image_url: width: 320 | image_tag: class: 'routine_img', loading: 'lazy' }}
-                      </figure>
-                      <div class="routine__header-card">
-                          <div class="routine__time">{{ block.settings.routine_time }}
-                             <div class="routine__time-icon">
-                              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_1_622)">
-                                    <path d="M7.49998 13.9287C11.0504 13.9287 13.9286 11.0506 13.9286 7.50011C13.9286 3.9497 11.0504 1.07153 7.49998 1.07153C3.94958 1.07153 1.07141 3.9497 1.07141 7.50011C1.07141 11.0506 3.94958 13.9287 7.49998 13.9287Z" stroke="#EB51FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M7.50044 5.02759V7.50012L5.02747 9.97264" stroke="#EB51FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_1_622">
-                                    <rect width="15" height="15" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                    </svg>
-                            </div>
-                            <div class="routine_title">{{ block.settings.routine_title }}</div>
+
+         <div class="routine__content-wrapper swiper routine-swiper">
+             <div class="swiper-wrapper">
+                 {% for block in section.blocks %}
+                      <div class="routine__card swiper-slide" {{ block.shopify_attributes }}>
+                          <figure class="routine__image">
+                              {{ block.settings.routine_img | image_url: width: 320 | image_tag: class: 'routine_img', loading: 'lazy' }}
+                          </figure>
+                          <div class="routine__header-card">
+                              <div class="routine__time">{{ block.settings.routine_time }}
+                                 <div class="routine__time-icon">
+                                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_622)">
+                                        <path d="M7.49998 13.9287C11.0504 13.9287 13.9286 11.0506 13.9286 7.50011C13.9286 3.9497 11.0504 1.07153 7.49998 1.07153C3.94958 1.07153 1.07141 3.9497 1.07141 7.50011C1.07141 11.0506 3.94958 13.9287 7.49998 13.9287Z" stroke="#EB51FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.50044 5.02759V7.50012L5.02747 9.97264" stroke="#EB51FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_1_622">
+                                        <rect width="15" height="15" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                                <div class="routine_title">{{ block.settings.routine_title }}</div>
+                              </div>
+                             <div class="routine__content">
+                                {{ block.settings.routine_text }}
+                             </div>
                           </div>
-                         <div class="routine__content">
-                            {{ block.settings.routine_text }}
-                         </div>
                       </div>
-                  </div>
-             {% endfor %}
+                 {% endfor %}
+             </div>
+             
+             <div class="swiper-pagination"></div>
+             <div class="swiper-button-prev"></div>
+             <div class="swiper-button-next"></div>
          </div>
        
     </div>
@@ -183,3 +190,44 @@
     ]
   }
 {% endschema %}
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.routine-swiper', {
+        // Opcije slajdera
+        direction: 'horizontal',
+        loop: false, // Stavi na true ako želiš da se vrti u krug
+        slidesPerView: 1.2, // Prikazuje 1 celu karticu i 20% sledeće na mobilnom
+        spaceBetween: 20,   // Razmak između kartica u px
+
+        // Paginacija (tačkice ispod slajdera)
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Navigacija (strelice)
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // Responzivnost
+        breakpoints: {
+            // Kada je ekran >= 768px (Tableti)
+            768: {
+                slidesPerView: 2.2,
+                spaceBetween: 30
+            },
+            // Kada je ekran >= 1024px (Desktop)
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40
+            }
+        }
+    });
+});
+
+</script>
