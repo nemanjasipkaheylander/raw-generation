@@ -30,7 +30,6 @@
     }
   }
 
-  /* --- OSNOVNI LAYOUT --- */
 .faq__wrapper {
     display: flex;
     flex-direction: column;
@@ -48,7 +47,7 @@
     }
     .faq__left-side {
         width: 30%;
-        position: sticky; /* Zadržava naslov na mestu dok se skroluju pitanja */
+        position: sticky; 
         top: 40px;
     }
     .faq__container {
@@ -56,17 +55,26 @@
     }
 }
 
-/* --- TIPOGRAFIJA I DUGME --- */
 .faq__title {
-    font-size: 32px;
+    font-size: 16px;
     font-weight: 800;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 .faq__subtitle {
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+.faq__title {
+    font-size: 20px;
+}
+.faq__subtitle {
+    font-size: 18px;
+}
+
 }
 .faq__btn {
     display: inline-block;
@@ -84,7 +92,6 @@
     background-color: #7b00c2;
 }
 
-/* --- FAQ KARTICE --- */
 .faq__item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Suptilna linija kao na slici */
     padding: 15px 0;
@@ -105,7 +112,6 @@
     color: #000;
 }
 
-/* --- GLATKA ANIMACIJA ODGOVORA --- */
 .faq__answer {
     display: grid;
     grid-template-rows: 0fr;
@@ -119,7 +125,6 @@
     line-height: 1.6;
 }
 
-/* --- KADA JE KARTICA OTVORENA (.active) --- */
 .faq__item.active .faq__answer {
     grid-template-rows: 1fr;
 }
@@ -127,7 +132,6 @@
     padding-bottom: 20px;
 }
 
-/* --- STILIZACIJA I ANIMACIJA IKONICE (SVG) --- */
 .faq__icon {
     display: flex;
     align-items: center;
@@ -139,15 +143,14 @@
     height: auto;
 }
 
-/* Menjanje boja SVG-a kada je otvoreno (Kao na tvom screenshotu) */
 .faq__item.active .faq__icon svg {
-    transform: rotate(180deg); /* Rotira strelicu na gore */
+    transform: rotate(180deg);
 }
 .faq__item.active .svg-bg {
-    fill: #A200F9; /* Ljubičasta pozadina */
+    fill: #A200F9; 
 }
 .faq__item.active .svg-chevron {
-    fill: #ffffff; /* Bela strelica */
+    fill: #ffffff; 
 }
 {% endstyle %}
 
