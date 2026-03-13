@@ -1,0 +1,584 @@
+{% liquid
+  assign section_target = section.settings.section_target
+  assign show_column_5 = section.settings.show_column_5
+%}
+
+{% style %}
+  .comparison-{{ section.id }} {
+    background: linear-gradient(to bottom, {{ section.settings.bg_gradient_1 }}, {{ section.settings.bg_gradient_2 }});
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .comparison-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desk }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desk }}px;
+    }
+  }
+
+  .comparison-{{ section.id }} .comparison-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .comparison-{{ section.id }} .comparison-scroll {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .comparison-{{ section.id }} .comparison-table {
+    display: grid;
+    align-items: start;
+    position: relative;
+    min-width: {% if show_column_5 %}1160px{% else %}920px{% endif %};
+    grid-template-columns:
+      240px
+      200px
+      240px
+      240px
+      {% if show_column_5 %}240px{% endif %};
+  }
+
+  .comparison-{{ section.id }} .comparison-column {
+    position: relative;
+  }
+
+  .comparison-{{ section.id }} .comparison-column__head {
+    min-height: 100px;
+    padding: 24px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+    color: #ffffff;
+  }
+
+  .comparison-{{ section.id }} .comparison-column--feature .comparison-column__head {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .comparison-{{ section.id }} .comparison-card {
+    background: #f3f3f3;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .comparison-{{ section.id }} .comparison-card--highlight {
+    background: #e9d3ea;
+    box-shadow: 10px 8px 0 rgba(125, 77, 118, 0.45);
+  }
+
+  .comparison-{{ section.id }} .comparison-column--highlight {
+    z-index: 3;
+    margin-top: -12px;
+    margin-bottom: -12px;
+  }
+
+  .comparison-{{ section.id }} .comparison-row {
+    min-height: 72px;
+    padding: 14px;
+    border-top: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .comparison-{{ section.id }} .comparison-card .comparison-row:first-child {
+    border-top: 0;
+  }
+
+  .comparison-{{ section.id }} .comparison-row--feature {
+    justify-content: flex-start;
+    text-align: left;
+    color: #4c4c4c;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .comparison-{{ section.id }} .comparison-column--highlight .comparison-row {
+    border-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .comparison-{{ section.id }} .comparison-icon-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .comparison-{{ section.id }} .comparison-icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+    flex: 0 0 auto;
+  }
+
+  .comparison-{{ section.id }} .comparison-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .comparison-{{ section.id }} .comparison-note {
+    font-size: 12px;
+    line-height: 1.25;
+    color: #4c4c4c;
+  }
+
+  @media (max-width: 767px) {
+    .comparison-{{ section.id }} .comparison-wrapper {
+      padding: 0 8px;
+    }
+
+    .comparison-{{ section.id }} .comparison-scroll {
+      overflow-x: auto;
+      overflow-y: visible;
+      padding-bottom: 10px;
+    }
+
+    .comparison-{{ section.id }} .comparison-table {
+      min-width: {% if show_column_5 %}700px{% else %}545px{% endif %};
+      grid-template-columns:
+        115px
+        120px
+        155px
+        155px
+        {% if show_column_5 %}155px{% endif %};
+    }
+
+    .comparison-{{ section.id }} .comparison-column__head {
+      min-height: 100px;
+      padding: 18px 8px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .comparison-{{ section.id }} .comparison-card {
+      border-radius: 16px;
+    }
+
+    .comparison-{{ section.id }} .comparison-column--highlight {
+      margin-top: -10px;
+      margin-bottom: -10px;
+    }
+
+    .comparison-{{ section.id }} .comparison-card--highlight {
+      box-shadow: 8px 6px 0 rgba(125, 77, 118, 0.45);
+    }
+
+    .comparison-{{ section.id }} .comparison-row {
+      min-height: 78px;
+      padding: 12px 8px;
+    }
+
+    .comparison-{{ section.id }} .comparison-row--feature {
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .comparison-{{ section.id }} .comparison-note {
+      font-size: 11px;
+      line-height: 1.2;
+    }
+
+    .comparison-{{ section.id }} .comparison-column--feature {
+      position: sticky;
+      left: 0;
+      z-index: 6;
+    }
+
+    .comparison-{{ section.id }} .comparison-column--feature .comparison-column__head {
+      background: linear-gradient(to bottom, {{ section.settings.bg_gradient_1 }}, {{ section.settings.bg_gradient_2 }});
+    }
+
+    .comparison-{{ section.id }} .comparison-column--feature .comparison-card {
+      background: #f3f3f3;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .comparison-{{ section.id }} .comparison-column--highlight {
+      position: sticky;
+      left: 115px;
+      z-index: 7;
+    }
+
+    .comparison-{{ section.id }} .comparison-column--highlight .comparison-column__head {
+      background: #e9d3ea;
+      color: #111111;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .comparison-{{ section.id }} .comparison-column--third,
+    .comparison-{{ section.id }} .comparison-column--fourth,
+    .comparison-{{ section.id }} .comparison-column--fifth {
+      z-index: 1;
+    }
+  }
+{% endstyle %}
+
+<section class="comparison-{{ section.id }}" id="{{ section_target }}">
+  <div class="comparison-wrapper">
+    <div class="comparison-scroll">
+      <div class="comparison-table">
+
+        <div class="comparison-column comparison-column--feature">
+          <div class="comparison-column__head">
+            {{ section.settings.feature_heading }}
+          </div>
+
+          <div class="comparison-card">
+            {% for block in section.blocks %}
+              <div class="comparison-row comparison-row--feature" {{ block.shopify_attributes }}>
+                {{ block.settings.feature_label }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="comparison-column comparison-column--highlight">
+          <div class="comparison-column__head">
+            {{ section.settings.column_1_title }}
+          </div>
+
+          <div class="comparison-card comparison-card--highlight">
+            {% for block in section.blocks %}
+              <div class="comparison-row" {{ block.shopify_attributes }}>
+                <div class="comparison-icon-wrap">
+                  {% if block.settings.column_1_status == 'check' %}
+                    <span class="comparison-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 1.8L14.65 4.14L18.14 3.86L18.86 7.35L21.2 10L18.86 12.65L19.14 16.14L15.65 16.86L13 19.2L10.35 16.86L6.86 17.14L6.14 13.65L3.8 11L6.14 8.35L5.86 4.86L9.35 4.14L12 1.8Z" fill="#49A347"></path>
+                        <path d="M8.7 11.9L10.9 14.1L15.3 9.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                  {% else %}
+                    <span class="comparison-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" fill="#C94747"></circle>
+                        <path d="M8.7 8.7L15.3 15.3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M15.3 8.7L8.7 15.3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                      </svg>
+                    </span>
+                  {% endif %}
+
+                  {% if block.settings.column_1_note != blank %}
+                    <div class="comparison-note">{{ block.settings.column_1_note }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="comparison-column comparison-column--third">
+          <div class="comparison-column__head">
+            {{ section.settings.column_2_title }}
+          </div>
+
+          <div class="comparison-card">
+            {% for block in section.blocks %}
+              <div class="comparison-row" {{ block.shopify_attributes }}>
+                <div class="comparison-icon-wrap">
+                  {% if block.settings.column_2_status == 'check' %}
+                    <span class="comparison-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 1.8L14.65 4.14L18.14 3.86L18.86 7.35L21.2 10L18.86 12.65L19.14 16.14L15.65 16.86L13 19.2L10.35 16.86L6.86 17.14L6.14 13.65L3.8 11L6.14 8.35L5.86 4.86L9.35 4.14L12 1.8Z" fill="#49A347"></path>
+                        <path d="M8.7 11.9L10.9 14.1L15.3 9.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                  {% else %}
+                    <span class="comparison-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" fill="#C94747"></circle>
+                        <path d="M8.7 8.7L15.3 15.3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M15.3 8.7L8.7 15.3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                      </svg>
+                    </span>
+                  {% endif %}
+
+                  {% if block.settings.column_2_note != blank %}
+                    <div class="comparison-note">{{ block.settings.column_2_note }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="comparison-column comparison-column--fourth">
+          <div class="comparison-column__head">
+            {{ section.settings.column_3_title }}
+          </div>
+
+          <div class="comparison-card">
+            {% for block in section.blocks %}
+              <div class="comparison-row" {{ block.shopify_attributes }}>
+                <div class="comparison-icon-wrap">
+                  {% if block.settings.column_3_status == 'check' %}
+                    <span class="comparison-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 1.8L14.65 4.14L18.14 3.86L18.86 7.35L21.2 10L18.86 12.65L19.14 16.14L15.65 16.86L13 19.2L10.35 16.86L6.86 17.14L6.14 13.65L3.8 11L6.14 8.35L5.86 4.86L9.35 4.14L12 1.8Z" fill="#49A347"></path>
+                        <path d="M8.7 11.9L10.9 14.1L15.3 9.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                  {% else %}
+                    <span class="comparison-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" fill="#C94747"></circle>
+                        <path d="M8.7 8.7L15.3 15.3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M15.3 8.7L8.7 15.3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                      </svg>
+                    </span>
+                  {% endif %}
+
+                  {% if block.settings.column_3_note != blank %}
+                    <div class="comparison-note">{{ block.settings.column_3_note }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        {% if show_column_5 %}
+          <div class="comparison-column comparison-column--fifth">
+            <div class="comparison-column__head">
+              {{ section.settings.column_4_title }}
+            </div>
+
+            <div class="comparison-card">
+              {% for block in section.blocks %}
+                <div class="comparison-row" {{ block.shopify_attributes }}>
+                  <div class="comparison-icon-wrap">
+                    {% if block.settings.column_4_status == 'check' %}
+                      <span class="comparison-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <path d="M12 1.8L14.65 4.14L18.14 3.86L18.86 7.35L21.2 10L18.86 12.65L19.14 16.14L15.65 16.86L13 19.2L10.35 16.86L6.86 17.14L6.14 13.65L3.8 11L6.14 8.35L5.86 4.86L9.35 4.14L12 1.8Z" fill="#49A347"></path>
+                          <path d="M8.7 11.9L10.9 14.1L15.3 9.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </span>
+                    {% else %}
+                      <span class="comparison-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                          <circle cx="12" cy="12" r="10" fill="#C94747"></circle>
+                          <path d="M8.7 8.7L15.3 15.3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                          <path d="M15.3 8.7L8.7 15.3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                        </svg>
+                      </span>
+                    {% endif %}
+
+                    {% if block.settings.column_4_note != blank %}
+                      <div class="comparison-note">{{ block.settings.column_4_note }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Comparison Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_target",
+      "label": "Section anchor"
+    },
+    {
+      "type": "text",
+      "id": "feature_heading",
+      "label": "Feature column title",
+      "default": "Feature"
+    },
+    {
+      "type": "text",
+      "id": "column_1_title",
+      "label": "Column 1 title (sticky highlight)",
+      "default": "Protein Cleanse"
+    },
+    {
+      "type": "text",
+      "id": "column_2_title",
+      "label": "Column 2 title",
+      "default": "Restrictive Crash Diets"
+    },
+    {
+      "type": "text",
+      "id": "column_3_title",
+      "label": "Column 3 title",
+      "default": "DIY Home Juicing"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_column_5",
+      "label": "Show extra comparison column",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "column_4_title",
+      "label": "Extra column title",
+      "default": "Optional Column"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_1",
+      "label": "Gradient top",
+      "default": "#2a2a2a"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_2",
+      "label": "Gradient bottom",
+      "default": "#1d1d1d"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 40,
+      "label": "Padding top mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 40,
+      "label": "Padding bottom mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desk",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 80,
+      "label": "Padding top desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desk",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 80,
+      "label": "Padding bottom desktop"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Feature row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_label",
+          "label": "Feature text"
+        },
+
+        {
+          "type": "select",
+          "id": "column_1_status",
+          "label": "Column 1 status",
+          "default": "check",
+          "options": [
+            { "value": "check", "label": "Check" },
+            { "value": "cross", "label": "Cross" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "column_1_note",
+          "label": "Column 1 note"
+        },
+
+        {
+          "type": "select",
+          "id": "column_2_status",
+          "label": "Column 2 status",
+          "default": "cross",
+          "options": [
+            { "value": "check", "label": "Check" },
+            { "value": "cross", "label": "Cross" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "column_2_note",
+          "label": "Column 2 note"
+        },
+
+        {
+          "type": "select",
+          "id": "column_3_status",
+          "label": "Column 3 status",
+          "default": "cross",
+          "options": [
+            { "value": "check", "label": "Check" },
+            { "value": "cross", "label": "Cross" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "column_3_note",
+          "label": "Column 3 note"
+        },
+
+        {
+          "type": "select",
+          "id": "column_4_status",
+          "label": "Extra column status",
+          "default": "cross",
+          "options": [
+            { "value": "check", "label": "Check" },
+            { "value": "cross", "label": "Cross" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "column_4_note",
+          "label": "Extra column note"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison Table",
+      "blocks": [
+        { "type": "row" },
+        { "type": "row" },
+        { "type": "row" },
+        { "type": "row" },
+        { "type": "row" },
+        { "type": "row" },
+        { "type": "row" }
+      ]
+    }
+  ]
+}
+{% endschema %}
