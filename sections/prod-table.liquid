@@ -54,11 +54,7 @@
     justify-content:center;
     position: relative;
     min-width: {% if show_column_5 %}1160px{% else %}920px{% endif %};
-    grid-template-columns:
-      240px
-      200px
-      240px
-      240px
+    grid-template-columns: 340px 286px 285px 285px
       {% if show_column_5 %}240px{% endif %};
   }
 
@@ -69,6 +65,7 @@
   .comparison-card--highlight .comparison-column__head {
     color: #000;
   }
+
 
   .comparison-{{ section.id }} .comparison-column__head {
     min-height: 100px;
@@ -90,20 +87,13 @@
 
   .comparison-{{ section.id }} .comparison-card {
     background: #f3f3f3;
-    border-radius: 18px;
     overflow: hidden;
     position: relative;
   }
 
   .comparison-{{ section.id }} .comparison-card--highlight {
     background: #e9d3ea;
-    box-shadow: 10px 8px 0 rgba(125, 77, 118, 0.45);
-  }
-
-  .comparison-{{ section.id }} .comparison-column--highlight {
-    z-index: 3;
-    margin-top: -12px;
-    margin-bottom: -12px;
+    box-shadow: 5px 8px 0 rgba(125, 77, 118, 0.45);
   }
 
   .comparison-{{ section.id }} .comparison-row {
