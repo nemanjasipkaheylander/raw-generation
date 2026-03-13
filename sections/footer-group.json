@@ -23,6 +23,33 @@
             "routine_img": "shopify://shop_images/Frame_2087327425.png"
           }
         },
+        "text_yTz7F9": {
+          "type": "text",
+          "settings": {
+            "routine_title": "naslov",
+            "routine_time": "naslov",
+            "routine_text": "naslov",
+            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+          }
+        },
+        "text_njPcrL": {
+          "type": "text",
+          "settings": {
+            "routine_title": "naslov",
+            "routine_time": "naslov",
+            "routine_text": "naslov",
+            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+          }
+        },
+        "text_tGWkRJ": {
+          "type": "text",
+          "settings": {
+            "routine_title": "naslov",
+            "routine_time": "naslov",
+            "routine_text": "naslov",
+            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+          }
+        },
         "text_9fPbNE": {
           "type": "text",
           "settings": {
@@ -44,6 +71,9 @@
       },
       "block_order": [
         "text_UYfmEw",
+        "text_yTz7F9",
+        "text_njPcrL",
+        "text_tGWkRJ",
         "text_9fPbNE",
         "text_geJUpE"
       ],
