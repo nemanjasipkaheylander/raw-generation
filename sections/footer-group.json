@@ -1,1 +1,422 @@
-{"type":"footer","name":"Footer","sections":{"advantages_EnUYzd":{"type":"advantages","blocks":{"text_gejaTN":{"type":"text","settings":{"desktop_text":"<p>Free Shipping<\/p>","mobile_text":"<p>Free Shipping<\/p>","icon":"glyphs\/signs\/transit","color":"#000000","mobile_color":"#000000"}},"text_FbkDTV":{"type":"text","settings":{"desktop_text":"<p>LIVE Support<\/p>","mobile_text":"<p>Support from humans<\/p>","icon":"glyphs\/signs\/technical-support","color":"#000000","mobile_color":"#000000"}},"text_Rwz6Er":{"type":"text","settings":{"desktop_text":"<p>Secure Checkout<\/p>","mobile_text":"<p>Secure Checkout<\/p>","icon":"glyphs\/signs\/protect","color":"#000000","mobile_color":"#000000"}}},"block_order":["text_gejaTN","text_FbkDTV","text_Rwz6Er"],"disabled":true,"settings":{"advantages":"show","text_style":"subheading-font","show_bottom_line":true,"center_text":true,"full_width":true,"media_ratio":"auto","image_width":24,"image_radius":"default","color_scheme":"background-4","spacing":24}},"footer":{"type":"Footer","blocks":{"menu_4LjrMb":{"type":"menu","settings":{"heading":"SHOP","menu":"footer-navigation-volume-theme","menu_orientation":"column","link_style":"body-font","uppercase":false,"bolder_font":false,"desktop_width":100,"center_text":false,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}},"menu_UraJTY":{"type":"menu","settings":{"heading":"SUPPORT","menu":"footer-navigation-volume-theme-2","menu_orientation":"column","link_style":"body-font","uppercase":false,"bolder_font":false,"desktop_width":100,"center_text":false,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}},"menu_jaxPJy":{"type":"menu","settings":{"heading":"INFORMATION","menu":"footer-navigation-volume-theme-3","menu_orientation":"column","link_style":"body-font","uppercase":false,"bolder_font":false,"desktop_width":100,"center_text":false,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}},"menu_C6Jk9z":{"type":"menu","settings":{"heading":"COMPANY","menu":"footer-navigation-volume-theme-4","menu_orientation":"column","link_style":"body-font","uppercase":false,"bolder_font":false,"desktop_width":100,"center_text":false,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}},"newsletter_n8kNEn":{"type":"newsletter","settings":{"label":"","text":"<p><strong>FREE WEIGHT LOSS GUIDE<\/strong><\/p>","text_style":"body-font","placeholder":"Email","caption":"","enable_checkbox":false,"make_required":false,"checkbox_label":"<p>I have read and agreed to the <a href=\"\/policies\/privacy-policy\">Terms and Conditions<\/a>.<\/p>","checkbox_text_style":"body-font","center_text":false,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}},"social_media_PnfJHp":{"type":"social_media","disabled":true,"settings":{"subheading":"","follow_on_shop":true,"center_text":false,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}},"localization_HVYYdf":{"type":"localization","settings":{"enable_language":true,"short_language":true,"enable_country":true,"short_country":true,"show_localization_outline":true,"show_localization_chevron":true,"show_localization_flag":true,"localization_radius":"40px","horizontal_alignment":"flex-start","vertical_alignment":"flex-end","desktop_padding":0}},"text_aQzfQV":{"type":"text","settings":{"heading":"","text":"<p>*These products are not intended to diagnose, treat, cure, or prevent any disease. Results vary and are not guaranteed.<\/p>","text_style":"caption-font","desktop_width":100,"center_text":false,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}},"text_hgRfAz":{"type":"text","settings":{"heading":"","text":"<p>The statements made on this website have not been evaluated by the Food and Drug Administration.<\/p><p><\/p>","text_style":"caption-font","desktop_width":100,"center_text":false,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}},"payment_methods_7P7gK9":{"type":"payment_methods","settings":{"heading":"","center_text":false,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}},"buttons_DBRNgi":{"type":"buttons","disabled":true,"settings":{"use_main_button":true,"button_icon_1":"glyphs\/signs\/mobile","swap_button_icon_1":true,"button_label_1":"DOWNLOAD APP","button_link_1":"","target_blank_1":false,"button_style_1":"outlined","button_icon_2":"","swap_button_icon_2":false,"button_label_2":"","button_link_2":"","target_blank_2":false,"button_style_2":"solid","button_icon_3":"","swap_button_icon_3":false,"button_label_3":"","button_link_3":"","target_blank_3":false,"button_style_3":"solid","horizontal_alignment":"flex-start","vertical_alignment":"flex-start","desktop_padding":0}}},"block_order":["menu_4LjrMb","menu_UraJTY","menu_jaxPJy","menu_C6Jk9z","newsletter_n8kNEn","social_media_PnfJHp","localization_HVYYdf","text_aQzfQV","text_hgRfAz","payment_methods_7P7gK9","buttons_DBRNgi"],"settings":{"grid_columns":"4","two_columns_mobile":true,"grid_style":"alternative","disable_max_width":true,"block_headings_style":"secondary-heading","show_top_line":true,"show_bottom_line":false,"color_scheme":"background-3","top_spacing":0,"bottom_spacing":0.4}},"legal":{"type":"Legal","disabled":true,"settings":{"style":"stretched","text_style":"body-font","enable_back_to_top":true,"show_label_on_desktop":true,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"background-1","top_spacing":0.4,"bottom_spacing":0.4}}},"order":["advantages_EnUYzd","footer","legal"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "prod_table_TY3KVL": {
+      "type": "prod-table",
+      "blocks": {
+        "row_jVkfBH": {
+          "type": "row",
+          "settings": {
+            "feature_label": "",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_mqDUfH": {
+          "type": "row",
+          "settings": {
+            "feature_label": "",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_bphDj3": {
+          "type": "row",
+          "settings": {
+            "feature_label": "",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_b9HdAy": {
+          "type": "row",
+          "settings": {
+            "feature_label": "",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_m4K9U3": {
+          "type": "row",
+          "settings": {
+            "feature_label": "",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_nbQxNC": {
+          "type": "row",
+          "settings": {
+            "feature_label": "",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_VJeyyP": {
+          "type": "row",
+          "settings": {
+            "feature_label": "",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_jVkfBH",
+        "row_mqDUfH",
+        "row_bphDj3",
+        "row_b9HdAy",
+        "row_m4K9U3",
+        "row_nbQxNC",
+        "row_VJeyyP"
+      ],
+      "name": "Comparison Table",
+      "settings": {
+        "section_target": "",
+        "feature_heading": "Feature",
+        "column_1_title": "Protein Cleanse",
+        "column_2_title": "Restrictive Crash Diets",
+        "column_3_title": "DIY Home Juicing",
+        "show_column_5": false,
+        "column_4_title": "Optional Column",
+        "bg_gradient_1": "#2a2a2a",
+        "bg_gradient_2": "#1d1d1d",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_desk": 80,
+        "padding_bottom_desk": 80
+      }
+    },
+    "advantages_EnUYzd": {
+      "type": "advantages",
+      "blocks": {
+        "text_gejaTN": {
+          "type": "text",
+          "settings": {
+            "desktop_text": "<p>Free Shipping</p>",
+            "mobile_text": "<p>Free Shipping</p>",
+            "icon": "glyphs/signs/transit",
+            "color": "#000000",
+            "mobile_color": "#000000"
+          }
+        },
+        "text_FbkDTV": {
+          "type": "text",
+          "settings": {
+            "desktop_text": "<p>LIVE Support</p>",
+            "mobile_text": "<p>Support from humans</p>",
+            "icon": "glyphs/signs/technical-support",
+            "color": "#000000",
+            "mobile_color": "#000000"
+          }
+        },
+        "text_Rwz6Er": {
+          "type": "text",
+          "settings": {
+            "desktop_text": "<p>Secure Checkout</p>",
+            "mobile_text": "<p>Secure Checkout</p>",
+            "icon": "glyphs/signs/protect",
+            "color": "#000000",
+            "mobile_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_gejaTN",
+        "text_FbkDTV",
+        "text_Rwz6Er"
+      ],
+      "disabled": true,
+      "settings": {
+        "advantages": "show",
+        "text_style": "subheading-font",
+        "show_bottom_line": true,
+        "center_text": true,
+        "full_width": true,
+        "media_ratio": "auto",
+        "image_width": 24,
+        "image_radius": "default",
+        "color_scheme": "background-4",
+        "spacing": 24
+      }
+    },
+    "footer": {
+      "type": "Footer",
+      "blocks": {
+        "menu_4LjrMb": {
+          "type": "menu",
+          "settings": {
+            "heading": "SHOP",
+            "menu": "footer-navigation-volume-theme",
+            "menu_orientation": "column",
+            "link_style": "body-font",
+            "uppercase": false,
+            "bolder_font": false,
+            "desktop_width": 100,
+            "center_text": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        },
+        "menu_UraJTY": {
+          "type": "menu",
+          "settings": {
+            "heading": "SUPPORT",
+            "menu": "footer-navigation-volume-theme-2",
+            "menu_orientation": "column",
+            "link_style": "body-font",
+            "uppercase": false,
+            "bolder_font": false,
+            "desktop_width": 100,
+            "center_text": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        },
+        "menu_jaxPJy": {
+          "type": "menu",
+          "settings": {
+            "heading": "INFORMATION",
+            "menu": "footer-navigation-volume-theme-3",
+            "menu_orientation": "column",
+            "link_style": "body-font",
+            "uppercase": false,
+            "bolder_font": false,
+            "desktop_width": 100,
+            "center_text": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        },
+        "menu_C6Jk9z": {
+          "type": "menu",
+          "settings": {
+            "heading": "COMPANY",
+            "menu": "footer-navigation-volume-theme-4",
+            "menu_orientation": "column",
+            "link_style": "body-font",
+            "uppercase": false,
+            "bolder_font": false,
+            "desktop_width": 100,
+            "center_text": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        },
+        "newsletter_n8kNEn": {
+          "type": "newsletter",
+          "settings": {
+            "label": "",
+            "text": "<p><strong>FREE WEIGHT LOSS GUIDE</strong></p>",
+            "text_style": "body-font",
+            "placeholder": "Email",
+            "caption": "",
+            "enable_checkbox": false,
+            "make_required": false,
+            "checkbox_label": "<p>I have read and agreed to the <a href=\"/policies/privacy-policy\">Terms and Conditions</a>.</p>",
+            "checkbox_text_style": "body-font",
+            "center_text": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        },
+        "social_media_PnfJHp": {
+          "type": "social_media",
+          "disabled": true,
+          "settings": {
+            "subheading": "",
+            "follow_on_shop": true,
+            "center_text": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        },
+        "localization_HVYYdf": {
+          "type": "localization",
+          "settings": {
+            "enable_language": true,
+            "short_language": true,
+            "enable_country": true,
+            "short_country": true,
+            "show_localization_outline": true,
+            "show_localization_chevron": true,
+            "show_localization_flag": true,
+            "localization_radius": "40px",
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-end",
+            "desktop_padding": 0
+          }
+        },
+        "text_aQzfQV": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "text": "<p>*These products are not intended to diagnose, treat, cure, or prevent any disease. Results vary and are not guaranteed.</p>",
+            "text_style": "caption-font",
+            "desktop_width": 100,
+            "center_text": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        },
+        "text_hgRfAz": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "text": "<p>The statements made on this website have not been evaluated by the Food and Drug Administration.</p><p></p>",
+            "text_style": "caption-font",
+            "desktop_width": 100,
+            "center_text": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        },
+        "payment_methods_7P7gK9": {
+          "type": "payment_methods",
+          "settings": {
+            "heading": "",
+            "center_text": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        },
+        "buttons_DBRNgi": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "use_main_button": true,
+            "button_icon_1": "glyphs/signs/mobile",
+            "swap_button_icon_1": true,
+            "button_label_1": "DOWNLOAD APP",
+            "button_link_1": "",
+            "target_blank_1": false,
+            "button_style_1": "outlined",
+            "button_icon_2": "",
+            "swap_button_icon_2": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "target_blank_2": false,
+            "button_style_2": "solid",
+            "button_icon_3": "",
+            "swap_button_icon_3": false,
+            "button_label_3": "",
+            "button_link_3": "",
+            "target_blank_3": false,
+            "button_style_3": "solid",
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "desktop_padding": 0
+          }
+        }
+      },
+      "block_order": [
+        "menu_4LjrMb",
+        "menu_UraJTY",
+        "menu_jaxPJy",
+        "menu_C6Jk9z",
+        "newsletter_n8kNEn",
+        "social_media_PnfJHp",
+        "localization_HVYYdf",
+        "text_aQzfQV",
+        "text_hgRfAz",
+        "payment_methods_7P7gK9",
+        "buttons_DBRNgi"
+      ],
+      "settings": {
+        "grid_columns": "4",
+        "two_columns_mobile": true,
+        "grid_style": "alternative",
+        "disable_max_width": true,
+        "block_headings_style": "secondary-heading",
+        "show_top_line": true,
+        "show_bottom_line": false,
+        "color_scheme": "background-3",
+        "top_spacing": 0,
+        "bottom_spacing": 0.4
+      }
+    },
+    "legal": {
+      "type": "Legal",
+      "disabled": true,
+      "settings": {
+        "style": "stretched",
+        "text_style": "body-font",
+        "enable_back_to_top": true,
+        "show_label_on_desktop": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "background-1",
+        "top_spacing": 0.4,
+        "bottom_spacing": 0.4
+      }
+    }
+  },
+  "order": [
+    "prod_table_TY3KVL",
+    "advantages_EnUYzd",
+    "footer",
+    "legal"
+  ]
+}
