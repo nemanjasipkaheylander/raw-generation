@@ -17,7 +17,7 @@
         "row_jVkfBH": {
           "type": "row",
           "settings": {
-            "feature_label": "",
+            "feature_label": "a",
             "column_1_status": "check",
             "column_1_note": "",
             "column_2_status": "cross",
@@ -124,7 +124,7 @@
       ],
       "name": "Comparison Table",
       "settings": {
-        "section_target": "",
+        "section_target": "product",
         "section_title_one": "tab",
         "section_title_two": "ela",
         "section_title_third": "",
