@@ -11,6 +11,58 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "prod_routine_jcAfHJ": {
+      "type": "prod-routine",
+      "blocks": {
+        "text_UYfmEw": {
+          "type": "text",
+          "settings": {
+            "routine_title": "naslov",
+            "routine_time": "naslov",
+            "routine_text": "naslov",
+            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+          }
+        },
+        "text_9fPbNE": {
+          "type": "text",
+          "settings": {
+            "routine_title": "naslov",
+            "routine_time": "naslov",
+            "routine_text": "naslov",
+            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+          }
+        },
+        "text_geJUpE": {
+          "type": "text",
+          "settings": {
+            "routine_title": "naslov",
+            "routine_time": "naslov",
+            "routine_text": "naslov",
+            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_UYfmEw",
+        "text_9fPbNE",
+        "text_geJUpE"
+      ],
+      "name": "Routine",
+      "settings": {
+        "section_target": "",
+        "bg_color": "",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "padding_top_desk": "",
+        "padding_bottom_desk": "",
+        "section_title_one": "naslov",
+        "section_title_two": "",
+        "section_button_text": "",
+        "section_button_url": ""
+      }
+    },
     "prod_faq_DGEW4e": {
       "type": "prod-faq",
       "blocks": {
@@ -455,6 +507,7 @@
     }
   },
   "order": [
+    "prod_routine_jcAfHJ",
     "prod_faq_DGEW4e",
     "prod_table_TY3KVL",
     "advantages_EnUYzd",
