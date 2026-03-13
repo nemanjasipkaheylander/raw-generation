@@ -151,51 +151,57 @@
 }
 {% endstyle %}
 
-<section class="{{ section.id }}" class="faq" id="{{ section_target }}">
-    <div class="l">
-          <div class="faq__right-side">
-              <h2 class="faq__title">{{ section.settings.section_title }}</h2>
-              <p class="faq_subtitle">{{ section.settings.section_subtitle }}</p>
+<section class="{{ section.id }} faq" id="{{ section_target }}">
+    <div class="l faq__wrapper">
+        <div class="faq__left-side">
+            <h2 class="faq__title">{{ section.settings.section_title }}</h2>
+            <p class="faq__subtitle">{{ section.settings.section_subtitle }}</p>
 
-              {% if section.settings.section_button_url != blank %}
-                <div class="faq__button-desc">
-                   <a href="{{ section.settings.section_button_url }}" title="{{ section.settings.section_button_text }}">{{ section.settings.section_button_text }}</a>
+            {% if section.settings.section_button_url != blank %}
+            <div class="faq__button-desc">
+                <a href="{{ section.settings.section_button_url }}" class="faq__btn" title="{{ section.settings.section_button_text }}">
+                    {{ section.settings.section_button_text }}
+                </a>
+            </div>
+            {% endif %}
+        </div> 
+
+        {% if section.blocks.size > 0 %}
+        <div class="faq__container">
+            {% for block in section.blocks %}
+            <div class="faq__item" {{ block.shopify_attributes }}>
+                <button class="faq__question">
+                    <span class="faq__question-text">{{ block.settings.faq_title }}</span>
+                    <span class="faq__icon">
+                        <svg width="48" height="51" viewBox="0 0 48 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_1_1000)">
+                                <path class="svg-bg" d="M0 10C0 4.47715 4.47715 0 10 0H38C43.5229 0 48 4.47715 48 10V38C48 43.5229 43.5228 48 38 48H10C4.47715 48 0 43.5228 0 38V10Z" fill="white" shape-rendering="crispEdges"/>
+                                <path class="svg-border" d="M10 0.5H38C43.2467 0.5 47.5 4.75329 47.5 10V38C47.5 43.2467 43.2467 47.5 38 47.5H10C4.7533 47.5 0.5 43.2467 0.5 38V10C0.5 4.7533 4.75329 0.5 10 0.5Z" stroke="#A200F9" shape-rendering="crispEdges"/>
+                                <path class="svg-chevron" d="M32.031 21.531L24.531 29.031C24.4614 29.1008 24.3787 29.1561 24.2876 29.1938C24.1966 29.2316 24.099 29.251 24.0004 29.251C23.9019 29.251 23.8043 29.2316 23.7132 29.1938C23.6222 29.1561 23.5394 29.1008 23.4698 29.031L15.9698 21.531C15.8291 21.3903 15.75 21.1994 15.75 21.0004C15.75 20.8014 15.8291 20.6105 15.9698 20.4698C16.1105 20.3291 16.3014 20.25 16.5004 20.25C16.6994 20.25 16.8903 20.3291 17.031 20.4698L24.0004 27.4401L30.9698 20.4698C31.0395 20.4001 31.1222 20.3448 31.2132 20.3071C31.3043 20.2694 31.4019 20.25 31.5004 20.25C31.599 20.25 31.6965 20.2694 31.7876 20.3071C31.8786 20.3448 31.9614 20.4001 32.031 20.4698C32.1007 20.5395 32.156 20.6222 32.1937 20.7132C32.2314 20.8043 32.2508 20.9019 32.2508 21.0004C32.2508 21.099 32.2314 21.1965 32.1937 21.2876C32.156 21.3786 32.1007 21.4614 32.031 21.531Z" fill="#A200F9"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_1_1000" x="0" y="0" width="48" height="51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="3"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.508223 0 0 0 0 0.0848743 0 0 0 0 0.735577 0 0 0 1 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1000"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1000" result="shape"/>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq__answer">
+                    <div class="faq__answer-inner">
+                        {{ block.settings.faq_text }}
+                    </div>
                 </div>
-              {% endif %}
-              
-          </div> 
-          {% if section.blocks.size > 0 %}
-               <div class="faq__container">
-                   {% for block in section.blocks %}
-                         <div class="faq__title">{{ block.settings.faq_title }}</div> <span class="close-shevron">
-                                <svg width="48" height="51" viewBox="0 0 48 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <g filter="url(#filter0_d_1_1000)">
-                              <path d="M0 10C0 4.47715 4.47715 0 10 0H38C43.5229 0 48 4.47715 48 10V38C48 43.5229 43.5228 48 38 48H10C4.47715 48 0 43.5228 0 38V10Z" fill="white" shape-rendering="crispEdges"/>
-                              <path d="M10 0.5H38C43.2467 0.5 47.5 4.75329 47.5 10V38C47.5 43.2467 43.2467 47.5 38 47.5H10C4.7533 47.5 0.5 43.2467 0.5 38V10C0.5 4.7533 4.75329 0.5 10 0.5Z" stroke="#A200F9" shape-rendering="crispEdges"/>
-                              <path d="M32.031 21.531L24.531 29.031C24.4614 29.1008 24.3787 29.1561 24.2876 29.1938C24.1966 29.2316 24.099 29.251 24.0004 29.251C23.9019 29.251 23.8043 29.2316 23.7132 29.1938C23.6222 29.1561 23.5394 29.1008 23.4698 29.031L15.9698 21.531C15.8291 21.3903 15.75 21.1994 15.75 21.0004C15.75 20.8014 15.8291 20.6105 15.9698 20.4698C16.1105 20.3291 16.3014 20.25 16.5004 20.25C16.6994 20.25 16.8903 20.3291 17.031 20.4698L24.0004 27.4401L30.9698 20.4698C31.0395 20.4001 31.1222 20.3448 31.2132 20.3071C31.3043 20.2694 31.4019 20.25 31.5004 20.25C31.599 20.25 31.6965 20.2694 31.7876 20.3071C31.8786 20.3448 31.9614 20.4001 32.031 20.4698C32.1007 20.5395 32.156 20.6222 32.1937 20.7132C32.2314 20.8043 32.2508 20.9019 32.2508 21.0004C32.2508 21.099 32.2314 21.1965 32.1937 21.2876C32.156 21.3786 32.1007 21.4614 32.031 21.531Z" fill="#0F141A"/>
-                              </g>
-                              <defs>
-                              <filter id="filter0_d_1_1000" x="0" y="0" width="48" height="51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                              <feOffset dy="3"/>
-                              <feComposite in2="hardAlpha" operator="out"/>
-                              <feColorMatrix type="matrix" values="0 0 0 0 0.508223 0 0 0 0 0.0848743 0 0 0 0 0.735577 0 0 0 1 0"/>
-                              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1000"/>
-                              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1000" result="shape"/>
-                              </filter>
-                              </defs>
-                              </svg>
-
-                         </span>
-                         <div class="faq__text">{{block.settings.faq_text}}</div>
-                   {% endfor %}
-               </div>
-          {% endif %}
-
-          <div class="faq__button-mob">
-                   <a href="{{ section.settings.section_button_url }}" title="{{ section.settings.section_button_text }}">{{ section.settings.section_button_text }}</a>
-          </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
 </section>
 
