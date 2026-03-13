@@ -231,6 +231,10 @@
 
 <section class="comparison-{{ section.id }}" id="{{ section_target }}">
   <div class="comparison-wrapper">
+
+        <div class="icon-list__title-container">
+            <h2 class="title-comparison">{{ section.settings.section_title_one }} <strong>{{ section.settings.section_title_two }}</strong> <span>{{ section.settings.section_title_third }}</span></h2>
+        </div>
     <div class="comparison-scroll">
       <div class="comparison-table">
 
@@ -404,6 +408,21 @@
       "id": "section_target",
       "label": "Section anchor"
     },
+          {
+        "type": "text",
+        "id": "section_title_one",
+        "label": "Enter title first word"
+      },
+      {
+        "type": "text",
+        "id": "section_title_two",
+        "label": "Enter title highlighted word"
+      },
+      {
+        "type": "text",
+        "id": "section_title_third",
+        "label": "Enter title rest"
+      },
     {
       "type": "text",
       "id": "feature_heading",
