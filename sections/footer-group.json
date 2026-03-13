@@ -11,6 +11,44 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "prod_faq_DGEW4e": {
+      "type": "prod-faq",
+      "blocks": {
+        "text_JmWhcB": {
+          "type": "text",
+          "settings": {
+            "faq_title": "pera",
+            "faq_text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        },
+        "text_r8edJN": {
+          "type": "text",
+          "settings": {
+            "faq_title": "",
+            "faq_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_JmWhcB",
+        "text_r8edJN"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "section_target": "naslov",
+        "bg_color": "#ff0000",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "20",
+        "padding_bottom": "20",
+        "padding_top_desk": "20",
+        "padding_bottom_desk": "20",
+        "section_title": "naslov",
+        "section_subtitle": "ispo naslova",
+        "section_button_text": "pera",
+        "section_button_url": "#"
+      }
+    },
     "prod_table_TY3KVL": {
       "type": "prod-table",
       "blocks": {
@@ -20,9 +58,9 @@
             "feature_label": "a",
             "column_1_status": "check",
             "column_1_note": "",
-            "column_2_status": "cross",
-            "column_2_note": "",
-            "column_3_status": "cross",
+            "column_2_status": "check",
+            "column_2_note": "(Often Water Weight Only)",
+            "column_3_status": "check",
             "column_3_note": "",
             "column_4_status": "cross",
             "column_4_note": ""
@@ -417,6 +455,7 @@
     }
   },
   "order": [
+    "prod_faq_DGEW4e",
     "prod_table_TY3KVL",
     "advantages_EnUYzd",
     "footer",
