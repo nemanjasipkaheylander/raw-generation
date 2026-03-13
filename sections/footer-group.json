@@ -125,6 +125,9 @@
       "name": "Comparison Table",
       "settings": {
         "section_target": "",
+        "section_title_one": "tab",
+        "section_title_two": "ela",
+        "section_title_third": "",
         "feature_heading": "Feature",
         "column_1_title": "Protein Cleanse",
         "column_2_title": "Restrictive Crash Diets",
