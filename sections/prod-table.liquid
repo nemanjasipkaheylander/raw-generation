@@ -66,6 +66,16 @@
     color: #000;
   }
 
+  .comparison-card.comparison-card--highlight {
+    border-radius: 20px;
+}
+.comparison-column--feature .comparison-card {
+    border-radius: 20px 0 0 20px !important;
+}
+
+.comparison-column:last-of-type  .comparison-card {
+    border-radius: 0 20px 20px 0 !important;
+}
 
   .comparison-{{ section.id }} .comparison-column__head {
     min-height: 100px;
