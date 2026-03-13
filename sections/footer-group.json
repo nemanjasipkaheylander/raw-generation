@@ -99,35 +99,59 @@
         "text_JmWhcB": {
           "type": "text",
           "settings": {
-            "faq_title": "pera",
-            "faq_text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            "faq_title": "Can I eat on this cleanse?",
+            "faq_text": "Yes! We would never ask you to give up your coffee, however there are a few adjustments we recommend to support your cleanse goals. Drink your coffee black or with a low-fat plant milk, like oat milk. Replace sugar with honey."
           }
         },
-        "text_r8edJN": {
+        "text_AwbnUQ": {
           "type": "text",
           "settings": {
-            "faq_title": "",
-            "faq_text": ""
+            "faq_title": "Can I eat on this cleanse?",
+            "faq_text": "Yes! We would never ask you to give up your coffee, however there are a few adjustments we recommend to support your cleanse goals. Drink your coffee black or with a low-fat plant milk, like oat milk. Replace sugar with honey."
+          }
+        },
+        "text_ziUEzn": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Can I eat on this cleanse?",
+            "faq_text": "Yes! We would never ask you to give up your coffee, however there are a few adjustments we recommend to support your cleanse goals. Drink your coffee black or with a low-fat plant milk, like oat milk. Replace sugar with honey."
+          }
+        },
+        "text_QE4HD4": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Can I eat on this cleanse?",
+            "faq_text": "Yes! We would never ask you to give up your coffee, however there are a few adjustments we recommend to support your cleanse goals. Drink your coffee black or with a low-fat plant milk, like oat milk. Replace sugar with honey."
+          }
+        },
+        "text_9XT8Nz": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Can I eat on this cleanse?",
+            "faq_text": "Yes! We would never ask you to give up your coffee, however there are a few adjustments we recommend to support your cleanse goals. Drink your coffee black or with a low-fat plant milk, like oat milk. Replace sugar with honey."
           }
         }
       },
       "block_order": [
         "text_JmWhcB",
-        "text_r8edJN"
+        "text_AwbnUQ",
+        "text_ziUEzn",
+        "text_QE4HD4",
+        "text_9XT8Nz"
       ],
       "name": "FAQ",
       "settings": {
         "section_target": "naslov",
-        "bg_color": "#ff0000",
+        "bg_color": "#ffffff",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
         "padding_top": "20",
         "padding_bottom": "20",
         "padding_top_desk": "20",
         "padding_bottom_desk": "20",
-        "section_title": "naslov",
-        "section_subtitle": "ispo naslova",
-        "section_button_text": "pera",
+        "section_title": "Frequently asked Questions",
+        "section_subtitle": "Your questions answered here",
+        "section_button_text": "FIND YOUR PLAN",
         "section_button_url": "#"
       }
     },
