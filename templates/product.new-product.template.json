@@ -205,7 +205,7 @@
       "name": "Icon with text cards",
       "settings": {
         "section_target": "",
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
         "padding_top": "40",
@@ -449,6 +449,85 @@
         "padding_bottom_desk": 65
       }
     },
+    "cleanse_companion_D6MenC": {
+      "type": "cleanse-companion",
+      "blocks": {
+        "feature_jyxqXd": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "",
+            "feature_title": "Step-by-Step Cleanse Guides",
+            "feature_text": "Know exactly what to do before, during, and after your cleanse for maximum results."
+          }
+        },
+        "feature_Dbfneg": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "",
+            "feature_title": "Track Your Progress",
+            "feature_text": "Log your weight and watch your results unfold in real time."
+          }
+        },
+        "feature_eLGCVf": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "",
+            "feature_title": "Direct Support Access",
+            "feature_text": "Get help when you need it, right from the app."
+          }
+        },
+        "feature_yq9NJr": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "",
+            "feature_title": "Lifestyle Tips & Resources",
+            "feature_text": "Practical support to help you feel your best and maintain your results for the long-term."
+          }
+        },
+        "feature_zHcEBc": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "",
+            "feature_title": "Manage Your Subscription",
+            "feature_text": "Update, pause, or reorder - all in one place."
+          }
+        }
+      },
+      "block_order": [
+        "feature_jyxqXd",
+        "feature_Dbfneg",
+        "feature_eLGCVf",
+        "feature_yq9NJr",
+        "feature_zHcEBc"
+      ],
+      "name": "Cleanse Companion",
+      "settings": {
+        "background_color": "#fff",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mob": 40,
+        "padding_bottom_mob": 40,
+        "image": "shopify://shop_images/Frame_2087326208_3163906f-6d65-419c-819b-056ad86795af.webp",
+        "image_size": "540x",
+        "image_border_radius": 0,
+        "image_max_width": 540,
+        "title_desktop": "YOUR CLEANSE COMPANION TO HELP YOU MAXIMIZE RESULTS",
+        "title_size_desktop": 24,
+        "title_alignment": "left",
+        "title_color": "#000000",
+        "title_font_weight": "600",
+        "title_mobile": "YOUR CLEANSE COMPANION",
+        "title_size_mobile": 24,
+        "title_alignment_mobile": "left",
+        "title_color_mobile": "#000000",
+        "title_font_weight_mobile": "600",
+        "card_title_color": "#000000",
+        "card_text_color": "#000000",
+        "show_disclaimer": true,
+        "disclaimer_text": "The mobile app is available exclusively to Raw Generation customers. Access is provided automatically upon purchase; the app cannot be downloaded or licensed as a standalone product through public app stores.",
+        "disclaimer_text_color": "#666666"
+      }
+    },
     "prod_faq_HyVha7": {
       "type": "prod-faq",
       "blocks": {
@@ -597,6 +676,7 @@
     "prod_icon_text_8VtVyA",
     "prod_routine_EPj6xp",
     "prod_table_7gN9nw",
+    "cleanse_companion_D6MenC",
     "prod_faq_HyVha7",
     "prod_marquee_wQYbcB"
   ]
