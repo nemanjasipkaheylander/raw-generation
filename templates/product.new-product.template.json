@@ -448,6 +448,69 @@
         "padding_top_desk": 65,
         "padding_bottom_desk": 65
       }
+    },
+    "prod_faq_HyVha7": {
+      "type": "prod-faq",
+      "blocks": {
+        "text_HkYRhQ": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Can I eat on this cleanse?",
+            "faq_text": "Yes! You do not have to commit to a strict juice fast for the Protein Cleanse to be effective. While a straight juice diet may help maximize your results, you can certainly eat raw fruits, veggies, or other choices from the cleanse-approved foods list (found in your Cleanse Guide) without undermining your progress. You might actually be MORE successful in achieving your goals if you eat. The satiation of chewing can help prevent ending your cleanse early due to hunger or intense cravings."
+          }
+        },
+        "text_tPBgQy": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Can I drink coffee during my cleanse?",
+            "faq_text": "Yes! We would never ask you to give up your coffee, however there are a few adjustments we recommend to support your cleanse goals. Drink your coffee black or with a low-fat plant milk, like oat milk. Replace sugar with honey."
+          }
+        },
+        "text_i9dh3g": {
+          "type": "text",
+          "settings": {
+            "faq_title": "How do I maintain my results after my cleanse?",
+            "faq_text": "The best way to help maintain your results post-cleanse is with The Protein Method™, a nutritionist-designed weekly weight management system that supports continued progress after a cleanse. To learn more about The Protein Method™, click here."
+          }
+        },
+        "text_PizNgm": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Are these weight loss juices low-calorie and low sugar?",
+            "faq_text": "Our in-house nutritionist believes that low-calorie fad diets are not the most effective approach to successful weight management long-term. Overly restrictive diets can often lead to frustration and setbacks. Lasting health and meaningful weight maintenance are more about choosing options with nutrient-dense ingredients, rather than counting calories, tracking fat grams, or limiting sugar intake. That being said, the juices in this cleanse were not designed to be low in calories, carbs, or natural fruit sugars. They provide your body with what it needs to thrive in the healthiest form possible…and the goal is to support sustainable weight management."
+          }
+        },
+        "text_99JAKy": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Why are the juices frozen?",
+            "faq_text": "We immediately flash-freeze all cold-pressed juices and smoothies. This is the only way to lock in the fresh flavor, raw nutrients, and enzymes, while still being able to deliver them to your door.Shipping juices frozen makes it super convenient for you. There’s no hefty prep time or messy clean-up. No juicer or blender is necessary for you to enjoy these juice recipes. All you have to do is thaw, sip, and experience the health benefits. Plus, if life gets in the way and you have to pause your cleanse, nothing goes to waste. The remaining bottles can stay in the freezer until you can start again."
+          }
+        }
+      },
+      "block_order": [
+        "text_HkYRhQ",
+        "text_tPBgQy",
+        "text_i9dh3g",
+        "text_PizNgm",
+        "text_99JAKy"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "section_target": "",
+        "bg_gradient_1": "#ffffff",
+        "bg_gradient_2": "#ffffff",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_desk": 80,
+        "padding_bottom_desk": 80,
+        "section_title": "Frequently asked Questions",
+        "section_subtitle": "Your questions answered here",
+        "section_button_text": "FIND YOUR PLAN",
+        "section_button_url": "",
+        "section_button_text_mob": "FIND YOUR PLAN",
+        "section_button_url_mob": ""
+      }
     }
   },
   "order": [
@@ -458,6 +521,7 @@
     "product_shop_ALTj8Y",
     "prod_icon_text_8VtVyA",
     "prod_routine_EPj6xp",
-    "prod_table_7gN9nw"
+    "prod_table_7gN9nw",
+    "prod_faq_HyVha7"
   ]
 }
