@@ -170,13 +170,8 @@
     align-items: center;
   }
 
-  .routine_title {
-    font-size: 12px;
-    font-weight: 700;
-    color: #9b51e0;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
+
+  
 
   .routine__content {
     font-size: 13px;
@@ -188,9 +183,6 @@
      TABLET+ (min-width: 768px)
   =========================== */
   @media (min-width: 768px) {
-    .routine__title {
-      font-size: 26px;
-    }
 
     .swiper-nav-desk {
       display: flex;
