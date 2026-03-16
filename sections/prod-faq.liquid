@@ -261,7 +261,7 @@
                     {{ section.settings.section_button_text_mob}}
                 </a>
             </div>
-            {% endif %}
+        {% endif %}
     </div>
 </section>
 
@@ -377,7 +377,6 @@
 
 
   document.addEventListener('DOMContentLoaded', () => {
-    // Selektujemo sve faq stavke
     const faqItems = document.querySelectorAll('.faq__item');
 
     faqItems.forEach(item => {
@@ -386,12 +385,10 @@
         questionBtn.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
 
-            // Zatvori sve ostale stavke (opciono, ali preporučljivo)
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
             });
 
-            // Ako stavka nije bila aktivna, otvori je
             if (!isActive) {
                 item.classList.add('active');
             }
