@@ -1,12 +1,7 @@
-
-
-
-
-{{ '' | asset_url | stylesheet_tag }}
+{{ '../assets/prod-faq.css' | asset_url | stylesheet_tag }}
 
 {% liquid
   assign section_target = section.settings.section_target
-  assign bg_color = section.settings.bg_color
   assign bg_gradient_1 = section.settings.bg_gradient_1
   assign bg_gradient_2 = section.settings.bg_gradient_2
   assign padding_top = section.settings.padding_top
@@ -18,7 +13,6 @@
 {% style %}
   .{{ section.id }} {
     position: relative;
-    background-color: {{ bg_color }};
     background-image: linear-gradient(to bottom, {{ bg_gradient_1 }} 0%, {{ bg_gradient_2 }} 100%);
     padding-top: {{ padding_top }}px;
     padding-bottom: {{ padding_bottom }}px;
@@ -29,372 +23,210 @@
       padding-bottom: {{ padding_bottom_desk }}px;
     }
   }
- 
-.faq__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    font-family: Jost;
-}
-
-.faq__left-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-  .faq__wrapper {
-    padding: 64px 20px;
-    gap: 32px;
-        flex-direction: row;
-
-}
-  .faq__wrapper {
-    flex-direction: column;
-}
-    .faq__wrapper {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-    .faq__left-side {
-        width: 30%;
-        position: sticky; 
-        top: 40px;
-
-    align-items: flex-start;
-    }
-    .faq__container {
-        width: 65%;
-    }
-}
-
-.faq__title {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    text-align:center;
-}
-.faq__subtitle {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 0;
-}
-
-.faq__button-desc {
-    display: none;
-}
-
-@media (min-width: 768px) {
-.faq__title {
-    font-size: 40px;
-    text-align:left;
-
-}
-.faq__subtitle {
-    font-size: 18px;
-    margin-bottom:32px;
-}
-
-.faq__button-desc {
-    display: flex;
-}
-
-}
-.faq__btn {
-    display: inline-block;
-    background-color: #a200f9;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    transition: background-color 0.3s;
-}
-.faq__btn:hover {
-    background-color: #7b00c2;
-}
-
-.faq__item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Suptilna linija kao na slici */
-}
-
-.faq__question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 15px 0;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: left;
-    color: #000;
-}
-
-.faq__answer {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-in-out;
-}
-
-.faq__answer-inner {
-    overflow: hidden;
-    color: #555;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.faq__button-mob{
-  display:flex;
-}
-
-@media (min-width: 768px) {
-.faq__question {
-    font-size: 20px;
-}
-
-.faq__answer-inner {
-    font-size: 18px;
-}
-.faq__button-mob{
-  display:none;
-}
-}
-
-.faq__item.active .faq__answer {
-    grid-template-rows: 1fr;
-}
-.faq__item.active .faq__answer-inner {
-    padding-bottom: 20px;
-}
-
-.faq__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.faq__icon svg {
-    transition: transform 0.3s ease;
-    width: 40px;
-    height: auto;
-    fill:transparent;
-}
-
-.faq__item.active .faq__icon svg {
-    transform: rotate(180deg);
-}
-.faq__item.active .svg-bg {
-    fill: #A200F9; 
-}
-.faq__item.active .svg-chevron {
-    fill: #ffffff; 
-}
-
-
 {% endstyle %}
 
 <section class="{{ section.id }} faq" id="{{ section_target }}">
-    <div class="l faq__wrapper">
-        <div class="faq__left-side">
-            <h2 class="faq__title">{{ section.settings.section_title }}</h2>
-            <p class="faq__subtitle">{{ section.settings.section_subtitle }}</p>
+  <div class="l faq__wrapper">
+    <div class="faq__left-side">
+      <h2 class="faq__title">{{ section.settings.section_title }}</h2>
+      <p class="faq__subtitle">{{ section.settings.section_subtitle }}</p>
 
-            {% if section.settings.section_button_url != blank %}
-            <div class="faq__button-desc">
-                <a href="{{ section.settings.section_button_url }}" class="faq__btn" title="{{ section.settings.section_button_text }}">
-                    {{ section.settings.section_button_text }}
-                </a>
-            </div>
-            {% endif %}
-        </div> 
-
-        {% if section.blocks.size > 0 %}
-        <div class="faq__container">
-            {% for block in section.blocks %}
-            <div class="faq__item" {{ block.shopify_attributes }}>
-                <button class="faq__question">
-                    <span class="faq__question-text">{{ block.settings.faq_title }}</span>
-                    <span class="faq__icon">
-                        <svg width="48" height="51" viewBox="0 0 48 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g filter="url(#filter0_d_1_1000)">
-                                <path class="svg-bg" d="M0 10C0 4.47715 4.47715 0 10 0H38C43.5229 0 48 4.47715 48 10V38C48 43.5229 43.5228 48 38 48H10C4.47715 48 0 43.5228 0 38V10Z" fill="white" shape-rendering="crispEdges"/>
-                                <path class="svg-border" d="M10 0.5H38C43.2467 0.5 47.5 4.75329 47.5 10V38C47.5 43.2467 43.2467 47.5 38 47.5H10C4.7533 47.5 0.5 43.2467 0.5 38V10C0.5 4.7533 4.75329 0.5 10 0.5Z" stroke="#A200F9" shape-rendering="crispEdges"/>
-                                <path class="svg-chevron" d="M32.031 21.531L24.531 29.031C24.4614 29.1008 24.3787 29.1561 24.2876 29.1938C24.1966 29.2316 24.099 29.251 24.0004 29.251C23.9019 29.251 23.8043 29.2316 23.7132 29.1938C23.6222 29.1561 23.5394 29.1008 23.4698 29.031L15.9698 21.531C15.8291 21.3903 15.75 21.1994 15.75 21.0004C15.75 20.8014 15.8291 20.6105 15.9698 20.4698C16.1105 20.3291 16.3014 20.25 16.5004 20.25C16.6994 20.25 16.8903 20.3291 17.031 20.4698L24.0004 27.4401L30.9698 20.4698C31.0395 20.4001 31.1222 20.3448 31.2132 20.3071C31.3043 20.2694 31.4019 20.25 31.5004 20.25C31.599 20.25 31.6965 20.2694 31.7876 20.3071C31.8786 20.3448 31.9614 20.4001 32.031 20.4698C32.1007 20.5395 32.156 20.6222 32.1937 20.7132C32.2314 20.8043 32.2508 20.9019 32.2508 21.0004C32.2508 21.099 32.2314 21.1965 32.1937 21.2876C32.156 21.3786 32.1007 21.4614 32.031 21.531Z" fill="#A200F9"/>
-                            </g>
-                            <defs>
-                                <filter id="filter0_d_1_1000" x="0" y="0" width="48" height="51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                    <feOffset dy="3"/>
-                                    <feComposite in2="hardAlpha" operator="out"/>
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0.508223 0 0 0 0 0.0848743 0 0 0 0 0.735577 0 0 0 1 0"/>
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1000"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1000" result="shape"/>
-                                </filter>
-                            </defs>
-                        </svg>
-                    </span>
-                </button>
-                <div class="faq__answer">
-                    <div class="faq__answer-inner">
-                        {{ block.settings.faq_text }}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+      {% if section.settings.section_button_url != blank %}
+        <div class="faq__button-desc">
+          <a href="{{ section.settings.section_button_url }}" class="faq__btn" title="{{ section.settings.section_button_text }}">
+            {{ section.settings.section_button_text }}
+          </a>
         </div>
-        {% endif %}
-
-
-                {% if section.settings.section_button_url_mob != blank %}
-            <div class="faq__button-mob">
-                <a href="{{ section.settings.section_button_url_mob }}" class="faq__btn" title="{{ section.settings.section_button_text_mob }}">
-                    {{ section.settings.section_button_text_mob}}
-                </a>
-            </div>
-        {% endif %}
+      {% endif %}
     </div>
+
+    {% if section.blocks.size > 0 %}
+      <div class="faq__container">
+        {% for block in section.blocks %}
+          <div class="faq__item" {{ block.shopify_attributes }}>
+            <button class="faq__question">
+              <span class="faq__question-text">{{ block.settings.faq_title }}</span>
+              <span class="faq__icon">
+                <svg width="48" height="51" viewBox="0 0 48 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_1_1000)">
+                    <path class="svg-bg" d="M0 10C0 4.47715 4.47715 0 10 0H38C43.5229 0 48 4.47715 48 10V38C48 43.5229 43.5228 48 38 48H10C4.47715 48 0 43.5228 0 38V10Z" fill="white" shape-rendering="crispEdges"/>
+                    <path class="svg-border" d="M10 0.5H38C43.2467 0.5 47.5 4.75329 47.5 10V38C47.5 43.2467 43.2467 47.5 38 47.5H10C4.7533 47.5 0.5 43.2467 0.5 38V10C0.5 4.7533 4.75329 0.5 10 0.5Z" stroke="#A200F9" shape-rendering="crispEdges"/>
+                    <path class="svg-chevron" d="M32.031 21.531L24.531 29.031C24.4614 29.1008 24.3787 29.1561 24.2876 29.1938C24.1966 29.2316 24.099 29.251 24.0004 29.251C23.9019 29.251 23.8043 29.2316 23.7132 29.1938C23.6222 29.1561 23.5394 29.1008 23.4698 29.031L15.9698 21.531C15.8291 21.3903 15.75 21.1994 15.75 21.0004C15.75 20.8014 15.8291 20.6105 15.9698 20.4698C16.1105 20.3291 16.3014 20.25 16.5004 20.25C16.6994 20.25 16.8903 20.3291 17.031 20.4698L24.0004 27.4401L30.9698 20.4698C31.0395 20.4001 31.1222 20.3448 31.2132 20.3071C31.3043 20.2694 31.4019 20.25 31.5004 20.25C31.599 20.25 31.6965 20.2694 31.7876 20.3071C31.8786 20.3448 31.9614 20.4001 32.031 20.4698C32.1007 20.5395 32.156 20.6222 32.1937 20.7132C32.2314 20.8043 32.2508 20.9019 32.2508 21.0004C32.2508 21.099 32.2314 21.1965 32.1937 21.2876C32.156 21.3786 32.1007 21.4614 32.031 21.531Z" fill="#A200F9"/>
+                  </g>
+                  <defs>
+                    <filter id="filter0_d_1_1000" x="0" y="0" width="48" height="51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="3"/>
+                      <feComposite in2="hardAlpha" operator="out"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0.508223 0 0 0 0 0.0848743 0 0 0 0 0.735577 0 0 0 1 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1000"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1000" result="shape"/>
+                    </filter>
+                  </defs>
+                </svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                {{ block.settings.faq_text }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.section_button_url_mob != blank %}
+      <div class="faq__button-mob">
+        <a href="{{ section.settings.section_button_url_mob }}" class="faq__btn" title="{{ section.settings.section_button_text_mob }}">
+          {{ section.settings.section_button_text_mob }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
 </section>
 
-{% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
-
 {% schema %}
-  {
-    "name": "FAQ",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Section Settings"
-      },
-      {
-        "type": "text",
-        "id": "section_target",
-        "label": "Section Target"
-      },
-      {
-        "type": "color",
-        "id": "bg_color",
-        "label": "Section background color"
-      },
-      {
-        "type": "color",
-        "id": "bg_gradient_1",
-        "label": "Section gradient color first"
-      }, {
-        "type": "color",
-        "id": "bg_gradient_2",
-        "label": "Section gradient color second"
-      },
-      {
-        "type": "text",
-        "id": "padding_top",
-        "label": "Section padding top - small screens"
-      }, {
-        "type": "text",
-        "id": "padding_bottom",
-        "label": "Section padding bottom - small screens"
-      }, {
-        "type": "text",
-        "id": "padding_top_desk",
-        "label": "Section padding top - large screens"
-      }, {
-        "type": "text",
-        "id": "padding_bottom_desk",
-        "label": "Section padding bottom - large screens"
-      },
-      {
-        "type": "header",
-        "content": "Section Content"
-      },
-      {
-        "type": "text",
-        "id": "section_title",
-        "label": "Enter title"
-      },
-      {
-        "type": "text",
-        "id": "section_subtitle",
-        "label": "Enter subtile"
-      },
-      {
-        "type": "text",
-        "id": "section_button_text",
-        "label": "Enter button text"
-      },
-      {
-        "type": "url",
-        "id": "section_button_url",
-        "label": "Paste URL"
-      },
-            {
-        "type": "text",
-        "id": "section_button_text_mob",
-        "label": "Enter button text mob"
-      },
-      {
-        "type": "url",
-        "id": "section_button_url_mob",
-        "label": "Paste URL Mob"
-      }
-      
-    ],
-    "blocks": [
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_target",
+      "label": "Section Target"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_1",
+      "label": "Gradient top",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_2",
+      "label": "Gradient bottom",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 40,
+      "label": "Padding top mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 40,
+      "label": "Padding bottom mobile"
+    },
+    {
+     "type": "range",
+      "id": "padding_top_desk",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 40,
+      "label": "Padding bottom "
+    },
+    {
+     "type": "range",
+      "id": "padding_bottom_desk",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 40,
+      "label": "Padding bottom "
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Enter title"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Enter subtitle"
+    },
+    {
+      "type": "text",
+      "id": "section_button_text",
+      "label": "Enter button text"
+    },
+    {
+      "type": "url",
+      "id": "section_button_url",
+      "label": "Paste URL"
+    },
+    {
+      "type": "text",
+      "id": "section_button_text_mob",
+      "label": "Enter button text mob"
+    },
+    {
+      "type": "url",
+      "id": "section_button_url_mob",
+      "label": "Paste URL Mob"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "FAQ",
+      "type": "text",
+      "settings": [
         {
-            "name": "FAQ",
-            "type": "text",
-            "settings": [ 
-                        {
-                            "type": "text",
-                            "id": "faq_title",
-                            "label": "Enter title"
-                        },
-                        {
-                            "type": "text",
-                            "id": "faq_text",
-                            "label": "Enter text"
-                        }
-            ]
+          "type": "text",
+          "id": "faq_title",
+          "label": "Enter title"
+        },
+        {
+          "type": "text",
+          "id": "faq_text",
+          "label": "Enter text"
         }
-    ],
-    "presets": [
-      {
-        "name": "FAQ"
-      }
-    ]
-  }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
+}
 {% endschema %}
 
 <script>
-
-
   document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq__item');
 
     faqItems.forEach(item => {
-        const questionBtn = item.querySelector('.faq__question');
+      const questionBtn = item.querySelector('.faq__question');
 
-        questionBtn.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
+      questionBtn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
 
-            faqItems.forEach(otherItem => {
-                otherItem.classList.remove('active');
-            });
-
-            if (!isActive) {
-                item.classList.add('active');
-            }
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
         });
-    });
-});
 
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  });
 </script>
