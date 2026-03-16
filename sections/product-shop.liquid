@@ -27,6 +27,17 @@
                       <div class="text-label">Best Seller</div>
                    </div>
                 {% endif %}
+                {% if section.settings.show_free_app %}
+                <div class="image-label-second">
+                  <div class="label-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 16.8764C15.9954 16.8764 19.2342 13.5791 19.2342 9.51169C19.2342 5.44427 15.9954 2.14697 12 2.14697C8.00464 2.14697 4.76576 5.44427 4.76576 9.51169C4.76576 13.5791 8.00464 16.8764 12 16.8764ZM12 16.8764L7.0006 21.966C6.62083 22.3526 5.97147 22.0788 5.97147 21.532V20.5588C5.97147 19.203 4.89184 18.1039 3.56006 18.1039H2.60406C2.06698 18.1039 1.798 17.4428 2.17778 17.0562L5.36862 13.8078M12 16.8764L16.9994 21.966C17.3792 22.3526 18.0285 22.0788 18.0285 21.532V20.5588C18.0285 19.203 19.1082 18.1039 20.4399 18.1039H21.3959C21.933 18.1039 22.202 17.4428 21.8222 17.0562L18.6314 13.8078" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+
+                  </div>
+                  <div class="text-label">free app included</div>
+                </div>
+            {% endif %}
           {%- if product.media.size > 0 -%}
             <div class="custom-product-shop__media-stage">
               <button
@@ -1454,7 +1465,12 @@
       "label": "Show bestseler badge",
       "default": false
     },
-    
+    {
+      "type": "checkbox",
+      "id": "show_free_app",
+      "label": "Show Free App badge",
+      "default": false
+    },
     {
       "type": "text",
       "id": "button_text",
