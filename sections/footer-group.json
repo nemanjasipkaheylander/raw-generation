@@ -11,24 +11,61 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
-    "prod_faq_VzaQnV": {
-      "type": "prod-faq",
-      "name": "FAQ",
+    "prod_icon_text_9bXAFw": {
+      "type": "prod-icon-text",
+      "blocks": {
+        "text_4jdpJD": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2087326202.svg",
+            "icon_text_title": "Feel Lighter",
+            "icon_text_content": "Nutrient dense juice cleanses to help you feel refreshed."
+          }
+        },
+        "text_ANydcR": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663421.svg",
+            "icon_text_title": "Energy Support",
+            "icon_text_content": "Hydrating, antioxidant rich blends that help shake off slugginess and restore your glow."
+          }
+        },
+        "text_CFJY7Y": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663421_1.svg",
+            "icon_text_title": "Detox Support",
+            "icon_text_content": "Give your body what it needs to support detox processes and reduce occasional sugar cravings."
+          }
+        },
+        "text_BFpz6J": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663421_2.svg",
+            "icon_text_title": "Kickstart Healthy Habits",
+            "icon_text_content": "Nutritionist-designed solutions to give you a clean break from processed foods and to jumpstart healthier eating habits."
+          }
+        }
+      },
+      "block_order": [
+        "text_4jdpJD",
+        "text_ANydcR",
+        "text_CFJY7Y",
+        "text_BFpz6J"
+      ],
+      "name": "Icon with text cards",
       "settings": {
         "section_target": "",
-        "bg_color": "",
+        "bg_color": "#ffffff",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
-        "padding_top": "",
-        "padding_bottom": "",
-        "padding_top_desk": "",
-        "padding_bottom_desk": "",
-        "section_title": "",
-        "section_subtitle": "",
-        "section_button_text": "",
-        "section_button_url": "",
-        "section_button_text_mob": "",
-        "section_button_url_mob": ""
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one": "Why",
+        "section_title_two": "Choose",
+        "section_title_third": "the Protein Cleanse®"
       }
     },
     "prod_routine_jcAfHJ": {
@@ -99,14 +136,14 @@
       ],
       "name": "Routine",
       "settings": {
-        "section_target": "",
+        "section_target": "pera",
         "bg_color": "",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
         "padding_top": "",
         "padding_bottom": "",
-        "padding_top_desk": "",
-        "padding_bottom_desk": "",
+        "padding_top_desk": "100",
+        "padding_bottom_desk": "100",
         "section_title_one": "naslov",
         "section_title_two": "",
         "section_button_text": "",
@@ -565,63 +602,6 @@
         "bottom_spacing": 0.4
       }
     },
-    "prod_icon_text_9bXAFw": {
-      "type": "prod-icon-text",
-      "blocks": {
-        "text_4jdpJD": {
-          "type": "text",
-          "settings": {
-            "icon_text_img": "shopify://shop_images/Frame_2087326202.svg",
-            "icon_text_title": "Feel Lighter",
-            "icon_text_content": "Nutrient dense juice cleanses to help you feel refreshed."
-          }
-        },
-        "text_ANydcR": {
-          "type": "text",
-          "settings": {
-            "icon_text_img": "shopify://shop_images/Frame_2085663421.svg",
-            "icon_text_title": "Energy Support",
-            "icon_text_content": "Hydrating, antioxidant rich blends that help shake off slugginess and restore your glow."
-          }
-        },
-        "text_CFJY7Y": {
-          "type": "text",
-          "settings": {
-            "icon_text_img": "shopify://shop_images/Frame_2085663421_1.svg",
-            "icon_text_title": "Detox Support",
-            "icon_text_content": "Give your body what it needs to support detox processes and reduce occasional sugar cravings."
-          }
-        },
-        "text_BFpz6J": {
-          "type": "text",
-          "settings": {
-            "icon_text_img": "shopify://shop_images/Frame_2085663421_2.svg",
-            "icon_text_title": "Kickstart Healthy Habits",
-            "icon_text_content": "Nutritionist-designed solutions to give you a clean break from processed foods and to jumpstart healthier eating habits."
-          }
-        }
-      },
-      "block_order": [
-        "text_4jdpJD",
-        "text_ANydcR",
-        "text_CFJY7Y",
-        "text_BFpz6J"
-      ],
-      "name": "Icon with text cards",
-      "settings": {
-        "section_target": "",
-        "bg_color": "#ffffff",
-        "bg_gradient_1": "",
-        "bg_gradient_2": "",
-        "padding_top": "40",
-        "padding_bottom": "40",
-        "padding_top_desk": "64",
-        "padding_bottom_desk": "64",
-        "section_title_one": "Why",
-        "section_title_two": "Choose",
-        "section_title_third": "the Protein Cleanse®"
-      }
-    },
     "legal": {
       "type": "Legal",
       "disabled": true,
@@ -640,13 +620,12 @@
     }
   },
   "order": [
-    "prod_faq_VzaQnV",
+    "prod_icon_text_9bXAFw",
     "prod_routine_jcAfHJ",
     "prod_faq_DGEW4e",
     "prod_table_TY3KVL",
     "advantages_EnUYzd",
     "footer",
-    "prod_icon_text_9bXAFw",
     "legal"
   ]
 }
