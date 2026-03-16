@@ -397,6 +397,86 @@
         "padding_top_desk": "",
         "padding_bottom_desk": ""
       }
+    },
+    "prod_marquee_9Pjmec": {
+      "type": "prod-marquee",
+      "blocks": {
+        "logo_GyfbyL": {
+          "type": "logo",
+          "settings": {
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_QxT4Mk": {
+          "type": "logo",
+          "settings": {
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_gTeMTJ": {
+          "type": "logo",
+          "settings": {
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_BjLH9K": {
+          "type": "logo",
+          "settings": {
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_nzX78W": {
+          "type": "logo",
+          "settings": {
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_7GWLU8": {
+          "type": "logo",
+          "settings": {
+            "alt_text": "Publication logo"
+          }
+        }
+      },
+      "block_order": [
+        "logo_GyfbyL",
+        "logo_QxT4Mk",
+        "logo_gTeMTJ",
+        "logo_BjLH9K",
+        "logo_nzX78W",
+        "logo_7GWLU8"
+      ],
+      "name": "As Seen In",
+      "settings": {
+        "section_target": "",
+        "bg_gradient_1": "#e8d5ff",
+        "bg_gradient_2": "#d8bcff",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_desk": 80,
+        "padding_bottom_desk": 80,
+        "speed": 30,
+        "label": "AS SEEN IN"
+      }
+    },
+    "prod_faq_et7NqD": {
+      "type": "prod-faq",
+      "name": "FAQ",
+      "settings": {
+        "section_target": "",
+        "bg_gradient_1": "#ffffff",
+        "bg_gradient_2": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_desk": 40,
+        "padding_bottom_desk": 40,
+        "section_title": "",
+        "section_subtitle": "",
+        "section_button_text": "",
+        "section_button_url": "",
+        "section_button_text_mob": "",
+        "section_button_url_mob": ""
+      }
     }
   },
   "order": [
@@ -406,6 +486,8 @@
     "mega_menu_one_yKwezG",
     "mega_menu_two_jrbXrQ",
     "mega_menu_three_7rMQgD",
-    "mega_menu_four_GrgLqr"
+    "mega_menu_four_GrgLqr",
+    "prod_marquee_9Pjmec",
+    "prod_faq_et7NqD"
   ]
 }
