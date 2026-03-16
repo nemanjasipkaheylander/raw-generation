@@ -216,6 +216,107 @@
         "section_title_two": "Choose",
         "section_title_third": "the Protein Cleanse®"
       }
+    },
+    "prod_routine_EPj6xp": {
+      "type": "prod-routine",
+      "blocks": {
+        "text_wPNDG3": {
+          "type": "text",
+          "settings": {
+            "routine_title": "WATER",
+            "routine_time": "Wake Up",
+            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
+            "routine_img": "shopify://shop_images/CleanseDay_Coffee2_1.jpg"
+          }
+        },
+        "text_T7GrQ3": {
+          "type": "text",
+          "settings": {
+            "routine_title": "JUICE #1",
+            "routine_time": "8 AM",
+            "routine_text": "Begin your day with the green juice—leafy green veggies like spinach and kale are packed with essential minerals that may help curb cravings and support your body's natural cleansing process. You can also enjoy as much fresh fruit as you'd like.",
+            "routine_img": "shopify://shop_images/CleanseDay_SweetGreens-Bananas_320947b6-4377-4d95-8df8-2325630c4cfa.jpg"
+          }
+        },
+        "text_6FR6Tt": {
+          "type": "text",
+          "settings": {
+            "routine_title": "JUICE #2",
+            "routine_time": "10 AM",
+            "routine_text": "For your second juice, we suggest choosing one of the non-green options—but don’t stress! You’ll still receive the full benefits of every bottle, no matter the order you enjoy them throughout the day.",
+            "routine_img": "shopify://shop_images/CleanseDay_CitrusCarrot-Berries_b00111ae-094f-4401-a568-baaeba1c9966.jpg"
+          }
+        },
+        "text_ADRNrB": {
+          "type": "text",
+          "settings": {
+            "routine_title": "JUICE #3",
+            "routine_time": "noon",
+            "routine_text": "Pair your third juice with a colorful mix of fruits and veggies you enjoy—think cucumbers, berries, bell peppers, or even a baked potato. Nourish your body with the amount that satisfies you—no restriction.",
+            "routine_img": "shopify://shop_images/CleanseDay_SweetRoots-SweetPotato.jpg"
+          }
+        },
+        "text_w6gjLN": {
+          "type": "text",
+          "settings": {
+            "routine_title": "SMOOTHIE #1",
+            "routine_time": "2pm",
+            "routine_text": "For the rest of the day you’ll be drinking the creamy smoothies. Drinking the light juices before the heavier smoothies is the key to help keep any bloating at bay.",
+            "routine_img": "shopify://shop_images/CleanseDay_VanillaCashew-Banana.jpg"
+          }
+        },
+        "text_ppxVmL": {
+          "type": "text",
+          "settings": {
+            "routine_title": "SMOOTHIE #2",
+            "routine_time": "4pm",
+            "routine_text": "Drink your second smoothie. Eat as many fruits and vegetables as you need to to keep yourself full and satiated.",
+            "routine_img": "shopify://shop_images/CleanseDay_PeanutButter-Apples.jpg"
+          }
+        },
+        "text_dJePrM": {
+          "type": "text",
+          "settings": {
+            "routine_title": "Smoothie #3",
+            "routine_time": "6pm",
+            "routine_text": "Your final smoothie of the day! If you feel you need more, you can also eat a salad, but keep it to just vegetables with an oil-free dressing.",
+            "routine_img": "shopify://shop_images/CleanseDay_ChocolateCashew-Dates_6ab2db0e-15a7-462d-ba47-69442545f14b.jpg"
+          }
+        },
+        "text_MyqmDU": {
+          "type": "text",
+          "settings": {
+            "routine_title": "Smoothie #1",
+            "routine_time": "4pm",
+            "routine_text": "Your cleanse guide will come with a recipe for a hearty vegetable soup that can be eaten at any point throughout your day when you feel you need something extra.",
+            "routine_img": "shopify://shop_images/CleanseDay_Soup.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_wPNDG3",
+        "text_T7GrQ3",
+        "text_6FR6Tt",
+        "text_ADRNrB",
+        "text_w6gjLN",
+        "text_ppxVmL",
+        "text_dJePrM",
+        "text_MyqmDU"
+      ],
+      "name": "Routine",
+      "settings": {
+        "section_target": "",
+        "bg_gradient_1": "#ffffff",
+        "bg_gradient_2": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_desk": 65,
+        "padding_bottom_desk": 65,
+        "section_title_one": "Your Cleanse",
+        "section_title_two": "Day Routine",
+        "section_button_text": "GET STARTED",
+        "section_button_url": ""
+      }
     }
   },
   "order": [
@@ -224,6 +325,7 @@
     "shogun-below",
     "shogun-optimizer",
     "product_shop_ALTj8Y",
-    "prod_icon_text_8VtVyA"
+    "prod_icon_text_8VtVyA",
+    "prod_routine_EPj6xp"
   ]
 }
