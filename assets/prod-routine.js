@@ -17,11 +17,32 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  document.querySelectorAll('.collection-button-prev').forEach(btn => {
-    btn.addEventListener('click', () => swiper.slidePrev());
+  const prevBtns = document.querySelectorAll('.collection-button-prev');
+  const nextBtns = document.querySelectorAll('.collection-button-next');
+
+  function updateButtons() {
+    prevBtns.forEach(btn => {
+      btn.classList.toggle('swiper-button-disabled', swiper.isBeginning);
+    });
+    nextBtns.forEach(btn => {
+      btn.classList.toggle('swiper-button-disabled', swiper.isEnd);
+    });
+  }
+
+  prevBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      swiper.slidePrev();
+      updateButtons();
+    });
   });
 
-  document.querySelectorAll('.collection-button-next').forEach(btn => {
-    btn.addEventListener('click', () => swiper.slideNext());
+  nextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      swiper.slideNext();
+      updateButtons();
+    });
   });
+
+  // Inicijalno stanje
+  updateButtons();
 });
