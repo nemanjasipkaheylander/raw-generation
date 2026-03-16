@@ -5,11 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     slidesPerView: 1.2,
     spaceBetween: 20,
 
-    navigation: {
-      nextEl: ['.collection-button-next'],
-      prevEl: ['.collection-button-prev'],
-    },
-
     breakpoints: {
       768: {
         slidesPerView: 2.2,
@@ -20,5 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 40,
       },
     },
+  });
+
+  document.querySelectorAll('.collection-button-prev').forEach(btn => {
+    btn.addEventListener('click', () => swiper.slidePrev());
+  });
+
+  document.querySelectorAll('.collection-button-next').forEach(btn => {
+    btn.addEventListener('click', () => swiper.slideNext());
   });
 });
