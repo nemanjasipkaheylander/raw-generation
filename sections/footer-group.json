@@ -11,87 +11,6 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
-    "prod_routine_jcAfHJ": {
-      "type": "prod-routine",
-      "blocks": {
-        "text_UYfmEw": {
-          "type": "text",
-          "settings": {
-            "routine_title": "WATER",
-            "routine_time": "Wake Up",
-            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
-            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
-          }
-        },
-        "text_at7LtE": {
-          "type": "text",
-          "settings": {
-            "routine_title": "WATER",
-            "routine_time": "Wake Up",
-            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
-            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
-          }
-        },
-        "text_FLxWBe": {
-          "type": "text",
-          "settings": {
-            "routine_title": "WATER",
-            "routine_time": "Wake Up",
-            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
-            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
-          }
-        },
-        "text_i9tCTR": {
-          "type": "text",
-          "settings": {
-            "routine_title": "WATER",
-            "routine_time": "Wake Up",
-            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
-            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
-          }
-        },
-        "text_Whqbg8": {
-          "type": "text",
-          "settings": {
-            "routine_title": "WATER",
-            "routine_time": "Wake Up",
-            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
-            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
-          }
-        },
-        "text_4hm64D": {
-          "type": "text",
-          "settings": {
-            "routine_title": "WATER",
-            "routine_time": "Wake Up",
-            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
-            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "text_UYfmEw",
-        "text_at7LtE",
-        "text_FLxWBe",
-        "text_i9tCTR",
-        "text_Whqbg8",
-        "text_4hm64D"
-      ],
-      "name": "Routine",
-      "settings": {
-        "section_target": "pera",
-        "bg_gradient_1": "",
-        "bg_gradient_2": "",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "padding_top_desk": 100,
-        "padding_bottom_desk": 100,
-        "section_title_one": "Your Cleanse",
-        "section_title_two": "Day Routine",
-        "section_button_text": "test",
-        "section_button_url": "#"
-      }
-    },
     "prod_faq_DGEW4e": {
       "type": "prod-faq",
       "blocks": {
@@ -561,7 +480,6 @@
     }
   },
   "order": [
-    "prod_routine_jcAfHJ",
     "prod_faq_DGEW4e",
     "prod_table_TY3KVL",
     "advantages_EnUYzd",

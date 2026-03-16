@@ -317,6 +317,137 @@
         "section_button_text": "GET STARTED",
         "section_button_url": ""
       }
+    },
+    "prod_table_7gN9nw": {
+      "type": "prod-table",
+      "blocks": {
+        "row_fkKyPc": {
+          "type": "row",
+          "settings": {
+            "feature_label": "Designed to Support Noticeable Progress",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "check",
+            "column_2_note": "(Often Water Weight Only)",
+            "column_3_status": "check",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_q3hqML": {
+          "type": "row",
+          "settings": {
+            "feature_label": "Nutritionist-Designed & Verified",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_RebJh6": {
+          "type": "row",
+          "settings": {
+            "feature_label": "Helps Reduce Hunger & Cravings",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_yYpVhJ": {
+          "type": "row",
+          "settings": {
+            "feature_label": "No Time Spent Shopping or Prepping",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_DDMz7f": {
+          "type": "row",
+          "settings": {
+            "feature_label": "Supports a Full Diet Reset",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "check",
+            "column_2_note": "(Sometimes)",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_jG96nW": {
+          "type": "row",
+          "settings": {
+            "feature_label": "Includes Nutritionist Support/Guidance",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        },
+        "row_AjiaJF": {
+          "type": "row",
+          "settings": {
+            "feature_label": "Guaranteed Delicious Taste",
+            "column_1_status": "check",
+            "column_1_note": "",
+            "column_2_status": "cross",
+            "column_2_note": "",
+            "column_3_status": "cross",
+            "column_3_note": "",
+            "column_4_status": "cross",
+            "column_4_note": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_fkKyPc",
+        "row_q3hqML",
+        "row_RebJh6",
+        "row_yYpVhJ",
+        "row_DDMz7f",
+        "row_jG96nW",
+        "row_AjiaJF"
+      ],
+      "name": "Comparison Table",
+      "settings": {
+        "section_target": "",
+        "section_title_one": "How Does the Protein Cleanse",
+        "section_title_two": "Compare?",
+        "section_title_third": "",
+        "feature_heading": "Feature",
+        "column_1_title": "Protein Cleanse",
+        "column_2_title": "Restrictive Crash Diets",
+        "column_3_title": "DIY Home Juicing",
+        "show_column_5": false,
+        "column_4_title": "Optional Column",
+        "bg_gradient_1": "#2d2d2d",
+        "bg_gradient_2": "#2d2d2d",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_desk": 65,
+        "padding_bottom_desk": 65
+      }
     }
   },
   "order": [
@@ -326,6 +457,7 @@
     "shogun-optimizer",
     "product_shop_ALTj8Y",
     "prod_icon_text_8VtVyA",
-    "prod_routine_EPj6xp"
+    "prod_routine_EPj6xp",
+    "prod_table_7gN9nw"
   ]
 }
