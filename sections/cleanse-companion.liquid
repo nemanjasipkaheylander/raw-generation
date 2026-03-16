@@ -1,0 +1,546 @@
+{%- style -%}
+  .section-{{ section.id }} {
+     padding: 0 20px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+   
+  }
+
+  .cleanse-companion {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Desktop Title */
+  .cleanse-companion__title-desktop {
+    display: block;
+    text-align: {{ section.settings.title_alignment }};
+    font-size: {{ section.settings.title_size_desktop }}px;
+    color: {{ section.settings.title_color }};
+    margin-bottom: 32px;
+    font-weight: {{ section.settings.title_font_weight }};
+    line-height: 1.2;
+  }
+
+  /* Mobile Title */
+  .cleanse-companion__title-mobile {
+    display: none;
+    text-align: {{ section.settings.title_alignment_mobile }};
+    font-size: {{ section.settings.title_size_mobile }}px;
+    color: {{ section.settings.title_color_mobile }};
+    font-weight: {{ section.settings.title_font_weight_mobile }};
+    line-height: 1.2;
+  }
+
+  .cleanse-companion__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cleanse-companion__card {
+
+  }
+
+  .cleanse-companion__card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: {{ section.settings.card_title_color }};
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+  }
+
+  .cleanse-companion__card-text {
+    font-size: 16px;
+    color: {{ section.settings.card_text_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .cleanse-companion__disclaimer {
+    text-align: center;
+    color: {{ section.settings.disclaimer_text_color }};
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 800px;
+  }
+
+  .cleanse-companion__disclaimer p {
+    margin: 0;
+  }
+  .cleanse-companion__box {
+    background: #F4F2F5;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .cleanse-companion__image img{
+    max-width: {{ section.settings.image_max_width }}px;
+    border-radius: {{ section.settings.image_border_radius }}px;
+  }
+  .cleanse-companion__content {
+    max-width: 540px;
+  }
+  .cleanse-companion__card-icon svg {
+      fill: transparent;
+  }
+
+  .cleanse-companion__card-content {
+      display: flex;
+      gap: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    .cleanse-companion__title-desktop {
+      display: none;
+    }
+
+    .cleanse-companion__title-mobile {
+      display: block;
+    }
+
+    .cleanse-companion__grid {
+      gap: 16px;
+    }
+
+    .cleanse-companion__card-title {
+      font-size: 16px;
+    }
+    .cleanse-companion__box {
+      flex-direction: column;
+      gap: 24px;
+    }
+    .cleanse-companion__card-text {
+      font-size: 15px;
+    }
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mob }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mob }}px;
+    }
+     .cleanse-companion__box {
+        padding: 20px;
+      }
+    .cleanse-companion__image img{
+        max-width: {{ section.settings.image_max_width }}px;
+      }
+    .cleanse-companion__disclaimer {
+        font-size: 12px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="section-{{ section.id }}">
+  <div class="cleanse-companion">
+    <div class="cleanse-companion__box">
+       <!-- Mobile Title -->
+      <h2 class="cleanse-companion__title-mobile">
+      {{ section.settings.title_mobile }}
+      </h2>
+
+      {% if section.settings.image != blank %}
+        <div class="cleanse-companion__image">
+          <img 
+            src="{{ section.settings.image | img_url: section.settings.image_size }}" 
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+          >
+        </div>
+      {% endif %}
+      <div class="cleanse-companion__content">
+          <!-- Desktop Title -->
+          <h2 class="cleanse-companion__title-desktop">
+          {{ section.settings.title_desktop }}
+          </h2>
+
+          <div class="cleanse-companion__grid">
+          {% for block in section.blocks %}
+              {% case block.type %}
+              {% when 'feature' %}
+                  <div class="cleanse-companion__card-content">
+                    {% if block.settings.icon_svg != blank %}
+                      <div class="cleanse-companion__card-icon">
+                        {{ block.settings.icon_svg }}
+                      </div>
+                    {% endif %}
+                    <div class="cleanse-companion__card" {{ block.shopify_attributes }}>
+                        <h3 class="cleanse-companion__card-title">
+                            {{ block.settings.feature_title }}
+                        </h3>
+                        <p class="cleanse-companion__card-text">
+                            {{ block.settings.feature_text }}
+                        </p>
+                    </div>
+                  </div>
+              {% endcase %}
+          {% endfor %}
+          </div>
+      </div>
+    </div>
+    {% if section.settings.show_disclaimer %}
+      <div class="cleanse-companion__disclaimer">
+        <p>{{ section.settings.disclaimer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cleanse Companion",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mob",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mob",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Image Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Image Size",
+      "options": [
+        {
+          "value": "master",
+          "label": "Original"
+        },
+        {
+          "value": "200x",
+          "label": "Small (200px)"
+        },
+        {
+          "value": "400x",
+          "label": "Medium (400px)"
+        },
+        {
+          "value": "540x",
+          "label": "Large (540px)"
+        },
+        {
+          "value": "800x",
+          "label": "Extra Large (800px)"
+        },
+        {
+          "value": "1000x",
+          "label": "2X Large (1000px)"
+        }
+      ],
+      "default": "540x"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Image Border Radius",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "image_max_width",
+      "label": "Image Max Width",
+      "default": 540
+    },
+    {
+      "type": "header",
+      "content": "Desktop Title Settings"
+    },
+    {
+      "type": "text",
+      "id": "title_desktop",
+      "label": "Desktop Title",
+      "default": "YOUR CLEANSE COMPANION TO HELP YOU MAXIMIZE RESULTS",
+      "info": "Title displayed on desktop devices"
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop Title Size",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Desktop Title Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Desktop Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Desktop Font Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Title Settings"
+    },
+    {
+      "type": "text",
+      "id": "title_mobile",
+      "label": "Mobile Title",
+      "default": "YOUR CLEANSE COMPANION",
+      "info": "Title displayed on mobile devices"
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Title Size",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "title_alignment_mobile",
+      "label": "Mobile Title Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "color",
+      "id": "title_color_mobile",
+      "label": "Mobile Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight_mobile",
+      "label": "Mobile Font Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "header",
+      "content": "Card Settings"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Disclaimer Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_disclaimer",
+      "label": "Show Disclaimer",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer_text",
+      "label": "Disclaimer Text",
+      "default": "The mobile app is available exclusively to Raw Generation customers. Access is provided automatically upon purchase; the app cannot be downloaded or licensed as a standalone product through public app stores."
+    },
+    {
+      "type": "color",
+      "id": "disclaimer_text_color",
+      "label": "Disclaimer Text Color",
+      "default": "#666666"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Card",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "SVG Icon Code",
+          "info": "Paste your SVG code here. Example: <svg width='48' height='48' viewBox='0 0 24 24'><path d='M12 2L2 7l10 5 10-5-10-5z'/></svg>",
+        },
+        {
+          "type": "text",
+          "id": "feature_title",
+          "label": "Feature Title",
+        },
+        {
+          "type": "textarea",
+          "id": "feature_text",
+          "label": "Feature Text",
+        }
+      ],
+      "limit": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cleanse Companion",
+      "category": "Custom Sections",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Step-by-Step Cleanse Guides",
+            "feature_text": "Know exactly what to do before, during, and after your cleanse for maximum results."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Track Your Progress",
+            "feature_text": "Log your weight and watch your results unfold in real time."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Direct Support Access",
+            "feature_text": "Get help when you need it, right from the app."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Lifestyle Tips & Resources",
+            "feature_text": "Practical support to help you feel your best and maintain your results for the long-term."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Manage Your Subscription",
+            "feature_text": "Update, pause, or reorder - all in one place."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
