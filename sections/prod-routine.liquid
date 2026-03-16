@@ -42,6 +42,11 @@
     color: #9b51e0;
   }
 
+  .routine__header-wrapp{
+    display:flex;
+    gap:4px;
+  }
+
   /* Header right side: arrows + button */
   .routine__header-controls {
     display: flex;
@@ -290,6 +295,7 @@
               }}
             </figure>
             <div class="routine__header-card">
+              <div class='routine__header-wrapp'>
               <div class="routine__time">
                 <div class="routine__time-icon">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -307,7 +313,9 @@
                 {{ block.settings.routine_time }}
 
               </div>
-                              <div class="routine_title">{{ block.settings.routine_title }}</div>
+              </div>
+
+              <div class="routine_title">{{ block.settings.routine_title }}</div>
               <div class="routine__content">
                 {{ block.settings.routine_text }}
               </div>
