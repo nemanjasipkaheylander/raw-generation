@@ -95,7 +95,10 @@
 
   /* Mobile full-width CTA */
   .routine__cta-btn-mobile {
-    display: inline-block;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:32px;
     background-color: #a200f9;
     color: #fff;
     padding: 12px 24px;
