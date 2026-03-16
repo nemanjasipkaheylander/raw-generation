@@ -705,8 +705,8 @@
       ],
       "settings": {
         "use_margins": true,
-        "grid_style": "secondary",
-        "disable_max_width": true,
+        "grid_style": "alternative",
+        "disable_max_width": false,
         "show_bottom_line": false,
         "top_spacing": 1,
         "bottom_spacing": 1
