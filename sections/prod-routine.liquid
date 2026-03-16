@@ -1,4 +1,5 @@
 {{ '../assets/prod-routine.css' | asset_url | stylesheet_tag }}
+{{ 'prod-routine.js' | asset_url | script_tag }}
 
 {% liquid
   assign section_target = section.settings.section_target
@@ -33,7 +34,7 @@
         {{ section.settings.section_title_one }}
         <span class="routine__purple">{{ section.settings.section_title_two }}</span>
       </h2>
-
+      <div class='routine_left'>
       <!-- Desktop: arrows + CTA in header -->
       <div class="swiper-navigation-wrapper swiper-nav-desk">
         <div class="collection-button collection-button-prev">
@@ -54,6 +55,10 @@
         </a>
       {% endif %}
     </div>
+        
+      </div>
+
+
 
     <!-- Swiper -->
     <div class="routine__content-wrapper swiper routine-swiper">
@@ -91,6 +96,7 @@
         {% endfor %}
       </div>
 
+
       <!-- Mobile: arrows below slider -->
       <div class="swiper-navigation-wrapper swiper-nav-mob">
         <div class="collection-button collection-button-prev">
@@ -114,7 +120,6 @@
   </div>
 </section>
 
-<script src='../assets/prod-routine.js'></script>
 
 {% schema %}
 {
@@ -141,13 +146,14 @@
       "label": "Gradient bottom",
       "default": "#ffffff"
     },
+
     {
       "type": "range",
       "id": "padding_top",
       "min": 0,
       "max": 150,
       "step": 5,
-      "default": 40,
+      "default": 20,
       "label": "Padding top mobile"
     },
     {
@@ -156,7 +162,7 @@
       "min": 0,
       "max": 150,
       "step": 5,
-      "default": 40,
+      "default": 20,
       "label": "Padding bottom mobile"
     },
     {
