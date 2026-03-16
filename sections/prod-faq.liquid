@@ -29,17 +29,24 @@
       padding-bottom: {{ padding_bottom_desk }}px;
     }
   }
-
+ 
 .faq__wrapper {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 40px 20px;
+        font-family: Jost;
+        font-weight:500;
 }
 
 @media (min-width: 768px) {
+  .faq__wrapper {
+    padding: 64px 20px;
+    gap: 32px;
+
+}
   .faq__wrapper {
     flex-direction: column;
 }
