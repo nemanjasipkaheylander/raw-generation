@@ -156,13 +156,11 @@
     align-items: center;
     gap: 6px;
     border: 1px solid #EB51FF;
-    border-radius: 50px;
     padding: 4px 10px 4px 8px;
     font-size: 12px;
     font-weight: 600;
     color: #EB51FF;
-        box-shadow: 0 3px #EB51FF;
-
+    box-shadow: 0 3px #EB51FF;
     width: fit-content;
   }
 
