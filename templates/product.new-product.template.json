@@ -159,6 +159,63 @@
         "show_quantity": false,
         "show_dynamic_checkout": false
       }
+    },
+    "prod_icon_text_8VtVyA": {
+      "type": "prod-icon-text",
+      "blocks": {
+        "text_C7q9wF": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2087326202.svg",
+            "icon_text_title": "Feel Lighter",
+            "icon_text_content": "Nutrient dense juice cleanses to help you feel refreshed."
+          }
+        },
+        "text_rNMJaF": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663421.svg",
+            "icon_text_title": "Energy Support",
+            "icon_text_content": "Hydrating, antioxidant rich blends that help shake off slugginess and restore your glow."
+          }
+        },
+        "text_WcVG9R": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663421_1.svg",
+            "icon_text_title": "Detox Support",
+            "icon_text_content": "Give your body what it needs to support detox processes and reduce occasional sugar cravings."
+          }
+        },
+        "text_aa4nyq": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663421_2.svg",
+            "icon_text_title": "Kickstart Healthy Habits",
+            "icon_text_content": "Nutritionist-designed solutions to give you a clean break from processed foods and to jumpstart healthier eating habits."
+          }
+        }
+      },
+      "block_order": [
+        "text_C7q9wF",
+        "text_rNMJaF",
+        "text_WcVG9R",
+        "text_aa4nyq"
+      ],
+      "name": "Icon with text cards",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#FFFFFF",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one": "Why",
+        "section_title_two": "Choose",
+        "section_title_third": "the Protein Cleanse®"
+      }
     }
   },
   "order": [
@@ -166,6 +223,7 @@
     "shogun-above",
     "shogun-below",
     "shogun-optimizer",
-    "product_shop_ALTj8Y"
+    "product_shop_ALTj8Y",
+    "prod_icon_text_8VtVyA"
   ]
 }
