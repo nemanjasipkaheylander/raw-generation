@@ -344,7 +344,7 @@
                           {%- endif -%}
                         </span>
 
-                        <span class="custom-product-shop__variant-value">{{ value }}</span>
+                        {% comment %} <span class="custom-product-shop__variant-value">{{ value }}</span> {% endcomment %}
 
                         {%- if option_subtext != blank -%}
                           <span class="custom-product-shop__variant-subtext">{{ option_subtext }}</span>
