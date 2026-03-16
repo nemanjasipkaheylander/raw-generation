@@ -26,7 +26,9 @@
         "section_title": "",
         "section_subtitle": "",
         "section_button_text": "",
-        "section_button_url": ""
+        "section_button_url": "",
+        "section_button_text_mob": "",
+        "section_button_url_mob": ""
       }
     },
     "prod_routine_jcAfHJ": {
@@ -170,7 +172,9 @@
         "section_title": "Frequently asked Questions",
         "section_subtitle": "Your questions answered here",
         "section_button_text": "FIND YOUR PLAN",
-        "section_button_url": "#"
+        "section_button_url": "#",
+        "section_button_text_mob": "FIND YOUR PLAN",
+        "section_button_url_mob": "#"
       }
     },
     "prod_table_TY3KVL": {
