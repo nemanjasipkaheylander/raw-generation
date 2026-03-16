@@ -87,19 +87,16 @@
 
   /* Mobile full-width CTA */
   .routine__cta-btn-mobile {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    padding: 14px 24px;
-    border-radius: 50px;
-    background: #9b51e0;
+    display: inline-block;
+    background-color: #a200f9;
     color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    padding: 12px 24px;
+    border-radius: 6px;
     text-decoration: none;
-    transition: background 0.2s;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background-color 0.3s;
   }
 
   .routine__cta-btn-mobile:hover {
@@ -198,18 +195,16 @@
     }
 
     .routine__cta-btn {
-      display: inline-block;
-      padding: 10px 24px;
-      background: #9b51e0;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      white-space: nowrap;
+    display: inline-block;
+    background-color: #a200f9;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background-color 0.3s;
     }
 
     .routine__cta-btn:hover {
