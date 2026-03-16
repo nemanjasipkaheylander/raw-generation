@@ -80,9 +80,27 @@
       gap:2.4rem;
       justify-content:center;
   }
+
+  .swiper-nav-mob{
+    display:none;
+  }
+
+ .swiper-nav-desk{
+  display:flex;
+ }
+
   .swiper-navigation-wrapper svg{
       fill:none !Important;
   }
+
+      @media (min-width: 767px) {
+  .swiper-nav-mob{
+    display:flex;
+  }
+ .swiper-nav-desk{
+  display:none;
+ }
+      }
 
     .routine__nav-btn {
       display: flex;
