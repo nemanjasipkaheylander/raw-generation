@@ -665,6 +665,100 @@
         "speed": 30,
         "label": "AS SEEN IN"
       }
+    },
+    "1773699189691acc94": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_polaris_WA4tKT": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "star": "#000",
+            "review_type": "product_review,questions",
+            "per_page": 8,
+            "primary_btn_bg_color": "#000",
+            "primary_btn_border_color": "#000",
+            "primary_btn_text_color": "#fff",
+            "secondary_btn_border_color": "#000",
+            "secondary_btn_text_color": "#000",
+            "border_color": "#D9D9D9",
+            "heading_text_color": "#000",
+            "heading_font": "sans_serif_n4",
+            "body_text_color": "#000",
+            "badge_icon_color": "#000",
+            "badge_text_color": "#000",
+            "enable_rich_snippets": true,
+            "show_location": true,
+            "show_tab_selector": false,
+            "show_dates": true,
+            "show_avatar": true,
+            "enable_sentiment_analysis": false,
+            "enable_replies": false,
+            "widget_spacing": 0,
+            "capitalise_headers_and_buttons": false,
+            "show_review_title": false,
+            "default_sort": "date_desc"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_polaris_WA4tKT"
+      ],
+      "settings": {
+        "use_margins": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    },
+    "prod_icon_text_fhM4cV": {
+      "type": "prod-icon-text",
+      "blocks": {
+        "text_9xJ3Wa": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663566.svg",
+            "icon_text_title": "REAL INGREDIENTS",
+            "icon_text_content": "All products are made from real fruits and vegetables. We NEVER use artificial ingredients."
+          }
+        },
+        "text_Xq4zzh": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663566_1.svg",
+            "icon_text_title": "MADE TO TASTE GREAT",
+            "icon_text_content": "We believe you shouldn't suffer through anything. Healthy can (and should) taste great."
+          }
+        },
+        "text_XfqzYp": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663566_2.svg",
+            "icon_text_title": "NUTRITIONIST SUPPORT",
+            "icon_text_content": "You’re never on your own—our nutritionist is here to support you with expert guidance."
+          }
+        }
+      },
+      "block_order": [
+        "text_9xJ3Wa",
+        "text_Xq4zzh",
+        "text_XfqzYp"
+      ],
+      "name": "Icon with text cards",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#f5e2ff",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one": "",
+        "section_title_two": "",
+        "section_title_third": ""
+      }
     }
   },
   "order": [
@@ -678,6 +772,8 @@
     "prod_table_7gN9nw",
     "cleanse_companion_D6MenC",
     "prod_faq_HyVha7",
-    "prod_marquee_wQYbcB"
+    "prod_marquee_wQYbcB",
+    "1773699189691acc94",
+    "prod_icon_text_fhM4cV"
   ]
 }
