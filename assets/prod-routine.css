@@ -16,7 +16,7 @@
   .routine__header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 28px;
@@ -193,7 +193,9 @@
      TABLET+ (min-width: 768px)
   =========================== */
   @media (min-width: 768px) {
-
+  .routine__header {
+    justify-content: space-between;
+  }
     .swiper-nav-desk {
       display: flex;
     }
