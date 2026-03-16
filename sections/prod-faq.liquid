@@ -154,6 +154,9 @@
     line-height: 1.6;
 }
 
+.faq__button-mob{
+  display:flex;
+}
 
 @media (min-width: 768px) {
 .faq__question {
@@ -162,6 +165,9 @@
 
 .faq__answer-inner {
     font-size: 18px;
+}
+.faq__button-mob{
+  display:mob;
 }
 }
 
@@ -250,8 +256,8 @@
         {% endif %}
 
         {% if section.settings.section_button_url != blank %}
-            <div class="faq__button-desc">
-                <a href="{{ section.settings.section_button_url_mob }}" class="faq__btn-mobile" title="{{ section.settings.section_button_text_mob }}">
+            <div class="faq__button-mob">
+                <a href="{{ section.settings.section_button_url_mob }}" class="faq__btn" title="{{ section.settings.section_button_text_mob }}">
                     {{ section.settings.section_button_text_mob}}
                 </a>
             </div>
