@@ -170,8 +170,12 @@
     align-items: center;
   }
 
-
-  
+  .routine_title {
+    font-weight: 700;
+    color: #9b51e0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
 
   .routine__content {
     font-size: 13px;
