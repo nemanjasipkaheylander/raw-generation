@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       768: {
         slidesPerView: 2.2,
-        spaceBetween: 30,
+        spaceBetween: 24,
       },
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 40,
+        slidesPerView: 3.2,
+        spaceBetween: 24,
       },
     },
   });
