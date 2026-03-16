@@ -157,7 +157,7 @@
     gap: 6px;
     border: 1px solid #EB51FF;
     padding: 4px 10px 4px 8px;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     color: #EB51FF;
     box-shadow: 0 3px #EB51FF;
@@ -199,6 +199,9 @@
     .swiper-nav-mob {
       display: none;
     }
+  .routine__title {
+    font-size: 21px;
+  }
 
     .routine__cta-btn {
     display: inline-block;
@@ -221,4 +224,7 @@
     .routine__cta-btn-mobile {
       display: none;
     }
+      .routine__time {
+    font-size: 16px;
+  }
   }
