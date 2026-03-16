@@ -11,6 +11,24 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "prod_faq_VzaQnV": {
+      "type": "prod-faq",
+      "name": "FAQ",
+      "settings": {
+        "section_target": "",
+        "bg_color": "",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "padding_top_desk": "",
+        "padding_bottom_desk": "",
+        "section_title": "",
+        "section_subtitle": "",
+        "section_button_text": "",
+        "section_button_url": ""
+      }
+    },
     "prod_routine_jcAfHJ": {
       "type": "prod-routine",
       "blocks": {
@@ -561,6 +579,7 @@
     }
   },
   "order": [
+    "prod_faq_VzaQnV",
     "prod_routine_jcAfHJ",
     "prod_faq_DGEW4e",
     "prod_table_TY3KVL",
