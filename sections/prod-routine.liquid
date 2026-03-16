@@ -71,7 +71,10 @@
             <div class="routine__header-card">
               <div class="routine__header-wrapp">
                 <div class="routine__time">
-                  <div class="routine__time-icon">
+
+                  {{ block.settings.routine_time }}
+
+                                    <div class="routine__time-icon">
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_1_622)">
                         <path d="M7.49998 13.9287C11.0504 13.9287 13.9286 11.0506 13.9286 7.50011C13.9286 3.9497 11.0504 1.07153 7.49998 1.07153C3.94958 1.07153 1.07141 3.9497 1.07141 7.50011C1.07141 11.0506 3.94958 13.9287 7.49998 13.9287Z" stroke="#EB51FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -84,7 +87,6 @@
                       </defs>
                     </svg>
                   </div>
-                  {{ block.settings.routine_time }}
                 </div>
                 <div class="routine_title">{{ block.settings.routine_title }}</div>
               </div>
