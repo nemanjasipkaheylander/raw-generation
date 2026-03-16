@@ -29,8 +29,8 @@
   }
 
   .routine__title {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 400;
     color: #1a1a1a;
     margin: 0;
     line-height: 1.2;
@@ -38,6 +38,8 @@
 
   .routine__purple {
     color: #9b51e0;
+        font-weight: 700;
+
   }
 
   .routine__header-wrapp {
@@ -170,11 +172,11 @@
     align-items: center;
   }
 
-  .routine_title {
+  .routine_title-slider {
+    font-size:18px;
     font-weight: 700;
     color: #9b51e0;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
   }
 
   .routine__content {
@@ -196,7 +198,7 @@
       display: none;
     }
   .routine__title {
-    font-size: 21px;
+    font-size: 38px;
   }
 
     .routine__cta-btn {
@@ -222,5 +224,8 @@
     }
       .routine__time {
     font-size: 16px;
+  }
+    .routine_title-slider {
+    font-size:21px;
   }
   }
