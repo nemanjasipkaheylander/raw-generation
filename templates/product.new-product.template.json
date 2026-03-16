@@ -79,6 +79,15 @@
             "item_4_text": "Nutritionist-Developed"
           }
         },
+        "upsell_product_wyHjiq": {
+          "type": "upsell_product",
+          "settings": {
+            "product": "1-day-cleanse",
+            "heading": "MORE METHOD™",
+            "description": "Post-cleanse workout support program.",
+            "button_text": "Add To Cart"
+          }
+        },
         "accordion_aTfeit": {
           "type": "accordion",
           "settings": {
@@ -119,15 +128,6 @@
             "name": "Lisa Testa, M.S.",
             "meta": "Chief Nutrition Officer, Raw Generation"
           }
-        },
-        "upsell_product_wyHjiq": {
-          "type": "upsell_product",
-          "settings": {
-            "product": "1-day-cleanse",
-            "heading": "MORE METHOD™",
-            "description": "Post-cleanse workout support program.",
-            "button_text": "Add To Cart"
-          }
         }
       },
       "block_order": [
@@ -139,12 +139,12 @@
         "buy_buttons_4d7xeN",
         "payment_terms_j4Mqe4",
         "trust_row_end7gz",
+        "upsell_product_wyHjiq",
         "accordion_aTfeit",
         "accordion_exzhPH",
         "accordion_ibjhmw",
         "accordion_UxFwnx",
-        "testimonial_7ceMtp",
-        "upsell_product_wyHjiq"
+        "testimonial_7ceMtp"
       ],
       "name": "Custom product shop",
       "settings": {
