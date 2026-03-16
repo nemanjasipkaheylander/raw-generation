@@ -32,9 +32,11 @@
 
 <section class="{{ section.id }}" class="icon-textv2" id="{{ section_target }}">
     <div class="l">
+      {% if section.settings.section_title_one != 'blank'  %}
         <div class="icon-textv2__title-container">
             <h2 class="title-icon-text">{{ section.settings.section_title_one }} <span class="purpple">{{ section.settings.section_title_two }}</span> <span>{{ section.settings.section_title_third }}</span></h2>
         </div>
+      {% endif %}
           {% if section.blocks.size > 0 %}
               <div class="icon-textv2__container">
                  {% for block in section.blocks %}
@@ -129,12 +131,12 @@
                         },
                         {
                             "type": "text",
-                            "id": "icont_text_title",
+                            "id": "icon_text_title",
                             "label": "Enter title"
                         },
                         {
                             "type": "text",
-                            "id": "icont_text_content",
+                            "id": "icon_text_content",
                             "label": "Enter content"
                         }
             ]
