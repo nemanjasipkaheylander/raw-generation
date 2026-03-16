@@ -161,7 +161,7 @@
       ],
       "name": "FAQ",
       "settings": {
-        "section_target": "naslov",
+        "section_target": "",
         "bg_color": "#ffffff",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
@@ -183,7 +183,7 @@
         "row_jVkfBH": {
           "type": "row",
           "settings": {
-            "feature_label": "a",
+            "feature_label": "Designed to Support Noticeable Progress",
             "column_1_status": "check",
             "column_1_note": "",
             "column_2_status": "check",
@@ -197,7 +197,7 @@
         "row_mqDUfH": {
           "type": "row",
           "settings": {
-            "feature_label": "",
+            "feature_label": "Designed to Support Noticeable Progress",
             "column_1_status": "check",
             "column_1_note": "",
             "column_2_status": "cross",
@@ -211,7 +211,7 @@
         "row_bphDj3": {
           "type": "row",
           "settings": {
-            "feature_label": "",
+            "feature_label": "Designed to Support Noticeable Progress",
             "column_1_status": "check",
             "column_1_note": "",
             "column_2_status": "cross",
@@ -225,7 +225,7 @@
         "row_b9HdAy": {
           "type": "row",
           "settings": {
-            "feature_label": "",
+            "feature_label": "Designed to Support Noticeable Progress",
             "column_1_status": "check",
             "column_1_note": "",
             "column_2_status": "cross",
@@ -239,11 +239,11 @@
         "row_m4K9U3": {
           "type": "row",
           "settings": {
-            "feature_label": "",
+            "feature_label": "Designed to Support Noticeable Progress",
             "column_1_status": "check",
             "column_1_note": "",
-            "column_2_status": "cross",
-            "column_2_note": "",
+            "column_2_status": "check",
+            "column_2_note": "(Sometimes)",
             "column_3_status": "cross",
             "column_3_note": "",
             "column_4_status": "cross",
@@ -253,7 +253,7 @@
         "row_nbQxNC": {
           "type": "row",
           "settings": {
-            "feature_label": "",
+            "feature_label": "Designed to Support Noticeable Progress",
             "column_1_status": "check",
             "column_1_note": "",
             "column_2_status": "cross",
@@ -267,7 +267,7 @@
         "row_VJeyyP": {
           "type": "row",
           "settings": {
-            "feature_label": "",
+            "feature_label": "Designed to Support Noticeable Progress",
             "column_1_status": "check",
             "column_1_note": "",
             "column_2_status": "cross",
@@ -291,8 +291,8 @@
       "name": "Comparison Table",
       "settings": {
         "section_target": "product",
-        "section_title_one": "tab",
-        "section_title_two": "ela",
+        "section_title_one": "How Does the Protein Cleanse",
+        "section_title_two": "Compare?",
         "section_title_third": "",
         "feature_heading": "Feature",
         "column_1_title": "Protein Cleanse",
