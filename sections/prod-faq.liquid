@@ -246,6 +246,14 @@
             {% endfor %}
         </div>
         {% endif %}
+
+        {% if section.settings.section_button_url != blank %}
+            <div class="faq__button-desc">
+                <a href="{{ section.settings.section_button_url_mob }}" class="faq__btn-mobile" title="{{ section.settings.section_button_text_mob }}">
+                    {{ section.settings.section_button_text_mob}}
+                </a>
+            </div>
+            {% endif %}
     </div>
 </section>
 
@@ -318,6 +326,16 @@
         "type": "url",
         "id": "section_button_url",
         "label": "Paste URL"
+      },
+            {
+        "type": "text",
+        "id": "section_button_text_mob",
+        "label": "Enter button text mob"
+      },
+      {
+        "type": "url",
+        "id": "section_button_url_mob",
+        "label": "Paste URL Mob"
       }
       
     ],
