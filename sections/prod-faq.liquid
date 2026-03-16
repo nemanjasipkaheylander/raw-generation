@@ -1,4 +1,6 @@
 {{ '../assets/prod-faq.css' | asset_url | stylesheet_tag }}
+{{ 'prod-faq.js' | asset_url | script_tag }}
+
 
 {% liquid
   assign section_target = section.settings.section_target
@@ -86,8 +88,6 @@
     {% endif %}
   </div>
 </section>
-
-{{ 'prod-faq.js' | asset_url | script_tag }}
 
 
 
