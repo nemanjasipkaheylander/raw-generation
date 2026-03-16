@@ -1,0 +1,1712 @@
+{{ 'custom-product-shop.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign selected_variant = product.selected_or_first_available_variant
+  assign product_form_id = 'custom-product-form-' | append: section.id
+  assign installment_form_id = 'custom-product-installment-' | append: section.id
+-%}
+
+<section
+  id="CustomProductShop-{{ section.id }}"
+  class="custom-product-shop color-{{ section.settings.color_scheme }}"
+  data-section-id="{{ section.id }}"
+  data-product-id="{{ product.id }}"
+>
+  <div class="custom-product-shop__inner page-width">
+    <div class="custom-product-shop__grid">
+      <div class="custom-product-shop__media-col">
+        <div class="custom-product-shop__media-card">
+             {% if section.settings.show_bestseler %}
+                   <div class="image-label">
+                      <div class="label-icon">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 16.8764C15.9954 16.8764 19.2342 13.5791 19.2342 9.51169C19.2342 5.44427 15.9954 2.14697 12 2.14697C8.00464 2.14697 4.76576 5.44427 4.76576 9.51169C4.76576 13.5791 8.00464 16.8764 12 16.8764ZM12 16.8764L7.0006 21.966C6.62083 22.3526 5.97147 22.0788 5.97147 21.532V20.5588C5.97147 19.203 4.89184 18.1039 3.56006 18.1039H2.60406C2.06698 18.1039 1.798 17.4428 2.17778 17.0562L5.36862 13.8078M12 16.8764L16.9994 21.966C17.3792 22.3526 18.0285 22.0788 18.0285 21.532V20.5588C18.0285 19.203 19.1082 18.1039 20.4399 18.1039H21.3959C21.933 18.1039 22.202 17.4428 21.8222 17.0562L18.6314 13.8078" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                          </svg>
+
+                      </div>
+                      <div class="text-label">Best Seller</div>
+                   </div>
+                {% endif %}
+          {%- if product.media.size > 0 -%}
+            <div class="custom-product-shop__media-stage">
+              <button
+                type="button"
+                class="custom-product-shop__media-nav custom-product-shop__media-nav--prev"
+                aria-label="Previous media"
+                data-media-prev
+              >
+                −
+              </button>
+
+              <div class="custom-product-shop__media-main" data-media-main>
+             
+                {%- for media in product.media -%}
+                  <div
+                    class="custom-product-shop__media-slide{% if media.id == selected_variant.featured_media.id or forloop.first and selected_variant.featured_media == blank %} is-active{% endif %}"
+                    data-media-slide
+                    data-media-id="{{ media.id }}"
+                  >
+                    {%- case media.media_type -%}
+                      {%- when 'image' -%}
+                        <img
+                          src="{{ media | image_url: width: 1200 }}"
+                          alt="{{ media.alt | escape }}"
+                          loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                          width="{{ media.preview_image.width }}"
+                          height="{{ media.preview_image.height }}"
+                        >
+                      {%- when 'external_video' -%}
+                        {{ media | external_video_tag: class: 'custom-product-shop__video', loading: 'lazy' }}
+                      {%- when 'video' -%}
+                        {{ media | video_tag: class: 'custom-product-shop__video', controls: true, preload: 'metadata' }}
+                      {%- else -%}
+                        {{ media | media_tag }}
+                    {%- endcase -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+
+              <button
+                type="button"
+                class="custom-product-shop__media-nav custom-product-shop__media-nav--next"
+                aria-label="Next media"
+                data-media-next
+              >
+                +
+              </button>
+            </div>
+
+            <div class="custom-product-shop__thumbs" data-media-thumbs>
+              {%- for media in product.media -%}
+                <button
+                  type="button"
+                  class="custom-product-shop__thumb{% if media.id == selected_variant.featured_media.id or forloop.first and selected_variant.featured_media == blank %} is-active{% endif %}"
+                  data-thumb
+                  data-media-target="{{ media.id }}"
+                  aria-label="Show media {{ forloop.index }}"
+                >
+                  {%- if media.preview_image != blank -%}
+                    <img
+                      src="{{ media.preview_image | image_url: width: 180 }}"
+                      alt="{{ media.alt | escape }}"
+                      loading="lazy"
+                      width="90"
+                      height="90"
+                    >
+                  {%- endif -%}
+                </button>
+              {%- endfor -%}
+            </div>
+          {%- else -%}
+            <div class="custom-product-shop__media-placeholder">
+              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {%- endif -%}
+        </div>
+
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'testimonial' -%}
+            <div class="custom-product-shop__testimonial" {{ block.shopify_attributes }}>
+              <div class="custom-product-shop__testimonial-avatar">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 120 }}"
+                    alt="{{ block.settings.name | escape }}"
+                    loading="lazy"
+                    width="56"
+                    height="56"
+                  >
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+              <div class="custom-product-shop__testimonial-content">
+                {%- if block.settings.text != blank -%}
+                  <div class="custom-product-shop__testimonial-text">{{ block.settings.text }}</div>
+                {%- endif -%}
+                <div class="custom-product-shop__testimonial-meta">
+                  {%- if block.settings.name != blank -%}
+                    <strong>{{ block.settings.name }}</strong>
+                  {%- endif -%}
+                  {%- if block.settings.meta != blank -%}
+                    <span>{{ block.settings.meta }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="custom-product-shop__info-col">
+  {%- if section.settings.eyebrow != blank -%}
+    <div class="custom-product-shop__eyebrow">{{ section.settings.eyebrow }}</div>
+  {%- endif -%}
+
+  {%- if section.settings.show_vendor and product.vendor != blank -%}
+    <div class="custom-product-shop__vendor">{{ product.vendor }}</div>
+  {%- endif -%}
+
+  {% if section.settings.show_review %}
+    <div class="prod-custom-review">
+      <div class="prod-custom-review__stars">
+        <svg width="98" height="18" viewBox="0 0 98 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.8168 6.8385C16.7465 6.6223 16.6138 6.43176 16.4354 6.29087C16.2569 6.14998 16.0408 6.06505 15.8142 6.04678L11.6657 5.71209L10.064 1.83857C9.97741 1.62751 9.82998 1.44697 9.64049 1.31991C9.451 1.19284 9.228 1.125 8.99985 1.125C8.7717 1.125 8.5487 1.19284 8.35921 1.31991C8.16972 1.44697 8.02229 1.62751 7.93567 1.83857L6.33536 5.71139L2.18481 6.04678C1.95783 6.06597 1.74155 6.15173 1.56309 6.2933C1.38463 6.43487 1.25191 6.62595 1.18156 6.84261C1.11122 7.05928 1.10638 7.29188 1.16765 7.51128C1.22891 7.73068 1.35356 7.92712 1.52598 8.076L4.69004 10.8062L3.72606 14.8886C3.67215 15.1104 3.68535 15.3432 3.76399 15.5574C3.84262 15.7717 3.98315 15.9578 4.16774 16.092C4.35232 16.2263 4.57263 16.3027 4.8007 16.3115C5.02877 16.3203 5.25432 16.2612 5.44872 16.1415L8.9995 13.9562L12.5524 16.1415C12.7469 16.2597 12.9719 16.3177 13.1993 16.3083C13.4267 16.2988 13.6462 16.2222 13.8301 16.0883C14.0141 15.9543 14.1543 15.7689 14.2331 15.5554C14.3119 15.342 14.3257 15.1099 14.2729 14.8886L13.3054 10.8055L16.4695 8.07529C16.6433 7.92667 16.7691 7.7298 16.8309 7.50963C16.8928 7.28945 16.8879 7.05588 16.8168 6.8385Z" fill="#FDC700"/>
+          <path d="M36.8168 6.8385C36.7465 6.6223 36.6138 6.43176 36.4354 6.29087C36.2569 6.14998 36.0408 6.06505 35.8142 6.04678L31.6657 5.71209L30.064 1.83857C29.9774 1.62751 29.83 1.44697 29.6405 1.31991C29.451 1.19284 29.228 1.125 28.9998 1.125C28.7717 1.125 28.5487 1.19284 28.3592 1.31991C28.1697 1.44697 28.0223 1.62751 27.9357 1.83857L26.3354 5.71139L22.1848 6.04678C21.9578 6.06597 21.7416 6.15173 21.5631 6.2933C21.3846 6.43487 21.2519 6.62595 21.1816 6.84261C21.1112 7.05928 21.1064 7.29188 21.1676 7.51128C21.2289 7.73068 21.3536 7.92712 21.526 8.076L24.69 10.8062L23.7261 14.8886C23.6721 15.1104 23.6853 15.3432 23.764 15.5574C23.8426 15.7717 23.9832 15.9578 24.1677 16.092C24.3523 16.2263 24.5726 16.3027 24.8007 16.3115C25.0288 16.3203 25.2543 16.2612 25.4487 16.1415L28.9995 13.9562L32.5524 16.1415C32.7469 16.2597 32.9719 16.3177 33.1993 16.3083C33.4267 16.2988 33.6462 16.2222 33.8301 16.0883C34.0141 15.9543 34.1543 15.7689 34.2331 15.5554C34.3119 15.342 34.3257 15.1099 34.2729 14.8886L33.3054 10.8055L36.4695 8.07529C36.6433 7.92667 36.7691 7.7298 36.8309 7.50963C36.8928 7.28945 36.8879 7.05588 36.8168 6.8385Z" fill="#FDC700"/>
+          <path d="M56.8168 6.8385C56.7465 6.6223 56.6138 6.43176 56.4354 6.29087C56.2569 6.14998 56.0408 6.06505 55.8142 6.04678L51.6657 5.71209L50.064 1.83857C49.9774 1.62751 49.83 1.44697 49.6405 1.31991C49.451 1.19284 49.228 1.125 48.9998 1.125C48.7717 1.125 48.5487 1.19284 48.3592 1.31991C48.1697 1.44697 48.0223 1.62751 47.9357 1.83857L46.3354 5.71139L42.1848 6.04678C41.9578 6.06597 41.7416 6.15173 41.5631 6.2933C41.3846 6.43487 41.2519 6.62595 41.1816 6.84261C41.1112 7.05928 41.1064 7.29188 41.1676 7.51128C41.2289 7.73068 41.3536 7.92712 41.526 8.076L44.69 10.8062L43.7261 14.8886C43.6721 15.1104 43.6853 15.3432 43.764 15.5574C43.8426 15.7717 43.9832 15.9578 44.1677 16.092C44.3523 16.2263 44.5726 16.3027 44.8007 16.3115C45.0288 16.3203 45.2543 16.2612 45.4487 16.1415L48.9995 13.9562L52.5524 16.1415C52.7469 16.2597 52.9719 16.3177 53.1993 16.3083C53.4267 16.2988 53.6462 16.2222 53.8301 16.0883C54.0141 15.9543 54.1543 15.7689 54.2331 15.5554C54.3119 15.342 54.3257 15.1099 54.2729 14.8886L53.3054 10.8055L56.4695 8.07529C56.6433 7.92667 56.7691 7.7298 56.8309 7.50963C56.8928 7.28945 56.8879 7.05588 56.8168 6.8385Z" fill="#FDC700"/>
+          <path d="M76.8168 6.8385C76.7465 6.6223 76.6138 6.43176 76.4354 6.29087C76.2569 6.14998 76.0408 6.06505 75.8142 6.04678L71.6657 5.71209L70.064 1.83857C69.9774 1.62751 69.83 1.44697 69.6405 1.31991C69.451 1.19284 69.228 1.125 68.9998 1.125C68.7717 1.125 68.5487 1.19284 68.3592 1.31991C68.1697 1.44697 68.0223 1.62751 67.9357 1.83857L66.3354 5.71139L62.1848 6.04678C61.9578 6.06597 61.7416 6.15173 61.5631 6.2933C61.3846 6.43487 61.2519 6.62595 61.1816 6.84261C61.1112 7.05928 61.1064 7.29188 61.1676 7.51128C61.2289 7.73068 61.3536 7.92712 61.526 8.076L64.69 10.8062L63.7261 14.8886C63.6721 15.1104 63.6853 15.3432 63.764 15.5574C63.8426 15.7717 63.9832 15.9578 64.1677 16.092C64.3523 16.2263 64.5726 16.3027 64.8007 16.3115C65.0288 16.3203 65.2543 16.2612 65.4487 16.1415L68.9995 13.9562L72.5524 16.1415C72.7469 16.2597 72.9719 16.3177 73.1993 16.3083C73.4267 16.2988 73.6462 16.2222 73.8301 16.0883C74.0141 15.9543 74.1543 15.7689 74.2331 15.5554C74.3119 15.342 74.3257 15.1099 74.2729 14.8886L73.3054 10.8055L76.4695 8.07529C76.6433 7.92667 76.7691 7.7298 76.8309 7.50963C76.8928 7.28945 76.8879 7.05588 76.8168 6.8385Z" fill="#FDC700"/>
+          <path d="M96.8168 6.8385C96.7465 6.6223 96.6138 6.43176 96.4354 6.29087C96.2569 6.14998 96.0408 6.06505 95.8142 6.04678L91.6657 5.71209L90.064 1.83857C89.9774 1.62751 89.83 1.44697 89.6405 1.31991C89.451 1.19284 89.228 1.125 88.9998 1.125C88.7717 1.125 88.5487 1.19284 88.3592 1.31991C88.1697 1.44697 88.0223 1.62751 87.9357 1.83857L86.3354 5.71139L82.1848 6.04678C81.9578 6.06597 81.7416 6.15173 81.5631 6.2933C81.3846 6.43487 81.2519 6.62595 81.1816 6.84261C81.1112 7.05928 81.1064 7.29188 81.1676 7.51128C81.2289 7.73068 81.3536 7.92712 81.526 8.076L84.69 10.8062L83.7261 14.8886C83.6721 15.1104 83.6853 15.3432 83.764 15.5574C83.8426 15.7717 83.9832 15.9578 84.1677 16.092C84.3523 16.2263 84.5726 16.3027 84.8007 16.3115C85.0288 16.3203 85.2543 16.2611 85.4487 16.1415L88.9995 13.9562L92.5524 16.1415C92.7469 16.2597 92.9719 16.3177 93.1993 16.3083C93.4267 16.2988 93.6462 16.2222 93.8301 16.0883C94.0141 15.9543 94.1543 15.7689 94.2331 15.5554C94.3119 15.342 94.3257 15.1099 94.2729 14.8886L93.3054 10.8055L96.4695 8.07529C96.6433 7.92667 96.7691 7.7298 96.8309 7.50963C96.8928 7.28945 96.8879 7.05588 96.8168 6.8385Z" fill="#E5DED4"/>
+          <path d="M91.6657 5.71209L95.8142 6.04678L88.9995 13.9562L85.4487 16.1415C85.2543 16.2611 85.0288 16.3203 84.8007 16.3115C84.5726 16.3027 84.3523 16.2263 84.1677 16.092C83.9832 15.9578 83.8426 15.7717 83.764 15.5574C83.6853 15.3432 83.6721 15.1104 83.7261 14.8886L84.69 10.8062L81.526 8.076C81.3536 7.92712 81.2289 7.73068 81.1676 7.51128C81.1064 7.29188 81.1112 7.05928 81.1816 6.84261C81.2519 6.62595 81.3846 6.43487 81.5631 6.2933C81.7416 6.15173 81.9578 6.06597 82.1848 6.04678L86.3354 5.71139L87.9357 1.83857C88.0223 1.62751 88.1697 1.44697 88.3592 1.31991C88.5487 1.19284 88.7717 1.125 88.9999 1.125C89.228 1.125 89.451 1.19284 89.6405 1.31991C89.83 1.44697 89.9774 1.62751 90.064 1.83857L91.6657 5.71209Z" fill="#FDC700"/>
+        </svg>
+      </div>
+      <div class="prod-custom-review__text">4.45/5 <span>|</span> 10,000+ happy customers</div>
+    </div>
+  {% endif %}
+
+  <h1 class="custom-product-shop__title">{{ product.title }}</h1>
+
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+
+      {%- when 'price' -%}
+        <div class="custom-product-shop__price-wrap" id="custom-price-{{ section.id }}" {{ block.shopify_attributes }}>
+          <div class="custom-product-shop__price-row">
+            <span class="custom-product-shop__price" data-price>
+              {{ selected_variant.price | money }}
+            </span>
+            <span
+              class="custom-product-shop__compare{% if selected_variant.compare_at_price <= selected_variant.price or selected_variant.compare_at_price == blank %} is-hidden{% endif %}"
+              data-compare-price
+            >
+              {%- if selected_variant.compare_at_price > selected_variant.price -%}
+                {{ selected_variant.compare_at_price | money }}
+              {%- endif -%}
+            </span>
+          </div>
+        </div>
+
+      {%- when 'description' -%}
+        <div class="custom-product-shop__subprice" {{ block.shopify_attributes }}>
+          {%- if block.settings.description != blank -%}
+            {{ block.settings.description }}
+          {%- else -%}
+            {{ product.description | strip_html }}
+          {%- endif -%}
+        </div>
+
+      {%- when 'benefits' -%}
+        <ul class="custom-product-shop__benefits" {{ block.shopify_attributes }}>
+          {%- if block.settings.benefit_1 != blank -%}
+            <li class="custom-product-shop__benefit">
+              <span class="custom-product-shop__benefit-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip-benefit-1)">
+                    <path d="M18 8.99951C18 4.02895 13.9705 -0.000488281 9 -0.000488281C4.02943 -0.000488281 0 4.02895 0 8.99951C0 13.97 4.02943 17.9995 9 17.9995C13.9705 17.9995 18 13.97 18 8.99951Z" fill="#A200F9"/>
+                    <path d="M5.19189 9.86869L7.35535 12.0321L12.115 6.83984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip-benefit-1">
+                      <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <span>{{ block.settings.benefit_1 }}</span>
+            </li>
+          {%- endif -%}
+
+          {%- if block.settings.benefit_2 != blank -%}
+            <li class="custom-product-shop__benefit">
+              <span class="custom-product-shop__benefit-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip-benefit-2)">
+                    <path d="M18 8.99951C18 4.02895 13.9705 -0.000488281 9 -0.000488281C4.02943 -0.000488281 0 4.02895 0 8.99951C0 13.97 4.02943 17.9995 9 17.9995C13.9705 17.9995 18 13.97 18 8.99951Z" fill="#A200F9"/>
+                    <path d="M5.19189 9.86869L7.35535 12.0321L12.115 6.83984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip-benefit-2">
+                      <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <span>{{ block.settings.benefit_2 }}</span>
+            </li>
+          {%- endif -%}
+
+          {%- if block.settings.benefit_3 != blank -%}
+            <li class="custom-product-shop__benefit">
+              <span class="custom-product-shop__benefit-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip-benefit-3)">
+                    <path d="M18 8.99951C18 4.02895 13.9705 -0.000488281 9 -0.000488281C4.02943 -0.000488281 0 4.02895 0 8.99951C0 13.97 4.02943 17.9995 9 17.9995C13.9705 17.9995 18 13.97 18 8.99951Z" fill="#A200F9"/>
+                    <path d="M5.19189 9.86869L7.35535 12.0321L12.115 6.83984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip-benefit-3">
+                      <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <span>{{ block.settings.benefit_3 }}</span>
+            </li>
+          {%- endif -%}
+
+          {%- if block.settings.benefit_4 != blank -%}
+            <li class="custom-product-shop__benefit">
+              <span class="custom-product-shop__benefit-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip-benefit-4)">
+                    <path d="M18 8.99951C18 4.02895 13.9705 -0.000488281 9 -0.000488281C4.02943 -0.000488281 0 4.02895 0 8.99951C0 13.97 4.02943 17.9995 9 17.9995C13.9705 17.9995 18 13.97 18 8.99951Z" fill="#A200F9"/>
+                    <path d="M5.19189 9.86869L7.35535 12.0321L12.115 6.83984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip-benefit-4">
+                      <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <span>{{ block.settings.benefit_4 }}</span>
+            </li>
+          {%- endif -%}
+
+          {%- if block.settings.benefit_5 != blank -%}
+            <li class="custom-product-shop__benefit">
+              <span class="custom-product-shop__benefit-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip-benefit-4)">
+                    <path d="M18 8.99951C18 4.02895 13.9705 -0.000488281 9 -0.000488281C4.02943 -0.000488281 0 4.02895 0 8.99951C0 13.97 4.02943 17.9995 9 17.9995C13.9705 17.9995 18 13.97 18 8.99951Z" fill="#A200F9"/>
+                    <path d="M5.19189 9.86869L7.35535 12.0321L12.115 6.83984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip-benefit-4">
+                      <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <span>{{ block.settings.benefit_5 }}</span>
+            </li>
+          {%- endif -%}
+        </ul>
+
+      {%- when 'variant_picker' -%}
+        {%- unless product.has_only_default_variant -%}
+          <div class="variant-picker__label">{{ block.settings.variant_text }}</div>
+          <div class="custom-product-shop__variants" data-variant-picker {{ block.shopify_attributes }}>
+            {%- for option in product.options_with_values -%}
+              <div class="custom-product-shop__option-group" data-option-index="{{ forloop.index0 }}">
+                <div class="custom-product-shop__option-head">
+                  <span class="custom-product-shop__option-name">{{ option.name }}</span>
+                  <span class="custom-product-shop__option-selected" data-option-selected>{{ option.selected_value }}</span>
+                </div>
+
+                <div class="custom-product-shop__option-values">
+                  {%- for value in option.values -%}
+                    {%- liquid
+                      assign option_disabled = true
+                      if value.variant.available
+                        assign option_disabled = false
+                      endif
+
+                      assign option_label = blank
+                      assign option_subtext = blank
+                      assign option_badge = blank
+
+                      if value.variant != blank
+                        assign option_label = value.variant.metafields.custom.option_label.value
+                        assign option_subtext = value.variant.metafields.custom.option_subtext.value
+                        assign option_badge = value.variant.metafields.custom.option_badge.value
+                      endif
+                    -%}
+
+                    <label class="custom-product-shop__variant-card{% if option_disabled %} is-disabled{% endif %}">
+                      <input
+                        type="radio"
+                        name="option-{{ forloop.parentloop.index0 }}"
+                        value="{{ value | escape }}"
+                        {% if value.selected %}checked{% endif %}
+                        {% if option_disabled %}disabled{% endif %}
+                        data-option-input
+                      >
+                      <span class="custom-product-shop__variant-card-inner">
+                        {%- if option_badge != blank -%}
+                          <span class="custom-product-shop__variant-badge">{{ option_badge }}</span>
+                        {%- endif -%}
+
+                        <span class="custom-product-shop__variant-title">
+                          {%- if option_label != blank -%}
+                            {{ option_label }}
+                          {%- else -%}
+                            {{ value }}
+                          {%- endif -%}
+                        </span>
+
+                        <span class="custom-product-shop__variant-value">{{ value }}</span>
+
+                        {%- if option_subtext != blank -%}
+                          <span class="custom-product-shop__variant-subtext">{{ option_subtext }}</span>
+                        {%- endif -%}
+                      </span>
+                    </label>
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endunless -%}
+
+      {%- when '@app' -%}
+        <div class="custom-product-shop__app-block" {{ block.shopify_attributes }}>
+          {% render block %}
+        </div>
+
+      {%- when 'buy_buttons' -%}
+        <div class="custom-product-shop__purchase-box" {{ block.shopify_attributes }}>
+          {%- form 'product', product, id: product_form_id, class: 'custom-product-shop__form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ selected_variant.id }}"
+              class="custom-product-shop__variant-id"
+              data-variant-id-input
+            >
+
+            {%- if section.settings.show_quantity -%}
+              <div class="custom-product-shop__qty-row">
+                <button type="button" class="custom-product-shop__qty-btn" data-qty-minus aria-label="Decrease quantity">−</button>
+                <input
+                  type="number"
+                  name="quantity"
+                  value="1"
+                  min="1"
+                  class="custom-product-shop__qty-input"
+                  data-qty-input
+                >
+                <button type="button" class="custom-product-shop__qty-btn" data-qty-plus aria-label="Increase quantity">+</button>
+              </div>
+            {%- endif -%}
+
+            <button
+              type="submit"
+              name="add"
+              class="custom-product-shop__submit"
+              data-submit-button
+              {% if selected_variant.available == false %}disabled{% endif %}
+            >
+              <span data-submit-text>
+                {%- if selected_variant.available -%}
+                  {{ section.settings.button_text }}
+                {%- else -%}
+                  {{ section.settings.sold_out_text }}
+                {%- endif -%}
+              </span>
+            </button>
+
+            {%- if section.settings.show_dynamic_checkout -%}
+              <div class="custom-product-shop__dynamic-checkout">
+                {{ form | payment_button }}
+              </div>
+            {%- endif -%}
+          {%- endform -%}
+        </div>
+
+      {%- when 'trust_row' -%}
+        <div class="custom-product-shop__trust-row" {{ block.shopify_attributes }}>
+          {%- if block.settings.item_1_text != blank -%}
+            <div class="custom-product-shop__trust-item">
+              {%- if block.settings.item_1_icon != blank -%}
+                <img src="{{ block.settings.item_1_icon | image_url: width: 80 }}" alt="{{ block.settings.item_1_text | escape }}" loading="lazy" width="24" height="24">
+              {%- else -%}
+                <span class="custom-product-shop__trust-dot"></span>
+              {%- endif -%}
+              <span>{{ block.settings.item_1_text }}</span>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.item_2_text != blank -%}
+            <div class="custom-product-shop__trust-item">
+              {%- if block.settings.item_2_icon != blank -%}
+                <img src="{{ block.settings.item_2_icon | image_url: width: 80 }}" alt="{{ block.settings.item_2_text | escape }}" loading="lazy" width="24" height="24">
+              {%- else -%}
+                <span class="custom-product-shop__trust-dot"></span>
+              {%- endif -%}
+              <span>{{ block.settings.item_2_text }}</span>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.item_3_text != blank -%}
+            <div class="custom-product-shop__trust-item">
+              {%- if block.settings.item_3_icon != blank -%}
+                <img src="{{ block.settings.item_3_icon | image_url: width: 80 }}" alt="{{ block.settings.item_3_text | escape }}" loading="lazy" width="24" height="24">
+              {%- else -%}
+                <span class="custom-product-shop__trust-dot"></span>
+              {%- endif -%}
+              <span>{{ block.settings.item_3_text }}</span>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.item_4_text != blank -%}
+            <div class="custom-product-shop__trust-item">
+              {%- if block.settings.item_4_icon != blank -%}
+                <img src="{{ block.settings.item_4_icon | image_url: width: 80 }}" alt="{{ block.settings.item_4_text | escape }}" loading="lazy" width="24" height="24">
+              {%- else -%}
+                <span class="custom-product-shop__trust-dot"></span>
+              {%- endif -%}
+              <span>{{ block.settings.item_4_text }}</span>
+            </div>
+          {%- endif -%}
+        </div>
+
+      {%- when 'accordion' -%}
+        <details class="custom-product-shop__accordion" {% if block.settings.open_by_default %}open{% endif %} {{ block.shopify_attributes }}>
+          <summary class="custom-product-shop__accordion-summary">
+            <span>{{ block.settings.title }}</span>
+            <span class="custom-product-shop__accordion-icon">+</span>
+          </summary>
+          <div class="custom-product-shop__accordion-content rte">
+            {{ block.settings.content }}
+          </div>
+        </details>
+
+        {%- when 'upsell_product' -%}
+  {%- assign upsell_product = block.settings.product -%}
+  {%- if upsell_product != blank -%}
+    {%- assign upsell_variant = upsell_product.selected_or_first_available_variant -%}
+
+    <div class="custom-product-shop__upsell" {{ block.shopify_attributes }}>
+      <div class="custom-product-shop__upsell-card">
+        <div class="custom-product-shop__upsell-media">
+          {%- if upsell_product.featured_image != blank -%}
+            <img
+              src="{{ upsell_product.featured_image | image_url: width: 320 }}"
+              alt="{{ upsell_product.title | escape }}"
+              loading="lazy"
+              width="160"
+              height="160"
+            >
+          {%- endif -%}
+        </div>
+
+        <div class="custom-product-shop__upsell-content">
+          {%- if block.settings.heading != blank -%}
+            <div class="custom-product-shop__upsell-label">{{ block.settings.heading }}</div>
+          {%- endif -%}
+
+          <div class="custom-product-shop__upsell-title">
+            {{ upsell_product.title }}
+          </div>
+
+          {%- if block.settings.description != blank -%}
+            <div class="custom-product-shop__upsell-description">
+              {{ block.settings.description }}
+            </div>
+          {%- elsif upsell_product.description != blank -%}
+            <div class="custom-product-shop__upsell-description">
+              {{ upsell_product.description | strip_html | truncate: 90 }}
+            </div>
+          {%- endif -%}
+
+          <div class="custom-product-shop__upsell-price-wrap">
+            <span class="custom-product-shop__upsell-price">
+              {{ upsell_variant.price | money }}
+            </span>
+
+            {%- if upsell_variant.compare_at_price > upsell_variant.price -%}
+              <span class="custom-product-shop__upsell-compare">
+                {{ upsell_variant.compare_at_price | money }}
+              </span>
+            {%- endif -%}
+          </div>
+          {% assign upsell_product_id = 'upsell-product-form-' | append: section.id | append: '-' | append: block.id %}
+          
+          {%- form 'product', upsell_product, id: upsell_product_id , class: 'custom-product-shop__upsell-form' -%}
+                <input type="hidden" name="id" value="{{ upsell_variant.id }}">
+
+                <button
+                  type="submit"
+                  name="add"
+                  class="custom-product-shop__upsell-button"
+                  {% if upsell_variant.available == false %}disabled{% endif %}
+                >
+                  {%- if upsell_variant.available -%}
+                    {{ block.settings.button_text }}
+                  {%- else -%}
+                    Sold Out
+                  {%- endif -%}
+                </button>
+{%- endform -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+      {%- when 'payment_terms' -%}
+        <div class="payment-iamges">
+          <figure class="payment-images_all">
+            <svg width="490" height="31" viewBox="0 0 490 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="490" height="31" fill="url(#pattern0_1_199)"/>
+              <defs>
+              <pattern id="pattern0_1_199" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_1_199" transform="matrix(0.00143678 0 0 0.0227273 -0.304598 -6.31818)"/>
+              </pattern>
+              <image id="image0_1_199" width="1120" height="598" preserveAspectRatio="none" xlink:href="data:image/png;base64,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9ve18lFHEfE2qTh3ark35fOjnoi4l01R3rKLBXS9awQW9Mu6a0anowR6WGDtndO8FWKWtyDF247ud/wz0y5333OSziH77Dppu0Ub+SVgi2qevdpZ2463/cxezeQSs101EwmXuG9LEccff3yKq1mKZE8kX2J7cq0pRb1nnXVWOivH+973vhRJm0suuWRqsdqVM0USZurxiy++uFb+uOOOS6tWraqtT/dtYKB7fx2MrV2fhxXTG5FX5/k1MDyPvM+2eZRt1I+t0ddGB+awb3g+HZ1DffMtMsvQP//BkUk1RpIk7vkSN9GNm+tGQiaSMZMKzXMjbqIbp0TipbjiJu4Pc+jDpjx+2JXocwAAEABJREFU80Phm1/KCZ0onCPO2ycnbfLqpK8f/3Bygqf+4I0/23FLlRhL/bESrucRp4h5d+2B999+49zixGvH77MSyZC4AqbYH28Heurjd9y0NxIlxbFYPuoRB8SiFo96+AGplqyZ8piJTz567f/5SnrI4z5Q+wjrWuG6b3//zzvu/RKJoXvvv6J29FEP235vmdj47sLehjSlJ1FTm6My5THaoPkiyXLBNetq936JIpHsiORGLCNiX7z1p7jPS2wXEefHlSqxXbxVqb5cJHLi2EwRV95EUmVq1J8TV8kU7RT742Ozo5+xHfd86YorX6KzC4hIpERSo1KppEqlkk5Y/ZRZa4mEzWn/9nfpWz++qnZOpVKprcf+2BcRN/CNir55/ZUpIq6wecpf/Vl6/5c/m4pjsS/K/stXPp/edPa/pJtv+32tvnUbN6SPXXJhivJrx+9NE8mbo970qvSOz541qdzHL70oxflRT7RTlI+2G0V1jjeJa3SufQQI7Cww+2+Dnc+xhwCBEghc2egeMNWxtPyee6dIstTHvg/9o7TqScemB77sxenexzx60pUvxVCOPHDyJePF/n5azpakaGQRyZFG+2fbt3r16vSRj3wkRYKlvuz5559fS5YcccQR6ZRTTqnF6aefns4444x0ySWX1BedWD/22GNr63E8rriJjUjg3HTTTbGa4sqa2soM3yqVSuf/QJmhf6071FXDLnVnf3jxthT3ULn+isZJjUhiRDImropZ7HweWfdWpM+fOZJ+fPmOZMm0dVemPdLwQP39ZxoWqNs5h9brSpdrNa4weXRd8qR4C9K76pIh0eOjcxJkxfg9XGL7uh/f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CBAgQIAAAQIECBAg0HwBNRIg0BwBCZjmOKqFAAECBAgQIECAAIHWCKiVAAECPSEgAdMT02gQBAgQIECAAAECrRNQMwECBAgQWLyABMziDdVAgAABAgQIEGitgNoJECBAgACBrheQgOn6KTQAAgQIECDQegEtECBAgAABAgQILE5AAmZxfs4mQIAAgfYIaIUAAQIECBAgQIBAVwtIwHT19Ok8AQLtE9ASAQIECBAgQIAAAQIEFi4gAbNwO2cSaK+A1ggQIECAAAECBAgQIECgawUkYLp26trfcS0SIECAAAECBAgQIECAAAECCxPopgTMwkboLAIECBAgQIAAAQIECBAgQKCbBHqyrxIwPTmtBkWAAAECBAgQIECAAAECCxdwJoHmC0jANN9UjQQIECBAgAABAgQIEFicgLMJEOg5AQmYnptSAyJAgAABAgQIECCweAE1ECBAgEBzBSRgmuupNgIECBAgQIAAgeYIqIUAAQIECPSUgARMT02nwRAgQIAAAQLNE1ATAQIECBAgQKB5AhIwzbNUEwECBAgQaK6A2ggQIECAAAECBHpGQAKmZ6bSQAgQINB8ATUSIECAAAECBAgQINAcAQmY5jiqhQCB1giolQABAgQIECBAgAABAj0hIAHTE9NoEK0TUDMBAgQIECBAgAABAgQIEFi8gATM4g1bW4PaCRAgQIAAAQIECBAgQIAAga4XmDUB0/UjNAACBAgQIECAAAECBAgQIEBgVgEFWisgAdNaX7UTIECAAAECBAgQIECAwNwElCLQ0wISMD09vQZHgAABAgQIECBAgMDcBZQkQIBA6wQkYFpnq2YCBAgQIECAAAEC8xNQmgABAgR6VkACpmen1sAIECBAgAABAvMXcAYBAgQIECDQGgEJmNa4qpUAAQIECBBYmICzCBAgQIAAAQI9KSAB05PTalAECBAgsHABZxIgQIAAAQIECBBovoAETPNN1UiAAIHFCTibAAECBAgQIECAAIGeE5CA6bkpNSACixdQAwECBAgQIECAAAECBAg0V0ACprmeamuOgFoIECBAgAABAgQIECBAgEBPCUjANJxOOwkQIECAAAECBAgQIECAAIHeF2jfCCVg2metJQIECBAgQIAAAQIECBAgMFnAVt8ISMD0zVQbKAECBAgQIECAAAECBHYWsIcAgfYISMC0x1krBAgQIECAAAEC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BAgQIECAAAECBAi0SEACpkWwC6nWOQQIECBAgAABAgQIECBAgEBvCtQnYHpzhEZFgAABAgQIECBAgAABAgQI1AtY74CABEwH0DVJgAABAgQIECBAgACB/hYwegL9JyAB039zbsQECBAgQIAAAQIECBAgQIBAmwUkYNoMrjkCBAgQIECAAAECISAIECBAoL8EJGD6a76NlgABAgQIECBQCFgSIECAAAECbRSQgGkjtqYIECBAgACBegHrBAgQIECAAIH+EZCA6Z+5NlICBAgQmCpgmwABAgQIECBAgECbBCRg2gStGQIECDQSsI8AAQIECBAgQIAAgf4QkIDpj3k2SgLTCdhPgAABAgQIECBAgAABAm0QkIBpA7ImZhJwjAABAgQIECBAgAABAgQI9L6ABEzvz7EREiBAgAABAgQIECBAgAABAh0WkIDp8ARongABAgQIECBAgAABAgT6Q8Ao+1tAAqa/59/oCRAgQIAAAQIECBDoHwEjJUCggwISMB3E1zQBAgQIECBAgACB/hIwWgIECPSvgARM/869kRMgQIAAAQIE+k/AiAkQIECAQIcEJGA6BK9ZAgQIECBAoD8FjJoAAQIECBDoTwEJmP6cd6MmQIAAgf4VMHICBAgQIECAAIEOCEjAdABdkwQIEOhvAaMnQIAAAQIECBAg0H8CEjD9N+dGTIAAAQIECBAgQIAAAQIECLRZQAKmzeCaIxACggABAgQIECBAgAABAgT6S0ACpr/muxitJQECBAgQIECAAAECBAgQINBGgQ4lYNo4Qk0RIECAAAECBAgQIECAAAECHRLQbCEgAVNIWBIgQIAAAQIECBAgQIBA7wkYEYGSCEjAlGQidIMAAQIECBAgQIAAgd4UMCoCBAiEgARMKAgCBAgQIECAAAECvStgZAQIECBQAgEJmBJMgi4QIECAAAECBHpbwOgIECBAgAABCRiPAQIECBAgQKD3BYyQAAECBAgQINBhAQmYDk+A5gkQIECgPwSMkgABAgQIECBAoL8FJGD6e/6NngCB/hEwUgIECBAgQIAAAQIEOiggAdNBfE0T6C8BoyVAgAABAgQIECBAgED/CkjA9O/c99/IjZgAAQIECBAgQIAAAQIECHRIQAKmjfCaIkCAAAECBAgQIECAAAECBHpfoNEIJWAaqdhHgAABAgQIECBAgAABAgS6V0DPSyggAVPCSdElAgQIECBAgAABAgQIdLeA3hMgMFVAAmaqiG0CBAgQIECAAAECBLpfwAgIECBQMgEJmJJNiO4QIECAAAECBAj0hoBRECBAgACBegEJmHoN6wQIECBAgACB3hEwEgIECBAgQKBEAhIwJZoMXSFAgAABAr0lYDQECBAgQIAAAQKFgARMIWFJgAABAr0nYEQECBAgQIAAAQIESiIgAVOSidANAgR6U8CoCBAgQIAAAQIECBAgEAISMKEgCPSugJERIECAAAECBAgQIECAQAkEJGBKMAm93QWjI0CAAAECBAgQIECAAAECBHo/AWOOCRAgQIAAAQIECBAgQIAAgd4XKPkIJWBKPkG6R4AAAQIECBAgQIAAAQLdIaCXBGYSkICZSccxAgQIECBAgAABAgQIdI+AnhIgUGIBCZgST46uESBAgAABAgQIEOguAb0lQIAAgekEJGCmk7GfAAECBAgQIECg+wT0mAABAgQIlFRAAqakE6NbBAgQIECAQHcK6DUBAgQIECBAoJGABEwjFfsIECBAgED3Cug5AQIECBAgQIBACQUkYEo4KbpEgACB7hbQewIECBAgQIAAAQIEpgpIwEwVsU2AQPcLGAEBAgQIECBAgAABAgRKJiABU7IJ0Z3eEDAKAgQIECBAgAABAgQIECBQLyABU6/RO+tGQoAAAQIECBAgQIAAAQIECJRIoEUJmBKNUFcIECBAgAABAgQIECBAgACBFgmodq4CEjBzlVKOAAECBAgQIECAAAECBMonoEcEukRAAqZLJko3CRAgQIAAAQIECBAop4BeESBAYC4CEjBzUVKGAAECBAgQIECAQHkF9IwAAQIEukBAAqYLJkkXCRAgQIAAAQLlFtA7AgQIECBAYDYBCZjZhBwnQIAAAQIEyi+ghwQIECBAgACBkgtIwJR8gnSPAAECBLpDQC8JECBAgAABAgQIzCQgATOTjmMECBDoHgE9JUCAAAECBAgQIECgxAISMCWeHF0j0F0CekuAAAECBAgQIECAAAEC0wlIwEwnY3/3CegxAQIECBAgQIAAAQIECBAoqYAETBMnRlUECBAgQIAAAQIECBAgQIBA7wssZIQSMAtRcw4BAgQIECBAgAABAgQIEOicgJa7UEACpgsnTZcJECBAgAABAgQIECDQWQGtEyAwXwEJmPmKKU+AAAECBAgQIECAQOcF9IAAAQJdJiAB02UTprsECBAgQIAAAQLlENALAgQIECAwHwEJmPloKUuAAAECBAgQKI+AnhAgQIAAAQJdJCAB00WTpasECBAgQKBcAnpDgAABAgQIECAwVwEJmLlKKUeAAAEC5RPQIwIECBAgQIAAAQJdIiAB0yUTpZsECJRTQK8IECBAgAABAgQIECAwFwEJmLkoKUOgvAJ6RoAAAQIECBAgQIAAAQJdICAB0wWTVO4u6h0BAgQIECBAgAABAgQIECAwm0D3J2BmG6HjBAgQIECAAAECBAgQIECAQPcLdPkIJGC6fAJ1nwABAgQIECBAgAABAgTaI6AVAosRkIBZjJ5zCRAgQIAAAQIECBAg0D4BLREg0MUCEjBdPHm6ToAAAQIECBAgQKC9AlojQIAAgYUKSMAsVM55BAgQIECAAAEC7RfQIgECBAgQ6FIBCZgunTjdJkCAAAECBDojoFUCBAgQIECAwEIEJGAWouYcAgQIECDQOQEtEyBAgAABAgQIdKGABEwXTpouEyBAoLMCWidAgAABAgQIECBAYL4CEjDzFVOeAIHOC+gBAQIECBAgQIAAAQIEukxAAqbLJkx3yyGgFwQIECBAgAABAgQIECBAYD4CEjDz0SpPWT0hQIAAAQIECBAgQIAAAQIEujRoyOUAAAFpSURBVEhggQmYLhqhrhIgQIAAAQIECBAgQIAAAQILFHBaswQkYJolqR4CBAgQIECAAAECBAgQaL6AGgn0iIAETI9MpGEQIECAAAECBAgQINAaAbUSIECgGQISMM1QVAcBAgQIECBAgACB1gmomQABAgR6QEACpgcm0RAIECBAgAABAq0VUDsBAgQIECCwWAEJmMUKOp8AAQIECBBovYAWCBAgQIAAAQJdLiAB0+UTqPsECBAg0B4BrRAgQIAAAQIECBBYjIAEzGL0nEuAAIH2CWiJAAECBAgQIECAAIEuFpCA6eLJ03UC7RXQGgECBAgQIECAAAECBAgsVEACZqFyzmu/gBYJECBAgAABAgQIECBAgECXCkjAzGPiFCVAgAABAgQIECBAgAABAgR6X6AVI5SAaYWqOgkQIECAAAECBAgQIECAwMIFnNmDAhIwPTiphkSAAAECBAgQIECAAIHFCTibAIFmC/z/AAAA//9akhS6AAAABklEQVQDAKicEm9vTRcKAAAAAElFTkSuQmCC"/>
+              </defs>
+              </svg>
+
+          </figure>
+        </div>
+        <div class="custom-product-shop__installments" {{ block.shopify_attributes }}>
+          {%- form 'product', product, id: installment_form_id -%}
+            <input type="hidden" name="id" value="{{ selected_variant.id }}" data-installment-variant-id>
+            {{ form | payment_terms }}
+          {%- endform -%}
+        </div>
+
+    {%- endcase -%}
+  {%- endfor -%}
+</div>
+    </div>
+  </div>
+
+  <script type="application/json" data-product-json>
+    {{ product.variants | json }}
+  </script>
+
+ <script>
+  (function() {
+    const section = document.getElementById('CustomProductShop-{{ section.id }}');
+    if (!section) return;
+
+    const variants = JSON.parse(section.querySelector('[data-product-json]').textContent);
+    const optionGroups = section.querySelectorAll('[data-option-index]');
+    const variantIdInputs = section.querySelectorAll('[data-variant-id-input], [data-installment-variant-id]');
+    const priceEl = section.querySelector('[data-price]');
+    const compareEl = section.querySelector('[data-compare-price]');
+    const submitButton = section.querySelector('[data-submit-button]');
+    const submitText = section.querySelector('[data-submit-text]');
+    const mediaSlides = Array.from(section.querySelectorAll('[data-media-slide]'));
+    const thumbs = Array.from(section.querySelectorAll('[data-thumb]'));
+    const prevBtn = section.querySelector('[data-media-prev]');
+    const nextBtn = section.querySelector('[data-media-next]');
+    const qtyInput = section.querySelector('[data-qty-input]');
+    const qtyMinus = section.querySelector('[data-qty-minus]');
+    const qtyPlus = section.querySelector('[data-qty-plus]');
+    const shopMoneyFormat = {{ shop.money_format | json }};
+
+    let activeMediaId = null;
+
+    function formatMoney(cents) {
+      if (window.Shopify && typeof window.Shopify.formatMoney === 'function') {
+        return window.Shopify.formatMoney(cents, shopMoneyFormat);
+      }
+
+      return (cents / 100).toFixed(2);
+    }
+
+    function getSelectedOptions() {
+      return Array.from(optionGroups).map((group) => {
+        const checked = group.querySelector('[data-option-input]:checked');
+        return checked ? checked.value : null;
+      });
+    }
+
+    function findVariant() {
+      const selectedOptions = getSelectedOptions();
+
+      return variants.find((variant) => {
+        return selectedOptions.every((value, index) => variant.options[index] === value);
+      });
+    }
+
+    function setActiveMedia(mediaId) {
+      if (!mediaId) return;
+
+      activeMediaId = String(mediaId);
+
+      mediaSlides.forEach((slide) => {
+        slide.classList.toggle('is-active', String(slide.dataset.mediaId) === activeMediaId);
+      });
+
+      thumbs.forEach((thumb) => {
+        thumb.classList.toggle('is-active', String(thumb.dataset.mediaTarget) === activeMediaId);
+      });
+    }
+
+    function updateSelectedLabels() {
+      optionGroups.forEach((group) => {
+        const checked = group.querySelector('[data-option-input]:checked');
+        const label = group.querySelector('[data-option-selected]');
+
+        if (checked && label) {
+          label.textContent = checked.value;
+        }
+      });
+    }
+
+    function updateVariant() {
+      const variant = findVariant();
+      if (!variant) return;
+
+      variantIdInputs.forEach((input) => {
+        input.value = variant.id;
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+
+      if (priceEl) {
+        priceEl.textContent = formatMoney(variant.price);
+      }
+
+      if (compareEl) {
+        if (variant.compare_at_price && variant.compare_at_price > variant.price) {
+          compareEl.textContent = formatMoney(variant.compare_at_price);
+          compareEl.classList.remove('is-hidden');
+        } else {
+          compareEl.textContent = '';
+          compareEl.classList.add('is-hidden');
+        }
+      }
+
+      if (submitButton && submitText) {
+        if (variant.available) {
+          submitButton.disabled = false;
+          submitText.textContent = {{ section.settings.button_text | json }};
+        } else {
+          submitButton.disabled = true;
+          submitText.textContent = {{ section.settings.sold_out_text | json }};
+        }
+      }
+
+      if (variant.featured_media && variant.featured_media.id) {
+        setActiveMedia(variant.featured_media.id);
+      }
+
+      section.dispatchEvent(new CustomEvent('variant:change', {
+        bubbles: true,
+        detail: {
+          sectionId: {{ section.id | json }},
+          variant: variant
+        }
+      }));
+    }
+
+    section.addEventListener('change', function(event) {
+      if (event.target.matches('[data-option-input]')) {
+        updateSelectedLabels();
+        updateVariant();
+      }
+    });
+
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener('click', function() {
+        setActiveMedia(this.dataset.mediaTarget);
+      });
+    });
+
+    function cycleMedia(direction) {
+      if (!mediaSlides.length) return;
+
+      const currentIndex = mediaSlides.findIndex((slide) => slide.classList.contains('is-active'));
+      let nextIndex = currentIndex + direction;
+
+      if (nextIndex < 0) nextIndex = mediaSlides.length - 1;
+      if (nextIndex >= mediaSlides.length) nextIndex = 0;
+
+      setActiveMedia(mediaSlides[nextIndex].dataset.mediaId);
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        cycleMedia(-1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        cycleMedia(1);
+      });
+    }
+
+    if (qtyMinus && qtyInput) {
+      qtyMinus.addEventListener('click', function() {
+        const current = parseInt(qtyInput.value || '1', 10);
+        qtyInput.value = Math.max(1, current - 1);
+      });
+    }
+
+    if (qtyPlus && qtyInput) {
+      qtyPlus.addEventListener('click', function() {
+        const current = parseInt(qtyInput.value || '1', 10);
+        qtyInput.value = current + 1;
+      });
+    }
+
+    const firstActiveSlide = section.querySelector('[data-media-slide].is-active');
+    if (firstActiveSlide) {
+      activeMediaId = firstActiveSlide.dataset.mediaId;
+    }
+
+    updateSelectedLabels();
+    updateVariant();
+  })();
+</script>
+</section>
+<style>
+    .custom-product-shop {
+  background: #f4f1f6;
+  padding: 24px 0;
+}
+
+.custom-product-shop .page-width {
+  max-width: 1280px;
+}
+
+.custom-product-shop__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.custom-product-shop__media-card,
+.custom-product-shop__purchase-box,
+.custom-product-shop__app-block,
+.custom-product-shop__accordion,
+.custom-product-shop__testimonial,
+.custom-product-shop__trust-row,
+.custom-product-shop__variants {
+  background: #fff;
+  border: 1px solid #dfcfe2;
+  border-radius: 16px;
+}
+
+.custom-product-shop__media-card {
+  padding: 16px;
+}
+
+.custom-product-shop__media-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 40px;
+  gap: 12px;
+  align-items: center;
+}
+
+.custom-product-shop__media-main {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #e8dce9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.custom-product-shop__media-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.custom-product-shop__media-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.custom-product-shop__media-slide img,
+.custom-product-shop__media-slide video,
+.custom-product-shop__media-slide iframe,
+.custom-product-shop__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-product-shop__media-nav {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #c9b0cd;
+  background: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.custom-product-shop__thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.custom-product-shop__thumb {
+  border: 1px solid #dfcfe2;
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px;
+  min-width: 72px;
+  cursor: pointer;
+}
+
+.custom-product-shop__thumb.is-active {
+  border-color: #b600ff;
+  box-shadow: 0 0 0 1px #b600ff inset;
+}
+
+.custom-product-shop__thumb img {
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.custom-product-shop__testimonial {
+  margin-top: 14px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.custom-product-shop__testimonial-avatar img,
+.custom-product-shop__testimonial-avatar .placeholder-svg {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+}
+
+.custom-product-shop__testimonial-text p:last-child {
+  margin-bottom: 0;
+}
+
+.custom-product-shop__testimonial-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6b5d71;
+}
+
+.custom-product-shop__eyebrow {
+  font-size: 12px;
+  line-height: 1.3;
+  color: #b600ff;
+  margin-bottom: 8px;
+}
+
+.custom-product-shop__vendor {
+  font-size: 13px;
+  color: #76697d;
+  margin-bottom: 6px;
+}
+
+.custom-product-shop__title {
+  margin: 0 0 12px;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #17121a;
+}
+
+.custom-product-shop__price-wrap {
+  margin-bottom: 18px;
+}
+
+.custom-product-shop__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.custom-product-shop__price {
+  color: #ff4b32;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.custom-product-shop__compare {
+  color: #8b7f92;
+  font-size: 17px;
+  text-decoration: line-through;
+}
+
+.custom-product-shop__compare.is-hidden {
+  display: none;
+}
+
+.custom-product-shop__subprice {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #74677a;
+}
+
+.custom-product-shop__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.custom-product-shop__benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #312736;
+}
+
+.custom-product-shop__benefit-icon {
+  color: #b600ff;
+  line-height: 1;
+  transform: translateY(2px);
+}
+
+.custom-product-shop__variants {
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.custom-product-shop__option-group + .custom-product-shop__option-group {
+  margin-top: 16px;
+}
+
+.custom-product-shop__option-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.custom-product-shop__option-name {
+  font-weight: 700;
+  color: #241b29;
+}
+
+.custom-product-shop__option-selected {
+  color: #8a7d90;
+}
+
+.custom-product-shop__option-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.custom-product-shop__variant-card {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.custom-product-shop__variant-card input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-product-shop__variant-card-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 86px;
+  padding: 12px 10px;
+  border: 1px solid #d8c7dc;
+  border-radius: 12px;
+  background: #faf7fb;
+  transition: 0.2s ease;
+}
+
+.custom-product-shop__variant-card input:checked + .custom-product-shop__variant-card-inner {
+  border-color: #b600ff;
+  background: #f7e9ff;
+  box-shadow: 0 0 0 1px #b600ff inset;
+}
+
+.custom-product-shop__variant-card.is-disabled,
+.custom-product-shop__variant-card input:disabled + .custom-product-shop__variant-card-inner {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.custom-product-shop__variant-badge {
+  align-self: flex-start;
+  margin-bottom: 6px;
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: #ffd6f6;
+  color: #8a00b8;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.custom-product-shop__variant-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #231b28;
+  line-height: 1.2;
+}
+
+.custom-product-shop__variant-value {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #3f3346;
+  font-weight: 600;
+}
+
+.custom-product-shop__variant-subtext {
+  margin-top: 6px;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #7e7186;
+}
+
+.custom-product-shop__app-block {
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.custom-product-shop__purchase-box {
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.custom-product-shop__form {
+  display: grid;
+  gap: 12px;
+}
+
+.custom-product-shop__qty-row {
+  display: inline-grid;
+  grid-template-columns: 44px 72px 44px;
+  border: 1px solid #d8c7dc;
+  border-radius: 12px;
+  overflow: hidden;
+  width: fit-content;
+  background: #fff;
+}
+
+.custom-product-shop__qty-btn {
+  border: 0;
+  background: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.custom-product-shop__qty-input {
+  border: 0;
+  text-align: center;
+  font-size: 16px;
+  width: 72px;
+  outline: none;
+}
+
+.custom-product-shop__submit {
+  width: 100%;
+  min-height: 54px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #c61cff 0%, #9800ff 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(164, 0, 255, 0.18);
+}
+
+.custom-product-shop__submit[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.custom-product-shop__dynamic-checkout > * {
+  width: 100%;
+}
+
+.custom-product-shop__trust-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.custom-product-shop__trust-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  font-size: 12px;
+  text-align: center;
+  color: #463b4d;
+}
+
+.custom-product-shop__trust-item img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.custom-product-shop__trust-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #b600ff;
+}
+
+.custom-product-shop__accordions {
+  display: grid;
+  gap: 10px;
+}
+
+.custom-product-shop__accordion {
+  overflow: hidden;
+}
+
+.custom-product-shop__accordion-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #231b28;
+}
+
+.custom-product-shop__accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.custom-product-shop__accordion[open] .custom-product-shop__accordion-icon {
+  transform: rotate(45deg);
+}
+
+.custom-product-shop__accordion-icon {
+  transition: transform 0.2s ease;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.custom-product-shop__accordion-content {
+  padding: 0 16px 16px;
+  color: #4f4456;
+  font-size: 14px;
+}
+
+.custom-product-shop__installments {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #736778;
+}
+.custom-product-shop__upsell {
+  margin-bottom: 16px;
+}
+
+.custom-product-shop__upsell-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 18px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #b600ff;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+.custom-product-shop__upsell-media {
+  background: #f5f5f7;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.custom-product-shop__upsell-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.custom-product-shop__upsell-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.custom-product-shop__upsell-label {
+  font-size: 11px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6f5f79;
+  margin-bottom: 8px;
+}
+
+.custom-product-shop__upsell-title {
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #17121a;
+  margin-bottom: 8px;
+}
+
+.custom-product-shop__upsell-description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #312736;
+  margin-bottom: 12px;
+}
+
+.custom-product-shop__upsell-price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.custom-product-shop__upsell-price {
+  color: #ff2f3d;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.custom-product-shop__upsell-compare {
+  color: #8b7f92;
+  font-size: 15px;
+  text-decoration: line-through;
+}
+
+.custom-product-shop__upsell-form {
+  width: 100%;
+}
+
+.custom-product-shop__upsell-button {
+  width: 100%;
+  min-height: 56px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #c61cff 0%, #9800ff 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(164, 0, 255, 0.18);
+}
+
+.custom-product-shop__upsell-button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 749px) {
+  .custom-product-shop__upsell-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .custom-product-shop__upsell-media {
+    min-height: 160px;
+  }
+
+  .custom-product-shop__upsell-title {
+    font-size: 16px;
+  }
+
+  .custom-product-shop__upsell-description {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .custom-product-shop {
+    padding: 14px 0 24px;
+  }
+
+  .custom-product-shop__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .custom-product-shop__title {
+    font-size: 28px;
+  }
+
+  .custom-product-shop__price {
+    font-size: 26px;
+  }
+
+  .custom-product-shop__option-values {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .custom-product-shop__trust-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .custom-product-shop__media-card,
+  .custom-product-shop__purchase-box,
+  .custom-product-shop__app-block,
+  .custom-product-shop__accordion,
+  .custom-product-shop__testimonial,
+  .custom-product-shop__trust-row,
+  .custom-product-shop__variants {
+    border-radius: 14px;
+  }
+
+  .custom-product-shop__media-stage {
+    grid-template-columns: 32px minmax(0, 1fr) 32px;
+    gap: 8px;
+  }
+
+  .custom-product-shop__media-nav {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+
+  .custom-product-shop__option-values {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .custom-product-shop__variant-card-inner {
+    min-height: 78px;
+    padding: 10px 8px;
+  }
+
+  .custom-product-shop__variant-title {
+    font-size: 12px;
+  }
+
+  .custom-product-shop__variant-value {
+    font-size: 13px;
+  }
+
+  .custom-product-shop__variant-subtext {
+    font-size: 10px;
+  }
+
+  .custom-product-shop__trust-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .custom-product-shop__trust-item {
+    font-size: 11px;
+  }
+}
+</style>
+{% schema %}
+{
+  "name": "Custom product shop",
+  "tag": "section",
+  "class": "section-custom-product-shop",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Designed for high-impact health routines"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_review",
+      "label": "Show review",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bestseler",
+      "label": "Show bestseler badge",
+      "default": false
+    },
+    
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Add To Cart"
+    },
+    {
+      "type": "text",
+      "id": "sold_out_text",
+      "label": "Sold out text",
+      "default": "Sold Out"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quantity",
+      "label": "Show quantity selector",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dynamic_checkout",
+      "label": "Show dynamic checkout",
+      "default": false
+    }
+  ],
+  "blocks": [
+  {
+    "type": "@app"
+  },
+  {
+    "type": "price",
+    "name": "Price",
+    "limit": 1,
+    "settings": []
+  },
+  {
+    "type": "description",
+    "name": "Description",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Custom description",
+        "default": "Fuel your body and support your wellness goals with the Protein Cleanse, a nutritionist-developed program designed to complement your workouts."
+      }
+    ]
+  },
+  {
+  "type": "upsell_product",
+  "name": "Upsell product",
+  "limit": 3,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Upsell product"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Small label",
+      "default": "MORE METHOD™"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Post-cleanse workout support program."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Add To Cart"
+    }
+  ]
+},
+  {
+    "type": "benefits",
+    "name": "Benefits",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "text",
+        "id": "benefit_1",
+        "label": "Benefit 1",
+        "default": "Support healthy hydration and recovery"
+      },
+      {
+        "type": "text",
+        "id": "benefit_2",
+        "label": "Benefit 2",
+        "default": "Help maintain lean muscle during your cleanse"
+      },
+      {
+        "type": "text",
+        "id": "benefit_3",
+        "label": "Benefit 3",
+        "default": "Reset your diet with cleaner eating habits"
+      },
+      {
+        "type": "text",
+        "id": "benefit_4",
+        "label": "Benefit 4",
+        "default": "Help reduce occasional bloating & support healthier cravings"
+      },
+      {
+        "type": "text",
+        "id": "benefit_5",
+        "label": "Benefit 5",
+        "default": "Support natural energy levels throughout the day"
+      }
+    ]
+  },
+  {
+    "type": "variant_picker",
+    "name": "Variant picker",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "text",
+        "id": "variant_text",
+        "label": "Enter label text",
+        "default": "Choose Number of Days :"
+      }
+    ]
+  },
+  {
+    "type": "buy_buttons",
+    "name": "Buy buttons",
+    "limit": 1,
+    "settings": []
+  },
+  {
+    "type": "trust_row",
+    "name": "Trust row",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "item_1_icon",
+        "label": "Item 1 icon"
+      },
+      {
+        "type": "text",
+        "id": "item_1_text",
+        "label": "Item 1 text",
+        "default": "Free shipping"
+      },
+      {
+        "type": "image_picker",
+        "id": "item_2_icon",
+        "label": "Item 2 icon"
+      },
+      {
+        "type": "text",
+        "id": "item_2_text",
+        "label": "Item 2 text",
+        "default": "Secure checkout"
+      },
+      {
+        "type": "image_picker",
+        "id": "item_3_icon",
+        "label": "Item 3 icon"
+      },
+      {
+        "type": "text",
+        "id": "item_3_text",
+        "label": "Item 3 text",
+        "default": "Money-back guarantee"
+      },
+      {
+        "type": "image_picker",
+        "id": "item_4_icon",
+        "label": "Item 4 icon"
+      },
+      {
+        "type": "text",
+        "id": "item_4_text",
+        "label": "Item 4 text",
+        "default": "Money-back guarantee"
+      }
+    ]
+  },
+  {
+    "type": "accordion",
+    "name": "Accordion",
+    "limit": 8,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "What's included?"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content",
+        "default": "<p>Add your content here.</p>"
+      },
+      {
+        "type": "checkbox",
+        "id": "open_by_default",
+        "label": "Open by default",
+        "default": false
+      }
+    ]
+  },
+  {
+    "type": "payment_terms",
+    "name": "Payment terms",
+    "limit": 1,
+    "settings": []
+  },
+  {
+    "type": "testimonial",
+    "name": "Testimonial",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Avatar"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>This is our favorite product for healthy recovery and daily support.</p>"
+      },
+      {
+        "type": "text",
+        "id": "name",
+        "label": "Name",
+        "default": "Jane D."
+      },
+      {
+        "type": "text",
+        "id": "meta",
+        "label": "Meta",
+        "default": "Verified Buyer"
+      }
+    ]
+  }
+],
+  
+  "presets": [
+    {
+      "name": "Custom product shop"
+    }
+  ]
+}
+{% endschema %}
