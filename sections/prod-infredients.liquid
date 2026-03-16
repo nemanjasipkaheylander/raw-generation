@@ -1,0 +1,263 @@
+{% liquid
+  assign section_target = section.settings.section_target
+  assign padding_top_desk = section.settings.padding_top_desk
+  assign padding_bottom_desk = section.settings.padding_bottom_desk
+%}
+
+{% style %}
+  .ingredients-{{ section.id }} {
+    background: linear-gradient(to bottom, {{ section.settings.bg_gradient_1 }}, {{ section.settings.bg_gradient_2 }});
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    overflow: hidden;
+    font-family: "Jost", sans-serif;
+  }
+
+  @media (min-width: 768px) {
+    .ingredients-{{ section.id }} {
+      padding-top: {{ padding_top_desk }}px;
+      padding-bottom: {{ padding_bottom_desk }}px;
+    }
+  }
+
+  /* ===========================
+     BASE — MOBILE FIRST
+  =========================== */
+
+  .ingredients__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ingredients__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 28px;
+    line-height: 1.3;
+  }
+
+  .ingredients__title span {
+    color: #9b51e0;
+    font-style: italic;
+  }
+
+  .ingredients__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .ingredients__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ingredients__icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border: 1.5px solid #9b51e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ingredients__icon img,
+  .ingredients__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  .ingredients__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+  }
+
+  /* ===========================
+     TABLET+ (min-width: 768px)
+  =========================== */
+  @media (min-width: 768px) {
+    .ingredients__title {
+      font-size: 32px;
+      margin-bottom: 36px;
+    }
+
+    .ingredients__grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px 32px;
+    }
+
+    .ingredients__icon {
+      width: 52px;
+      height: 52px;
+    }
+
+    .ingredients__label {
+      font-size: 12px;
+    }
+  }
+{% endstyle %}
+
+<section class="ingredients-{{ section.id }}" id="{{ section_target }}">
+  <div class="ingredients__inner">
+
+    <h2 class="ingredients__title">
+      {{ section.settings.title_one }}
+      <span>{{ section.settings.title_highlighted }}</span>
+      {{ section.settings.title_two }}
+    </h2>
+
+    <div class="ingredients__grid">
+      {% for block in section.blocks %}
+        <div class="ingredients__item" {{ block.shopify_attributes }}>
+          <div class="ingredients__icon">
+            {% if block.settings.icon != blank %}
+              {{
+                block.settings.icon
+                | image_url: width: 48
+                | image_tag: loading: 'lazy'
+              }}
+            {% else %}
+              <!-- fallback circle icon -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="#9b51e0" stroke-width="1.5"/>
+                <path d="M8 12l3 3 5-5" stroke="#9b51e0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {% endif %}
+          </div>
+          <span class="ingredients__label">{{ block.settings.label }}</span>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ingredients",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_target",
+      "label": "Section anchor ID"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_1",
+      "label": "Gradient top",
+      "default": "#e8d5ff"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_2",
+      "label": "Gradient bottom",
+      "default": "#d8bcff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 40,
+      "label": "Padding top mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 40,
+      "label": "Padding bottom mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desk",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 80,
+      "label": "Padding top desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desk",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 80,
+      "label": "Padding bottom desktop"
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "title_one",
+      "label": "Title — part before highlight",
+      "default": "We Believe in"
+    },
+    {
+      "type": "text",
+      "id": "title_highlighted",
+      "label": "Title — highlighted part",
+      "default": "100% Ingredient"
+    },
+    {
+      "type": "text",
+      "id": "title_two",
+      "label": "Title — part after highlight",
+      "default": "Transparency"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Ingredient badge",
+      "type": "badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label text",
+          "default": "100% PLANT-BASED"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ingredients",
+      "blocks": [
+        { "type": "badge", "settings": { "label": "100% PLANT-BASED" } },
+        { "type": "badge", "settings": { "label": "GLUTEN-FREE" } },
+        { "type": "badge", "settings": { "label": "NON-GMO" } },
+        { "type": "badge", "settings": { "label": "VEGAN" } },
+        { "type": "badge", "settings": { "label": "GRAIN-FREE" } },
+        { "type": "badge", "settings": { "label": "SOY-FREE" } },
+        { "type": "badge", "settings": { "label": "KOSHER" } },
+        { "type": "badge", "settings": { "label": "HALAL CERTIFIED" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
