@@ -114,8 +114,13 @@
   }
 
 
-
-
+.comparison-row.comparison-row--feature {
+    padding: 2px 10px;
+}
+  @media (max-width: 767px) {
+.comparison-row.comparison-row--feature {
+    padding: 14px;
+}  }
   .comparison-{{ section.id }} .comparison-row {
     min-height: 72px;
     padding: 14px;
@@ -212,7 +217,7 @@
 
     .comparison-{{ section.id }} .comparison-row {
       min-height: 78px;
-      padding: 12px 8px;
+      padding: 12px 6px;
     }
 
     .comparison-{{ section.id }} .comparison-row--feature {
