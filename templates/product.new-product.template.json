@@ -705,8 +705,8 @@
       ],
       "settings": {
         "use_margins": true,
-        "grid_style": "page",
-        "disable_max_width": false,
+        "grid_style": "secondary",
+        "disable_max_width": true,
         "show_bottom_line": false,
         "top_spacing": 1,
         "bottom_spacing": 1
@@ -755,6 +755,7 @@
         "padding_bottom": "20",
         "padding_top_desk": "64",
         "padding_bottom_desk": "64",
+        "section_title_one_v2": "",
         "section_title_two": "",
         "section_title_third": ""
       }
