@@ -502,7 +502,7 @@
       ],
       "name": "Cleanse Companion",
       "settings": {
-        "background_color": "#fff",
+        "background_color": "#ffffff",
         "padding_top": 64,
         "padding_bottom": 64,
         "padding_top_mob": 40,
@@ -672,20 +672,20 @@
         "reviews_io_reviewsio_polaris_WA4tKT": {
           "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
           "settings": {
-            "star": "#000",
+            "star": "#000000",
             "review_type": "product_review,questions",
             "per_page": 8,
-            "primary_btn_bg_color": "#000",
-            "primary_btn_border_color": "#000",
-            "primary_btn_text_color": "#fff",
-            "secondary_btn_border_color": "#000",
-            "secondary_btn_text_color": "#000",
-            "border_color": "#D9D9D9",
-            "heading_text_color": "#000",
+            "primary_btn_bg_color": "#000000",
+            "primary_btn_border_color": "#000000",
+            "primary_btn_text_color": "#ffffff",
+            "secondary_btn_border_color": "#000000",
+            "secondary_btn_text_color": "#000000",
+            "border_color": "#d9d9d9",
+            "heading_text_color": "#000000",
             "heading_font": "sans_serif_n4",
-            "body_text_color": "#000",
-            "badge_icon_color": "#000",
-            "badge_text_color": "#000",
+            "body_text_color": "#000000",
+            "badge_icon_color": "#000000",
+            "badge_text_color": "#000000",
             "enable_rich_snippets": true,
             "show_location": true,
             "show_tab_selector": false,
@@ -712,10 +712,10 @@
         "bottom_spacing": 1
       }
     },
-    "prod_icon_text_fhM4cV": {
-      "type": "prod-icon-text",
+    "prod_icon_full_text_CnQJAd": {
+      "type": "prod-icon-full-text",
       "blocks": {
-        "text_9xJ3Wa": {
+        "text_FLCt3E": {
           "type": "text",
           "settings": {
             "icon_text_img": "shopify://shop_images/Frame_2085663566.svg",
@@ -723,7 +723,7 @@
             "icon_text_content": "All products are made from real fruits and vegetables. We NEVER use artificial ingredients."
           }
         },
-        "text_Xq4zzh": {
+        "text_bVidAP": {
           "type": "text",
           "settings": {
             "icon_text_img": "shopify://shop_images/Frame_2085663566_1.svg",
@@ -731,7 +731,7 @@
             "icon_text_content": "We believe you shouldn't suffer through anything. Healthy can (and should) taste great."
           }
         },
-        "text_XfqzYp": {
+        "text_tYegTF": {
           "type": "text",
           "settings": {
             "icon_text_img": "shopify://shop_images/Frame_2085663566_2.svg",
@@ -741,21 +741,20 @@
         }
       },
       "block_order": [
-        "text_9xJ3Wa",
-        "text_Xq4zzh",
-        "text_XfqzYp"
+        "text_FLCt3E",
+        "text_bVidAP",
+        "text_tYegTF"
       ],
-      "name": "Icon with text cards",
+      "name": "Icon with text cards V2",
       "settings": {
         "section_target": "",
         "bg_color": "#f5e2ff",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
-        "padding_top": "40",
-        "padding_bottom": "40",
+        "padding_top": "20",
+        "padding_bottom": "20",
         "padding_top_desk": "64",
         "padding_bottom_desk": "64",
-        "section_title_one": "",
         "section_title_two": "",
         "section_title_third": ""
       }
@@ -774,6 +773,6 @@
     "prod_faq_HyVha7",
     "prod_marquee_wQYbcB",
     "1773699189691acc94",
-    "prod_icon_text_fhM4cV"
+    "prod_icon_full_text_CnQJAd"
   ]
 }
