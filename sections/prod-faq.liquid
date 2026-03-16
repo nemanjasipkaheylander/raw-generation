@@ -87,6 +87,8 @@
   </div>
 </section>
 
+<script src='../assets/prod-faq.js'>
+
 {% schema %}
 {
   "name": "FAQ",
@@ -209,24 +211,3 @@
 }
 {% endschema %}
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const faqItems = document.querySelectorAll('.faq__item');
-
-    faqItems.forEach(item => {
-      const questionBtn = item.querySelector('.faq__question');
-
-      questionBtn.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-
-        faqItems.forEach(otherItem => {
-          otherItem.classList.remove('active');
-        });
-
-        if (!isActive) {
-          item.classList.add('active');
-        }
-      });
-    });
-  });
-</script>
