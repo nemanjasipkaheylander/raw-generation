@@ -20,9 +20,6 @@
     }
   }
 
-  /* ===========================
-     BASE — MOBILE FIRST
-  =========================== */
 
   .ingredients__inner {
     max-width: 1280px;
@@ -57,21 +54,13 @@
 
   .ingredients__icon {
     flex-shrink: 0;
-    width: 46px;
-    height: 46px;
-    border: 1.5px solid #9b51e0;
+    max-width: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .ingredients__icon img,
-  .ingredients__icon svg {
-    width: 24px;
-    height: 24px;
-    display: block;
-  }
 
   .ingredients__label {
     font-size: 11px;
@@ -93,11 +82,6 @@
     .ingredients__grid {
       grid-template-columns: repeat(4, 1fr);
       gap: 24px 32px;
-    }
-
-    .ingredients__icon {
-      width: 52px;
-      height: 52px;
     }
 
     .ingredients__label {
@@ -125,12 +109,6 @@
                 | image_url: width: 48
                 | image_tag: loading: 'lazy'
               }}
-            {% else %}
-              <!-- fallback circle icon -->
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#9b51e0" stroke-width="1.5"/>
-                <path d="M8 12l3 3 5-5" stroke="#9b51e0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
             {% endif %}
           </div>
           <span class="ingredients__label">{{ block.settings.label }}</span>
