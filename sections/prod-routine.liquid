@@ -1,4 +1,3 @@
-
 {% liquid
   assign section_target = section.settings.section_target
   assign bg_color = section.settings.bg_color
@@ -11,246 +10,240 @@
 %}
 
 {% style %}
-/* ===========================
-   ROUTINE SECTION
-=========================== */
-
-.routine {
-  overflow: hidden;
-}
-
-.l {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Header */
-.routine__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 28px;
-}
-
-.routine__title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.routine__purple {
-  color: #9b51e0;
-}
-
-/* Header right side: arrows + button */
-.routine__header-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.routine__nav-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: 1.5px solid #ccc;
-  border-radius: 50%;
-  background: #fff;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
-  flex-shrink: 0;
-}
-
-.routine__nav-btn:hover {
-  border-color: #9b51e0;
-  background: #f8f0ff;
-}
-
-.routine__nav-btn svg {
-  width: 16px;
-  height: 16px;
-  stroke: #1a1a1a;
-}
-
-.routine__cta-btn {
-  display: inline-block;
-  padding: 10px 24px;
-  background: #9b51e0;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.15s;
-  white-space: nowrap;
-}
-
-.routine__cta-btn:hover {
-  background: #7c3dbf;
-  transform: translateY(-1px);
-}
-
-/* Swiper wrapper */
-.routine__content-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Cards */
-.routine__card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  display: flex;
-  flex-direction: column;
-}
-
-.routine__image {
-  margin: 0;
-  aspect-ratio: 16 / 11;
-  overflow: hidden;
-}
-
-.routine__image img,
-.routine__image .routine_img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.routine__header-card {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Time badge */
-.routine__time {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #f5f0ff;
-  border: 1px solid #e5d6ff;
-  border-radius: 50px;
-  padding: 4px 10px 4px 8px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #1a1a1a;
-  width: fit-content;
-}
-
-.routine__time-icon {
-  display: flex;
-  align-items: center;
-}
-
-.routine_title {
-  font-size: 12px;
-  font-weight: 700;
-  color: #9b51e0;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.routine__content {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* ===========================
-   SWIPER OVERRIDES
-=========================== */
-
-/* Hide default Swiper arrows */
-.routine-swiper .swiper-button-prev,
-.routine-swiper .swiper-button-next {
-  display: none !important;
-}
-
-/* Pagination dots */
-.routine-swiper .swiper-pagination {
-  position: relative;
-  margin-top: 20px;
-  bottom: auto;
-}
-
-.routine-swiper .swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 1;
-  width: 8px;
-  height: 8px;
-  transition: background 0.2s, width 0.2s;
-  border-radius: 4px;
-}
-
-.routine-swiper .swiper-pagination-bullet-active {
-  background: #9b51e0;
-  width: 20px;
-}
-
-/* ===========================
-   MOBILE ADJUSTMENTS
-=========================== */
-@media (max-width: 767px) {
-  .routine__title {
-    font-size: 18px;
+  .routine {
+    overflow: hidden;
   }
 
-  /* On mobile: hide GET STARTED from header, show full-width below slider */
-  .routine__cta-btn-mobile {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    padding: 14px 24px;
-    border-radius: 50px;
+  .l {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header */
+  .routine__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .routine__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .routine__purple {
+    color: #9b51e0;
+  }
+
+  /* Header right side: arrows + button */
+  .routine__header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .routine__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #ccc;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    flex-shrink: 0;
+  }
+
+  .routine__nav-btn:hover {
+    border-color: #9b51e0;
+    background: #f8f0ff;
+  }
+
+  .routine__nav-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: #1a1a1a;
+  }
+
+  .routine__cta-btn {
+    display: inline-block;
+    padding: 10px 24px;
     background: #9b51e0;
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    border-radius: 50px;
     text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
   }
 
-  .routine__cta-btn-mobile:hover {
+  .routine__cta-btn:hover {
     background: #7c3dbf;
+    transform: translateY(-1px);
   }
 
-  /* Hide desktop CTA from header on mobile */
-  .routine__header-controls .routine__cta-btn {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .routine__title {
-    font-size: 26px;
+  /* Swiper wrapper */
+  .routine__content-wrapper {
+    position: relative;
+    overflow: hidden;
   }
 
-  /* Hide mobile CTA on desktop */
-  .routine__cta-btn-mobile {
-    display: none;
+  /* Cards */
+  .routine__card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
   }
-}
 
+  .routine__image {
+    margin: 0;
+    aspect-ratio: 16 / 11;
+    overflow: hidden;
+  }
+
+  .routine__image img,
+  .routine__image .routine_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .routine__header-card {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Time badge */
+  .routine__time {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f5f0ff;
+    border: 1px solid #e5d6ff;
+    border-radius: 50px;
+    padding: 4px 10px 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1a1a;
+    width: fit-content;
+  }
+
+  .routine__time-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .routine_title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #9b51e0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .routine__content {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  /* ===========================
+     SWIPER OVERRIDES
+  =========================== */
+
+  /* Hide default Swiper arrows */
+  .routine-swiper .swiper-button-prev,
+  .routine-swiper .swiper-button-next {
+    display: none !important;
+  }
+
+  /* Pagination dots */
+  .routine-swiper .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+    bottom: auto;
+  }
+
+  .routine-swiper .swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+    transition: background 0.2s, width 0.2s;
+    border-radius: 4px;
+  }
+
+  .routine-swiper .swiper-pagination-bullet-active {
+    background: #9b51e0;
+    width: 20px;
+  }
+
+  /* ===========================
+     MOBILE ADJUSTMENTS
+  =========================== */
+  @media (max-width: 767px) {
+    .routine__title {
+      font-size: 18px;
+    }
+
+    /* On mobile: hide GET STARTED from header, show full-width below slider */
+    .routine__cta-btn-mobile {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      padding: 14px 24px;
+      border-radius: 50px;
+      background: #9b51e0;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+    }
+
+    .routine__cta-btn-mobile:hover {
+      background: #7c3dbf;
+    }
+
+    /* Hide desktop CTA from header on mobile */
+    .routine__header-controls .routine__cta-btn {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .routine__title {
+      font-size: 26px;
+    }
+
+    /* Hide mobile CTA on desktop */
+    .routine__cta-btn-mobile {
+      display: none;
+    }
+  }
 {% endstyle %}
 
 <section class="{{ section.id }} routine" id="{{ section_target }}">
   <div class="l">
-
     <div class="routine__header">
       <h2 class="routine__title">
         {{ section.settings.section_title_one }}
@@ -273,9 +266,11 @@
         </button>
 
         {% if section.settings.section_button_url != blank %}
-          <a href="{{ section.settings.section_button_url }}"
-             title="{{ section.settings.section_button_text }}"
-             class="routine__cta-btn">
+          <a
+            href="{{ section.settings.section_button_url }}"
+            title="{{ section.settings.section_button_text }}"
+            class="routine__cta-btn"
+          >
             {{ section.settings.section_button_text }}
           </a>
         {% endif %}
@@ -288,7 +283,11 @@
         {% for block in section.blocks %}
           <div class="routine__card swiper-slide" {{ block.shopify_attributes }}>
             <figure class="routine__image">
-              {{ block.settings.routine_img | image_url: width: 320 | image_tag: class: 'routine_img', loading: 'lazy' }}
+              {{
+                block.settings.routine_img
+                | image_url: width: 320
+                | image_tag: class: 'routine_img', loading: 'lazy'
+              }}
             </figure>
             <div class="routine__header-card">
               <div class="routine__time">
@@ -306,8 +305,9 @@
                   </svg>
                 </div>
                 {{ block.settings.routine_time }}
-                <div class="routine_title">{{ block.settings.routine_title }}</div>
+
               </div>
+                              <div class="routine_title">{{ block.settings.routine_title }}</div>
               <div class="routine__content">
                 {{ block.settings.routine_text }}
               </div>
@@ -320,153 +320,154 @@
     </div>
 
     {% if section.settings.section_button_url != blank %}
-      <a href="{{ section.settings.section_button_url }}"
-         title="{{ section.settings.section_button_text }}"
-         class="routine__cta-btn-mobile">
+      <a
+        href="{{ section.settings.section_button_url }}"
+        title="{{ section.settings.section_button_text }}"
+        class="routine__cta-btn-mobile"
+      >
         {{ section.settings.section_button_text }}
       </a>
     {% endif %}
-
   </div>
 </section>
 
 {% schema %}
-  {
-    "name": "Routine",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Section Settings"
-      },
-      {
-        "type": "text",
-        "id": "section_target",
-        "label": "Section Target"
-      },
-      {
-        "type": "color",
-        "id": "bg_color",
-        "label": "Section background color"
-      },
-      {
-        "type": "color",
-        "id": "bg_gradient_1",
-        "label": "Section gradient color first"
-      },
-      {
-        "type": "color",
-        "id": "bg_gradient_2",
-        "label": "Section gradient color second"
-      },
-      {
-        "type": "text",
-        "id": "padding_top",
-        "label": "Section padding top - small screens"
-      },
-      {
-        "type": "text",
-        "id": "padding_bottom",
-        "label": "Section padding bottom - small screens"
-      },
-      {
-        "type": "text",
-        "id": "padding_top_desk",
-        "label": "Section padding top - large screens"
-      },
-      {
-        "type": "text",
-        "id": "padding_bottom_desk",
-        "label": "Section padding bottom - large screens"
-      },
-      {
-        "type": "header",
-        "content": "Section Content"
-      },
-      {
-        "type": "text",
-        "id": "section_title_one",
-        "label": "Enter title one"
-      },
-      {
-        "type": "text",
-        "id": "section_title_two",
-        "label": "Enter title two"
-      },
-      {
-        "type": "text",
-        "id": "section_button_text",
-        "label": "Enter button text"
-      },
-      {
-        "type": "url",
-        "id": "section_button_url",
-        "label": "Paste URL"
-      }
-    ],
-    "blocks": [
-      {
-        "name": "Routine",
-        "type": "text",
-        "settings": [
-          {
-            "type": "text",
-            "id": "routine_title",
-            "label": "Enter title"
-          },
-          {
-            "type": "text",
-            "id": "routine_time",
-            "label": "Enter time"
-          },
-          {
-            "type": "text",
-            "id": "routine_text",
-            "label": "Enter text"
-          },
-          {
-            "type": "image_picker",
-            "id": "routine_img",
-            "label": "Upload image"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Routine"
-      }
-    ]
-  }
+{
+  "name": "Routine",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_target",
+      "label": "Section Target"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section background color"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_1",
+      "label": "Section gradient color first"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_2",
+      "label": "Section gradient color second"
+    },
+    {
+      "type": "text",
+      "id": "padding_top",
+      "label": "Section padding top - small screens"
+    },
+    {
+      "type": "text",
+      "id": "padding_bottom",
+      "label": "Section padding bottom - small screens"
+    },
+    {
+      "type": "text",
+      "id": "padding_top_desk",
+      "label": "Section padding top - large screens"
+    },
+    {
+      "type": "text",
+      "id": "padding_bottom_desk",
+      "label": "Section padding bottom - large screens"
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "section_title_one",
+      "label": "Enter title one"
+    },
+    {
+      "type": "text",
+      "id": "section_title_two",
+      "label": "Enter title two"
+    },
+    {
+      "type": "text",
+      "id": "section_button_text",
+      "label": "Enter button text"
+    },
+    {
+      "type": "url",
+      "id": "section_button_url",
+      "label": "Paste URL"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Routine",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "routine_title",
+          "label": "Enter title"
+        },
+        {
+          "type": "text",
+          "id": "routine_time",
+          "label": "Enter time"
+        },
+        {
+          "type": "text",
+          "id": "routine_text",
+          "label": "Enter text"
+        },
+        {
+          "type": "image_picker",
+          "id": "routine_img",
+          "label": "Upload image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Routine"
+    }
+  ]
+}
 {% endschema %}
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.routine-swiper', {
-    direction: 'horizontal',
-    loop: false,
-    slidesPerView: 1.2,
-    spaceBetween: 20,
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.routine-swiper', {
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 1.2,
+      spaceBetween: 20,
 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-
-    navigation: {
-      nextEl: '.routine-next',
-      prevEl: '.routine-prev',
-    },
-
-    breakpoints: {
-      768: {
-        slidesPerView: 2.2,
-        spaceBetween: 30
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 40
-      }
-    }
+
+      navigation: {
+        nextEl: '.routine-next',
+        prevEl: '.routine-prev',
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 2.2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+      },
+    });
   });
-});
 </script>
