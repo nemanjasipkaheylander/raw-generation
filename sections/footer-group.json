@@ -74,65 +74,65 @@
         "text_UYfmEw": {
           "type": "text",
           "settings": {
-            "routine_title": "naslov",
-            "routine_time": "naslov",
-            "routine_text": "naslov",
-            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+            "routine_title": "WATER",
+            "routine_time": "Wake Up",
+            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
+            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
           }
         },
-        "text_yTz7F9": {
+        "text_at7LtE": {
           "type": "text",
           "settings": {
-            "routine_title": "naslov",
-            "routine_time": "naslov",
-            "routine_text": "naslov",
-            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+            "routine_title": "WATER",
+            "routine_time": "Wake Up",
+            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
+            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
           }
         },
-        "text_njPcrL": {
+        "text_FLxWBe": {
           "type": "text",
           "settings": {
-            "routine_title": "naslov",
-            "routine_time": "naslov",
-            "routine_text": "naslov",
-            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+            "routine_title": "WATER",
+            "routine_time": "Wake Up",
+            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
+            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
           }
         },
-        "text_tGWkRJ": {
+        "text_i9tCTR": {
           "type": "text",
           "settings": {
-            "routine_title": "naslov",
-            "routine_time": "naslov",
-            "routine_text": "naslov",
-            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+            "routine_title": "WATER",
+            "routine_time": "Wake Up",
+            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
+            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
           }
         },
-        "text_9fPbNE": {
+        "text_Whqbg8": {
           "type": "text",
           "settings": {
-            "routine_title": "naslov",
-            "routine_time": "naslov",
-            "routine_text": "naslov",
-            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+            "routine_title": "WATER",
+            "routine_time": "Wake Up",
+            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
+            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
           }
         },
-        "text_geJUpE": {
+        "text_4hm64D": {
           "type": "text",
           "settings": {
-            "routine_title": "naslov",
-            "routine_time": "naslov",
-            "routine_text": "naslov",
-            "routine_img": "shopify://shop_images/Frame_2087327425.png"
+            "routine_title": "WATER",
+            "routine_time": "Wake Up",
+            "routine_text": "Start your day with a tall glass of water and fiber-rich fruit to gently wake up your digestion. Yes, you can still enjoy your morning coffee—just keep it clean with black coffee or a splash of unsweetened plant milk.",
+            "routine_img": "shopify://shop_images/BAB-Rollover_AppleCelery-NoYacon-2.jpg"
           }
         }
       },
       "block_order": [
         "text_UYfmEw",
-        "text_yTz7F9",
-        "text_njPcrL",
-        "text_tGWkRJ",
-        "text_9fPbNE",
-        "text_geJUpE"
+        "text_at7LtE",
+        "text_FLxWBe",
+        "text_i9tCTR",
+        "text_Whqbg8",
+        "text_4hm64D"
       ],
       "name": "Routine",
       "settings": {
@@ -143,8 +143,8 @@
         "padding_bottom": 0,
         "padding_top_desk": 100,
         "padding_bottom_desk": 100,
-        "section_title_one": "naslov",
-        "section_title_two": "",
+        "section_title_one": "Your Cleanse",
+        "section_title_two": "Day Routine",
         "section_button_text": "test",
         "section_button_url": "#"
       }
