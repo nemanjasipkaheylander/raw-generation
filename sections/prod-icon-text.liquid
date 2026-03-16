@@ -46,7 +46,7 @@
                                  {{ block.settings.icon_text_img | image_url: width: 320 | image_tag: class: 'it_icon', loading: 'lazy' }}
                              </figure>
                              <h2 class="icon-text__title">{{ block.settings.icon_text_title }}</h2>
-                             <p class="icont-text__content">{{ block.settings.icon_text_content }}</p>
+                             <p class="icon-text__content">{{ block.settings.icon_text_content }}</p>
                        </div>
                  {% endfor %}
               </div>
@@ -94,7 +94,7 @@
     margin-bottom: 8px;
 }
 
-.icont-text__content {
+.icon-text__content {
     font-family: Jost;
     font-weight: 400;
     font-size: 16px;
