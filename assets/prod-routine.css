@@ -43,7 +43,7 @@
   .routine__header-wrapp {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 12px;
   }
 
   /* CTA — hidden on mobile */
@@ -161,6 +161,7 @@
     font-weight: 600;
     color: #EB51FF;
     box-shadow: 0 3px #EB51FF;
+    border-radius:5px;
     width: fit-content;
   }
 
