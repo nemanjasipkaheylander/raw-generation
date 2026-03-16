@@ -155,13 +155,14 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: #f5f0ff;
-    border: 1px solid #e5d6ff;
+    border: 1px solid #EB51FF;
     border-radius: 50px;
     padding: 4px 10px 4px 8px;
     font-size: 12px;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #EB51FF;
+        box-shadow: 0 3px #EB51FF;
+
     width: fit-content;
   }
 
