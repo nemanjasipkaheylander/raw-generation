@@ -1,3 +1,6 @@
+{{ '../assets/prod-ingredients.css' | asset_url | stylesheet_tag }}
+
+
 {% liquid
   assign section_target = section.settings.section_target
   assign padding_top_desk = section.settings.padding_top_desk
@@ -10,6 +13,7 @@
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
     overflow: hidden;
+
     font-family: "Jost", sans-serif;
   }
 
@@ -20,70 +24,6 @@
     }
   }
 
-
-  .ingredients__inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .ingredients__title {
-    font-size: 28px;
-    font-weight: 400;
-    color: #1a1a1a;
-    margin: 0 0 32px;
-    line-height: 1.3;
-  }
-
-  .ingredients__title span {
-    color: #9b51e0;
-        font-weight: 700;
-        }
-
-  .ingredients__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  .ingredients__item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .ingredients__icon {
-    flex-shrink: 0;
-    max-width: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-
-  .ingredients__label {
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #000;
-  }
-
-  @media (min-width: 768px) {
-    .ingredients__title {
-      font-size: 40px;
-      margin-bottom: 48px;
-    }
-
-    .ingredients__grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px 32px;
-    }
-
-    .ingredients__label {
-      font-size: 16px;
-    }
-  }
 {% endstyle %}
 
 <section class="ingredients-{{ section.id }}" id="{{ section_target }}">
