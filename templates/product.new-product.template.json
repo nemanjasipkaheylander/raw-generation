@@ -511,6 +511,81 @@
         "section_button_text_mob": "FIND YOUR PLAN",
         "section_button_url_mob": ""
       }
+    },
+    "prod_marquee_wQYbcB": {
+      "type": "prod-marquee",
+      "blocks": {
+        "logo_CCTw4K": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_63.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_6txMQB": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_64.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_Rfq3pW": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_67.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_yczWiz": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_68.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_wzRDrC": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_65.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_3BNgPK": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_66.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_zRTJtA": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/TheEveryGirl_300x300_1c63f27d-8cd3-44ad-8766-013527f2bab2.png",
+            "alt_text": "Publication logo"
+          }
+        }
+      },
+      "block_order": [
+        "logo_CCTw4K",
+        "logo_6txMQB",
+        "logo_Rfq3pW",
+        "logo_yczWiz",
+        "logo_wzRDrC",
+        "logo_3BNgPK",
+        "logo_zRTJtA"
+      ],
+      "name": "As Seen In",
+      "settings": {
+        "section_target": "",
+        "bg_gradient_1": "#ead5f5",
+        "bg_gradient_2": "#ead5f5",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_desk": 45,
+        "padding_bottom_desk": 45,
+        "speed": 30,
+        "label": "AS SEEN IN"
+      }
     }
   },
   "order": [
@@ -522,6 +597,7 @@
     "prod_icon_text_8VtVyA",
     "prod_routine_EPj6xp",
     "prod_table_7gN9nw",
-    "prod_faq_HyVha7"
+    "prod_faq_HyVha7",
+    "prod_marquee_wQYbcB"
   ]
 }
