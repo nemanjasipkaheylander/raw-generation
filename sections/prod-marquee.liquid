@@ -1,0 +1,325 @@
+{% style %}
+  .as-seen-in-{{ section.id }} {
+    background: linear-gradient(to bottom, {{ section.settings.bg_gradient_1 }}, {{ section.settings.bg_gradient_2 }});
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    overflow: hidden;
+    font-family: "Jost", sans-serif;
+  }
+
+  @media (min-width: 768px) {
+    .as-seen-in-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desk }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desk }}px;
+    }
+  }
+
+  /* ===========================
+     BASE — MOBILE FIRST
+  =========================== */
+
+  .as-seen-in__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .as-seen-in__label {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Marquee track */
+  .as-seen-in__marquee-wrap {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Fade edges */
+  .as-seen-in__marquee-wrap::before,
+  .as-seen-in__marquee-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .as-seen-in__marquee-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, {{ section.settings.bg_gradient_1 }}, transparent);
+  }
+
+  .as-seen-in__marquee-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, {{ section.settings.bg_gradient_2 }}, transparent);
+  }
+
+  .as-seen-in__track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: max-content;
+    animation: marquee-scroll {{ section.settings.speed }}s linear infinite;
+  }
+
+  .as-seen-in__track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .as-seen-in__logo-item {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  .as-seen-in__logo-item img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: opacity 0.2s, filter 0.2s;
+    padding: 0 28px;
+  }
+
+  .as-seen-in__logo-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  /* Placeholder logo */
+  .as-seen-in__placeholder {
+    height: 36px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .as-seen-in__placeholder-inner {
+    height: 28px;
+    width: 90px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+  }
+
+  /* Separator + between logos */
+  .as-seen-in__sep {
+    font-size: 16px;
+    font-weight: 300;
+    color: #1a1a1a;
+    opacity: 0.4;
+    flex-shrink: 0;
+    padding: 0 4px;
+  }
+
+  /* ===========================
+     TABLET+ (min-width: 768px)
+  =========================== */
+  @media (min-width: 768px) {
+    .as-seen-in__inner {
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+      padding: 0;
+    }
+
+    .as-seen-in__label {
+      font-size: 14px;
+      padding: 0 32px;
+      border-right: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .as-seen-in__logo-item img {
+      height: 44px;
+    }
+
+    .as-seen-in__placeholder {
+      height: 44px;
+    }
+
+    .as-seen-in__marquee-wrap::before,
+    .as-seen-in__marquee-wrap::after {
+      width: 80px;
+    }
+  }
+{% endstyle %}
+
+<section class="as-seen-in-{{ section.id }}" id="{{ section.settings.section_target }}">
+  <div class="as-seen-in__inner">
+
+    <div class="as-seen-in__label">{{ section.settings.label }}</div>
+
+    <div class="as-seen-in__marquee-wrap">
+      <div class="as-seen-in__track">
+
+        {% comment %} First pass {% endcomment %}
+        {% for block in section.blocks %}
+          <div class="as-seen-in__logo-item" {{ block.shopify_attributes }}>
+            {% if block.settings.logo != blank %}
+              {{ block.settings.logo | image_url: width: 300 | image_tag: loading: 'lazy', alt: block.settings.alt_text }}
+            {% else %}
+              <div class="as-seen-in__placeholder">
+                <div class="as-seen-in__placeholder-inner"></div>
+              </div>
+            {% endif %}
+          </div>
+          <span class="as-seen-in__sep">+</span>
+        {% endfor %}
+
+        {% comment %} Duplicate for seamless loop {% endcomment %}
+        {% for block in section.blocks %}
+          <div class="as-seen-in__logo-item">
+            {% if block.settings.logo != blank %}
+              {{ block.settings.logo | image_url: width: 300 | image_tag: loading: 'lazy', alt: block.settings.alt_text }}
+            {% else %}
+              <div class="as-seen-in__placeholder">
+                <div class="as-seen-in__placeholder-inner"></div>
+              </div>
+            {% endif %}
+          </div>
+          <span class="as-seen-in__sep">+</span>
+        {% endfor %}
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "As Seen In",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_target",
+      "label": "Section anchor ID"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_1",
+      "label": "Gradient top",
+      "default": "#e8d5ff"
+    },
+    {
+      "type": "color",
+      "id": "bg_gradient_2",
+      "label": "Gradient bottom",
+      "default": "#d8bcff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 20,
+      "label": "Padding top mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 20,
+      "label": "Padding bottom mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desk",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 80,
+      "label": "Padding top desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desk",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 80,
+      "label": "Padding bottom desktop"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 10,
+      "max": 150,
+      "step": 5,
+      "default": 30,
+      "label": "Scroll speed (seconds)"
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label text",
+      "default": "AS SEEN IN"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Logo",
+      "type": "logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt text",
+          "default": "Publication logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "As Seen In",
+      "blocks": [
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" }
+      ]
+    }
+  ]
+}
+{% endschema %}
