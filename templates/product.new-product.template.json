@@ -153,6 +153,7 @@
         "show_vendor": false,
         "show_review": true,
         "show_bestseler": true,
+        "show_free_app": true,
         "button_text": "Buy Now - Secure Checkout",
         "sold_out_text": "Sold Out",
         "show_quantity": false,
