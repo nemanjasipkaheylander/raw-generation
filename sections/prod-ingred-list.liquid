@@ -38,6 +38,7 @@
         </div>
         {% assign counter = 0 %}
           {% if section.blocks.size > 0 %}
+            <div class="ingredients-list__wrapper">
               <div class="ingredients-list__container">
                  {% for block in section.blocks %}
                        {% if counter < 4 %}
@@ -55,11 +56,11 @@
                  {% endfor %}
                    
               </div>
-                <div class="ingredients-list__main-img">
+              <div class="ingredients-list__main-img">
                     <figure class="ingredients-image">
                         {{ section.settings.main_img | image_url: width: 2000 | image_tag: class: 'main_img', loading: 'lazy' }}
                     </figure>
-                </div>
+              </div>
               <div class="ingredients-list__container">
                  {% for block in section.blocks %}
                     {% assign block_index = forloop.index %}
@@ -74,6 +75,7 @@
                     {% endif %}
                   {% endfor %}
               </div>
+            </div>
           {% endif %}
     </div>
 </section>
@@ -112,6 +114,18 @@ figure.ingredients-list__image {
     padding: 8px 16px 8px 8px;
     box-shadow: 0 1px 0 0 #000;
     max-width: fit-content;
+}
+.ingredients-list__container {
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+    position: absolute;
+    top: 81px;
+}
+
+.ingredients-list__container:last-of-type {
+    top: 0;
+    right: 0;
 }
 </style>
 
