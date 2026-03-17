@@ -49,7 +49,7 @@
            
           <div class="text-with-image__image-container">
              <figure class="text-with-image__image">
-                {{ section.settings.section_image| image_url: width: 320 | image_tag: class: 'main_author_img', loading: 'lazy' }}
+                {{ section.settings.section_image | image_url: width: 2000 | image_tag: class: 'main_author_img', loading: 'lazy' }}
              </figure>
           </div>
 
@@ -145,7 +145,7 @@
         "label": "Enter text"
       },
        {
-        "type": "text",
+        "type": "image_picker",
         "id": "section_image",
         "label": "Upload image"
       }
