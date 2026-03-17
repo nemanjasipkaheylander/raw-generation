@@ -54,9 +54,6 @@
              </figure>
           </div>
         </div>
-          <div class="faq__button-mob">
-                   <a href="{{ section.settings.section_button_url }}" title="{{ section.settings.section_button_text }}">{{ section.settings.section_button_text }}</a>
-          </div>
     </div>
 </section>
 
@@ -147,12 +144,24 @@ figure.text-with-image__image {
 
 .text-with-image__image-container {
     max-width: 565px;
+    width: 100%;
 }
 
 .text-with-image__button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+@media (max-width: 767px) {
+
+  .text-with-image__wrapper {
+    gap: 24px;
+    flex-direction: column-reverse;
+}
+.text-with-image__right-side {
+    justify-content: center;
+    text-align: center;
+}
 }
 </style>
 
