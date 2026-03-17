@@ -82,8 +82,8 @@
     display: block;
     filter: grayscale(100%);
     opacity: 0.75;
+    max-width: 150px;
     transition: opacity 0.2s, filter 0.2s;
-    padding: 0 28px;
   }
 
   .as-seen-in__logo-item img:hover {
