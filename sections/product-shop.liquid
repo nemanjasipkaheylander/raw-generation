@@ -378,7 +378,7 @@
                       >
                       <span class="custom-product-shop__variant-card-inner">
                         {%- if option_badge != blank -%}
-                          <span class="custom-product-shop__variant-badge">{{ option_badge }}</span>
+                          <span class="custom-product-shop__variant-badge {{ forloop.parentloop.index0 }}">{{ option_badge }}</span>
                         {%- endif -%}
 
                         <span class="custom-product-shop__variant-title">
