@@ -62,20 +62,17 @@
                 </div>
               <div class="ingredients-list__container">
                  {% for block in section.blocks %}
-                       {% if counter > 4 %}
-                        
-                       
-                       <div class="ingredients-list__card">
-                             <figure class="ingredients-list__image">
-                                 {{ block.settings.ingredients_list_img | image_url: width: 320 | image_tag: class: 'icon-list_img', loading: 'lazy' }}
-                             </figure>
-                             <h2 class="ingredients-list__title">{{ block.settings.ingredients_list_title }}</h2>
-                             
-                       </div>
-                       {% endif %}
-                       {% assign counter = counter |  plus: 3 %}
-                 {% endfor %}
-                   
+                    {% assign block_index = forloop.index %}
+                    
+                    {% if block_index > 3 %}
+                      <div class="ingredients-list__card">
+                        <figure class="ingredients-list__image">
+                          {{ block.settings.ingredients_list_img | image_url: width: 320 | image_tag: class: 'icon-list_img', loading: 'lazy' }}
+                        </figure>
+                        <h2 class="ingredients-list__title">{{ block.settings.ingsredietns_list_title }}</h2>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
               </div>
           {% endif %}
     </div>
