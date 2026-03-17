@@ -40,7 +40,7 @@
           {% if section.blocks.size > 0 %}
               <div class="ingredients-list__container">
                  {% for block in section.blocks %}
-                       {% if counter < 3 %}
+                       {% if counter < 4 %}
                         
                        
                        <div class="ingredients-list__card">
@@ -57,12 +57,12 @@
               </div>
                 <div class="ingredients-list__main-img">
                     <figure class="ingredients-image">
-                        {{ section.settings.main_img | image_url: width: 320 | image_tag: class: 'main_img', loading: 'lazy' }}
+                        {{ section.settings.main_img | image_url: width: 2000 | image_tag: class: 'main_img', loading: 'lazy' }}
                     </figure>
                 </div>
               <div class="ingredients-list__container">
                  {% for block in section.blocks %}
-                       {% if counter > 3 %}
+                       {% if counter > 4 %}
                         
                        
                        <div class="ingredients-list__card">
