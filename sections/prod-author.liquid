@@ -33,6 +33,7 @@
 
 <section class="{{ section.id }}" class="text-with-image" id="{{ section_target }}">
     <div class="l">
+        <div class="text-with-image__wrapper">
           <div class="text-with-image__right-side">
               <div class="text-with-image__tagline">{{ section.settings.section_tagline }}</div>
               <h2 class="text-with-image__title">{{ section.settings.section_title }}</h2>
@@ -52,7 +53,7 @@
                 {{ section.settings.section_image | image_url: width: 2000 | image_tag: class: 'main_author_img', loading: 'lazy' }}
              </figure>
           </div>
-
+        </div>
           <div class="faq__button-mob">
                    <a href="{{ section.settings.section_button_url }}" title="{{ section.settings.section_button_text }}">{{ section.settings.section_button_text }}</a>
           </div>
