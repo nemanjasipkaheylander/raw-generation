@@ -257,10 +257,11 @@
       "block_order": [
         "text_eHhqew"
       ],
+      "disabled": true,
       "name": "Custom review",
       "settings": {
         "section_target": "",
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "bg_gradient_1": "",
         "bg_gradient_2": "",
         "padding_top": "40",
