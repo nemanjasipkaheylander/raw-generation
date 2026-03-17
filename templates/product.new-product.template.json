@@ -82,8 +82,8 @@
         "upsell_product_wyHjiq": {
           "type": "upsell_product",
           "settings": {
-            "product": "1-day-cleanse",
-            "heading": "MORE METHOD™",
+            "product": "protein-method",
+            "heading": "",
             "description": "Post-cleanse workout support program.",
             "button_text": "Add To Cart"
           }
