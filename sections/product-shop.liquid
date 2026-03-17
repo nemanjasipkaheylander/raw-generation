@@ -506,6 +506,7 @@
         </div>
 
       {%- when 'accordion' -%}
+        {%- assign nutrition_facts = product.metafields.content.nutrition_facts.value -%}
       <details class="custom-product-shop__accordion" {% if block.settings.open_by_default %}open{% endif %} {{ block.shopify_attributes }}>
         <summary class="custom-product-shop__accordion-summary">
           <span>{{ block.settings.title }}</span>
