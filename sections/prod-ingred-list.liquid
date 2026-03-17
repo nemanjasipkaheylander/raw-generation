@@ -77,7 +77,7 @@
               </div>
               <div class="ingredients-list__main-img-mob">
                     <figure class="ingredients-image">
-                        {{ section.settings.main_img | image_url: width: 2000 | image_tag: class: 'main_img', loading: 'lazy' }}
+                        {{ section.settings.main_img_mob | image_url: width: 2000 | image_tag: class: 'main_img', loading: 'lazy' }}
                     </figure>
               </div>
             </div>
@@ -284,7 +284,12 @@ h2.ingredients-list__title {
       {
         "type": "image_picker",
         "id": "main_img",
-        "label": "Upload icon"
+        "label": "Upload Image Desk"
+        },
+        {
+        "type": "image_picker",
+        "id": "main_img_mob",
+        "label": "Upload Image Mob"
         }
     ],
     "blocks": [
