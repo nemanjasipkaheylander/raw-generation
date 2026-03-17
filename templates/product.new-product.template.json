@@ -942,7 +942,8 @@
         "section_title_one": "What’s",
         "section_title_two": "Not",
         "section_title_third": "in Any of Our Products",
-        "main_img": "shopify://shop_images/Frame_2087327486_1.png"
+        "main_img": "shopify://shop_images/Frame_2087327486_1.png",
+        "main_img_mob": "shopify://shop_images/Frame_2087327486_2.png"
       }
     }
   },
