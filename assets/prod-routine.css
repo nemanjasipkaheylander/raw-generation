@@ -136,12 +136,13 @@
     border:1px solid #B1AEAE;
     display: flex;
     flex-direction: column;
+    padding: 16px;
   }
 
   .routine__image {
     margin: 0;
-    aspect-ratio: 16 / 11;
     overflow: hidden;
+    border-radius: 8px;
   }
 
   .routine__image img,
@@ -153,7 +154,7 @@
   }
 
   .routine__header-card {
-    padding: 16px;
+    padding: 16px 0px;
     display: flex;
     flex-direction: column;
     gap: 10px;
