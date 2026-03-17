@@ -35,7 +35,7 @@
         <h2 class="logos__title">{{ section.settings.logos_text }}</h2>
         {% for block in section.blocks %}
             <div class="logos__image-container">
-                <figure class="logos__image">{{ block.settings.logos | image_url: width: 320 | image_tag: class: 'logos', loading: 'lazy' }}</figure>
+                <figure class="logos__image">{{ block.settings.logos | image_url: width: 2000 | image_tag: class: 'logos', loading: 'lazy' }}</figure>
                 <div class="logos__after">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 0L12.6958 11.3042L24 12L12.6958 12.6958L12 24L11.3042 12.6958L0 12L11.3042 11.3042L12 0Z" fill="black"/>
