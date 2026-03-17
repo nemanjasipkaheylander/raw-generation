@@ -94,6 +94,22 @@ h2.icon-list__title {
     text-align: center;
     color: #000;
 }
+
+@media (max-width: 767px) {
+  .icon-list__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 4 equal columns */
+    gap: 20px;
+}
+h2.icon-list__title {
+    font-size: 13px;
+}
+h2.title-icon-list {
+    font-size: 28px;
+}
+.icon-list__title-container {margin-bottom: 32px;}
+
+}
 </style>
 
 {% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
