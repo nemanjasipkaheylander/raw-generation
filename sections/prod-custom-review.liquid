@@ -34,7 +34,7 @@
 <section class="{{ section.id }}" class="custom-review" id="{{ section_target }}">
     <div class="l">
           <div class="custom-review__section-header">
-              <h2 class="custom-review__title">{{ section.settings.section_title_one }} <span class="routine__purple">{{ section.settings.section_title_two }}</span> <span>{{ section.settings.section_title_three }}</span></h2>
+              <h2 class="custom-review__title">{{ section.settings.section_title_one }} <span class="purple">{{ section.settings.section_title_two }}</span> <span>{{ section.settings.section_title_three }}</span></h2>
                <!-- Desktop: arrows + CTA in header -->
               <div class="swiper-navigation-wrapper swiper-nav-desk">
                 <div class="review-button-prev">
@@ -209,6 +209,10 @@ document.addEventListener('DOMContentLoaded', function () {
 .review-button-next.swiper-button-disabled
  {
     filter: grayscale(1);
+}
+.custom-review__title .purple {
+  color: #9b51e0;
+    font-weight: 700;
 }
 .custo-review__text {
     font-family: "Jost", sans-serif;
