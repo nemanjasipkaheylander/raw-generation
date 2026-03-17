@@ -41,7 +41,9 @@
         font-weight: 700;
 
   }
-
+.routine__time-icon svg {
+    fill: transparent;
+}
   .routine__header-wrapp {
     display: flex;
     align-items: center;
