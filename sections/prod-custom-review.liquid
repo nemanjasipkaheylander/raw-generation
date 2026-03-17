@@ -144,10 +144,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateButtonsRev() {
     prevBtnsRev.forEach(btn => {
-      btn.classList.toggle('swiper-button-disabled', swiper.isBeginning);
+      btn.classList.toggle('swiper-button-disabled', swiperRev.isBeginning);
     });
     nextBtnsRev.forEach(btn => {
-      btn.classList.toggle('swiper-button-disabled', swiper.isEnd);
+      btn.classList.toggle('swiper-button-disabled', swiperRev.isEnd);
     });
   }
 
