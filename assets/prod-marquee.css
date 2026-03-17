@@ -73,6 +73,7 @@
     align-items: center;
     gap: 0;
     flex-shrink: 0;
+    width: 200px;
   }
 
   .as-seen-in__logo-item img {
