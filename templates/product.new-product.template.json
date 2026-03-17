@@ -759,6 +759,28 @@
         "section_title_two": "",
         "section_title_third": ""
       }
+    },
+    "prod_author_FRgKKB": {
+      "type": "prod-author",
+      "name": "Text with image",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#FFFFFF",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_tagline": "Meet Lisa Testa, M.S.",
+        "section_title": "Chief Nutrition Officer& Head of Product Development",
+        "section_content_one": "I’ve been a Holistic Nutritionist since 2008, supporting clients in finding sustainable and balanced approaches to nutrition. After struggling with my own weight for over 10 years, I realized I didn’t need a “diet” at all, I just needed to understand how to nourish my body. Long-term restrictive approaches can be hard to maintain and often leave people feeling frustrated. My focus is on creating healthy habits that are realistic, flexible and supportive of overall wellbeing.",
+        "section_content_two": "That’s why Raw Generation programs are so effective. They are designed to give your body the nutrition it needs in a way that works, so you can feel more comfortable in your own skin.",
+        "section_button_text": "Which Solution Is Perfect For Me?",
+        "section_button_url": "#",
+        "section_after_button": "Take the 60-second quiz",
+        "section_image": ""
+      }
     }
   },
   "order": [
@@ -774,6 +796,7 @@
     "prod_faq_HyVha7",
     "prod_marquee_wQYbcB",
     "1773699189691acc94",
-    "prod_icon_full_text_CnQJAd"
+    "prod_icon_full_text_CnQJAd",
+    "prod_author_FRgKKB"
   ]
 }
