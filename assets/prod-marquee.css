@@ -56,7 +56,7 @@
     align-items: center;
     gap: 0;
     width: max-content;
-    animation: marquee-scroll {{ section.settings.speed }}s linear infinite;
+    animation: marquee-scroll 30s linear infinite;
   }
 
   .as-seen-in__track:hover {
