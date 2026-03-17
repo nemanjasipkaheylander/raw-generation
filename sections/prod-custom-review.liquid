@@ -103,6 +103,60 @@
     </div>
 </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.swiper-reviews', {
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+
+    breakpoints: {
+      768: {
+        slidesPerView: 2.2,
+        spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 3.2,
+        spaceBetween: 24,
+      },
+    },
+  });
+
+  const prevBtns = document.querySelectorAll('.review-button-prev');
+  const nextBtns = document.querySelectorAll('.review-button-next');
+
+  function updateButtons() {
+    prevBtns.forEach(btn => {
+      btn.classList.toggle('swiper-button-disabled', swiper.isBeginning);
+    });
+    nextBtns.forEach(btn => {
+      btn.classList.toggle('swiper-button-disabled', swiper.isEnd);
+    });
+  }
+
+  prevBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      swiper.slidePrev();
+      updateButtons();
+    });
+  });
+
+  nextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      swiper.slideNext();
+      updateButtons();
+    });
+  });
+
+  // Inicijalno stanje
+  updateButtons();
+});
+
+</script>
+
+
+
 {% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
 
 <style>
