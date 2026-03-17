@@ -781,6 +781,91 @@
         "section_after_button": "Take the 60-second quiz",
         "section_image": "shopify://shop_images/image_75_2_1.png"
       }
+    },
+    "prod_icon_list_6Q7HyG": {
+      "type": "prod-icon-list",
+      "blocks": {
+        "text_kjMGAh": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12795_8f61e8ba-47c1-4a9c-9ec6-30baa406ee99.svg",
+            "icon_list_title": "100% Plant-based"
+          }
+        },
+        "text_y6mnfb": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12791.svg",
+            "icon_list_title": "Gluten-free"
+          }
+        },
+        "text_mejMXY": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12793.svg",
+            "icon_list_title": "Non-GMO"
+          }
+        },
+        "text_nFYREP": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12794.svg",
+            "icon_list_title": "Vegan"
+          }
+        },
+        "text_maFtwm": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12791.svg",
+            "icon_list_title": "Grain-free"
+          }
+        },
+        "text_UQfxmA": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Clip_path_group_1.svg",
+            "icon_list_title": "Soy-free"
+          }
+        },
+        "text_nxn3FW": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12794_1.svg",
+            "icon_list_title": "Kosher"
+          }
+        },
+        "text_jGdtcn": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12794_2.svg",
+            "icon_list_title": "Halal Certified"
+          }
+        }
+      },
+      "block_order": [
+        "text_kjMGAh",
+        "text_y6mnfb",
+        "text_mejMXY",
+        "text_nFYREP",
+        "text_maFtwm",
+        "text_UQfxmA",
+        "text_nxn3FW",
+        "text_jGdtcn"
+      ],
+      "name": "Icon list",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#f5e2ff",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one": "We Believe in",
+        "section_title_two": "100% Ingredient",
+        "section_title_third": "Transparency"
+      }
     }
   },
   "order": [
@@ -797,6 +882,7 @@
     "prod_marquee_wQYbcB",
     "1773699189691acc94",
     "prod_icon_full_text_CnQJAd",
-    "prod_author_FRgKKB"
+    "prod_author_FRgKKB",
+    "prod_icon_list_6Q7HyG"
   ]
 }
