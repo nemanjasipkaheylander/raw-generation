@@ -49,9 +49,9 @@
                                 <rect width="14" height="14" rx="7" fill="#A200F9"/>
                                 <path d="M4 7.33333L5.875 9L10 5" stroke="#FEECD5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-
+                              <div class="custom-review__verified">{{ block.settings.review_verified }}</div>
                             </div>
-                            <div class="custom-review__verified">{{ block.settings.review_verified }}</div>
+                            
                             
                          </div> 
                          <div class="custo-review__content">
@@ -151,6 +151,10 @@ figure.custom-review__footer-image {
     border-radius: 8px;
     width: 240px;
     height: 280px;
+}
+.custom-review__verified-icon {
+  display: flex;
+  align-items: center;
 }
 </style>
 
