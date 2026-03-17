@@ -75,6 +75,11 @@
                     {% endif %}
                   {% endfor %}
               </div>
+              <div class="ingredients-list__main-img-mob">
+                    <figure class="ingredients-image">
+                        {{ section.settings.main_img | image_url: width: 2000 | image_tag: class: 'main_img', loading: 'lazy' }}
+                    </figure>
+              </div>
             </div>
           {% endif %}
     </div>
@@ -156,7 +161,9 @@ figure.ingredients-list__image {
 .ingredients-list__container:last-of-type .ingredients-list__card:nth-child(4) {
     margin-left: 0;
 }
-
+.ingredients-list__main-img-mob {
+  display: none;
+}
 @media (max-width: 1200px) {
      h2.title-ingredients-list {
     font-size: 28px;
@@ -168,6 +175,12 @@ figure.ingredients-list__image {
     align-items: center;
     gap: 10px;
     position: unset;
+}
+.ingredients-list__main-img {
+  display: none;
+}
+.ingredients-list__main-img-mob {
+  display: block;
 }
 }
 </style>
