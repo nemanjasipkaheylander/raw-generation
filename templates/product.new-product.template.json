@@ -252,10 +252,70 @@
             "review_type": "Skinny Cleansea",
             "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.png"
           }
+        },
+        "text_QjVATE": {
+          "type": "text",
+          "settings": {
+            "review_author": "Brandy M.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"This cleanse was a nice reset to get me back on track from the holidays. The juices taste really good. I love them so much that I decided to subscribe monthly.\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_2.png",
+            "review_type": "Skinny Cleansea",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.png"
+          }
+        },
+        "text_WdzKPU": {
+          "type": "text",
+          "settings": {
+            "review_author": "Felicia A.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"I am thrilled that the Raw Generation protein cleanse is so tasty! I particularly like that they use plant protein and vegan ingredients. I have a dairy sensitivity and whey protein sensitivity that keeps me from other protein and cleanse products. I will order again and for longer!\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_3.png",
+            "review_type": "Protein Cleanse",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1_1.png"
+          }
+        },
+        "text_7tUQrC": {
+          "type": "text",
+          "settings": {
+            "review_author": "Anonymous",
+            "review_verified": "Verified Customer",
+            "review_text": "\"Purchased the 3 day protein cleanse and every juice and smoothie tasted great. Very easy cleanse to follow.\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_4.png",
+            "review_type": "Protein Cleanse",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1_1.png"
+          }
+        },
+        "text_ygBc6d": {
+          "type": "text",
+          "settings": {
+            "review_author": "Joanie B.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"Love all of the juices, every one has a different flavor and all of them are wonderful. If you're thinking about buying Raw Generation, yes you should. They are so yummy.\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_5.png",
+            "review_type": "Company Review",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1_2.png"
+          }
+        },
+        "text_W4iBz4": {
+          "type": "text",
+          "settings": {
+            "review_author": "Denise M",
+            "review_verified": "Verified Customer",
+            "review_text": "\"I just love Raw Generation Juices! I can just reach into my fridge and grab a juice or smoothie and drink them without a whole time-consuming prep. I reach for something good instead of not. I would highly recommend them.\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_6.png",
+            "review_type": "Company Review",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1_2.png"
+          }
         }
       },
       "block_order": [
-        "text_eHhqew"
+        "text_eHhqew",
+        "text_QjVATE",
+        "text_WdzKPU",
+        "text_7tUQrC",
+        "text_ygBc6d",
+        "text_W4iBz4"
       ],
       "name": "Custom review",
       "settings": {
