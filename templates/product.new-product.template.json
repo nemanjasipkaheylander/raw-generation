@@ -672,6 +672,7 @@
         "feature_yq9NJr",
         "feature_zHcEBc"
       ],
+      "disabled": true,
       "name": "Cleanse Companion",
       "settings": {
         "background_color": "#ffffff",
