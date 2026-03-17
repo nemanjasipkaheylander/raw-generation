@@ -239,6 +239,39 @@
         "main_img_mob": "shopify://shop_images/Frame_2087327486_2.png"
       }
     },
+    "prod_custom_review_EnWCCW": {
+      "type": "prod-custom-review",
+      "blocks": {
+        "text_eHhqew": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"The drinks were filling, I loved how they were set up for you to take, and they tasted delicious! I highly recommend this juice company, and I will tell everyone I run into about it!!\"",
+            "review_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.png",
+            "review_type": "Skinny Cleansea",
+            "review_type_img": "shopify://shop_images/image_6487327_1.jpg_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_eHhqew"
+      ],
+      "name": "Custom review",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#FFFFFF",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one": "What",
+        "section_title_two": "Our",
+        "section_title_three": "Customers Say"
+      }
+    },
     "prod_icon_text_8VtVyA": {
       "type": "prod-icon-text",
       "blocks": {
@@ -954,6 +987,7 @@
     "shogun-optimizer",
     "product_shop_ALTj8Y",
     "prod_ingred_list_MbmUXc",
+    "prod_custom_review_EnWCCW",
     "prod_icon_text_8VtVyA",
     "prod_routine_EPj6xp",
     "prod_table_7gN9nw",
