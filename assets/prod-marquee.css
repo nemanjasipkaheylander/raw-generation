@@ -56,7 +56,7 @@
     align-items: center;
     gap: 0;
     width: max-content;
-    animation: marquee-scroll 30s linear infinite;
+    animation: marquee-scroll 60s linear infinite;
   }
 
   .as-seen-in__track:hover {
@@ -73,6 +73,7 @@
     align-items: center;
     gap: 0;
     flex-shrink: 0;
+    justify-content: center;
     width: 200px;
   }
 
