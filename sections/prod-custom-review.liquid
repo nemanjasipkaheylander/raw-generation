@@ -37,7 +37,8 @@
               <h2 class="custom-review__title">{{ section.settings.section_title_one }} <span class="routine__purple">{{ section.settings.section_title_two }}</span> <span>{{ section.settings.section_title_three }}</span></h2>
                
          </div> 
-         <div class="custom-review__content-wrapper">
+         <div class="custom-review__content-wrapper swiper swiper-reviews">
+           <div class="swiper-wrapper">
              {% for block in section.blocks %}
                   <div class="custom-review__card">
                        <div class="custom-review__left-side">
@@ -81,6 +82,7 @@
                       </div>
                   </div>
              {% endfor %}
+            </div>
          </div>
        
     </div>
