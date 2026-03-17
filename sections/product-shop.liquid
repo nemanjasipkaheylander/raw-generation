@@ -506,17 +506,47 @@
         </div>
 
       {%- when 'accordion' -%}
-        <details class="custom-product-shop__accordion" {% if block.settings.open_by_default %}open{% endif %} {{ block.shopify_attributes }}>
-          <summary class="custom-product-shop__accordion-summary">
-            <span>{{ block.settings.title }}</span>
-            <span class="custom-product-shop__accordion-icon">+</span>
-          </summary>
+      <details class="custom-product-shop__accordion" {% if block.settings.open_by_default %}open{% endif %} {{ block.shopify_attributes }}>
+        <summary class="custom-product-shop__accordion-summary">
+          <span>{{ block.settings.title }}</span>
+          <span class="custom-product-shop__accordion-icon">+</span>
+        </summary>
+        
+        {% if block.settings.title contains 'Flavors' or block.settings.title contains 'Ingredients' or block.settings.title contains 'Nutrition Facts' %}
+          <div class="accordion__content body-font" style="overscroll-behavior-x: contain;overflow-x: auto;gap: 2rem;display: flex;">
+            {% for metaobject in nutrition_facts %}
+              {% assign alt = metaobject.title | escape | append: ' nutrition facts' %}
+              <div class="w-full shrink-0 snap-start{% if nutrition_facts.count > 1 %} max-w-sm{% endif %}">
+                <h4 class="m-0 text-base font-normal">{{ metaobject.title }}</h4>
+                {% if metaobject.subtitle.value %}
+                  <p class="m-0 text-caps-sm ">{{ metaobject.subtitle }}</p>
+                {% endif %}
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                  {% if metaobject.description.value %}
+                    <div class="text-sm rte">{{ metaobject.description | metafield_tag }}</div>
+                  {% endif %}
+                  {{
+                    metaobject.image.value
+                    | image_url: width: 800
+                    | image_tag:
+                      loading: 'lazy',
+                      sizes: '200px, (min-width: 800px) 400px, (min-width: 1600px) 800px',
+                      widths: '200, 400, 800',
+                      alt: alt
+                  }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
           <div class="custom-product-shop__accordion-content rte">
             {{ block.settings.content }}
           </div>
-        </details>
+        {% endif %}
+      </details>
 
 
+         
         {%- when 'upsell_product' -%}
   {%- assign upsell_product = block.settings.product -%}
   {%- if upsell_product != blank -%}
