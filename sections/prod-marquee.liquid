@@ -29,7 +29,7 @@
         {% for block in section.blocks %}
           <div class="as-seen-in__logo-item" {{ block.shopify_attributes }}>
             {% if block.settings.logo != blank %}
-              {{ block.settings.logo | image_url: width: 300 | image_tag: loading: 'lazy', alt: block.settings.alt_text }}
+              {{ block.settings.logo | image_url: width: 2000 | image_tag: loading: 'lazy', alt: block.settings.alt_text }}
             {% else %}
               <div class="as-seen-in__placeholder">
                 <div class="as-seen-in__placeholder-inner"></div>
@@ -43,7 +43,7 @@
         {% for block in section.blocks %}
           <div class="as-seen-in__logo-item">
             {% if block.settings.logo != blank %}
-              {{ block.settings.logo | image_url: width: 300 | image_tag: loading: 'lazy', alt: block.settings.alt_text }}
+              {{ block.settings.logo | image_url: width: 2000 | image_tag: loading: 'lazy', alt: block.settings.alt_text }}
             {% else %}
               <div class="as-seen-in__placeholder">
                 <div class="as-seen-in__placeholder-inner"></div>
