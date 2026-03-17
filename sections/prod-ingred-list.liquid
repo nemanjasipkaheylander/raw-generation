@@ -61,7 +61,7 @@
                         {{ section.settings.main_img | image_url: width: 2000 | image_tag: class: 'main_img', loading: 'lazy' }}
                     </figure>
               </div>
-              <div class="ingredients-list__container">
+              <div class="ingredients-list__container ingredients-list__container-sescond">
                  {% for block in section.blocks %}
                     {% assign block_index = forloop.index %}
                     
@@ -137,7 +137,7 @@ h2.ingredients-list__title {
     left: 138px;
 }
 
-.ingredients-list__container:nth-of-type(2){
+.ingredients-list__container-sescond{
     top: 55px;
     right: 96px;
     left: unset;
@@ -154,19 +154,19 @@ h2.ingredients-list__title {
     margin-left: 75px;
 }
 
-.ingredients-list__container:last-of-type .ingredients-list__card:nth-child(1) {
+.ingredients-list__container-sescond .ingredients-list__card:nth-child(1) {
     margin-left: 60px;
 }
 
-.ingredients-list__container:last-of-type .ingredients-list__card:nth-child(2) {
+.ingredients-list__container-sescond .ingredients-list__card:nth-child(2) {
     margin-left: 70px;
 }
 
-.ingredients-list__container:last-of-type .ingredients-list__card:nth-child(3) {
+.ingredients-list__container-sescond .ingredients-list__card:nth-child(3) {
     margin-left: 0;
 }
 
-.ingredients-list__container:last-of-type .ingredients-list__card:nth-child(4) {
+.ingredients-list__container-sescond .ingredients-list__card:nth-child(4) {
     margin-left: 0;
 }
 .ingredients-list__main-img-mob {
@@ -198,11 +198,11 @@ h2.ingredients-list__title {
     margin-left: 0px;
 }
 
-.ingredients-list__container:last-of-type .ingredients-list__card:nth-child(1) {
+.ingredients-list__container-sescond .ingredients-list__card:nth-child(1) {
     margin-left: 0px;
 }
 
-.ingredients-list__container:last-of-type .ingredients-list__card:nth-child(2) {
+.ingredients-list__container-sescond .ingredients-list__card:nth-child(2) {
     margin-left: 0px;
 }
 }
