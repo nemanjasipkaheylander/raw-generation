@@ -80,8 +80,6 @@
     width: auto;
     object-fit: contain;
     display: block;
-    filter: grayscale(100%);
-    opacity: 0.75;
     max-width: 150px;
     transition: opacity 0.2s, filter 0.2s;
   }
@@ -110,12 +108,7 @@
 
   /* Separator + between logos */
   .as-seen-in__sep {
-    font-size: 16px;
-    font-weight: 300;
-    color: #1a1a1a;
-    opacity: 0.4;
-    flex-shrink: 0;
-    padding: 0 4px;
+   
   }
 
   /* ===========================
