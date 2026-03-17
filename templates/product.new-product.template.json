@@ -945,6 +945,34 @@
         "label": "AS SEEN IN"
       }
     },
+    "rich_text_DrkLMT": {
+      "type": "rich-text",
+      "blocks": {
+        "text_BjAxTP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>These statements reflect individual customer experiences. Results may vary and are not guaranteed. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>",
+            "richtext_heading_style": "section-heading",
+            "text_style": "body-font"
+          }
+        }
+      },
+      "block_order": [
+        "text_BjAxTP"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "center_text": true,
+        "content_width": "narrow",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "background-3",
+        "section_framing": "disable",
+        "top_spacing": 1,
+        "bottom_spacing": 0
+      }
+    },
     "1773699189691acc94": {
       "type": "apps",
       "blocks": {
@@ -982,7 +1010,6 @@
       "block_order": [
         "reviews_io_reviewsio_polaris_WA4tKT"
       ],
-      "disabled": true,
       "settings": {
         "use_margins": true,
         "grid_style": "alternative",
@@ -1057,6 +1084,7 @@
     "prod_icon_list_6Q7HyG",
     "prod_faq_HyVha7",
     "prod_marquee_wQYbcB",
+    "rich_text_DrkLMT",
     "1773699189691acc94",
     "prod_icon_full_text_CnQJAd"
   ]
