@@ -27,7 +27,7 @@
                       <div class="text-label">Best Seller</div>
                    </div>
                 {% endif %}
-                {% if section.settings.show_free_app %}
+                {% comment %} {% if section.settings.show_free_app %}
                 <div class="image-label-second">
                   <div class="label-icon">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@
                   </div>
                   <div class="text-label">free app included</div>
                 </div>
-            {% endif %}
+            {% endif %} {% endcomment %}
           {%- if product.media.size > 0 -%}
             <div class="custom-product-shop__media-stage">
               <button
