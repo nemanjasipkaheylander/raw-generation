@@ -516,6 +516,39 @@
           </div>
         </details>
 
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'testimonial' -%}
+            <div class="custom-product-shop__testimonial custom-product-shop__testimonial-mob" {{ block.shopify_attributes }}>
+              <div class="custom-product-shop__testimonial-avatar">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 120 }}"
+                    alt="{{ block.settings.name | escape }}"
+                    loading="lazy"
+                    width="56"
+                    height="56"
+                  >
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+              <div class="custom-product-shop__testimonial-content">
+                {%- if block.settings.text != blank -%}
+                  <div class="custom-product-shop__testimonial-text">{{ block.settings.text }}</div>
+                {%- endif -%}
+                <div class="custom-product-shop__testimonial-meta">
+                  {%- if block.settings.name != blank -%}
+                    <strong>{{ block.settings.name }}</strong>
+                  {%- endif -%}
+                  {%- if block.settings.meta != blank -%}
+                    <span>{{ block.settings.meta }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+
         {%- when 'upsell_product' -%}
   {%- assign upsell_product = block.settings.product -%}
   {%- if upsell_product != blank -%}
