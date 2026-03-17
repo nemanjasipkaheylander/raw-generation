@@ -1636,7 +1636,9 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
+  .custom-product-shop__testimonial.custom-product-shop__testimonial-mob {
+    display: none;
+}
 @media screen and (max-width: 749px) {
   .custom-product-shop__upsell-card {
     grid-template-columns: 1fr;
@@ -1706,6 +1708,18 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
   .image-label-second .text-label {
     font-size: 12px;
   }
+  .custom-product-shop__testimonial {
+    display: none;
+  }
+  .custom-product-shop__testimonial.custom-product-shop__testimonial-mob {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.custom-product-shop__info-col {
+    position: relative;
+    padding-bottom: 220px;
+}
   .image-label {
     width: fit-content;
     height: 28px;
