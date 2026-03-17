@@ -83,6 +83,41 @@
 
 {% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
 
+<style>
+  h2.title-ingredients-list {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.4;
+    text-align: center;
+    color: #000;
+}
+
+h2.title-ingredients-list .purpple {
+    font-weight: 700;
+    color: #a548d8;
+}
+
+.ingredients-list__title-container {
+    margin-bottom: 32px;
+}
+
+figure.ingredients-list__image {
+    max-width: 32px;
+}
+
+.ingredients-list__card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #000;
+    border-radius: 500px;
+    padding: 8px 16px 8px 8px;
+    box-shadow: 0 1px 0 0 #000;
+}
+</style>
+
+
 {% schema %}
   {
     "name": "Ingredients list",
