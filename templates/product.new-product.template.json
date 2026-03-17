@@ -618,7 +618,9 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_desk": 65,
-        "padding_bottom_desk": 65
+        "padding_bottom_desk": 65,
+        "section_button_text": "SHOP NOW",
+        "section_button_url": "#"
       }
     },
     "cleanse_companion_D6MenC": {
