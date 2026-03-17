@@ -923,6 +923,7 @@
       "block_order": [
         "reviews_io_reviewsio_polaris_WA4tKT"
       ],
+      "disabled": true,
       "settings": {
         "use_margins": true,
         "grid_style": "alternative",
