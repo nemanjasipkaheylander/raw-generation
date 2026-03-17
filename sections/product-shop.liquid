@@ -516,7 +516,6 @@
           </div>
         </details>
 
-        {%- for block in section.blocks -%}
           {%- if block.type == 'testimonial' -%}
             <div class="custom-product-shop__testimonial custom-product-shop__testimonial-mob" {{ block.shopify_attributes }}>
               <div class="custom-product-shop__testimonial-avatar">
@@ -547,7 +546,6 @@
               </div>
             </div>
           {%- endif -%}
-        {%- endfor -%}
 
         {%- when 'upsell_product' -%}
   {%- assign upsell_product = block.settings.product -%}
