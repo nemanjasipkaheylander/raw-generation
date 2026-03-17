@@ -313,26 +313,12 @@
                             </span>
                         {% endfor %}
                     {% endif %}
-                    {% if settings.show_badge_sale %}
-                        {% if card_product.available and card_product.selected_or_first_available_variant.compare_at_price > card_product.selected_or_first_available_variant.price %}
-                            {% liquid 
-                                assign target = card_product                              
-                                if settings.show_selected_variant_value == true
-                                    assign target = card_product.selected_or_first_available_variant
-                                endif
 
-                                case settings.sale_badge_style
-                                    when 'percentage'
-                                        assign discount = target.compare_at_price | minus: target.price 
-                                        assign discount_percent = discount | times: 100 | divided_by: target.compare_at_price
-                                        assign sale_badge = discount_percent | round | prepend: '-' | append: '%'
-                                    when 'text'
-                                        assign sale_badge = 'products.product.badges.sale_badge' | t
-                                endcase
-                            %}
-                            <span {% if settings.sale_badge_style == 'percentage' %}dir="ltr"{% endif %} class="card__badges-item card__badges-item--sale {% if settings.make_badges_transparent %}card__badges-item--transparent{% endif %}">{{ sale_badge }}</span>
-                        {% endif %}
+
+{% if card_product.metafields.custom.sales_badge != blank %}
+                            <span class="card__badges-item card__badges-item--sale">{{ card_product.metafields.custom.sales_badge }} </span>
                     {% endif %}
+ 
                     {% if settings.show_badge_sold %}
                         {% unless card_product.available %}
                             <span class="card__badges-item card__badges-item--sold {% if settings.make_badges_transparent %}card__badges-item--transparent{% endif %}">{{ 'products.product.badges.sold_out_badge' | t }}</span>
@@ -441,6 +427,12 @@
                         </div>
                     {% endif %}
                 </div>
+
+        {% if card_product.metafields.custom.custom_labele != blank %}
+            <div class="custom-label">
+                {{ card_product.metafields.custom.custom_labele }} 
+            </div>
+        {% endif %}
 
                 <div class="ruk_rating_snippet" data-sku="{{ card_product.handle }};{{ card_product.variants | map: 'sku' | join: ';' }};{{ card_product.variants | map: 'id' | join: ';' }}"></div>
 
@@ -897,11 +889,7 @@
             
         </div>
 
-        {% if card_product.metafields.custom.custom_labele != blank %}
-            <div class="custom-label">
-                {{ card_product.metafields.custom.custom_labele }} 
-            </div>
-        {% endif %}
+
         {% if quick_buy == 'on_desktop' or quick_buy == 'enable' %}
                      <div class="atc-add card__extras flex--row{% if quick_buy == 'on_desktop'%} card__extras--mobile-hidden{% endif %}">
                             {% if card_product.variants.size < 2 %}
@@ -910,10 +898,7 @@
                               -%}
                               <add-to-cart data-variant-id="{{ card_product.selected_or_first_available_variant.id }}" class="{% if settings.action_after_adding_to_cart == 'drawer' %}cart-drawer{% elsif settings.action_after_adding_to_cart == 'popup' %}cart-notification{% endif %}">
                                 <button id="{{ product_form_id }}-submit" type="submit" name="add" class="quick-view-button card__add-to-cart quick button button--secondary solid-button body-font" {% unless card_product.available %}disabled{% endunless %} aria-label="{{ 'accessibility.qiuck_buy.open_qiuck_buy' | t }}">
-                                    <span class="cart__icon flex--row">ADD TO CART <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 4H3.60632C4.62694 4 5.48384 4.7685 5.59452 5.78311L6.40548 13.2169C6.51616 14.2315 7.37306 15 8.39368 15H17.046C17.9602 15 18.7581 14.3801 18.984 13.4942L20.3639 8.08311C20.6864 6.81854 19.731 5.58889 18.426 5.58889H6.6M6.62476 18.6249H7.37476M6.62476 19.3749H7.37476M17.6248 18.6249H18.3748M17.6248 19.3749H18.3748M8 19C8 19.5523 7.55229 20 7 20C6.44772 20 6 19.5523 6 19C6 18.4477 6.44772 18 7 18C7.55229 18 8 18.4477 8 19ZM19 19C19 19.5523 18.5523 20 18 20C17.4477 20 17 19.5523 17 19C17 18.4477 17.4477 18 18 18C18.5523 18 19 18.4477 19 19Z" stroke="#A200F9" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M7 18.5C7.27614 18.5 7.5 18.7239 7.5 19C7.5 19.2761 7.27614 19.5 7 19.5C6.72386 19.5 6.5 19.2761 6.5 19C6.5 18.7239 6.72386 18.5 7 18.5ZM18 18.5C18.2761 18.5 18.5 18.7239 18.5 19C18.5 19.2761 18.2761 19.5 18 19.5C17.7239 19.5 17.5 19.2761 17.5 19C17.5 18.7239 17.7239 18.5 18 18.5Z" stroke="#A200F9" stroke-linecap="round"/>
-</svg> 
+                                    <span class="cart__icon flex--row">ADD TO CART 
 
                                        {% comment %}  {% if card_product.template_suffix == 'preorder' %}
                                             {%- render 'glyphs_interface', icon: 'preorder' -%}
