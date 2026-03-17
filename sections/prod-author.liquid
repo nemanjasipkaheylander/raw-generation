@@ -61,6 +61,76 @@
 
 {% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
 
+<style>
+  .text-with-image__tagline {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 1.4;
+    color: #a200f9;
+}
+
+h2.text-with-image__title {
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #000;
+}
+
+p.text-with-image__content-one {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #434343;
+}
+
+p.text-with-image__content-two {
+    box-shadow: 2px 3px 0 0 #c4a7d3;
+    background: #ead5f5;
+    border: 1px solid #a1a1a1;
+    border-radius: 10px;
+    padding: 24px 16px;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    /* line-height: 25px; */
+    line-height: 1.4;
+    color: #434343;
+}
+
+.text-with-image__button a {
+    border: 1px solid #a548d8;
+    border-radius: 10px;
+    padding: 8px 24px;
+    box-shadow: 0 3px 0 0 #8216bc;
+    background: #a200f9;
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #fdfcfe;
+    display: inline-block;
+}
+
+p.text-with-image__button-after {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+    color: #000;
+}
+
+figure.text-with-image__image {
+    box-shadow: 8px 8px 0 0 #e4d5ed;
+    border-radius: 16px;
+}
+</style>
+
 {% schema %}
   {
     "name": "Text with image",
