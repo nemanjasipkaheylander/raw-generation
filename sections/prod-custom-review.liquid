@@ -117,7 +117,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.swiper-reviews', {
+  const swiperRev = new Swiper('.swiper-reviews', {
     direction: 'horizontal',
     loop: false,
     slidesPerView: 1.2,
@@ -135,34 +135,34 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  const prevBtns = document.querySelectorAll('.review-button-prev');
-  const nextBtns = document.querySelectorAll('.review-button-next');
+  const prevBtnsRev = document.querySelectorAll('.review-button-prev');
+  const nextBtnsRev = document.querySelectorAll('.review-button-next');
 
-  function updateButtons() {
-    prevBtns.forEach(btn => {
+  function updateButtonsRev() {
+    prevBtnsRev.forEach(btn => {
       btn.classList.toggle('swiper-button-disabled', swiper.isBeginning);
     });
-    nextBtns.forEach(btn => {
+    nextBtnsRev.forEach(btn => {
       btn.classList.toggle('swiper-button-disabled', swiper.isEnd);
     });
   }
 
-  prevBtns.forEach(btn => {
+  prevBtnsRev.forEach(btn => {
     btn.addEventListener('click', () => {
-      swiper.slidePrev();
-      updateButtons();
+      swiperRev.slidePrev();
+      updateButtonsRev();
     });
   });
 
-  nextBtns.forEach(btn => {
+  nextBtnsRev.forEach(btn => {
     btn.addEventListener('click', () => {
-      swiper.slideNext();
-      updateButtons();
+      swiperRev.slideNext();
+      updateButtonsRev();
     });
   });
 
   // Inicijalno stanje
-  updateButtons();
+  updateButtonsRev();
 });
 
 </script>
