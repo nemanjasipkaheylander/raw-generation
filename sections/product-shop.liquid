@@ -217,14 +217,14 @@
         <div class="custom-product-shop__price-wrap" id="custom-price-{{ section.id }}" {{ block.shopify_attributes }}>
           <div class="custom-product-shop__price-row">
             <span class="custom-product-shop__price" data-price>
-              {{ selected_variant.price | money_with_currency }}
+              {{ selected_variant.price | money }}
             </span>
             <span
               class="custom-product-shop__compare{% if selected_variant.compare_at_price <= selected_variant.price or selected_variant.compare_at_price == blank %} is-hidden{% endif %}"
               data-compare-price
             >
               {%- if selected_variant.compare_at_price > selected_variant.price -%}
-                {{ selected_variant.compare_at_price | money_with_currency }}
+                {{ selected_variant.compare_at_price | money }}
               {%- endif -%}
             </span>
           </div>
