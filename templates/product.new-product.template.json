@@ -955,11 +955,20 @@
             "richtext_heading_style": "section-heading",
             "text_style": "body-font"
           }
+        },
+        "custom_liquid_wbbNbn": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n#shopify-section-template--18301468082238__1773699189691acc94 {\n    background: #f2f2f2;\n}\n</style>",
+            "text_style": "body-font"
+          }
         }
       },
       "block_order": [
-        "text_BjAxTP"
+        "text_BjAxTP",
+        "custom_liquid_wbbNbn"
       ],
+      "custom_css": [],
       "name": "t:sections.rich-text.name",
       "settings": {
         "center_text": true,
