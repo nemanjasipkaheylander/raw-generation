@@ -160,85 +160,6 @@
         "show_dynamic_checkout": false
       }
     },
-    "prod_ingred_list_MbmUXc": {
-      "type": "prod-ingred-list",
-      "blocks": {
-        "text_VPbEmm": {
-          "type": "text",
-          "settings": {
-            "ingredients_list_img": "shopify://shop_images/Clip_path_group_3.svg",
-            "ingredients_list_title": "Added sugars"
-          }
-        },
-        "text_VynqPU": {
-          "type": "text",
-          "settings": {
-            "ingredients_list_img": "shopify://shop_images/Group_12818.svg",
-            "ingredients_list_title": "Artificial sweeteners"
-          }
-        },
-        "text_PyQqRU": {
-          "type": "text",
-          "settings": {
-            "ingredients_list_img": "shopify://shop_images/Group_12812.svg",
-            "ingredients_list_title": "Ultra-processed protein powders"
-          }
-        },
-        "text_cDhr8r": {
-          "type": "text",
-          "settings": {
-            "ingredients_list_img": "shopify://shop_images/Group_12811.svg",
-            "ingredients_list_title": "Preservatives"
-          }
-        },
-        "text_hxDYrn": {
-          "type": "text",
-          "settings": {
-            "ingredients_list_img": "shopify://shop_images/Clip_path_group_2.svg",
-            "ingredients_list_title": "Dyes or artificial colorings"
-          }
-        },
-        "text_KAHRCh": {
-          "type": "text",
-          "settings": {
-            "ingredients_list_img": "shopify://shop_images/Group_12819.svg",
-            "ingredients_list_title": "“Natural” flavors"
-          }
-        },
-        "text_hW4wnV": {
-          "type": "text",
-          "settings": {
-            "ingredients_list_img": "shopify://shop_images/Group_12814.svg",
-            "ingredients_list_title": "Seed oils"
-          }
-        }
-      },
-      "block_order": [
-        "text_VPbEmm",
-        "text_VynqPU",
-        "text_PyQqRU",
-        "text_cDhr8r",
-        "text_hxDYrn",
-        "text_KAHRCh",
-        "text_hW4wnV"
-      ],
-      "name": "Ingredients list",
-      "settings": {
-        "section_target": "",
-        "bg_color": "#f5e2ff",
-        "bg_gradient_1": "",
-        "bg_gradient_2": "",
-        "padding_top": "40",
-        "padding_bottom": "0",
-        "padding_top_desk": "64",
-        "padding_bottom_desk": "0",
-        "section_title_one": "What’s",
-        "section_title_two": "Not",
-        "section_title_third": "in Any of Our Products",
-        "main_img": "shopify://shop_images/Frame_2087327486_1.png",
-        "main_img_mob": "shopify://shop_images/Frame_2087327486_2.png"
-      }
-    },
     "prod_custom_review_EnWCCW": {
       "type": "prod-custom-review",
       "blocks": {
@@ -330,6 +251,85 @@
         "section_title_one": "What",
         "section_title_two": "Our",
         "section_title_three": "Customers Say"
+      }
+    },
+    "prod_ingred_list_MbmUXc": {
+      "type": "prod-ingred-list",
+      "blocks": {
+        "text_VPbEmm": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Clip_path_group_3.svg",
+            "ingredients_list_title": "Added sugars"
+          }
+        },
+        "text_VynqPU": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12818.svg",
+            "ingredients_list_title": "Artificial sweeteners"
+          }
+        },
+        "text_PyQqRU": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12812.svg",
+            "ingredients_list_title": "Ultra-processed protein powders"
+          }
+        },
+        "text_cDhr8r": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12811.svg",
+            "ingredients_list_title": "Preservatives"
+          }
+        },
+        "text_hxDYrn": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Clip_path_group_2.svg",
+            "ingredients_list_title": "Dyes or artificial colorings"
+          }
+        },
+        "text_KAHRCh": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12819.svg",
+            "ingredients_list_title": "“Natural” flavors"
+          }
+        },
+        "text_hW4wnV": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12814.svg",
+            "ingredients_list_title": "Seed oils"
+          }
+        }
+      },
+      "block_order": [
+        "text_VPbEmm",
+        "text_VynqPU",
+        "text_PyQqRU",
+        "text_cDhr8r",
+        "text_hxDYrn",
+        "text_KAHRCh",
+        "text_hW4wnV"
+      ],
+      "name": "Ingredients list",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#f5e2ff",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "0",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "0",
+        "section_title_one": "What’s",
+        "section_title_two": "Not",
+        "section_title_third": "in Any of Our Products",
+        "main_img": "shopify://shop_images/Frame_2087327486_1.png",
+        "main_img_mob": "shopify://shop_images/Frame_2087327486_2.png"
       }
     },
     "prod_icon_text_8VtVyA": {
@@ -1084,8 +1084,8 @@
     "shogun-below",
     "shogun-optimizer",
     "product_shop_ALTj8Y",
-    "prod_ingred_list_MbmUXc",
     "prod_custom_review_EnWCCW",
+    "prod_ingred_list_MbmUXc",
     "prod_icon_text_8VtVyA",
     "prod_routine_EPj6xp",
     "prod_table_7gN9nw",
