@@ -1010,6 +1010,7 @@
       "block_order": [
         "reviews_io_reviewsio_polaris_WA4tKT"
       ],
+      "custom_css": [],
       "settings": {
         "use_margins": true,
         "grid_style": "alternative",
