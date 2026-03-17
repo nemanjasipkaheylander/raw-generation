@@ -1,0 +1,784 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {}
+    },
+    "product_shop_ALTj8Y": {
+      "type": "product-shop",
+      "blocks": {
+        "price_Ap9ryP": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_7xnVrw": {
+          "type": "description",
+          "settings": {
+            "description": "Fuel your body with 6g of protein, 5g of fiber, and 60% Vitamin C with this plant-based meal-replacement smoothie."
+          }
+        },
+        "benefits_GBnJzC": {
+          "type": "benefits",
+          "settings": {
+            "benefit_1": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+            "benefit_2": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+            "benefit_3": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+            "benefit_4": "",
+            "benefit_5": ""
+          }
+        },
+        "recharge_subscriptions_subscription_widget_v2_WV9e7k": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
+        "buy_buttons_v2_cViAnN": {
+          "type": "buy_buttons_v2",
+          "settings": {
+            "primary_button_text": "BUY 18 BOTTLES",
+            "primary_quantity": 18,
+            "secondary_button_text": "BUILD A BOX",
+            "secondary_product": "build-a-box-1",
+            "secondary_url": ""
+          }
+        },
+        "payment_terms_j4Mqe4": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "trust_row_end7gz": {
+          "type": "trust_row",
+          "settings": {
+            "item_1_icon": "shopify://shop_images/Truck_1.png",
+            "item_1_text": "Free Shipping on Subscriptions",
+            "item_2_icon": "shopify://shop_images/ArrowsCounterClockwise.png",
+            "item_2_text": "Satisfaction Guarantee",
+            "item_3_icon": "shopify://shop_images/Frame_5c8b2466-4a65-4afd-9687-c817657e7e5d.png",
+            "item_3_text": "Made in the USA",
+            "item_4_icon": "shopify://shop_images/ShieldCheck.png",
+            "item_4_text": "Nutritionist-Developed"
+          }
+        },
+        "accordion_exzhPH": {
+          "type": "accordion",
+          "settings": {
+            "title": "Ingredients & Nutrition Facts",
+            "content": "<p>Add your content here.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_ibjhmw": {
+          "type": "accordion",
+          "settings": {
+            "title": "Health Benefits",
+            "content": "<p>Get ready to experience a full body reset in just a few days with the Protein Cleanse. Ideal for busy people and able to fit into any workout schedule, these ready-to-drink recipes make supporting your weight management goals as simple as it gets.<br/><br/>The Protein Cleanse:<br/>• Supports healthy weight management. • Can help complement your workouts with healthy carbs and 38g of protein. <br/>• Helps support your stamina and natural energy levels. <br/>• May help reduce bloating and support muscle recovery. <br/>• Supports gut health and digestion.<br/>• Supports a healthy inflammatory response.<br/><br/>Every sip is functional. Every bottle is nutritionist-designed to support your specific fitness and wellness goals.</p>",
+            "open_by_default": false
+          }
+        },
+        "testimonial_7ceMtp": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/RSqOB_qbX_1.png",
+            "text": "<p>\"This isn’t about restriction—it’s about nourishing your body and feeling comfortable in your own skin.\"</p>",
+            "name": "Lisa Testa, M.S.",
+            "meta": "Chief Nutrition Officer, Raw Generation"
+          }
+        }
+      },
+      "block_order": [
+        "price_Ap9ryP",
+        "description_7xnVrw",
+        "benefits_GBnJzC",
+        "recharge_subscriptions_subscription_widget_v2_WV9e7k",
+        "buy_buttons_v2_cViAnN",
+        "payment_terms_j4Mqe4",
+        "trust_row_end7gz",
+        "accordion_exzhPH",
+        "accordion_ibjhmw",
+        "testimonial_7ceMtp"
+      ],
+      "name": "Custom product shop",
+      "settings": {
+        "color_scheme": "",
+        "eyebrow": "Developed by an expert holistic nutritionist",
+        "show_vendor": false,
+        "show_review": true,
+        "show_bestseler": true,
+        "show_free_app": true,
+        "button_text": "Buy Now - Secure Checkout",
+        "sold_out_text": "Sold Out",
+        "show_quantity": false,
+        "show_dynamic_checkout": false
+      }
+    },
+    "prod_collection_tabs_MBqxLF": {
+      "type": "prod-collection-tabs",
+      "blocks": {
+        "collection_G7XbeQ": {
+          "type": "Collection",
+          "settings": {
+            "collection_tab": "juice-cleanses",
+            "custom_subtitle": "<p>Find your <strong>perfect 3-10 day reset.</strong> Targeted programs designed to help you feel lighter and support natural detoxification and energy levels.<br/><br/></p>"
+          }
+        },
+        "collection_WHGeEb": {
+          "type": "Collection",
+          "settings": {
+            "collection_tab": "wellness-programs",
+            "custom_subtitle": "<p><strong>Programs designed to help you work toward your wellness goals, consistently and sustainably.</strong> These weekly wellness programs are nutritionist-developed to help you build healthier eating habits, reduce cravings, and support your weight management goals for lasting, long-term results.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "collection_G7XbeQ",
+        "collection_WHGeEb"
+      ],
+      "name": "Product Tabs Selection Grid",
+      "settings": {
+        "custom_title_one": "Our Other",
+        "custom_title_two": "Programs",
+        "products_per_page": 15,
+        "desktop_columns": "3",
+        "mobile_columns": "2",
+        "collection_title": "hide",
+        "heading_style": "section-heading",
+        "enable_secondary_grid": false,
+        "secondary_products_per_page": 25,
+        "secondary_grid_desktop_columns": "5",
+        "enable_preview_grid": false,
+        "preview_products_per_page": 40,
+        "preview_grid_desktop_columns": 10,
+        "preview_grid_mobile_columns": "4",
+        "enable_filtering": false,
+        "enable_desktop_sticky_filtering_panel": false,
+        "enable_mobile_sticky_filtering_panel": false,
+        "filter_type": "drawer",
+        "drawer_position": "right",
+        "drawer_button_label": "Filter products",
+        "mobile_drawer_button_label": "Filter",
+        "drawer_button_style": "solid",
+        "filter_label_style": "subheading-font",
+        "dropdown_style": "big",
+        "dropdown_width": "packed",
+        "filter_and_operator_subtitle": "Match all",
+        "open_collapsible_label": "",
+        "hover_behavior": "image_zoom",
+        "show_bullets": true,
+        "autoplay_speed": 3,
+        "desktop_options": "enable",
+        "mobile_options": "enable",
+        "card_content_style": "regular",
+        "quick_buy": "enable",
+        "price_position": "bottom",
+        "options_position": "bottom",
+        "show_vendor": "text",
+        "show_title": true,
+        "max_product_name_characters": 100,
+        "show_rating": true,
+        "show_short_description": true,
+        "show_pickup_availability": false,
+        "show_product_card_border": false,
+        "pagination": "paginated",
+        "pagination_button_label": "Load more",
+        "pagination_button_icon": "",
+        "swap_pagination_button_icon": false,
+        "pagination_button_style": "solid",
+        "use_main_button_pagination": false,
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "disable_grid_gaps": false,
+        "show_bottom_line": false,
+        "secondary_full_width": true,
+        "secondary_grid_style": "secondary",
+        "secondary_disable_max_width": true,
+        "secondary_disable_grid_gaps": false,
+        "preview_full_width": true,
+        "preview_grid_style": "secondary",
+        "preview_disable_max_width": true,
+        "preview_disable_grid_gaps": true,
+        "color_scheme": "",
+        "product_card_color_scheme": "",
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    },
+    "prod_ingred_list_MbmUXc": {
+      "type": "prod-ingred-list",
+      "blocks": {
+        "text_VPbEmm": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Clip_path_group_3.svg",
+            "ingredients_list_title": "Added sugars"
+          }
+        },
+        "text_VynqPU": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12818.svg",
+            "ingredients_list_title": "Artificial sweeteners"
+          }
+        },
+        "text_PyQqRU": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12812.svg",
+            "ingredients_list_title": "Ultra-processed protein powders"
+          }
+        },
+        "text_cDhr8r": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12811.svg",
+            "ingredients_list_title": "Preservatives"
+          }
+        },
+        "text_hxDYrn": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Clip_path_group_2.svg",
+            "ingredients_list_title": "Dyes or artificial colorings"
+          }
+        },
+        "text_KAHRCh": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12819.svg",
+            "ingredients_list_title": "“Natural” flavors"
+          }
+        },
+        "text_hW4wnV": {
+          "type": "text",
+          "settings": {
+            "ingredients_list_img": "shopify://shop_images/Group_12814.svg",
+            "ingredients_list_title": "Seed oils"
+          }
+        }
+      },
+      "block_order": [
+        "text_VPbEmm",
+        "text_VynqPU",
+        "text_PyQqRU",
+        "text_cDhr8r",
+        "text_hxDYrn",
+        "text_KAHRCh",
+        "text_hW4wnV"
+      ],
+      "name": "Ingredients list",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#f4f2f5",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "0",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "0",
+        "section_title_one": "What’s",
+        "section_title_two": "Not",
+        "section_title_third": "in Any of Our Products",
+        "main_img": "shopify://shop_images/Frame_2087327486_1.png",
+        "main_img_mob": "shopify://shop_images/Frame_2087327486_2.png"
+      }
+    },
+    "prod_custom_review_EnWCCW": {
+      "type": "prod-custom-review",
+      "blocks": {
+        "text_eHhqew": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"The drinks were filling, I loved how they were set up for you to take, and they tasted delicious! I highly recommend this juice company, and I will tell everyone I run into about it!!\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_1.png",
+            "review_type": "Skinny Cleansea",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.png"
+          }
+        },
+        "text_U9iE3M": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"The drinks were filling, I loved how they were set up for you to take, and they tasted delicious! I highly recommend this juice company, and I will tell everyone I run into about it!!\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_1.png",
+            "review_type": "Skinny Cleansea",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.png"
+          }
+        },
+        "text_LPBNPC": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"The drinks were filling, I loved how they were set up for you to take, and they tasted delicious! I highly recommend this juice company, and I will tell everyone I run into about it!!\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_1.png",
+            "review_type": "Skinny Cleansea",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.png"
+          }
+        },
+        "text_rgddDz": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"The drinks were filling, I loved how they were set up for you to take, and they tasted delicious! I highly recommend this juice company, and I will tell everyone I run into about it!!\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_1.png",
+            "review_type": "Skinny Cleansea",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.png"
+          }
+        },
+        "text_ffPg3A": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"The drinks were filling, I loved how they were set up for you to take, and they tasted delicious! I highly recommend this juice company, and I will tell everyone I run into about it!!\"",
+            "review_img": "shopify://shop_images/image_6487327_1.jpg_1.png",
+            "review_type": "Skinny Cleansea",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_eHhqew",
+        "text_U9iE3M",
+        "text_LPBNPC",
+        "text_rgddDz",
+        "text_ffPg3A"
+      ],
+      "name": "Custom review",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#ffffff",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one": "What",
+        "section_title_two": "Our",
+        "section_title_three": "Customers Say"
+      }
+    },
+    "prod_icon_text_8VtVyA": {
+      "type": "prod-icon-text",
+      "blocks": {
+        "text_C7q9wF": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2087326202.svg",
+            "icon_text_title": "Feel Lighter",
+            "icon_text_content": "Nutrient dense juice cleanses to help you feel refreshed."
+          }
+        },
+        "text_rNMJaF": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663421.svg",
+            "icon_text_title": "Energy Support",
+            "icon_text_content": "Hydrating, antioxidant rich blends that help shake off slugginess and restore your glow."
+          }
+        },
+        "text_WcVG9R": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663421_1.svg",
+            "icon_text_title": "Detox Support",
+            "icon_text_content": "Give your body what it needs to support detox processes and reduce occasional sugar cravings."
+          }
+        },
+        "text_aa4nyq": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663421_2.svg",
+            "icon_text_title": "Kickstart Healthy Habits",
+            "icon_text_content": "Nutritionist-designed solutions to give you a clean break from processed foods and to jumpstart healthier eating habits."
+          }
+        }
+      },
+      "block_order": [
+        "text_C7q9wF",
+        "text_rNMJaF",
+        "text_WcVG9R",
+        "text_aa4nyq"
+      ],
+      "name": "Icon with text cards",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#ffffff",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one": "Why",
+        "section_title_two": "Choose",
+        "section_title_third": "Raw Generation?"
+      }
+    },
+    "prod_author_FRgKKB": {
+      "type": "prod-author",
+      "name": "Text with image",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#f4f2f5",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_tagline": "Meet Lisa Testa, M.S.",
+        "section_title": "Chief Nutrition Officer& Head of Product Development",
+        "section_content_one": "I’ve been a Holistic Nutritionist since 2008, supporting clients in finding sustainable and balanced approaches to nutrition. After struggling with my own weight for over 10 years, I realized I didn’t need a “diet” at all, I just needed to understand how to nourish my body. Long-term restrictive approaches can be hard to maintain and often leave people feeling frustrated. My focus is on creating healthy habits that are realistic, flexible and supportive of overall wellbeing.",
+        "section_content_two": "That’s why Raw Generation programs are so effective. They are designed to give your body the nutrition it needs in a way that works, so you can feel more comfortable in your own skin.",
+        "section_button_text": "Which Solution Is Perfect For Me?",
+        "section_button_url": "https://www.rawgeneration.com/collections/juice-cleanses",
+        "section_after_button": "",
+        "section_image": "shopify://shop_images/image_75_2_1.png"
+      }
+    },
+    "prod_icon_list_6Q7HyG": {
+      "type": "prod-icon-list",
+      "blocks": {
+        "text_kjMGAh": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12795_8f61e8ba-47c1-4a9c-9ec6-30baa406ee99.svg",
+            "icon_list_title": "100% Plant-based"
+          }
+        },
+        "text_y6mnfb": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12791.svg",
+            "icon_list_title": "Gluten-free"
+          }
+        },
+        "text_mejMXY": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12793.svg",
+            "icon_list_title": "Non-GMO"
+          }
+        },
+        "text_nFYREP": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12794.svg",
+            "icon_list_title": "Vegan"
+          }
+        },
+        "text_maFtwm": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12791.svg",
+            "icon_list_title": "Grain-free"
+          }
+        },
+        "text_UQfxmA": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Clip_path_group_1.svg",
+            "icon_list_title": "Soy-free"
+          }
+        },
+        "text_nxn3FW": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12794_1.svg",
+            "icon_list_title": "Kosher"
+          }
+        },
+        "text_jGdtcn": {
+          "type": "text",
+          "settings": {
+            "icon_list_img": "shopify://shop_images/Group_12794_2.svg",
+            "icon_list_title": "Halal Certified"
+          }
+        }
+      },
+      "block_order": [
+        "text_kjMGAh",
+        "text_y6mnfb",
+        "text_mejMXY",
+        "text_nFYREP",
+        "text_maFtwm",
+        "text_UQfxmA",
+        "text_nxn3FW",
+        "text_jGdtcn"
+      ],
+      "name": "Icon list",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#f5e2ff",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one": "We Believe in",
+        "section_title_two": "100% Ingredient",
+        "section_title_third": "Transparency"
+      }
+    },
+    "prod_faq_HyVha7": {
+      "type": "prod-faq",
+      "blocks": {
+        "text_i9dh3g": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Lorem ipsum",
+            "faq_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          }
+        },
+        "text_PizNgm": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Are these weight loss juices low-calorie and low sugar?",
+            "faq_text": "Our in-house nutritionist believes that low-calorie fad diets are not the most effective approach to successful weight management long-term. Overly restrictive diets can often lead to frustration and setbacks. Lasting health and meaningful weight maintenance are more about choosing options with nutrient-dense ingredients, rather than counting calories, tracking fat grams, or limiting sugar intake. That being said, the juices in this cleanse were not designed to be low in calories, carbs, or natural fruit sugars. They provide your body with what it needs to thrive in the healthiest form possible…and the goal is to support sustainable weight management."
+          }
+        },
+        "text_99JAKy": {
+          "type": "text",
+          "settings": {
+            "faq_title": "Why are the juices frozen?",
+            "faq_text": "We immediately flash-freeze all cold-pressed juices and smoothies. This is the only way to lock in the fresh flavor, raw nutrients, and enzymes, while still being able to deliver them to your door.Shipping juices frozen makes it super convenient for you. There’s no hefty prep time or messy clean-up. No juicer or blender is necessary for you to enjoy these juice recipes. All you have to do is thaw, sip, and experience the health benefits. Plus, if life gets in the way and you have to pause your cleanse, nothing goes to waste. The remaining bottles can stay in the freezer until you can start again."
+          }
+        }
+      },
+      "block_order": [
+        "text_i9dh3g",
+        "text_PizNgm",
+        "text_99JAKy"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "section_target": "",
+        "bg_gradient_1": "#ffffff",
+        "bg_gradient_2": "#ffffff",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_desk": 80,
+        "padding_bottom_desk": 80,
+        "section_title": "Frequently asked Questions",
+        "section_subtitle": "Your questions answered here",
+        "section_button_text": "Build My own Box",
+        "section_button_url": "shopify://products/build-a-box-1",
+        "section_button_text_mob": "Build My own Box",
+        "section_button_url_mob": "shopify://products/build-a-box-1"
+      }
+    },
+    "prod_marquee_wQYbcB": {
+      "type": "prod-marquee",
+      "blocks": {
+        "logo_CCTw4K": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/nyp.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_6txMQB": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/popsugar_e11ef10a-9dd1-42bf-afde-af065cd0cf0b.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_Rfq3pW": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/purewow_eed8bea5-70e2-489b-bdf6-e0f99eb83aef.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_yczWiz": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/byrdie.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_wzRDrC": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ok.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_3BNgPK": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/people_5eb90b6f-d00f-47ce-802e-93379d7eef11.png",
+            "alt_text": "Publication logo"
+          }
+        },
+        "logo_zRTJtA": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/the_everygirl.png",
+            "alt_text": "Publication logo"
+          }
+        }
+      },
+      "block_order": [
+        "logo_CCTw4K",
+        "logo_6txMQB",
+        "logo_Rfq3pW",
+        "logo_yczWiz",
+        "logo_wzRDrC",
+        "logo_3BNgPK",
+        "logo_zRTJtA"
+      ],
+      "name": "As Seen In",
+      "settings": {
+        "section_target": "",
+        "bg_gradient_1": "#ead5f5",
+        "bg_gradient_2": "#ead5f5",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_desk": 45,
+        "padding_bottom_desk": 45,
+        "speed": 30,
+        "label": "AS SEEN IN"
+      }
+    },
+    "1773699189691acc94": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_polaris_WA4tKT": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "star": "#000000",
+            "review_type": "product_review,questions",
+            "per_page": 8,
+            "primary_btn_bg_color": "#000000",
+            "primary_btn_border_color": "#000000",
+            "primary_btn_text_color": "#ffffff",
+            "secondary_btn_border_color": "#000000",
+            "secondary_btn_text_color": "#000000",
+            "border_color": "#d9d9d9",
+            "heading_text_color": "#000000",
+            "heading_font": "sans_serif_n4",
+            "body_text_color": "#000000",
+            "badge_icon_color": "#000000",
+            "badge_text_color": "#000000",
+            "enable_rich_snippets": true,
+            "show_location": true,
+            "show_tab_selector": false,
+            "show_dates": true,
+            "show_avatar": true,
+            "enable_sentiment_analysis": false,
+            "enable_replies": false,
+            "widget_spacing": 0,
+            "capitalise_headers_and_buttons": false,
+            "show_review_title": false,
+            "default_sort": "date_desc"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_polaris_WA4tKT"
+      ],
+      "settings": {
+        "use_margins": true,
+        "grid_style": "alternative",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    },
+    "prod_icon_full_text_CnQJAd": {
+      "type": "prod-icon-full-text",
+      "blocks": {
+        "text_FLCt3E": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663566.svg",
+            "icon_text_title": "REAL INGREDIENTS",
+            "icon_text_content": "All products are made from real fruits and vegetables. We NEVER use artificial ingredients."
+          }
+        },
+        "text_bVidAP": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663566_1.svg",
+            "icon_text_title": "MADE TO TASTE GREAT",
+            "icon_text_content": "We believe you shouldn't suffer through anything. Healthy can (and should) taste great."
+          }
+        },
+        "text_tYegTF": {
+          "type": "text",
+          "settings": {
+            "icon_text_img": "shopify://shop_images/Frame_2085663566_2.svg",
+            "icon_text_title": "NUTRITIONIST SUPPORT",
+            "icon_text_content": "You’re never on your own—our nutritionist is here to support you with expert guidance."
+          }
+        }
+      },
+      "block_order": [
+        "text_FLCt3E",
+        "text_bVidAP",
+        "text_tYegTF"
+      ],
+      "name": "Icon with text cards V2",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#f5e2ff",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one_v2": "",
+        "section_title_two": "",
+        "section_title_third": ""
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "shogun-below",
+    "shogun-optimizer",
+    "product_shop_ALTj8Y",
+    "prod_collection_tabs_MBqxLF",
+    "prod_ingred_list_MbmUXc",
+    "prod_custom_review_EnWCCW",
+    "prod_icon_text_8VtVyA",
+    "prod_author_FRgKKB",
+    "prod_icon_list_6Q7HyG",
+    "prod_faq_HyVha7",
+    "prod_marquee_wQYbcB",
+    "1773699189691acc94",
+    "prod_icon_full_text_CnQJAd"
+  ]
+}

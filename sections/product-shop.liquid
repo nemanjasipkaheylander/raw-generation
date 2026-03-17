@@ -458,6 +458,62 @@
           {%- endform -%}
         </div>
 
+       {%- when 'buy_buttons_v2' -%}
+  {%- assign product_form_v2_id = 'custom-product-form-v2-' | append: section.id -%}
+
+  <div class="custom-product-shop__purchase-box custom-product-shop__purchase-box--v2" {{ block.shopify_attributes }}>
+    <div class="custom-product-shop__dual-buttons">
+      <button
+        type="button"
+        class="custom-product-shop__submit custom-product-shop__submit--secondary"
+        data-buy18-button
+        data-buy18-quantity="{{ block.settings.primary_quantity }}"
+      >
+        {{ block.settings.primary_button_text }}
+      </button>
+
+      {%- if block.settings.secondary_product != blank -%}
+        <a
+          href="{{ block.settings.secondary_product.url }}"
+          class="custom-product-shop__submit custom-product-shop__submit--secondary custom-product-shop__submit--link"
+        >
+          {{ block.settings.secondary_button_text }}
+        </a>
+      {%- elsif block.settings.secondary_url != blank -%}
+        <a
+          href="{{ block.settings.secondary_url }}"
+          class="custom-product-shop__submit custom-product-shop__submit--secondary custom-product-shop__submit--link"
+        >
+          {{ block.settings.secondary_button_text }}
+        </a>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%}
+      Skriveni form držimo samo kao storage za quantity / variant / selling plan,
+      ali AJAX add-to-cart radimo kroz fetch('/cart/add.js')
+    {%- endcomment -%}
+    {%- form 'product', product, id: product_form_v2_id, class: 'custom-product-shop__form-v2-hidden' -%}
+      <input
+        type="hidden"
+        name="id"
+        value="{{ selected_variant.id }}"
+        data-buy18-variant-id
+      >
+      <input
+        type="hidden"
+        name="quantity"
+        value="{{ block.settings.primary_quantity }}"
+        data-buy18-qty
+      >
+      <input
+        type="hidden"
+        name="selling_plan"
+        value=""
+        data-buy18-selling-plan
+      >
+    {%- endform -%}
+  </div>
       {%- when 'trust_row' -%}
         <div class="custom-product-shop__trust-row" {{ block.shopify_attributes }}>
           {%- if block.settings.item_1_text != blank -%}
@@ -706,24 +762,27 @@
     const qtyInput = section.querySelector('[data-qty-input]');
     const qtyMinus = section.querySelector('[data-qty-minus]');
     const qtyPlus = section.querySelector('[data-qty-plus]');
+
+    const buy18Button = section.querySelector('[data-buy18-button]');
+    const buy18Form = section.querySelector('.custom-product-shop__form-v2-hidden');
+    const buy18VariantInput = section.querySelector('[data-buy18-variant-id]');
+    const buy18QtyInput = section.querySelector('[data-buy18-qty]');
+    const buy18SellingPlanInput = section.querySelector('[data-buy18-selling-plan]');
+
     const shopMoneyFormat = {{ shop.money_format | json }};
 
     let activeMediaId = null;
 
     function formatMoney(cents) {
-      // Always try to use Shopify's formatter first
       if (window.Shopify && typeof window.Shopify.formatMoney === 'function') {
         return window.Shopify.formatMoney(cents, shopMoneyFormat);
       }
-      
-      // Fallback with proper currency detection
+
       if (window.Shopify && window.Shopify.currency) {
-        // Get the active currency symbol from Shopify
         const currencySymbol = window.Shopify.currency.symbol || '$';
         return currencySymbol + (cents / 100).toFixed(2);
       }
-      
-      // Ultimate fallback (but still just $)
+
       return '$' + (cents / 100).toFixed(2);
     }
 
@@ -800,6 +859,10 @@
         }
       }
 
+      if (buy18VariantInput) {
+        buy18VariantInput.value = variant.id;
+      }
+
       if (variant.featured_media && variant.featured_media.id) {
         setActiveMedia(variant.featured_media.id);
       }
@@ -861,6 +924,41 @@
       qtyPlus.addEventListener('click', function() {
         const current = parseInt(qtyInput.value || '1', 10);
         qtyInput.value = current + 1;
+      });
+    }
+
+    if (buy18Button && buy18Form) {
+      buy18Button.addEventListener('click', function() {
+        const currentVariant = findVariant();
+        if (!currentVariant) return;
+
+        if (buy18VariantInput) {
+          buy18VariantInput.value = currentVariant.id;
+        }
+
+        if (buy18QtyInput) {
+          buy18QtyInput.value = buy18QtyInput.getAttribute('value') || buy18QtyInput.value || 18;
+        }
+
+        if (buy18SellingPlanInput) {
+          let sellingPlanValue = '';
+
+          const checkedSellingPlan = section.querySelector('input[name="selling_plan"]:checked');
+          const plainSellingPlanInput = section.querySelector('input[name="selling_plan"]:not([type="radio"]):not([type="checkbox"])');
+          const sellingPlanSelect = section.querySelector('select[name="selling_plan"]');
+
+          if (checkedSellingPlan) {
+            sellingPlanValue = checkedSellingPlan.value || '';
+          } else if (sellingPlanSelect) {
+            sellingPlanValue = sellingPlanSelect.value || '';
+          } else if (plainSellingPlanInput) {
+            sellingPlanValue = plainSellingPlanInput.value || '';
+          }
+
+          buy18SellingPlanInput.value = sellingPlanValue;
+        }
+
+        buy18Form.requestSubmit();
       });
     }
 
@@ -2069,6 +2167,44 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
     "limit": 1,
     "settings": []
   },
+  {
+  "type": "buy_buttons_v2",
+  "name": "Buy buttons v2",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary button text",
+      "default": "BUY 18 BOTTLES"
+    },
+    {
+      "type": "range",
+      "id": "primary_quantity",
+      "label": "Primary button quantity",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 18
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary button text",
+      "default": "BUILD A BOX"
+    },
+    {
+      "type": "product",
+      "id": "secondary_product",
+      "label": "Secondary product"
+    },
+    {
+      "type": "url",
+      "id": "secondary_url",
+      "label": "Fallback URL"
+    }
+  ]
+},
   {
     "type": "trust_row",
     "name": "Trust row",
