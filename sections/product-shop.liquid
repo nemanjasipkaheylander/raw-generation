@@ -680,11 +680,20 @@
     let activeMediaId = null;
 
     function formatMoney(cents) {
+      // Always try to use Shopify's formatter first
       if (window.Shopify && typeof window.Shopify.formatMoney === 'function') {
         return window.Shopify.formatMoney(cents, shopMoneyFormat);
       }
-
-      return (cents / 100).toFixed(2);
+      
+      // Fallback with proper currency detection
+      if (window.Shopify && window.Shopify.currency) {
+        // Get the active currency symbol from Shopify
+        const currencySymbol = window.Shopify.currency.symbol || '$';
+        return currencySymbol + (cents / 100).toFixed(2);
+      }
+      
+      // Ultimate fallback (but still just $)
+      return '$' + (cents / 100).toFixed(2);
     }
 
     function getSelectedOptions() {
