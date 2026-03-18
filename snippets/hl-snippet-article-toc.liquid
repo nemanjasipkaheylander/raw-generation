@@ -1,0 +1,8 @@
+{% for toc in tableContent %}
+   
+              {% if toc.type == 'table-of-content' %}
+                  <li class="hl-article__table-of-content-item">
+                    <a href="{{toc.settings.toc_anchor}}" title="{{ toc.settings.toc_headlines}}">{{ toc.settings.toc_headlines }}</a>
+                  </li>
+              {% endif %}
+{% endfor %}

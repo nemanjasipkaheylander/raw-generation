@@ -1,0 +1,337 @@
+
+
+
+{{ '' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign section_target = section.settings.section_target
+  assign bg_color = section.settings.bg_color
+  assign bg_gradient_1 = section.settings.bg_gradient_1
+  assign bg_gradient_2 = section.settings.bg_gradient_2
+  assign padding_top = section.settings.padding_top
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_top_desk = section.settings.padding_top_desk
+  assign padding_bottom_desk = section.settings.padding_bottom_desk
+%}
+
+{% style %}
+  .{{ section.id }} {
+    position: relative;
+    background-color: {{ bg_color }};
+    background-image: linear-gradient(to bottom, {{ bg_gradient_1 }} 0%, {{ bg_gradient_2 }} 100%);
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+  }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ padding_top_desk }}px;
+      padding-bottom: {{ padding_bottom_desk }}px;
+    }
+  }
+{% endstyle %}
+
+<section class="{{ section.id }} hl-article" id="{{ section_target }}">
+    <div class="hl-article__table-of-content">
+        <div class="hl-article__table-of-content-title">{{ section.settings.toc_title }}</div>
+        <ul class="hl-article__table-of-content-navigation">
+             {% render 'hl-snippet-article-toc'  tableContent: section.blocks %}
+        </ul>
+        
+    </div>
+    <div class="hl-article__main-content">
+         {% render 'hl-snippet-article-content' artContent: section.blocks  article: article %}
+
+         {% if article.metafields.custom.disclaimer_title %}
+                <div class="hl-article__accordion-wrapper">
+                      <div class="hl-article__accordion-title-wrapper">
+                           <figure class="hl-article__accordion-icon">
+                             {{ article.metafields.custom.disclaimer_icon | image_url: width: 2000 | image_tag: class: 'accordion-icon', loading: 'lazy' }}
+                           </figure>
+                           <h3 class="hl-article__accordion-title">{{ article.metafields.custom.disclaimer_title }}</h3>
+                      </div>
+                      <div class="hl-article__accordion-content">{{ article.metafields.custom.disclaimer_content }}</div>
+                </div>
+         {% endif %}
+
+         {% if article.metafields.custom.sources_title %}
+                <div class="hl-article__accordion-wrapper">
+                      <div class="hl-article__accordion-title-wrapper">
+                           <figure class="hl-article__accordion-icon">
+                             {{ article.metafields.custom.sources_icon | image_url: width: 2000 | image_tag: class: 'accordion-icon', loading: 'lazy' }}
+                           </figure>
+                           <h3 class="hl-article__accordion-title">{{ article.metafields.custom.sources_title }}</h3>
+                      </div>
+                      <div class="hl-article__accordion-content">
+                            <div class="hl-article__accordion-author-image">
+                                <figure>
+                                    {{ article.metafields.custom.sources_author_image | image_url: width: 2000 | image_tag: class: 'accordion-icon', loading: 'lazy' }}
+                                </figure>
+                            </div>
+                            <div class="hl-article__accordion-main-content">
+                                  <div class="hl-article__accordion-main-content-title">
+                                     {{ article.metafields.custom.sources_author_name }}
+                                  </div>
+                                  <div class="hl-article__accordion-main-content-subtitle">
+                                      {{ article.metafields.custom.source_author_job_title }}
+                                  </div>
+                                  <div class="hl-article__accordion-main-content-text">
+                                       {{ article.metafields.custom.source_author_content }}
+                                  </div>
+                                  <div class="hl-article__accordion-main-content-link">
+                                        {% if article.metafields.custom.source_author_url %}
+                                             <a href="{{article.metafields.custom.source_author_url}}" title="{{ article.metafields.custom.source_author_url_text }}">{{ article.metafields.custom.source_author_url_text }}</a>
+                                        {% endif %}
+                                  </div>
+                            </div>
+                      </div>
+                      <div class="hl-article__accordion-side-icon">
+                          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M24 16.0005C25.5913 16.0005 27.1174 16.6326 28.2426 17.7578C29.3679 18.8831 30 20.4092 30 22.0005V29.0005H26V22.0005C26 21.4701 25.7893 20.9613 25.4142 20.5863C25.0391 20.2112 24.5304 20.0005 24 20.0005C23.4696 20.0005 22.9609 20.2112 22.5858 20.5863C22.2107 20.9613 22 21.4701 22 22.0005V29.0005H18V22.0005C18 20.4092 18.6321 18.8831 19.7574 17.7578C20.8826 16.6326 22.4087 16.0005 24 16.0005ZM10 17.0005H14V29.0005H10V17.0005Z" stroke="#A200F9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 14.0005C13.1046 14.0005 14 13.1051 14 12.0005C14 10.8959 13.1046 10.0005 12 10.0005C10.8954 10.0005 10 10.8959 10 12.0005C10 13.1051 10.8954 14.0005 12 14.0005Z" stroke="#A200F9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+
+                      </div>
+                </div>
+         {% endif %}
+    </div>
+    <div class="hl-article__side-info">
+        {% render 'hl-snippet-article-side-info'  sideInfo: section.blocks %}
+    </div>
+</section>
+
+{% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
+
+{% schema %}
+  {
+    "name": "Custom Article",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "text",
+        "id": "section_target",
+        "label": "Section Target"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Section background color"
+      },
+      {
+        "type": "color",
+        "id": "bg_gradient_1",
+        "label": "Section gradient color first"
+      }, {
+        "type": "color",
+        "id": "bg_gradient_2",
+        "label": "Section gradient color second"
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Section padding top - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Section padding bottom - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_top_desk",
+        "label": "Section padding top - large screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom_desk",
+        "label": "Section padding bottom - large screens"
+      },
+      {
+        "type": "header",
+        "content": "Section Content"
+      },
+      {
+        "type": "text",
+        "id": "toc_title",
+        "label": "Enter toc title",
+        "default": "Contents"
+      }
+    ],
+    "blocks": [
+           {
+                "name": "Headlines",
+                "type": "table-of-content",
+                "settings": [
+                          {
+                            "type": "text",
+                            "id": "toc_headlines",
+                            "label": "Enter headline"
+                           },
+                           {
+                            "type": "url",
+                            "id": "toc_anchor",
+                            "info": "Enter anchor like this for example #name what you put in paragraph anchor field",
+                            "label": "Paste Anchor"
+                           }   
+                ]
+            },
+            {
+                "name": "Author info",
+                "type": "side-autor",
+                "limit": 1,
+                "settings": [
+                        {
+                            "type": "image_picker",
+                            "id": "sa_image",
+                            "label": "Upload image"
+                        },
+                        {
+                            "type": "text",
+                            "id": "sa_name",
+                            "label": "Enter author name"
+                        },
+                        {
+                            "type": "text",
+                            "id": "sa_title",
+                            "label": "Enter author title"
+                        },
+                        {
+                            "type": "url",
+                            "id": "sa_url",
+                            "label": "Paste link to Linked IN"
+                        }
+                ]
+            },
+            {
+                "name": "Quiz info",
+                "type": "side-quiz",
+                "settings": [
+                        {
+                            "type": "image_picker",
+                            "id": "qz_image",
+                            "label": "Upload image"
+                        },
+                        {
+                            "type": "text",
+                            "id": "qz_tagline",
+                            "label": "Enter tagline"
+                        },
+                        {
+                            "type": "text",
+                            "id": "qz_title",
+                            "label": "Enter  title"
+                        },
+                        {
+                            "type": "text",
+                            "id": "qz_content",
+                            "label": "Enter  text"
+                        },
+                        {
+                            "type": "text",
+                            "id": "qz_button_text",
+                            "label": "Enter button text"
+                        },
+                        {
+                            "type": "url",
+                            "id": "qz_url",
+                            "label": "Paste link to quiz"
+                        }
+                ]
+            },
+            {
+              "name": "Article Heading",
+                "type": "article-heading",
+                "limit": 1,
+                "settings": [
+                           {
+                            "type": "richtext",
+                            "id": "art_paragraph_one",
+                            "label": "Enter text"
+                           }
+                ]
+            },
+            {
+                "name": "Highlight Content",
+                "type": "hightlight-content",
+                "settings": [
+                            {
+                            "type": "image_picker",
+                            "id": "hgh_icon",
+                            "label": "Upload icon"
+                            }, 
+                            {
+                            "type": "text",
+                            "id": "hgh_title",
+                            "label": "Enter title"
+                           },
+                           {
+                            "type": "richtext",
+                            "id": "hgh_content",
+                            "label": "Enter title"
+                           }
+                ]
+            },
+            {
+                "name": "Paragraph",
+                "type": "paragraph",
+                "settings": [
+                            {
+                            "type": "text",
+                            "id": "paragraph_title",
+                            "label": "Enter title"
+                           },
+                           {
+                            "type": "richtext",
+                            "id": "paragraph_content",
+                            "label": "Enter title"
+                           },
+                           {
+                            "type": "text",
+                            "id": "paragraph_anchor",
+                            "label": "Enter anchor for linking with out #"
+                           } 
+                ]
+            },
+            {
+                "name": "Quiz Devider",
+                "type": "quiz-devider",
+                "settings": [
+                        {
+                            "type": "image_picker",
+                            "id": "qzd_image",
+                            "label": "Upload image"
+                        },
+                        {
+                            "type": "text",
+                            "id": "qzd_tagline",
+                            "label": "Enter tagline"
+                        },
+                        {
+                            "type": "text",
+                            "id": "qzd_title",
+                            "label": "Enter  title"
+                        },
+                        {
+                            "type": "text",
+                            "id": "qzd_content",
+                            "label": "Enter  text"
+                        },
+                        {
+                            "type": "text",
+                            "id": "qzd_button_text",
+                            "label": "Enter button text"
+                        },
+                        {
+                            "type": "url",
+                            "id": "qzd_url",
+                            "label": "Paste link to quiz"
+                        }
+                ]
+            }
+    ],
+    "presets": [
+      {
+        "name": "Custom Article"
+      }
+    ]
+  }
+{% endschema %}

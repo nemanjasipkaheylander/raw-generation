@@ -108,12 +108,228 @@
       "type": "shogun-optimizer",
       "disabled": true,
       "settings": {}
+    },
+    "hl_custom_article_kLFyyF": {
+      "type": "hl-custom-article",
+      "blocks": {
+        "table_of_content_t9DW4M": {
+          "type": "table-of-content",
+          "settings": {
+            "toc_headlines": "Benefits of Regular Cleansing",
+            "toc_anchor": "#anchor-one"
+          }
+        },
+        "table_of_content_hEVdH9": {
+          "type": "table-of-content",
+          "settings": {
+            "toc_headlines": "How Often Should You Cleanse?",
+            "toc_anchor": "#anchor-two"
+          }
+        },
+        "table_of_content_8KX7MR": {
+          "type": "table-of-content",
+          "settings": {
+            "toc_headlines": "Choosing the Right Cleanse",
+            "toc_anchor": "#anchor-three"
+          }
+        },
+        "table_of_content_t4r7Re": {
+          "type": "table-of-content",
+          "settings": {
+            "toc_headlines": "Signs You Need a Cleanse",
+            "toc_anchor": "#anchor-four"
+          }
+        },
+        "table_of_content_9q4xJe": {
+          "type": "table-of-content",
+          "settings": {
+            "toc_headlines": "Preparing for Your Cleanse",
+            "toc_anchor": "#anchor-five"
+          }
+        },
+        "table_of_content_7H7A8y": {
+          "type": "table-of-content",
+          "settings": {
+            "toc_headlines": "During Your Cleanse",
+            "toc_anchor": "#anchor-six"
+          }
+        },
+        "table_of_content_Qdggmk": {
+          "type": "table-of-content",
+          "settings": {
+            "toc_headlines": "After Your Cleanse",
+            "toc_anchor": "#anchor-seven"
+          }
+        },
+        "article_heading_DwjfFx": {
+          "type": "article-heading",
+          "settings": {
+            "art_paragraph_one": "<p>As a holistic nutritionist, I am a big proponent of cleansing and detoxifying your body regularly. In today's world, we're constantly exposed to toxins—from the food we eat to the air we breathe. A well-planned juice cleanse can help reset your system, boost your energy levels, and kickstart healthier habits.<br/><br/></p>"
+          }
+        },
+        "hightlight_content_87H6jA": {
+          "type": "hightlight-content",
+          "settings": {
+            "hgh_icon": "shopify://shop_images/Frame_1_5a7e4f7a-4375-4355-8c54-20d80809ce9d.png",
+            "hgh_title": "Key Takeaways",
+            "hgh_content": "<ul><li>Regular cleansing helps remove toxins and supports liver function</li><li>Beginners should start with a 3-day cleanse and work up gradually</li><li>Most people benefit from cleansing 4-6 times per year</li><li>Listen to your body and consult a healthcare provider if unsure</li></ul>"
+          }
+        },
+        "paragraph_TQJnKc": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_title": "Benefits of Regular Cleansing",
+            "paragraph_content": "<p>When done correctly, juice cleansing offers numerous benefits beyond just weight management. Your digestive system gets a much-needed break, allowing your body to focus energy on cellular repair and detoxification. Many of my clients report improved mental clarity, better sleep, and glowing skin after completing a cleanse.<br/><br/>The concentrated nutrients in cold-pressed juices flood your system with vitamins, minerals, and antioxidants that are easily absorbed. This nutrient density is what makes cleansing so effective—you're not just restricting calories, you're actively nourishing your body at the cellular level.<br/><br/><br/><br/></p>",
+            "paragraph_anchor": "anchor-one"
+          }
+        },
+        "hightlight_content_NCPdfw": {
+          "type": "hightlight-content",
+          "settings": {
+            "hgh_icon": "shopify://shop_images/Frame_2_c1f6c37c-4340-413a-b15f-b6e9f9a3c3a4.png",
+            "hgh_title": "Pro Tip",
+            "hgh_content": "<p>Start your cleanse on a Thursday so your most challenging days (days 2-3) fall on the weekend when you have more flexibility and less stress. This simple timing trick dramatically improves completion rates!<br/><br/></p>"
+          }
+        },
+        "paragraph_Fa7cqy": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_title": "How Often Should You Cleanse?",
+            "paragraph_content": "<p>The frequency of cleansing depends on several factors including your current health, lifestyle, and goals. There's no one-size-fits-all answer, but I've developed guidelines based on my 20 years of experience helping clients achieve optimal health.<br/><br/><strong>For Beginners</strong><br/><br/>If you've never done a juice cleanse before, I recommend starting with a 3-day cleanse and doing it once every 3-4 months. This gives your body time to adjust and helps you understand how you respond to cleansing. Pay attention to how you feel before, during, and after—this information will help you optimize future cleanses.<br/><br/><strong>For Experienced Cleansers</strong><br/><br/>Once you're comfortable with the cleansing process, you can increase frequency to every 6-8 weeks. Many of my long-term clients do a 5-7 day cleanse at the change of each season, with shorter 3-day maintenance cleanses in between. This rhythm aligns with your body's natural cycles and maximizes the benefits.<br/><br/></p>",
+            "paragraph_anchor": "anchor-two"
+          }
+        },
+        "hightlight_content_8VDXHM": {
+          "type": "hightlight-content",
+          "settings": {
+            "hgh_icon": "shopify://shop_images/Frame_10.png",
+            "hgh_title": "Important",
+            "hgh_content": "<p>Never do an extended cleanse (longer than 3 days) without consulting a healthcare provider, especially if you have diabetes, are pregnant or nursing, have a history of eating disorders, or take prescription medications. Safety always comes first.<br/><br/></p>"
+          }
+        },
+        "paragraph_gGYYKL": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_title": "Choosing the Right Cleanse",
+            "paragraph_content": "<p>Not all cleanses are created equal. The best cleanse for you depends on your goals, experience level, and lifestyle. At Raw Generation, we've developed different cleanse programs to meet various needs—from our gentle Skinny Cleanse for beginners to our intensive Deep Detox for experienced cleansers looking for maximum results.<br/><br/>Consider factors like your daily activity level, any upcoming events or travel, and your specific health goals. A protein-enhanced cleanse might be better if you're maintaining an exercise routine, while a green-focused cleanse is ideal for maximizing detoxification benefits.<br/><br/></p>",
+            "paragraph_anchor": "anchor-three"
+          }
+        },
+        "quiz_devider_LrBnBe": {
+          "type": "quiz-devider",
+          "settings": {
+            "qzd_image": "shopify://shop_images/Frame_2087327425_cf829b13-b410-4deb-885b-b1fa82541077.png",
+            "qzd_tagline": "FREE QUIZ",
+            "qzd_title": "Not Sure Which Cleanse Is Right for You?",
+            "qzd_content": "Take our quick 2-minute quiz to discover your perfect cleanse based on your goals, lifestyle, and dietary preferences. Get personalized recommendations tailored just for you.",
+            "qzd_button_text": "Find Your Plan",
+            "qzd_url": "#"
+          }
+        },
+        "paragraph_gRHMEa": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_title": "Signs You Need a Cleanse",
+            "paragraph_content": "<p>Your body often gives you signals that it's time for a reset. Common signs include persistent fatigue despite adequate sleep, brain fog or difficulty concentrating, digestive issues like bloating or irregularity, and skin problems such as breakouts or dullness. If you've been eating more processed foods than usual or feeling sluggish after meals, these are clear indicators that a cleanse could benefit you.<br/><br/>Other signs to watch for include unexplained headaches, sugar cravings that feel out of control, difficulty sleeping, and a general sense of being \"off\" that you can't quite explain. Many of my clients describe feeling like they're running on empty, even when they're getting enough rest. This is often a sign that the body's natural detoxification pathways are overwhelmed and could use some support.<br/><br/></p>",
+            "paragraph_anchor": "anchor-four"
+          }
+        },
+        "hightlight_content_gzzcfG": {
+          "type": "hightlight-content",
+          "settings": {
+            "hgh_icon": "shopify://shop_images/Frame_2_c1f6c37c-4340-413a-b15f-b6e9f9a3c3a4.png",
+            "hgh_title": "Pro Tip",
+            "hgh_content": "<p>Keep a simple wellness journal for a week before deciding to cleanse. Track your energy levels, sleep quality, digestion, and mood. This baseline data will help you measure the impact of your cleanse and identify patterns in your health.<br/><br/></p>"
+          }
+        },
+        "paragraph_L4YNt4": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_title": "Preparing for Your Cleanse",
+            "paragraph_content": "<p>Proper preparation is key to a successful cleanse. I recommend starting to prepare 3-5 days before your cleanse begins. Gradually reduce caffeine, alcohol, processed foods, and sugar. Increase your intake of fruits, vegetables, and water. This pre-cleanse phase helps minimize detox symptoms and makes the transition much smoother.<br/><br/>Mental preparation is equally important. Set your intentions, clear your schedule of stressful obligations if possible, and create a supportive environment. Stock up on herbal teas, plan some gentle activities like walking or yoga, and prepare to give your body the rest it needs.<br/><br/></p>",
+            "paragraph_anchor": "anchor-five"
+          }
+        },
+        "paragraph_xgX7ez": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_title": "During Your Cleanse",
+            "paragraph_content": "<p>Once you begin your cleanse, consistency is key. Drink each juice at regular intervals—typically every 2-3 hours—to maintain steady energy and blood sugar levels. Stay well-hydrated between juices with plenty of water and herbal teas. Gentle movement like walking or restorative yoga is encouraged, but avoid intense workouts that could leave you feeling depleted.<br/><br/>It's normal to experience some detox symptoms during the first day or two, including mild headaches, fatigue, or irritability. These typically subside by day three as your body adjusts. Listen to your body—if you feel genuinely unwell rather than just uncomfortable, it's okay to eat something light like raw vegetables or a small portion of nuts. The goal is sustainable wellness, not suffering.<br/><br/></p>",
+            "paragraph_anchor": "anchor-six"
+          }
+        },
+        "paragraph_X6BCJf": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_title": "After Your Cleanse",
+            "paragraph_content": "<p>The way you break your cleanse is just as important as the cleanse itself. Ease back into solid foods gradually over 2-3 days. Start with smoothies, soups, and salads before reintroducing more complex foods. Avoid processed foods, alcohol, and heavy meals for at least a few days to maintain the benefits you've gained.<br/><br/>Many people find that cleansing resets their taste preferences and reduces cravings for unhealthy foods. Use this momentum to establish new eating habits. You may notice that you're satisfied with smaller portions, that vegetables taste more flavorful, and that you're more in tune with your body's hunger signals. These are the lasting gifts of a well-executed cleanse.<br/><br/>Remember, cleansing is a gift you give yourself. Approach it with curiosity and self-compassion rather than rigid expectations. Every cleanse is an opportunity to learn more about your body and deepen your connection to your health.<br/><br/></p>",
+            "paragraph_anchor": "anchor-seven"
+          }
+        },
+        "side_autor_4Y9zTi": {
+          "type": "side-autor",
+          "settings": {
+            "sa_image": "shopify://shop_images/RSqOB_qbX_1.png",
+            "sa_name": "Lisa Testa, M.S.",
+            "sa_title": "Chief Nutrition Officer & Head of Product Development",
+            "sa_url": "#"
+          }
+        },
+        "side_quiz_ERNKRW": {
+          "type": "side-quiz",
+          "settings": {
+            "qz_image": "shopify://shop_images/Frame_2087327425_cf829b13-b410-4deb-885b-b1fa82541077.png",
+            "qz_tagline": "FREE QUIZ",
+            "qz_title": "Find Your Perfect Cleanse",
+            "qz_content": "Find Your Perfect Cleanse",
+            "qz_button_text": "Find Your Plan",
+            "qz_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "table_of_content_t9DW4M",
+        "table_of_content_hEVdH9",
+        "table_of_content_8KX7MR",
+        "table_of_content_t4r7Re",
+        "table_of_content_9q4xJe",
+        "table_of_content_7H7A8y",
+        "table_of_content_Qdggmk",
+        "article_heading_DwjfFx",
+        "hightlight_content_87H6jA",
+        "paragraph_TQJnKc",
+        "hightlight_content_NCPdfw",
+        "paragraph_Fa7cqy",
+        "hightlight_content_8VDXHM",
+        "paragraph_gGYYKL",
+        "quiz_devider_LrBnBe",
+        "paragraph_gRHMEa",
+        "hightlight_content_gzzcfG",
+        "paragraph_L4YNt4",
+        "paragraph_xgX7ez",
+        "paragraph_X6BCJf",
+        "side_autor_4Y9zTi",
+        "side_quiz_ERNKRW"
+      ],
+      "name": "Custom Article",
+      "settings": {
+        "section_target": "",
+        "bg_color": "",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "padding_top_desk": "",
+        "padding_bottom_desk": "",
+        "toc_title": "Contents"
+      }
     }
   },
   "order": [
     "shogun-helper",
     "breadcrumbs_zxymR7",
     "main-article",
-    "shogun-optimizer"
+    "shogun-optimizer",
+    "hl_custom_article_kLFyyF"
   ]
 }

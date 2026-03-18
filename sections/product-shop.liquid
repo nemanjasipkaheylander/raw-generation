@@ -408,6 +408,11 @@
           {% render block %}
         </div>
 
+        {% when 'custom_liquid' %}
+        <div class="custom-liquid-block" {{ block.shopify_attributes }}>
+          {{ block.settings.custom_liquid }}
+        </div>
+
       {%- when 'buy_buttons' -%}
         <div class="custom-product-shop__purchase-box" {{ block.shopify_attributes }}>
           {%- form 'product', product, id: product_form_id, class: 'custom-product-shop__form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
@@ -459,59 +464,55 @@
         </div>
 
        {%- when 'buy_buttons_v2' -%}
+  {%- when 'buy_buttons_v2' -%}
   {%- assign product_form_v2_id = 'custom-product-form-v2-' | append: section.id -%}
 
   <div class="custom-product-shop__purchase-box custom-product-shop__purchase-box--v2" {{ block.shopify_attributes }}>
-    <div class="custom-product-shop__dual-buttons">
-      <button
-        type="button"
-        class="custom-product-shop__submit custom-product-shop__submit--secondary"
-        data-buy18-button
-        data-buy18-quantity="{{ block.settings.primary_quantity }}"
-      >
-        {{ block.settings.primary_button_text }}
-      </button>
-
-      {%- if block.settings.secondary_product != blank -%}
-        <a
-          href="{{ block.settings.secondary_product.url }}"
-          class="custom-product-shop__submit custom-product-shop__submit--secondary custom-product-shop__submit--link"
-        >
-          {{ block.settings.secondary_button_text }}
-        </a>
-      {%- elsif block.settings.secondary_url != blank -%}
-        <a
-          href="{{ block.settings.secondary_url }}"
-          class="custom-product-shop__submit custom-product-shop__submit--secondary custom-product-shop__submit--link"
-        >
-          {{ block.settings.secondary_button_text }}
-        </a>
-      {%- endif -%}
-    </div>
-
-    {%- comment -%}
-      Skriveni form držimo samo kao storage za quantity / variant / selling plan,
-      ali AJAX add-to-cart radimo kroz fetch('/cart/add.js')
-    {%- endcomment -%}
-    {%- form 'product', product, id: product_form_v2_id, class: 'custom-product-shop__form-v2-hidden' -%}
+    {%- form 'product', product, id: product_form_v2_id, class: 'custom-product-shop__form custom-product-shop__form--v2', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
       <input
         type="hidden"
         name="id"
         value="{{ selected_variant.id }}"
+        class="custom-product-shop__variant-id"
+        data-variant-id-input
         data-buy18-variant-id
       >
+
       <input
         type="hidden"
         name="quantity"
         value="{{ block.settings.primary_quantity }}"
         data-buy18-qty
       >
-      <input
-        type="hidden"
-        name="selling_plan"
-        value=""
-        data-buy18-selling-plan
-      >
+
+      <div class="custom-product-shop__dual-buttons">
+        <button
+          type="submit"
+          name="add"
+          class="custom-product-shop__submit custom-product-shop__submit--secondary"
+          data-buy18-button
+          data-buy18-quantity="{{ block.settings.primary_quantity }}"
+          {% if selected_variant.available == false %}disabled{% endif %}
+        >
+          {{ block.settings.primary_button_text }}
+        </button>
+
+        {%- if block.settings.secondary_product != blank -%}
+          <a
+            href="{{ block.settings.secondary_product.url }}"
+            class="custom-product-shop__submit custom-product-shop__submit--secondary custom-product-shop__submit--link"
+          >
+            {{ block.settings.secondary_button_text }}
+          </a>
+        {%- elsif block.settings.secondary_url != blank -%}
+          <a
+            href="{{ block.settings.secondary_url }}"
+            class="custom-product-shop__submit custom-product-shop__submit--secondary custom-product-shop__submit--link"
+          >
+            {{ block.settings.secondary_button_text }}
+          </a>
+        {%- endif -%}
+      </div>
     {%- endform -%}
   </div>
       {%- when 'trust_row' -%}
@@ -1330,6 +1331,90 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
   pointer-events: auto;
 }
 
+ .recharge-subscription-widget {}
+
+    .recharge-subscription-widget .rc-radio-group__options {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    border:none;
+    }
+
+    .recharge-subscription-widget .rc-widget {
+    border: none;
+    margin-block: 0;
+    margin-bottom: 0;
+    padding: 0;
+    }
+
+    .recharge-subscription-widget .rc-radio.rc-radio--active {
+    background: #E7CEF4 !important;
+    box-shadow: 0px 3px 0px 0px #8216BC !important;
+    border: 1px solid #A548D8 !important;
+    }
+
+    .rc-radio {}
+
+    .recharge-subscription-widget .rc-radio {
+    border-radius: 12px;
+    border: 1px solid #E0E2E4 !important;
+    box-shadow: 0px 2px 0px 0px #DADADA !important;
+    margin-bottom: 5px;
+    }
+
+    .rc-selling-plans {
+    background: #E7CEF4;
+    border-radius: 12px;
+    margin-top: -16px !important;
+    box-shadow: 0px 3px 0px 0px #8216BC;
+    border: 1px solid #A548D8;
+    padding: 12px;
+    }
+
+    .rc-selling-plans-dropdown select.rc-selling-plans-dropdown__select {
+    border: 1px solid #D2B3E3;
+    border-radius: 10px;
+    font-family: Jost;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: black;
+    }
+
+    .recharge-subscription-widget .rc-radio.rc-radio--active.subscription-radio {
+    box-shadow: none !important;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: 0px !important;
+    }
+
+    span.rc-radio__label {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    }
+
+    span.rc-radio__label span.price-label {
+    color: black;
+    font-family: Jost;
+    font-weight: 500;
+    font-size: 16px;
+    }
+
+    span.discount-label {
+    font-family: Jost;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: black;
+    }
+
+    small#shopify-buyer-consent {
+    display: none !important;
+    }
+
+
 .custom-product-shop__media-slide img,
 .custom-product-shop__media-slide video,
 .custom-product-shop__media-slide iframe,
@@ -1598,6 +1683,15 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
   cursor: pointer;
   box-shadow: 0 3px 0 0 #8216bc;
   background: #a200f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-product-shop__dual-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .custom-product-shop__submit[disabled] {
@@ -1659,7 +1753,7 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
   line-height: 1;
 }
 
-.custom-product-shop__accordion-content p{
+.custom-product-shop__accordion-content p, .custom-product-shop__accordion-content li{
   padding-top: 16px;
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -1796,6 +1890,10 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
   .prod-custom-review__text {
       font-family: "Jost", sans-serif;
 }
+.custom-bullets li {
+  font-family: "Jost", sans-serif;
+  line-height: 1.6;
+}
 @media screen and (max-width: 749px) {
   .custom-product-shop__upsell-card {
     grid-template-columns: 1fr;
@@ -1861,6 +1959,10 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
   .custom-product-shop__variants {
     border-radius: 14px;
   }
+  ul.custom-bullets li {
+    font-size: 14px;
+    line-height: 1.6;
+}
   .custom-product-shop__thumbs {
     display: none;
   }
@@ -1868,7 +1970,7 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
     width: 100%;
     position: unset;
 }
-  .custom-product-shop__accordion-content.rte p {
+  .custom-product-shop__accordion-content.rte p, .custom-product-shop__accordion-content li {
     font-size: 14px;
 }
   .custom-product-shop__subprice {
@@ -2158,6 +2260,18 @@ button.custom-product-shop__media-nav.custom-product-shop__media-nav--prev {
         "id": "variant_text",
         "label": "Enter label text",
         "default": "Choose Number of Days :"
+      }
+    ]
+  },
+  {
+    "type": "custom_liquid",
+    "name": "Custom Liquid",
+    "settings": [
+      {
+        "type": "liquid",
+        "id": "custom_liquid",
+        "label": "Custom Liquid Code",
+        "info": "Add your custom liquid code here"
       }
     ]
   },
