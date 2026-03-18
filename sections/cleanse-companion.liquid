@@ -195,7 +195,7 @@
       <div class="cleanse-companion__content">
           <!-- Desktop Title -->
           <h2 class="cleanse-companion__title-desktop">
-          {{ section.settings.title_desktop }}
+          {{ section.settings.title_desktop }} <span>{{ section.settings.title_desktop_2 }}</span> {{ section.settings.title_desktop_3 }}
           </h2>
 
           <div class="cleanse-companion__grid">
@@ -362,6 +362,16 @@
       "label": "Desktop Title",
       "default": "YOUR CLEANSE COMPANION TO HELP YOU MAXIMIZE RESULTS",
       "info": "Title displayed on desktop devices"
+    },
+     {
+      "type": "text",
+      "id": "title_desktop_2",
+      "label": "Desktop Title Highlighted"
+    },
+     {
+      "type": "text",
+      "id": "title_desktop_3",
+      "label": "Desktop Title"
     },
     {
       "type": "range",
