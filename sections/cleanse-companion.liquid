@@ -94,9 +94,44 @@
       display: flex;
       gap: 10px;
   }
+  .cleanse-companion__image {
+    position: relative;
+}
+
+.cleanse-companion__badge {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: #C922AD;
+    padding: 1px 13px;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+.cleanse-companion__badge span {
+    color: #fff;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
   @media screen and (max-width: 768px) {
     .cleanse-companion__title-desktop {
       display: none;
+    }
+
+    .cleanse-companion__image {
+    position: relative;
+}
+
+    .cleanse-companion__badge {
+        padding: 1px 13px;
+    }
+
+    .cleanse-companion__badge span {
+        font-size: 12px;
     }
 
     .cleanse-companion__title-mobile {
