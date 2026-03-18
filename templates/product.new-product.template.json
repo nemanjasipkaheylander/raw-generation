@@ -674,7 +674,6 @@
         "feature_yq9NJr",
         "feature_zHcEBc"
       ],
-      "disabled": true,
       "name": "Cleanse Companion",
       "settings": {
         "background_color": "#ffffff",
@@ -686,6 +685,8 @@
         "image_size": "540x",
         "image_border_radius": 0,
         "image_max_width": 540,
+        "badge": true,
+        "badge_text": "Free with Purchase",
         "title_desktop": "YOUR CLEANSE COMPANION TO HELP YOU MAXIMIZE RESULTS",
         "title_size_desktop": 24,
         "title_alignment": "left",
@@ -817,35 +818,35 @@
           "type": "text",
           "settings": {
             "faq_title": "Can I eat on this cleanse?",
-            "faq_text": "Yes! You do not have to commit to a strict juice fast for the Protein Cleanse to be effective. While a straight juice diet may help maximize your results, you can certainly eat raw fruits, veggies, or other choices from the cleanse-approved foods list (found in your Cleanse Guide) without undermining your progress. You might actually be MORE successful in achieving your goals if you eat. The satiation of chewing can help prevent ending your cleanse early due to hunger or intense cravings."
+            "faq_text": "<p>Yes! You do not have to commit to a strict juice fast for the Protein Cleanse to be effective. While a straight juice diet may help maximize your results, you can certainly eat raw fruits, veggies, or other choices from the cleanse-approved foods list (found in your Cleanse Guide) without undermining your progress. You might actually be MORE successful in achieving your goals if you eat. The satiation of chewing can help prevent ending your cleanse early due to hunger or intense cravings.</p>"
           }
         },
         "text_tPBgQy": {
           "type": "text",
           "settings": {
             "faq_title": "Can I drink coffee during my cleanse?",
-            "faq_text": "Yes! We would never ask you to give up your coffee, however there are a few adjustments we recommend to support your cleanse goals. Drink your coffee black or with a low-fat plant milk, like oat milk. Replace sugar with honey."
+            "faq_text": "<p>Yes! We would never ask you to give up your coffee, however there are a few adjustments we recommend to support your cleanse goals. Drink your coffee black or with a low-fat plant milk, like oat milk. Replace sugar with honey.</p>"
           }
         },
         "text_i9dh3g": {
           "type": "text",
           "settings": {
             "faq_title": "How do I maintain my results after my cleanse?",
-            "faq_text": "The best way to help maintain your results post-cleanse is with The Protein Method™, a nutritionist-designed weekly weight management system that supports continued progress after a cleanse. To learn more about The Protein Method™, click here."
+            "faq_text": "<p>The best way to help maintain your results post-cleanse is with The Protein Method™, a nutritionist-designed weekly weight management system that supports continued progress after a cleanse. To learn more about The Protein Method™, click here.</p>"
           }
         },
         "text_PizNgm": {
           "type": "text",
           "settings": {
             "faq_title": "Are these weight loss juices low-calorie and low sugar?",
-            "faq_text": "Our in-house nutritionist believes that low-calorie fad diets are not the most effective approach to successful weight management long-term. Overly restrictive diets can often lead to frustration and setbacks. Lasting health and meaningful weight maintenance are more about choosing options with nutrient-dense ingredients, rather than counting calories, tracking fat grams, or limiting sugar intake. That being said, the juices in this cleanse were not designed to be low in calories, carbs, or natural fruit sugars. They provide your body with what it needs to thrive in the healthiest form possible…and the goal is to support sustainable weight management."
+            "faq_text": "<p>Our in-house nutritionist believes that low-calorie fad diets are not the most effective approach to successful weight management long-term. Overly restrictive diets can often lead to frustration and setbacks. Lasting health and meaningful weight maintenance are more about choosing options with nutrient-dense ingredients, rather than counting calories, tracking fat grams, or limiting sugar intake. That being said, the juices in this cleanse were not designed to be low in calories, carbs, or natural fruit sugars. They provide your body with what it needs to thrive in the healthiest form possible…and the goal is to support sustainable weight management.</p>"
           }
         },
         "text_99JAKy": {
           "type": "text",
           "settings": {
             "faq_title": "Why are the juices frozen?",
-            "faq_text": "We immediately flash-freeze all cold-pressed juices and smoothies. This is the only way to lock in the fresh flavor, raw nutrients, and enzymes, while still being able to deliver them to your door.Shipping juices frozen makes it super convenient for you. There’s no hefty prep time or messy clean-up. No juicer or blender is necessary for you to enjoy these juice recipes. All you have to do is thaw, sip, and experience the health benefits. Plus, if life gets in the way and you have to pause your cleanse, nothing goes to waste. The remaining bottles can stay in the freezer until you can start again."
+            "faq_text": "<p>We immediately flash-freeze all cold-pressed juices and smoothies. This is the only way to lock in the fresh flavor, raw nutrients, and enzymes, while still being able to deliver them to your door.Shipping juices frozen makes it super convenient for you. There’s no hefty prep time or messy clean-up. No juicer or blender is necessary for you to enjoy these juice recipes. All you have to do is thaw, sip, and experience the health benefits. Plus, if life gets in the way and you have to pause your cleanse, nothing goes to waste. The remaining bottles can stay in the freezer until you can start again.</p>"
           }
         }
       },
