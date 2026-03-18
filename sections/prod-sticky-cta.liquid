@@ -1,0 +1,103 @@
+{% if section.settings.section_button_url != blank %}
+    <div class="lp-sticky-cta"> 
+        <a href="{{ section.settings.section_button_url }}" title="{{ section.settings.section_button_text }}">
+        {{ section.settings.section_button_text }}
+        </a>
+    </div>
+{% endif %}
+
+<style>
+.lp-sticky-cta {
+    position: fixed;
+    bottom: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    transition: all .3s;
+}
+.lp-sticky-cta a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    box-shadow: 0px 3px 0px 0px #8216BC;
+    background: #A200F9;
+    text-transform: uppercase;
+    min-height: 56px;
+    width: 100%;
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var classSticky = 'sticky';
+    var lpHero = document.querySelector('.custom-product-shop');
+    var lpStickyCtaBar = document.querySelector('.lp-sticky-cta');
+    var lpFooter = document.querySelector('.footer');
+    var isInViewport = function (elem) {
+      var rect = elem.getBoundingClientRect();
+  
+      return (
+        rect.bottom >= 0
+        && rect.right >= 0
+        && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+        && rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+  
+    var timer;
+    window.addEventListener('scroll', function () {
+      if(timer) {
+        window.clearTimeout(timer);
+      }
+  
+      timer = window.setTimeout(function() {
+  
+        if (isInViewport(lpHero) || isInViewport(lpFooter)) {
+          if (lpStickyCtaBar.classList.contains(classSticky)) {
+            lpStickyCtaBar.classList.remove(classSticky)
+          }
+        } else {
+          if (!lpStickyCtaBar.classList.contains(classSticky)) {
+            lpStickyCtaBar.classList.add(classSticky)
+          }
+        }
+        
+      }, 100);
+    });
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "Sticky CTA",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_button_text",
+      "label": "Enter button text"
+    },
+    {
+      "type": "url",
+      "id": "section_button_url",
+      "label": "Paste URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky CTA"
+    }
+  ]
+}
+{% endschema %}
