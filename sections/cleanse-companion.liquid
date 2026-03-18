@@ -178,7 +178,7 @@
     <div class="cleanse-companion__box">
        <!-- Mobile Title -->
       <h2 class="cleanse-companion__title-mobile">
-      {{ section.settings.title_mobile }}
+        {{ section.settings.title_mobile }} {{ section.settings.title_mobile_2 }} {{ section.settings.title_mobile_3 }} 
       </h2>
 
       {% if section.settings.image != blank %}
@@ -444,6 +444,16 @@
       "label": "Mobile Title",
       "default": "YOUR CLEANSE COMPANION",
       "info": "Title displayed on mobile devices"
+    },
+    {
+      "type": "text",
+      "id": "title_mobile_2",
+      "label": "Mobile Title Highlighted",
+    },
+    {
+      "type": "text",
+      "id": "title_mobile_3",
+      "label": "Mobile Title"
     },
     {
       "type": "range",
