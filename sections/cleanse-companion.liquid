@@ -122,11 +122,16 @@
     letter-spacing: 0%;
     text-transform: uppercase;
 }
+.cleanse-companion__subtitle-mobile {
+      display: none;
+    }
   @media screen and (max-width: 768px) {
     .cleanse-companion__title-desktop {
       display: none;
     }
-
+.cleanse-companion__subtitle-desktop {
+      display: none;
+  }
     .cleanse-companion__image {
     position: relative;
 }
@@ -142,6 +147,9 @@
     .cleanse-companion__title-mobile {
       display: block;
       text-transform: uppercase;
+    }
+    .cleanse-companion__subtitle-mobile {
+      display: block;
     }
     .cleanse-companion__title-mobile span{
       color: #A200F9;
@@ -184,6 +192,7 @@
       <h2 class="cleanse-companion__title-mobile">
         {{ section.settings.title_mobile }} <span>{{ section.settings.title_mobile_2 }}</span> {{ section.settings.title_mobile_3 }} 
       </h2>
+      <p class="cleanse-companion__subtitle-mob">{{ section.settings.subtitle_desktop }}</p>
 
       {% if section.settings.image != blank %}
         <div class="cleanse-companion__image">
@@ -206,6 +215,8 @@
           <h2 class="cleanse-companion__title-desktop">
           {{ section.settings.title_desktop }} <span>{{ section.settings.title_desktop_2 }}</span> {{ section.settings.title_desktop_3 }}
           </h2>
+
+          <p class="cleanse-companion__subtitle-desktop">{{ section.settings.subtitle_desktop }}</p>
 
           <div class="cleanse-companion__grid">
           {% for block in section.blocks %}
@@ -381,6 +392,11 @@
       "type": "text",
       "id": "title_desktop_3",
       "label": "Desktop Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_desktop",
+      "label": "Desktop SubTitle"
     },
     {
       "type": "range",
