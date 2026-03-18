@@ -1084,6 +1084,14 @@
         "section_title_two": "",
         "section_title_third": ""
       }
+    },
+    "prod_sticky_cta_JJR8Td": {
+      "type": "prod-sticky-cta",
+      "name": "Sticky CTA",
+      "settings": {
+        "section_button_text": "FIND YOUR PLAN",
+        "section_button_url": "#shop-anchor"
+      }
     }
   },
   "order": [
@@ -1104,6 +1112,7 @@
     "prod_marquee_wQYbcB",
     "rich_text_DrkLMT",
     "1773699189691acc94",
-    "prod_icon_full_text_CnQJAd"
+    "prod_icon_full_text_CnQJAd",
+    "prod_sticky_cta_JJR8Td"
   ]
 }
