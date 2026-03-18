@@ -16,6 +16,7 @@
     justify-content: center;
     padding: 14px 20px;
     transition: all .3s;
+    display:none;
 }
 .lp-sticky-cta a {
     display: flex;
@@ -34,6 +35,11 @@
 }
 .lp-sticky-cta.sticky {
     bottom: 0px;
+}
+@media (max-width: 767px) {
+    .lp-sticky-cta {
+        display:block;
+    }
 }
 </style>
 
