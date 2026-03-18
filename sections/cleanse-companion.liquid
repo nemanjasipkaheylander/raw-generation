@@ -143,6 +143,11 @@
 
       {% if section.settings.image != blank %}
         <div class="cleanse-companion__image">
+          {% if section.settings.badge %}
+            <div class="cleanse-companion__badge">
+              <span>{{ section.settings.badge_text }}</span>
+            </div>
+          {% endif %}
           <img 
             src="{{ section.settings.image | img_url: section.settings.image_size }}" 
             alt="{{ section.settings.image.alt | escape }}"
@@ -300,6 +305,17 @@
       "id": "image_max_width",
       "label": "Image Max Width",
       "default": 540
+    },
+    {
+      "type": "checkbox",
+      "id": "badge",
+      "label": "Show Badge",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text"
     },
     {
       "type": "header",
