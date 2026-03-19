@@ -35,7 +35,8 @@
 </svg>
 
                             </div>
-                            <span class="hl-article__side-info-quiz-tagline">{{ si.settings.qz_tagline}}</span>
+                            <div class='hl-article_side-info-wrapp'>
+  <span class="hl-article__side-info-quiz-tagline">{{ si.settings.qz_tagline}}</span>
                             </div>
                             <div class="hl-article__side-info-quiz-title">{{ si.settings.qz_title }}</div>
                             <div class="hl-article__side-info-quiz-contnet">{{ si.settings.qz_content}}</div>
@@ -44,6 +45,9 @@
                                   {{ si.settings.qz_button_text}}
                                 </a>
                           {% endif %}
+
+                            </div>
+                          
                     </div>
               {% endcase %}
 {% endfor %}
