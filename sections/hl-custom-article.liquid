@@ -216,6 +216,54 @@ figure.hl-article__side-info-image {
 .hl-article__author-name {
   font-weight: 400;
 }
+/* ── .hl-article__image-wrapper ──────────────────────────── */
+.hl-article__image-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── .hl-article__feature-image ──────────────────────────── */
+.hl-article__feature-image {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.hl-article__feature-image .article__img,
+.article__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ── .hl-article__caption ────────────────────────────────── */
+.hl-article__caption {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 8px;
+}
+
+/* ── .hl-article__first-paragraph ───────────────────────── */
+.hl-article__first-paragraph {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.hl-article__first-paragraph p {
+  margin: 0;
+}
+
+.hl-article__first-paragraph a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #333;
+}
 {% endstyle %}
 
 <section class="{{ section.id }} hl-article" id="{{ section_target }}">
