@@ -60,6 +60,7 @@
                 {% when 'quiz-devider' %}
 
                     <div class="hl-article__devider-quiz-card">
+                            <div class='hl-article__wrapp'>
                         
                           <div class="hl-article__devider-name">
                             <div class="hl-article__devider-quiz-icon">
@@ -85,7 +86,9 @@
                               <figure class="hl-article__devider-quiz-image">
                                {{ art.settings.qzd_image | image_url: width: 2000 | image_tag: class: 'art-author__img', loading: 'lazy' }}
                           </figure>
-                          </div>
+                          
+                    </div>
+                        </div>
                     </div>
                       
         {% endcase %}
