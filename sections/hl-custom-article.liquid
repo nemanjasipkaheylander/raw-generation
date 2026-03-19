@@ -108,6 +108,114 @@ figure.hl-article__side-info-image {
   font-size:40px;
 }
   }
+
+  .hl-article__info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 0;
+  margin-bottom: 20px;
+  row-gap: 8px;
+}
+ 
+/* ── Date ─────────────────────────────────────────────────── */
+.hl-article__date {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+ 
+/* Dot separator after date */
+.hl-article__date::after {
+  content: '·';
+  margin: 0 8px;
+  color: #bbb;
+  font-size: 18px;
+  line-height: 1;
+}
+ 
+/* ── Read time ────────────────────────────────────────────── */
+.hl-article__rti {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #666;
+}
+ 
+/* Clock SVG icon */
+.hl-article__rti-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+ 
+.hl-article__rti-time {
+  font-size: 14px;
+  color: #666;
+}
+ 
+/* Push author to its own row */
+.hl-article__author-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+ 
+/* ── Author avatar ────────────────────────────────────────── */
+.hl-article__author-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+ 
+.hl-article__author-image img,
+.art-author__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+/* ── Author name ──────────────────────────────────────────── */
+.hl-article__author-name {
+  font-size: 14px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+ 
+.hl-article__author-name .random-text {
+  font-weight: 400;
+  color: #666;
+}
+ 
+/* The actual name part (direct text node / inline after span) */
+.hl-article__author-name a {
+  font-weight: 600;
+  color: #A200F9;
+  text-decoration: none;
+}
+ 
+.hl-article__author-name a:hover {
+  text-decoration: underline;
+}
+ 
+/* When name is plain text (no anchor), style it purple */
+.hl-article__author-name {
+  font-weight: 400;
+}
 {% endstyle %}
 
 <section class="{{ section.id }} hl-article" id="{{ section_target }}">
