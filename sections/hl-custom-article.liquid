@@ -718,6 +718,7 @@ figure.hl-article__side-info-image {
 {% endstyle %}
 
 <section class="{{ section.id }} hl-article" id="{{ section_target }}">
+  <div class='l'>
     <div class="hl-article__table-of-content">
         <div class="hl-article__table-of-content-title">{{ section.settings.toc_title }}</div>
         <ol class="hl-article__table-of-content-navigation">
@@ -784,6 +785,9 @@ figure.hl-article__side-info-image {
     <div class="hl-article__side-info">
         {% render 'hl-snippet-article-side-info'  sideInfo: section.blocks %}
     </div>
+
+  </div>
+
 </section>
 
 {% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
