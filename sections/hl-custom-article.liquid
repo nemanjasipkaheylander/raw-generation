@@ -264,6 +264,114 @@ figure.hl-article__side-info-image {
   text-decoration: underline;
   text-decoration-color: #333;
 }
+/* ── .hl-article__highlight-wrapper ─────────────────────── */
+.hl-article__highlight-wrapper {
+  background: #F5EAFF;
+  border-radius: 16px;
+  padding: 20px 24px;
+}
+
+/* ── .hl-article__highlight-header ──────────────────────── */
+.hl-article__highlight-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* ── .hl-article__highlight-icon ────────────────────────── */
+.hl-article__highlight-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin: 2px 0 0;
+}
+
+.hl-article__highlight-icon .article__icon,
+.article__icon {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── .hl-article__highlight-title ───────────────────────── */
+/* Used in both highlight-wrapper and paragraph-wrapper */
+.hl-article__highlight-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #A200F9;
+  line-height: 1.4;
+  /* Inside highlight: stays inline next to icon */
+  flex: 1;
+  min-width: 0;
+}
+
+/* Paragraph h2 variant — larger, dark, full width */
+.hl-article__paragraph-wrapper .hl-article__highlight-title {
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #111;
+  width: 100%;
+  flex: none;
+}
+
+/* ── .hl-article__highlight-content ─────────────────────── */
+/* Shared between highlight and paragraph blocks */
+.hl-article__highlight-content {
+  width: 100%;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.75;
+}
+
+.hl-article__highlight-content p {
+  margin-bottom: 10px;
+}
+
+.hl-article__highlight-content p:last-child {
+  margin-bottom: 0;
+}
+
+.hl-article__highlight-content ul,
+.hl-article__highlight-content ol {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.hl-article__highlight-content ul li {
+  list-style: disc;
+}
+
+.hl-article__highlight-content ol li {
+  list-style: decimal;
+}
+
+.hl-article__highlight-content a {
+  color: #A200F9;
+  text-decoration: underline;
+}
+
+/* ── .hl-article__paragraph-wrapper ─────────────────────── */
+.hl-article__paragraph-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  scroll-margin-top: 80px; /* offset for sticky nav */
+}
+
+/* Paragraph body text slightly larger than highlight */
+.hl-article__paragraph-wrapper .hl-article__highlight-content {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.8;
+}
 {% endstyle %}
 
 <section class="{{ section.id }} hl-article" id="{{ section_target }}">
