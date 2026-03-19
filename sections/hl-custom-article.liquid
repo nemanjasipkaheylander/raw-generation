@@ -35,7 +35,6 @@
     padding:20px;
 }
 .hl-article__table-of-content {
-    max-width: 300px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -50,16 +49,21 @@
       display: flex;
       gap: 40px;
       padding:30px 40px;
+      align-items: flex-start;
+
   }
+  .hl-article__table-of-content {
+    max-width: 300px;
+}
   }
 {% endstyle %}
 
 <section class="{{ section.id }} hl-article" id="{{ section_target }}">
     <div class="hl-article__table-of-content">
         <div class="hl-article__table-of-content-title">{{ section.settings.toc_title }}</div>
-        <ul class="hl-article__table-of-content-navigation">
+        <ol class="hl-article__table-of-content-navigation">
              {% render 'hl-snippet-article-toc'  tableContent: section.blocks %}
-        </ul>
+        </ol>
         
     </div>
     <div class="hl-article__main-content">
