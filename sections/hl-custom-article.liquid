@@ -28,6 +28,19 @@
       padding-bottom: {{ padding_bottom_desk }}px;
     }
   }
+
+  .hl-article {
+    display: flex;
+    gap: 20px;
+    padding:20px;
+}
+  @media (min-width: 768px) {
+    .hl-article {
+      display: flex;
+      gap: 20px;
+      padding:30px 40px;
+  }
+  }
 {% endstyle %}
 
 <section class="{{ section.id }} hl-article" id="{{ section_target }}">
