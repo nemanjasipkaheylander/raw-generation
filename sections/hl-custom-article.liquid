@@ -715,8 +715,8 @@
         </div>
       {% endif %}
 
-              <div class="hl-article__last-box">
-          <div class="hl-article__accordion-author-image">
+              <div class="hl-article__author-bottom">
+          <div class="hl-article__author-bottom-image">
             <figure>
               {{
                 article.metafields.custom.sources_author_image
@@ -725,16 +725,16 @@
               }}
             </figure>
           </div>
-          <div class="hl-article__accordion-main-content-title">
+          <div class="hl-article__author-bottom-name">
             {{ article.metafields.custom.sources_author_name }}
           </div>
-          <div class="hl-article__accordion-main-content-subtitle">
+          <div class="hl-article__author-bottom-subtitle">
             {{ article.metafields.custom.source_author_job_title }}
           </div>
-          <div class="hl-article__accordion-main-content-text">
+          <div class="hl-article__author-bottom-text">
             {{ article.metafields.custom.source_author_content }}
           </div>
-          <div class="hl-article__accordion-main-content-link">
+          <div class="hl-article__author-bottom-link">
             {% if article.metafields.custom.source_author_url %}
               <a
                 href="{{article.metafields.custom.source_author_url}}"
