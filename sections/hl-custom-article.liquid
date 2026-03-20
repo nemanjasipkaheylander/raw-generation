@@ -826,17 +826,14 @@ figure.hl-article__side-info-quiz-image .si-author__img {
       }
 
   /* ── .hl-article__author-bottom ──────────────────────────── */
-  .hl-article__author-bottom {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    grid-template-rows: auto auto 1fr auto;
-    column-gap: 16px;
-    row-gap: 4px;
-    border: 1px solid #E6E6E6;
+.hl-article__author-bottom {
     border-radius: 16px;
     padding: 20px;
-    background: #fff;
-  }
+    background: #F4F4F4;
+    position: relative;
+    display: flex;
+    gap:14px;
+}
 
   /* ── Image: spans both rows on the left ───────────────────── */
   .hl-article__author-bottom-image {
@@ -937,6 +934,7 @@ figure.hl-article__side-info-quiz-image .si-author__img {
   .hl-article__author-bottom-link a:hover {
     text-decoration: underline;
   }
+  
 {% endstyle %}
 
 <section class="{{ section.id }} hl-article" id="{{ section_target }}">
