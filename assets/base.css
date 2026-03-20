@@ -1850,9 +1850,7 @@ summary[open] .dropdown-icon--close {
     height: 0;
 }
 
-svg {
-    fill: rgb(var(--layout-text-color));
-}
+
 
 .svg-with-background path,
 .svg-with-background circle,
