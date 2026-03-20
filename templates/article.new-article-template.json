@@ -318,9 +318,9 @@
         "bg_gradient_1": "",
         "bg_gradient_2": "",
         "padding_top": "",
-        "padding_bottom": "",
-        "padding_top_desk": "",
-        "padding_bottom_desk": "",
+        "padding_bottom": "30",
+        "padding_top_desk": "30",
+        "padding_bottom_desk": "30",
         "toc_title": "Contents"
       }
     }
