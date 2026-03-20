@@ -850,8 +850,8 @@ figure.hl-article__side-info-quiz-image .si-author__img {
 }
 .hl-article__author-icon {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 0;
+    top: -15px;
 }
 
 .hl-article__author-bottom-image {
@@ -947,10 +947,14 @@ figure.hl-article__side-info-quiz-image .si-author__img {
     position:relative;
   }
 
-        @media (min-width: 1200px) {
+   @media (min-width: 750px) {
 
   .hl-article__author-bottom {
     flex-direction:row;
+}
+.hl-article__author-icon {
+    right: 0;
+    top: 0;
 }
 }
   
