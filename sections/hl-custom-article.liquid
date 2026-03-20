@@ -779,6 +779,37 @@
         </div>
         </div>
       {% endif %}
+
+              <div class="hl-article__last-box">
+          <div class="hl-article__accordion-author-image">
+            <figure>
+              {{
+                article.metafields.custom.sources_author_image
+                | image_url: width: 2000
+                | image_tag: class: 'accordion-icon', loading: 'lazy'
+              }}
+            </figure>
+          </div>
+          <div class="hl-article__accordion-main-content-title">
+            {{ article.metafields.custom.sources_author_name }}
+          </div>
+          <div class="hl-article__accordion-main-content-subtitle">
+            {{ article.metafields.custom.source_author_job_title }}
+          </div>
+          <div class="hl-article__accordion-main-content-text">
+            {{ article.metafields.custom.source_author_content }}
+          </div>
+          <div class="hl-article__accordion-main-content-link">
+            {% if article.metafields.custom.source_author_url %}
+              <a
+                href="{{article.metafields.custom.source_author_url}}"
+                title="{{ article.metafields.custom.source_author_url_text }}"
+              >
+                {{- article.metafields.custom.source_author_url_text -}}
+              </a>
+            {% endif %}
+          </div>
+        </div>
     </div>
 
     <div class="hl-article__side-info">
