@@ -777,36 +777,6 @@
             <path d="M12 14.0005C13.1046 14.0005 14 13.1051 14 12.0005C14 10.8959 13.1046 10.0005 12 10.0005C10.8954 10.0005 10 10.8959 10 12.0005C10 13.1051 10.8954 14.0005 12 14.0005Z" stroke="#A200F9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class="hl-article__last-box">
-          <div class="hl-article__accordion-author-image">
-            <figure>
-              {{
-                article.metafields.custom.sources_author_image
-                | image_url: width: 2000
-                | image_tag: class: 'accordion-icon', loading: 'lazy'
-              }}
-            </figure>
-          </div>
-          <div class="hl-article__accordion-main-content-title">
-            {{ article.metafields.custom.sources_author_name }}
-          </div>
-          <div class="hl-article__accordion-main-content-subtitle">
-            {{ article.metafields.custom.source_author_job_title }}
-          </div>
-          <div class="hl-article__accordion-main-content-text">
-            {{ article.metafields.custom.source_author_content }}
-          </div>
-          <div class="hl-article__accordion-main-content-link">
-            {% if article.metafields.custom.source_author_url %}
-              <a
-                href="{{article.metafields.custom.source_author_url}}"
-                title="{{ article.metafields.custom.source_author_url_text }}"
-              >
-                {{- article.metafields.custom.source_author_url_text -}}
-              </a>
-            {% endif %}
-          </div>
-        </div>
         </div>
       {% endif %}
     </div>
