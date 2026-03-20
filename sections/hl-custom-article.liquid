@@ -948,6 +948,8 @@
 {% endstyle %}
 
 <section class="{{ section.id }} hl-article" id="{{ section_target }}">
+  <div class='blog-wrapp'>
+
   <div class="hl-article__table-of-content">
     <div class="hl-article__table-of-content-title">{{ section.settings.toc_title }}</div>
     <ol class="hl-article__table-of-content-navigation">
@@ -1040,6 +1042,9 @@
   <div class="hl-article__side-info">
     {% render 'hl-snippet-article-side-info', sideInfo: section.blocks %}
   </div>
+
+  </div>
+
 </section>
 <script src="{{ 'article-accordion.js' | asset_url }}" defer></script>
 
