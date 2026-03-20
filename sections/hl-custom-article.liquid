@@ -810,9 +810,10 @@
         </div>
       {% endif %}
     </div>
-  </div>
-  <div class="hl-article__side-info">
-    {% render 'hl-snippet-article-side-info', sideInfo: section.blocks %}
+
+    <div class="hl-article__side-info">
+      {% render 'hl-snippet-article-side-info', sideInfo: section.blocks %}
+    </div>
   </div>
 </section>
 <script src="{{ 'article-accordion.js' | asset_url }}" defer></script>
