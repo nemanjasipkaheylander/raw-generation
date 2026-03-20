@@ -991,6 +991,7 @@
           </div>
         </div>
       {% endif %}
+        {% if article.metafields.custom.source_author_job_title != blank %}
 
       <div class="hl-article__author-bottom">
         <div class="hl-article__author-bottom-image">
@@ -1003,7 +1004,6 @@
           </figure>
         </div>
 
-        {% if article.metafields.custom.source_author_job_title != blank %}
           <div class="hl-article__author-content">
             <div class="hl-article__author-icon">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
