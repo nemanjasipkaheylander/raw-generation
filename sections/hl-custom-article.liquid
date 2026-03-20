@@ -845,6 +845,7 @@ figure.hl-article__side-info-quiz-image .si-author__img {
     background: #F4F4F4;
     position: relative;
     display: flex;
+    flex-direction:column;
     gap:14px;
 }
 .hl-article__author-icon {
@@ -943,6 +944,12 @@ figure.hl-article__side-info-quiz-image .si-author__img {
     margin-left:4px;
   }
 
+        @media (min-width: 1200px) {
+
+  .hl-article__author-bottom {
+    flex-direction:row;
+}
+}
   
 {% endstyle %}
 
