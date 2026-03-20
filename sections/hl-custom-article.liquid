@@ -130,51 +130,175 @@
       /* ============================================================
          RIGHT SIDEBAR
          ============================================================ */
-      .hl-article__side-info {
-        width: 100%;
-        flex-direction: column;
-        gap: 20px;
-        display: flex;
-      }
+/* ============================================================
+   SIDE INFO — AUTHOR CARD (side-autor)
+   ============================================================ */
+.hl-article__side-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 20px;
+  gap: 6px;
+  border: 1px solid #E6E6E6;
+  border-radius: 20px;
+  text-align: center;
+}
 
-      .hl-article__side-info-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: #fff;
-        padding: 20px;
-        gap: 10px;
-        border: 1px solid #E6E6E6;
-        border-radius: 20px;
-        text-align: center;
-      }
+figure.hl-article__side-info-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0;
+}
 
-      figure.hl-article__side-info-image {
-        max-width: 60px;
-      }
+figure.hl-article__side-info-image .si-author__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-      .hl-article__side-info-quiz-card {
-        border-radius: 20px;
-        border: 1px solid #E6E6E6;
-        overflow: hidden;
-      }
+.hl-article__side-info-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+}
 
-      .hl-article_side-info-wrapp {
-        padding: 20px;
-        display: flex;
-        gap: 12px;
-        flex-direction: column;
-      }
+.hl-article__side-info-title {
+  font-size: 12px;
+  color: #A200F9;
+  font-weight: 500;
+  line-height: 1.4;
+}
 
-      @media (min-width: 768px) {
-        .hl-article__side-info {
-          max-width: 300px;
-          display: flex;
-          position: sticky;
-          top: 70px;
-        }
-      }
+.hl-article__side-info-card > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  color: #A200F9;
+  text-decoration: none;
+}
+
+.hl-article__side-info-card > a:hover {
+  opacity: 0.75;
+}
+
+/* ============================================================
+   SIDE INFO — QUIZ CARD (side-quiz)
+   ============================================================ */
+.hl-article__side-info-quiz-card {
+  border-radius: 20px;
+  border: 1px solid #E6E6E6;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Hero image at top */
+figure.hl-article__side-info-quiz-image {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+figure.hl-article__side-info-quiz-image .si-author__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content wrapper */
+.hl-article_side-info-wrapp {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/* Tagline row: icon + text */
+.hl-article__side-info-name {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hl-article__side-info-quiz-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.hl-article__side-info-quiz-icon svg {
+  display: block;
+}
+
+.hl-article__side-info-quiz-tagline {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #A200F9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Tagline row: icon inline with text */
+.hl-article__side-info-name > .hl-article__side-info-quiz-icon,
+.hl-article__side-info-name > span.hl-article__side-info-quiz-tagline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hl-article__side-info-name {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.hl-article__side-info-quiz-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.25;
+  width: 100%;
+}
+
+.hl-article__side-info-quiz-contnet {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CTA button */
+.hl-article_side-info-wrapp > a {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  background: #A200F9;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.hl-article_side-info-wrapp > a:hover {
+  background: #8500cc;
+  transform: translateY(-1px);
+}
 
       /* ============================================================
          ARTICLE META (DATE, RTI, AUTHOR)
