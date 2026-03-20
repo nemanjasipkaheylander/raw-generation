@@ -50,14 +50,27 @@
     flex-direction: column;
   }
 
+.hl-article__main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
   @media (min-width: 768px) {
     .hl-article {
       gap: 40px;
       padding: 30px 40px;
       align-items: flex-start;
     }
+    
+.hl-article__main-content {
+    gap: 40px;
+}
+
   }
 
+
+  
   /* ============================================================
      TITLE
      ============================================================ */
@@ -97,6 +110,7 @@
     list-style-type: auto;
     font-size: 14px;
   }
+
 
   @media (min-width: 768px) {
     .hl-article__table-of-content {
