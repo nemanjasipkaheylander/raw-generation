@@ -3,6 +3,7 @@
         {% case art.type %}
             {% when 'article-heading' %}
                 
+            <div class="hl-article__hero-text">
                 <h1 class="hl-article__title">
                     {{ article.title }}
                 </h1>
@@ -19,6 +20,9 @@
                         <div class="hl-article__author-name"><span class="random-text">Written by </span>{{ article.author }}</div>
                     </div>
                 </div>
+
+            </div>
+
 
                 <div class="hl-article__image-wrapper">
                     <figure class="hl-article__feature-image">
