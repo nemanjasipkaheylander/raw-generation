@@ -136,6 +136,9 @@
 .ruk_rating_snippet i {
     font-size: 10px;
 }
+.quick-view-button.button.card__add-to-cart {
+    padding: 10px 8px;
+}
 }
 
 @media (min-width: 768px) {
