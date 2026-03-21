@@ -16,6 +16,7 @@
   }
 .custom-popup__subtitle {
     text-align: center;
+    margin-bottom: 16px;
 }
   .custom-popup__title {
     font-family: Jost;
