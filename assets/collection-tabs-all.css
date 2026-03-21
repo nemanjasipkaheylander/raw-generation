@@ -36,19 +36,18 @@
     width: 100%;
   }
   .collection-tab-button__image {
-      max-width: 75px;
-      margin: 0 auto;
-      margin-bottom: 8px;
-      border-radius: 12px;
+    max-width: 75px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    border-radius: 12px;
   }
   .collection-tab-button__image img{
       border-radius: 12px;
   }
   .collection-tab-buttons {
     display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: scroll;
     width: 100%;
+    justify-content: center;
   }
 
   .collection-tab-button {
@@ -59,6 +58,7 @@
     padding-block: 0 !important;
     font-family: Jost;
     text-align: center;
+    max-width: 75px;
   }
 
   .collection-tab-button.is-active {
