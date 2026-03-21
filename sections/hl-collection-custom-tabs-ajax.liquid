@@ -273,8 +273,10 @@
         --grid-columns: {{ section.settings.mobile_columns }};
 
         @container grid-container(min-width: {{ default_grid_min_width_mobile }}) {
-          grid-template-columns: repeat(var(--grid-columns), minmax({{ 156 }}px, 1fr));
+          grid-template-columns: repeat(var(--grid-columns), minmax({{ mobile_card_min_width }}px, 1fr));
         }
+        grid-template-columns: repeat(auto-fill, minmax({{ 156 }}px, 1fr));
+
       }
     }
 
