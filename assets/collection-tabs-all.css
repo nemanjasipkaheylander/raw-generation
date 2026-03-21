@@ -115,6 +115,22 @@
   .card__short-description {
     margin-bottom: auto;
   }
+
+  .custom_tab_ratings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #f7f7f9;
+    border-radius: 50px;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 4px 10px;
+}
+.collection-tab.is-active {
+    padding-right: 20px;
+}
+
 }
 
 @media (min-width: 768px) {
@@ -122,7 +138,9 @@
     .section-container {
       padding: 30px 0 0;
     }
-
+    .custom_tab_ratings {
+      padding: 6px 10px;
+  }
     .custom-popup__header-wrapper {
       max-width: 745px;
       margin: 0 auto;
@@ -131,10 +149,11 @@
       gap: 16px;
       align-items: center;
     }
-
+    .collection-tab-button__image {
+        max-width: 80px;
+        margin: 0 auto;
+    }
     .custom-popup__title {
-      font-family: Jost;
-      font-weight: 400;
       font-size: 30px;
       line-height: 130%;
       text-align: center;
