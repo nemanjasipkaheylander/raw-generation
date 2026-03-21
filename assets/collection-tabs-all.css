@@ -139,6 +139,9 @@
 .quick-view-button.button.card__add-to-cart {
     padding: 10px 8px;
 }
+add-to-cart.cart-drawer {
+  margin-left: 0;
+}
 }
 
 @media (min-width: 768px) {
