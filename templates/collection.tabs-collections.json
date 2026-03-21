@@ -61,8 +61,8 @@
       ],
       "name": "CP collection tabs-v2",
       "settings": {
-        "custom_title_one": "",
-        "custom_title_two": "",
+        "custom_title_one": "Cold Pressed",
+        "custom_title_two": "Juices",
         "custom_subtitle": "",
         "products_per_page": 15,
         "desktop_columns": "3",
