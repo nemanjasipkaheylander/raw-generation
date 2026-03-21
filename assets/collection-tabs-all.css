@@ -58,6 +58,7 @@
     line-height: 140%;
     padding-block: 0 !important;
     font-family: Jost;
+    text-align: center;
   }
 
   .collection-tab-button.is-active {
