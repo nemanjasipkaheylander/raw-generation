@@ -52,13 +52,11 @@
   }
 
   .collection-tab-button {
-    border-radius: 8px !important;
     padding-inline: 0;
     color: #000;
     font-size: 15px;
     line-height: 140%;
     padding-block: 0 !important;
-    white-space: nowrap;
     font-family: Jost;
   }
 
