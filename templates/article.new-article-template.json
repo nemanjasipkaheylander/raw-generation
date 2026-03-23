@@ -285,6 +285,18 @@
             "qz_button_text": "Find Your Plan",
             "qz_url": "#"
           }
+        },
+        "author_KDE3Mi": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify://shop_images/RSqOB_qbX_1.png",
+            "author_name": "Lisa Testa, M.S.",
+            "author_job_title": "Chief Nutrition Officer & Head of Product Development at Raw Generation",
+            "author_linkedin_url": "https://www.linkedin.com/in/lisa-testa-m-s-16514036/",
+            "author_content": "<p>Lisa Testa is a holistic nutritionist with over 20 years of experience in wellness and detoxification. She holds a Master of Science in Holistic Nutrition and has helped thousands of clients achieve their health goals through juice cleansing and whole-food nutrition.<br/><br/></p>",
+            "author_url": "https://www.rawgeneration.com/pages/lisa-testa?_pos=1&_sid=25e6b2213&_ss=r",
+            "author_url_text": "Learn more about Lisa"
+          }
         }
       },
       "block_order": [
@@ -309,7 +321,8 @@
         "paragraph_xgX7ez",
         "paragraph_X6BCJf",
         "side_autor_4Y9zTi",
-        "side_quiz_ERNKRW"
+        "side_quiz_ERNKRW",
+        "author_KDE3Mi"
       ],
       "name": "Custom Article",
       "settings": {
