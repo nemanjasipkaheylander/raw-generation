@@ -437,7 +437,7 @@
             document.getElementsByTagName('head')[0].appendChild(script);
         </script>
         
-        <script>
+        {% comment %} <script>
           window['__cvg_shopify_info'] = {
             product: {{ product | json }},
             variant: {{ product.selected_or_first_available_variant | json }},
@@ -445,7 +445,7 @@
             collection: {...{{ collection | json }}, products: {{ collection.products | json }}},
             search: {{ search.terms | json }},
           };
-          </script>
+          </script> {% endcomment %}
           <script src="https://static.runconverge.com/pixels/ZhXx_S.js" async></script>
           <script>
             window.cvg||(cvg=function(){cvg.process?cvg.process.apply(cvg,arguments):cvg.queue.push(arguments)},cvg.queue=[]);
