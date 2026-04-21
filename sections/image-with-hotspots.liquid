@@ -372,7 +372,7 @@
                                   {% endif %}
                                 </div>
                                 {% if block.settings.product != blank %}
-                                    {% if section.settings.open_in_quick_view %}<quick-view-button class="image-with-hotspots__content{% if section.settings.center_text %} center{% endif %} quick {{ block.settings.position }}" data-product-url="{{ block.settings.product.url | within: block.settings.product.collection }}" data-product-variant-url="{{ block.settings.product.selected_or_first_available_variant.url }}" tabindex="0">
+                                    {% if section.settings.open_in_quick_view %}<quick-view-button class="image-with-hotspots__content{% if section.settings.center_text %} center{% endif %} quick {{ block.settings.position }}" data-product-url="{{ block.settings.product.url | within: block.settings.product.collection }}" data-product-variant-url="{{ block.settings.product.url }}" tabindex="0">
                                     {% else %}<a class="image-with-hotspots__content{% if section.settings.center_text %} center{% endif %} {{ block.settings.position }}" href="{{ block.settings.product.url }}"{% if section.settings.target_blank %} target="_blank"{% endif %}>{% endif %}
                                         {%- if section.settings.show_vendor -%}
                                             <p class="image-with-hotspots__vendor body-font{% if settings.uppercase_body %} uppercase{% endif %}">{{ block.settings.product.vendor }}</p>

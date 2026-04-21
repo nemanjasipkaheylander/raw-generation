@@ -26,7 +26,7 @@
 
 <div class="card-product{% if full_width %} card-product--full-width{% endif %} color-{{ product_card_color_scheme }} 
     {% if show_product_card_border %}with-border{% endif %} {% if product_card_color_scheme != parent_color_scheme %}with-color{% endif %}">
-    <a id="card-product-{{ index }}" class="card hover_behavior-{{ hover_behavior }} flex--column {% if quick_buy == 'on_desktop' or quick_buy == 'enable' %}card-quick-view{% endif %}" href="{{ card_product.selected_or_first_available_variant.url }}" draggable="false">
+    <a id="card-product-{{ index }}" class="card hover_behavior-{{ hover_behavior }} flex--column {% if quick_buy == 'on_desktop' or quick_buy == 'enable' %}card-quick-view{% endif %}" href="{{ card_product.url }}" draggable="false">
             <div class="card-product__media-wrapper {% if settings.fit_product_media %}card-product__media-wrapper--fit{% endif %}" style="--total-slides: {{ card_product.media.size }}; --speed: {{ autoplay_speed }}s;">
                     <div class="card__product-media card__product-image aspect-ratio {% if settings.fit_product_media %}card__product-media--fit{% endif %} {% if hover_behavior == 'second_image' %}card__product-media--show-second-img{% endif %}" 
                         {% if settings.disable_right_click %}oncontextmenu="return false"{% endif %}
