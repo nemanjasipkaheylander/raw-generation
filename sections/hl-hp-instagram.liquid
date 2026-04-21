@@ -1,0 +1,171 @@
+
+
+
+{{ '' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign section_target = section.settings.section_target
+  assign bg_color = section.settings.bg_color
+  assign bg_gradient_1 = section.settings.bg_gradient_1
+  assign bg_gradient_2 = section.settings.bg_gradient_2
+  assign padding_top = section.settings.padding_top
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_top_desk = section.settings.padding_top_desk
+  assign padding_bottom_desk = section.settings.padding_bottom_desk
+%}
+
+{% style %}
+  .{{ section.id }} {
+    position: relative;
+    background-color: {{ bg_color }};
+    background-image: linear-gradient(to bottom, {{ bg_gradient_1 }} 0%, {{ bg_gradient_2 }} 100%);
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+  }
+  @media (min-width: 768px) {
+    .{{ section.id }} {
+      padding-top: {{ padding_top_desk }}px;
+      padding-bottom: {{ padding_bottom_desk }}px;
+    }
+  }
+{% endstyle %}
+
+<section class="{{ section.id }} hl-hp-instagram" id="{{ section_target }}">
+    <div class="l">
+         <h2 class="hl-hp-instagram__title">{{ section.settings.section_title }}</h2>
+         <div class="hl-hp-instagram__title__subtitle">{{ section.settings.section_text }}</div>
+         <div class="hl-hp-instagram__social-wrapper">
+              <div class="hl-hp-instagram__social-insta">
+                <a href="{{section.settings.instagram_one_url}}" title="{{ section.settings.instagram_one_text }}">{{ section.settings.instagram_one_text }}</a>
+              </div>
+              <div class="hl-hp-instagram__social-fb">
+                <a href="{{ section.settings.instagram_two_url }}" title="{{ section.settings.instagram_two_text }}"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 1.66663H12.5C11.395 1.66663 10.3352 2.10561 9.55376 2.88701C8.77236 3.66842 8.33337 4.72822 8.33337 5.83329V8.33329H5.83337V11.6666H8.33337V18.3333H11.6667V11.6666H14.1667L15 8.33329H11.6667V5.83329C11.6667 5.61228 11.7545 5.40032 11.9108 5.24404C12.0671 5.08776 12.279 4.99996 12.5 4.99996H15V1.66663Z" fill="white"/>
+</svg>
+{{ section.settings.instagram_two_text }}</a>
+              </div>
+         </div>
+
+
+         {% if section.blocks.size > 0 %}
+            <div class="hl-hp-instagram__content-wrapper">
+                {% for block in section.blocks %}
+                       <div class="hl-hp-instagram__image-container">
+                           <a href="{{ block.settings.instagram_url }}" title="instagram-images">
+                               {{ block.settings.instagram_img | image_url: width: 2000 | image_tag: class: 'hl-hp-instagram__img', loading: 'lazy' }}
+                           </a>
+                       </div>
+                {% endfor %}
+            </div>
+         {% endif %}
+    </div>
+</section>
+
+{% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
+
+{% schema %}
+  {
+    "name": "Instagram section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "text",
+        "id": "section_target",
+        "label": "Section Target"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Section background color"
+      },
+      {
+        "type": "color",
+        "id": "bg_gradient_1",
+        "label": "Section gradient color first"
+      }, {
+        "type": "color",
+        "id": "bg_gradient_2",
+        "label": "Section gradient color second"
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Section padding top - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Section padding bottom - small screens"
+      }, {
+        "type": "text",
+        "id": "padding_top_desk",
+        "label": "Section padding top - large screens"
+      }, {
+        "type": "text",
+        "id": "padding_bottom_desk",
+        "label": "Section padding bottom - large screens"
+      },
+      {
+        "type": "header",
+        "content": "Section Content"
+      },
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Enter title",
+        "default": "Join Us On"
+      },
+      {
+        "type": "richtext",
+        "id": "section_text",
+        "label": "Enter text"
+      },
+      {
+        "type": "url",
+        "id": "instagram_one_url",
+        "label": "Paste url"
+      },
+      {
+        "type": "text",
+        "id": "instagram_one_text",
+        "label":"Enter text"
+      },
+      {
+        "type": "url",
+        "id": "instagram_two_url",
+        "label": "Paste url"
+      },
+      {
+        "type": "text",
+        "id": "instagram_two_text",
+        "label":"Enter facebook text"
+      }
+
+    ],
+    "blocks": [
+        {
+            "name": "instagram image",
+            "type": "image",
+            "settings": [
+                      {
+                        "type": "image_picker",
+                        "id": "instagram_img",
+                        "label": "Upload image"
+                      },
+                      {
+                        "type": "url",
+                        "id": "instagram_url",
+                        "label": "Paste url"
+                        }
+            ] 
+        }
+    ],
+    "presets": [
+      {
+        "name": "Instagram section"
+      }
+    ]
+  }
+{% endschema %}
