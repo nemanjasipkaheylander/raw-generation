@@ -11,20 +11,22 @@
   "sections": {
     "main-page": {
       "type": "main-page",
-      "settings": {}
-    },
-    "hl_hp_hero_kang7f": {
-      "type": "hl-hp-hero",
-      "name": "HP Hero",
-      "settings": {}
-    },
-    "hl_hp_collection_eyemtF": {
-      "type": "hl-hp-collection",
-      "settings": {}
-    },
-    "hl_hp_instagram_a44YF4": {
-      "type": "hl-hp-instagram",
-      "settings": {}
+      "settings": {
+        "heading": "",
+        "heading_style": "section-heading",
+        "hide_heading": false,
+        "center_text": true,
+        "rte_heading_style": "page-title",
+        "page_style": "body-font",
+        "content_width": "regular",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
     },
     "shogun-helper": {
       "type": "shogun-helper",
@@ -38,9 +40,6 @@
   "order": [
     "shogun-helper",
     "main-page",
-    "hl_hp_hero_kang7f",
-    "hl_hp_collection_eyemtF",
-    "hl_hp_instagram_a44YF4",
     "shogun-optimizer"
   ]
 }
