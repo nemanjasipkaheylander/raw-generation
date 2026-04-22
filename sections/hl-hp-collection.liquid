@@ -467,8 +467,6 @@ button.cp-program-tabs__button {
       {% endif %}
     </div>
 
-    <div class="section color-{{ section.settings.color_scheme }}{% if enable_grid_switcher %} enable-grid-switcher{% endif %}">
-      <div class="section-container {% if settings.uppercase_body %}uppercase{% endif %}{% if section.settings.show_bottom_line %} bottom-line{% endif %}">
         {% if tab_blocks.size > 0 %}
           {% for block in tab_blocks %}
             {% assign tab_collection = block.settings.collection %}
@@ -607,8 +605,6 @@ button.cp-program-tabs__button {
             </div>
           </div>
         {% endif %}
-      </div>
-    </div>
 
     <div class="hp-collection">
       <h3 class="hp-collection__title">{{ section.settings.custom_quiz }}</h3>
