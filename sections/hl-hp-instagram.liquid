@@ -76,6 +76,43 @@
 }
 
   }
+  .hl-hp-instagram__marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.hl-hp-instagram__marquee-track {
+  display: flex;
+  gap: 16px; /* razmak između slika */
+  width: max-content;
+  animation: marquee-left 20s linear infinite;
+}
+
+.hl-hp-instagram__marquee-track:hover {
+  animation-play-state: paused; /* pauza na hover */
+}
+
+.hl-hp-instagram__image-container {
+  flex-shrink: 0;
+  width: 300px; /* širina slike - prilagodi po potrebi */
+  height: 300px;
+}
+
+.hl-hp-instagram__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* -50% jer su blokovi duplirani */
+  }
+}
 {% endstyle %}
 
 <section class="{{ section.id }} hl-hp-instagram" id="{{ section_target }}">
@@ -98,8 +135,11 @@
       </div>
     </div>
 
-    {% if section.blocks.size > 0 %}
-      <div class="hl-hp-instagram__content-wrapper">
+{% if section.blocks.size > 0 %}
+  <div class="hl-hp-instagram__marquee-wrapper">
+    <div class="hl-hp-instagram__marquee-track">
+      {% comment %} Dupliraj blokove za beskonačni efekat {% endcomment %}
+      {% for i in (1..2) %}
         {% for block in section.blocks %}
           <div class="hl-hp-instagram__image-container">
             <a href="{{ block.settings.instagram_url }}" title="instagram-images">
@@ -111,8 +151,10 @@
             </a>
           </div>
         {% endfor %}
-      </div>
-    {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
   </div>
 </section>
 

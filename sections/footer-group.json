@@ -13,6 +13,74 @@
   "sections": {
     "hl_hp_instagram_a44YF4": {
       "type": "hl-hp-instagram",
+      "blocks": {
+        "image_mRjHKc": {
+          "type": "image",
+          "settings": {
+            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
+            "instagram_url": "#"
+          }
+        },
+        "image_A4wBCy": {
+          "type": "image",
+          "settings": {
+            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
+            "instagram_url": "#"
+          }
+        },
+        "image_6Qy7K8": {
+          "type": "image",
+          "settings": {
+            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
+            "instagram_url": "#"
+          }
+        },
+        "image_Cpjnyt": {
+          "type": "image",
+          "settings": {
+            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
+            "instagram_url": "#"
+          }
+        },
+        "image_MwkKCQ": {
+          "type": "image",
+          "settings": {
+            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
+            "instagram_url": "#"
+          }
+        },
+        "image_wkWmXx": {
+          "type": "image",
+          "settings": {
+            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
+            "instagram_url": "#"
+          }
+        },
+        "image_aAVeGr": {
+          "type": "image",
+          "settings": {
+            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
+            "instagram_url": "#"
+          }
+        },
+        "image_fjg8AA": {
+          "type": "image",
+          "settings": {
+            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
+            "instagram_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "image_mRjHKc",
+        "image_A4wBCy",
+        "image_6Qy7K8",
+        "image_Cpjnyt",
+        "image_MwkKCQ",
+        "image_wkWmXx",
+        "image_aAVeGr",
+        "image_fjg8AA"
+      ],
       "name": "Instagram section",
       "settings": {
         "section_target": "",
