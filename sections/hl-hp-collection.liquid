@@ -401,6 +401,17 @@
       margin-bottom: 14px;
     }
   }
+
+.hp-collection__title{
+  font-size:16px;
+  font-weight:700;
+}
+.hp-collection__title a{
+  font-size:15px;
+  font-weight:600;
+  text-decoration:underline;
+  color:#A200F9;
+}
 {% endstyle %}
 
 <section class="custom-popup">
@@ -575,8 +586,8 @@
       </div>
     </div>
 
-    <div class="custom-popup_quiz">
-      <h3 class="custom-popup_quiz-title">{{ section.settings.custom_quiz }}</h3>
+    <div class="hp-collection">
+      <h3 class="hp-collection__title">{{ section.settings.custom_quiz }}</h3>
       {% if section.settings.custom_quiz_button_link %}
         <a href="{{ section.settings.custom_quiz_button_link }}" title="{{ section.settings.custom_quiz_button_text }}">
           {{ section.settings.custom_quiz_button_text }}
