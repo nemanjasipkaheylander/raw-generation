@@ -301,7 +301,7 @@ s.regular-price {
     align-items: center;
     display: flex;
     gap: 20px;
-    margin:0;
+    margin:0 !important;
 }
 
 .cart__icon.flex--row {
