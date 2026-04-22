@@ -124,69 +124,53 @@
         "image_mRjHKc": {
           "type": "image",
           "settings": {
-            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
-            "instagram_url": "#"
+            "instagram_img": "shopify://shop_images/9.jpg",
+            "instagram_url": "https://www.instagram.com/raw_generation_juices/"
           }
         },
-        "image_A4wBCy": {
+        "image_fawJbX": {
           "type": "image",
           "settings": {
-            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
-            "instagram_url": "#"
+            "instagram_img": "shopify://shop_images/13.jpg",
+            "instagram_url": "https://www.instagram.com/raw_generation_juices/"
           }
         },
         "image_6Qy7K8": {
           "type": "image",
           "settings": {
-            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
-            "instagram_url": "#"
+            "instagram_img": "shopify://shop_images/14.jpg",
+            "instagram_url": "https://www.instagram.com/raw_generation_juices/"
           }
         },
         "image_Cpjnyt": {
           "type": "image",
           "settings": {
-            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
-            "instagram_url": "#"
+            "instagram_img": "shopify://shop_images/15.jpg",
+            "instagram_url": "https://www.instagram.com/raw_generation_juices/"
           }
         },
         "image_MwkKCQ": {
           "type": "image",
           "settings": {
-            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
-            "instagram_url": "#"
+            "instagram_img": "shopify://shop_images/12.jpg",
+            "instagram_url": "https://www.instagram.com/raw_generation_juices/"
           }
         },
         "image_wkWmXx": {
           "type": "image",
           "settings": {
-            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
-            "instagram_url": "#"
-          }
-        },
-        "image_aAVeGr": {
-          "type": "image",
-          "settings": {
-            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
-            "instagram_url": "#"
-          }
-        },
-        "image_fjg8AA": {
-          "type": "image",
-          "settings": {
-            "instagram_img": "shopify://shop_images/PDP_Tile-_Red.jpg",
-            "instagram_url": "#"
+            "instagram_img": "shopify://shop_images/16.jpg",
+            "instagram_url": "https://www.instagram.com/raw_generation_juices/"
           }
         }
       },
       "block_order": [
         "image_mRjHKc",
-        "image_A4wBCy",
+        "image_fawJbX",
         "image_6Qy7K8",
         "image_Cpjnyt",
         "image_MwkKCQ",
-        "image_wkWmXx",
-        "image_aAVeGr",
-        "image_fjg8AA"
+        "image_wkWmXx"
       ],
       "name": "Instagram section",
       "settings": {
@@ -481,8 +465,8 @@
     }
   },
   "order": [
-    "hl_hp_collection_eyemtF",
     "hl_hp_hero_kang7f",
+    "hl_hp_collection_eyemtF",
     "hl_hp_instagram_a44YF4",
     "advantages_EnUYzd",
     "footer",
