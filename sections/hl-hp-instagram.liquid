@@ -57,8 +57,24 @@
 
 .hl-hp-instagram__image-container{
   max-width:140px;
+  height:140px;
   border-radius:15px;
   overflow:hidden;
+}
+  .hl-hp-instagram__marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.hl-hp-instagram__marquee-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: marquee-left 20s linear infinite;
+}
+
+.hl-hp-instagram__marquee-track:hover {
+  animation-play-state: paused; /* pauza na hover */
 }
 
   @media (min-width: 600px) {
@@ -73,37 +89,16 @@
   .hl-hp-instagram__image-container{
   max-width:280px;
   border-radius:20px;
-}
+    height:280px;
 
-  }
-  .hl-hp-instagram__marquee-wrapper {
-  overflow: hidden;
-  width: 100%;
 }
 
 .hl-hp-instagram__marquee-track {
-  display: flex;
-  gap: 16px; /* razmak između slika */
-  width: max-content;
-  animation: marquee-left 20s linear infinite;
+  gap: 24px;
 }
 
-.hl-hp-instagram__marquee-track:hover {
-  animation-play-state: paused; /* pauza na hover */
-}
+  }
 
-.hl-hp-instagram__image-container {
-  flex-shrink: 0;
-  width: 300px; /* širina slike - prilagodi po potrebi */
-  height: 300px;
-}
-
-.hl-hp-instagram__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 
 @keyframes marquee-left {
   0% {
