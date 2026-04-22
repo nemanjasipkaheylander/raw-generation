@@ -1,49 +1,24 @@
-{{ '' | asset_url | stylesheet_tag }}
+{{ 'hl-hp-hero.css' | asset_url | stylesheet_tag }}
 
 {% liquid
   assign section_target = section.settings.section_target
 %}
 {% style %}
 
-  /* hero wrapper */
+  /* ================================
+     SECTION
+  ================================ */
+  .{{ section.id }} {
+    position: relative;
+  }
+  /* ================================
+     HERO LAYOUT
+  ================================ */
   .hl-hp-hero {
     position: relative;
     font-family: Jost;
   }
 
-  /* pozadinska slika - pokriva celu sekciju */
-  .hl-hp-hero__right-side {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .hl-hp-hero__right-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  /* spacer - u normalnom flow-u, daje visinu sekciji */
-  .hl-hp-hero__spacer-wrapper {
-    width: 100%;
-    position: relative;
-    z-index: 0;
-  }
-
-  .hl-hp-hero__spacer {
-    display: block;
-    width: 100%;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  /* .l lebdi preko spacera */
   .hl-hp-hero .l {
     position: absolute;
     top: 0;
@@ -55,53 +30,91 @@
     align-items: flex-start;
   }
 
-  /* left side sadrzaj */
+  /* ================================
+     BACKGROUND IMAGE
+  ================================ */
+  .hl-hp-hero__right-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hl-hp-hero__right-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* ================================
+     SPACER
+  ================================ */
+  .hl-hp-hero__spacer-wrapper {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+  }
+
+  .hl-hp-hero__spacer {
+    display: block;
+    width: 100%;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* ================================
+     LEFT SIDE CONTENT
+  ================================ */
   .hl-hp-hero__left-side {
-    padding:20px 0;
     position: relative;
     z-index: 2;
     text-align: center;
     max-width: 650px;
+    padding: 20px 0;
   }
 
-  /* ratings */
-  .hp-hl-hero__ratings-wrapper {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    padding: 5px 10px;
-    background: #fff;
-    border-radius: 50px;
-    margin: 0 auto;
-    margin-bottom: 16px;
-    max-width: fit-content;
-    font-size: 13px;
-  }
-
-  /* tagline */
   .hl-hp-hero__tagline {
     color: #A548D8;
     font-size: 15px;
-    text-transform: uppercase;
     font-weight: 600;
+    text-transform: uppercase;
   }
 
-  /* title */
   .hl-hp-hero_title {
     font-size: 30px;
+    font-weight: 400;
     line-height: 130%;
     margin-bottom: 16px;
-    font-weight: 400;
   }
 
-  /* subtitle */
   .hl-hp-hero__subtitle {
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 24px;
   }
 
-  /* buttons */
+  /* ================================
+     RATINGS
+  ================================ */
+  .hp-hl-hero__ratings-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 50px;
+    margin: 0 auto 16px;
+    max-width: fit-content;
+    font-size: 13px;
+  }
+
+  /* ================================
+     BUTTONS
+  ================================ */
   .hl-hp-hero__button-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -119,8 +132,8 @@
     color: #fff;
     background: #A200F9;
     border-radius: 5px;
+    font-weight: 600;
     text-transform: uppercase;
-    font-weight:600;
   }
 
   .hl-hp-hero__button-secondary {
@@ -130,46 +143,33 @@
     background: #fff;
     border: 1px solid #A200F9;
     border-radius: 5px;
+    font-weight: 600;
     text-transform: uppercase;
-        font-weight:600;
-
   }
 
-  .cp-program-tab-panel__subtitle {
-    color: #413C38;
-    max-width: 940px;
+  /* ================================
+     IMAGE VISIBILITY
+  ================================ */
+  .hl-hp-hero__img--mobile { display: block; }
+  .hl-hp-hero__img--desktop { display: none; }
 
-}
-
-
-
-  /* images */
-  .hl-hp-hero__img--mobile {
-    display: block;
-  }
-
-  .hl-hp-hero__img--desktop {
-    display: none;
-  }
-
-.cp-program-tab-panel__subtitle {
-    font-size: 15px;
-}
-
-  /* desktop */
+  /* ================================
+     DESKTOP
+  ================================ */
   @media (min-width: 768px) {
+    .hl-hp-hero .l {
+      align-items: center;
+    }
+
     .hl-hp-hero__left-side {
       max-width: 610px;
       text-align: left;
-              align-self: center;
+      align-self: center;
     }
-.cp-program-tab-panel__subtitle {
-    font-size: 18px;
-}
+
     .hp-hl-hero__ratings-wrapper {
       font-size: 16px;
-      margin: 0;
-      margin-bottom: 16px;
+      margin: 0 0 16px;
     }
 
     .hl-hp-hero__tagline {
@@ -200,14 +200,10 @@
       max-width: fit-content;
     }
 
-    .hl-hp-hero__img--mobile {
-      display: none;
-    }
-
-    .hl-hp-hero__img--desktop {
-      display: block;
-    }
+    .hl-hp-hero__img--mobile { display: none; }
+    .hl-hp-hero__img--desktop { display: block; }
   }
+
 {% endstyle %}
 <section class="{{ section.id }} hl-hp-hero" id="{{ section_target }}">
 
