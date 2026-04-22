@@ -33,11 +33,13 @@
     font-size:40px;
     color:#fff;
     text-align:center;
+  }
+  
+  .hl-hp-instagram__title__subtitle{
     margin-bottom:7px;  
   }
 .hl-hp-instagram__social-wrapper{
   display:flex;
-  gap:70px;
   justify-content:center;
   color:#fff;
    flex-direction:column;
@@ -49,12 +51,21 @@
   font-size:14px;
 }
 
+.hl-hp-instagram__social-insta,
+.hl-hp-instagram__social-fb {
+    display: flex;
+    justify-content: center;
+}
+
+
 @media (min-width: 600px) {
 .hl-hp-instagram__social-wrapper a{
   font-size:16px;
 }
 .hl-hp-instagram__social-wrapper{
  flex-direction:row;
+  gap:70px;
+
 }
 }
 {% endstyle %}
