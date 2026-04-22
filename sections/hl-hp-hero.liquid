@@ -29,13 +29,16 @@
 
   .hl-hp-hero {
     position: relative;
+    min-height:836px;
   }
 
-  .hl-hp-hero__right-side {
+.hl-hp-hero__right-side {
     position: absolute;
     top: 0;
     left: 0;
-  }
+    right: 0;
+    bottom: 0;
+}
 
   .hl-hp-hero__left-side {
     position: relative;
@@ -121,6 +124,9 @@
 
   /* desktop */
   @media (min-width: 768px) {
+      .hl-hp-hero {
+    min-height:auto;
+  }
     .hl-hp-hero__left-side {
       max-width: 610px;
       text-align: left;
