@@ -70,6 +70,10 @@
     font-weight:300;
     margin-bottom:24px;
   }
+  .hl-hp-hero__button-wrapper{
+    display:flex;
+    flex-wrap:wrap;
+  }
   .hl-hp-hero__button-primary{
     width:100%;
     padding:13px;
@@ -144,6 +148,9 @@
                 {{ section.settings.hero_subtitle }}
               </p>
 
+              <div class='hl-hp-hero__button-wrapper'>
+
+
               {% if section.settings.hero_button_one_url != blank %}
                  <a href="{{ section.settings.hero_button_one_url }}" title="{{ section.settings.hero_button_one_text }}">
                    <div class="hl-hp-hero__button-primary">
@@ -165,6 +172,9 @@
                  </a>  
                  </div>
               {% endif %}
+
+              </div>
+
         </div>
         <div class="hl-hp-hero__right-side">
             {{ section.settings.hero_image | image_url: width: 2000 | image_tag: class: 'hl-hp-hero__img', loading: 'lazy' }}
