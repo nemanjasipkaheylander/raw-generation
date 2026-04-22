@@ -273,7 +273,10 @@
       {% endif %}
     </div>
 
-    {% comment %} spacer - ista slika ali visibility hidden, daje visinu sekciji {% endcomment %}
+
+
+  </div>
+      {% comment %} spacer - ista slika ali visibility hidden, daje visinu sekciji {% endcomment %}
     {% if section.settings.hero_image_mobile != blank %}
       {{
         section.settings.hero_image_mobile
@@ -295,8 +298,6 @@
         | image_tag: class: 'hl-hp-hero__spacer hl-hp-hero__img--desktop', loading: 'lazy'
       }}
     {% endif %}
-
-  </div>
 </section>
 
 {% comment %} <script src='{{ '' | asset_url }}' defer='defer'></script> {% endcomment %}
