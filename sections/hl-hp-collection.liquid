@@ -2,149 +2,20 @@
 {{ 'template-collection-popup.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-  assign enable_grid_switcher = false
-  if section.settings.enable_secondary_grid or section.settings.enable_preview_grid
-    assign enable_grid_switcher = true
+  assign disable_max_width = section.settings.disable_max_width
+  assign full_width = section.settings.full_width
+  assign grid_style = section.settings.grid_style
+  assign products_per_page = section.settings.products_per_page
+
+  if grid_style == 'page' and settings.full_width_page_grid
+    assign disable_max_width = true
+  elsif grid_style == 'alternative' and settings.full_width_alt_grid
+    assign disable_max_width = true
+  elsif grid_style == 'secondary' and settings.full_width_second_grid
+    assign disable_max_width = true
   endif
 
   assign force_hover_behavior_none = false
-  assign disable_max_width = false
-  assign full_width = false
-
-  if enable_grid_switcher
-    if cart.attributes['grid_type'] != blank
-      assign grid_type = cart.attributes['grid_type']
-    else
-      assign grid_type = 'default'
-    endif
-
-    case grid_type
-      when 'default'
-        assign grid_style = section.settings.grid_style
-        assign products_per_page = section.settings.products_per_page
-
-        if section.settings.disable_max_width
-          assign disable_max_width = true
-        elsif grid_style == 'page' and settings.full_width_page_grid
-          assign disable_max_width = true
-        elsif grid_style == 'alternative' and settings.full_width_alt_grid
-          assign disable_max_width = true
-        elsif grid_style == 'secondary' and settings.full_width_second_grid
-          assign disable_max_width = true
-        endif
-
-        if section.settings.full_width
-          assign full_width = true
-        endif
-
-        if section.settings.disable_grid_gaps
-          assign grid_column_gap = 0
-        else
-          case grid_style
-            when 'page'
-              assign grid_column_gap = settings.page_column_gap
-            when 'alternative'
-              assign grid_column_gap = settings.alt_grid_column_gap
-            when 'secondary'
-              assign grid_column_gap = settings.second_grid_column_gap
-          endcase
-        endif
-
-      when 'secondary'
-        assign grid_style = section.settings.secondary_grid_style
-        assign products_per_page = section.settings.secondary_products_per_page
-
-        if section.settings.secondary_disable_max_width
-          assign disable_max_width = true
-        elsif grid_style == 'page' and settings.full_width_page_grid
-          assign disable_max_width = true
-        elsif grid_style == 'alternative' and settings.full_width_alt_grid
-          assign disable_max_width = true
-        elsif grid_style == 'secondary' and settings.full_width_second_grid
-          assign disable_max_width = true
-        endif
-
-        if section.settings.secondary_full_width
-          assign full_width = true
-        endif
-
-        if section.settings.secondary_disable_grid_gaps
-          assign grid_column_gap = 0
-        else
-          case grid_style
-            when 'page'
-              assign grid_column_gap = settings.page_column_gap
-            when 'alternative'
-              assign grid_column_gap = settings.alt_grid_column_gap
-            when 'secondary'
-              assign grid_column_gap = settings.second_grid_column_gap
-          endcase
-        endif
-
-      when 'preview'
-        assign grid_style = section.settings.preview_grid_style
-        assign products_per_page = section.settings.preview_products_per_page
-        assign force_hover_behavior_none = true
-
-        if section.settings.preview_disable_max_width
-          assign disable_max_width = true
-        elsif grid_style == 'page' and settings.full_width_page_grid
-          assign disable_max_width = true
-        elsif grid_style == 'alternative' and settings.full_width_alt_grid
-          assign disable_max_width = true
-        elsif grid_style == 'secondary' and settings.full_width_second_grid
-          assign disable_max_width = true
-        endif
-
-        if section.settings.preview_full_width
-          assign full_width = true
-        endif
-
-        if section.settings.preview_disable_grid_gaps
-          assign grid_column_gap = 0
-        else
-          case grid_style
-            when 'page'
-              assign grid_column_gap = settings.page_column_gap
-            when 'alternative'
-              assign grid_column_gap = settings.alt_grid_column_gap
-            when 'secondary'
-              assign grid_column_gap = settings.second_grid_column_gap
-          endcase
-        endif
-    endcase
-  else
-    assign grid_type = 'default'
-    assign grid_style = section.settings.grid_style
-    assign products_per_page = section.settings.products_per_page
-
-    if section.settings.disable_max_width
-      assign disable_max_width = true
-    elsif grid_style == 'page' and settings.full_width_page_grid
-      assign disable_max_width = true
-    elsif grid_style == 'alternative' and settings.full_width_alt_grid
-      assign disable_max_width = true
-    elsif grid_style == 'secondary' and settings.full_width_second_grid
-      assign disable_max_width = true
-    endif
-
-    if section.settings.full_width
-      assign full_width = true
-    endif
-
-    if section.settings.disable_grid_gaps
-      assign grid_column_gap = 0
-    else
-      case grid_style
-        when 'page'
-          assign grid_column_gap = settings.page_column_gap
-        when 'alternative'
-          assign grid_column_gap = settings.alt_grid_column_gap
-        when 'secondary'
-          assign grid_column_gap = settings.second_grid_column_gap
-      endcase
-    endif
-  endif
 
   assign accent_price = false
   if settings.bolder_product_price and section.settings.card_content_style == 'regular'
@@ -182,40 +53,6 @@
   endif
 
   assign selector_container = '#shopify-section-' | append: section.id
-
-  assign default_card_min_width = 250
-  assign secondary_card_min_width = 210
-  assign preview_card_min_width = 120
-  assign mobile_card_min_width = 1
-
-  assign default_columns = section.settings.desktop_columns | times: 1
-  assign default_columns_minus_1 = default_columns | minus: 1
-  assign default_columns_mobile = section.settings.mobile_columns | times: 1
-  assign default_columns_mobile_minus_1 = default_columns_mobile | minus: 1
-
-  assign secondary_columns = section.settings.secondary_grid_desktop_columns | times: 1
-  assign secondary_columns_minus_1 = secondary_columns | minus: 1
-  assign secondary_columns_mobile = section.settings.mobile_columns | times: 1
-  assign secondary_columns_mobile_minus_1 = secondary_columns_mobile | minus: 1
-
-  assign preview_columns = section.settings.preview_grid_desktop_columns | times: 1
-  assign preview_columns_minus_1 = preview_columns | minus: 1
-  assign preview_columns_mobile = section.settings.preview_grid_mobile_columns | times: 1
-  assign preview_columns_mobile_minus_1 = preview_columns_mobile | minus: 1
-
-  assign default_gaps_width = grid_column_gap | times: default_columns_minus_1
-  assign default_gaps_width_mobile = grid_column_gap | times: default_columns_mobile_minus_1
-  assign secondary_gaps_width = grid_column_gap | times: secondary_columns_minus_1
-  assign secondary_gaps_width_mobile = grid_column_gap | times: secondary_columns_mobile_minus_1
-  assign preview_gaps_width = grid_column_gap | times: preview_columns_minus_1
-  assign preview_gaps_width_mobile = grid_column_gap | times: preview_columns_mobile_minus_1
-
-  assign default_grid_min_width = default_columns | times: default_card_min_width | plus: default_gaps_width | append: 'px'
-  assign default_grid_min_width_mobile = default_columns_mobile | times: mobile_card_min_width | plus: default_gaps_width_mobile | append: 'px'
-  assign secondary_grid_min_width = secondary_columns | times: secondary_card_min_width | plus: secondary_gaps_width | append: 'px'
-  assign secondary_grid_min_width_mobile = secondary_columns_mobile | times: mobile_card_min_width | plus: secondary_gaps_width_mobile | append: 'px'
-  assign preview_grid_min_width = preview_columns | times: preview_card_min_width | plus: preview_gaps_width | append: 'px'
-  assign preview_grid_min_width_mobile = preview_columns_mobile | times: mobile_card_min_width | plus: preview_gaps_width_mobile | append: 'px'
 
   assign tab_blocks = section.blocks | where: 'type', 'tab'
   assign first_tab_block = tab_blocks.first
@@ -475,7 +312,7 @@
                                 selector_container: selector_container,
                                 show_bullets: section.settings.show_bullets,
                                 grid_type: 'grid',
-                                is_in_main_collection_product_grid: true,
+                                is_in_main_collection_product_grid: false,
                                 show_pickup_availability: section.settings.show_pickup_availability
                               %}
                             {% else %}
@@ -512,7 +349,7 @@
                                 selector_container: selector_container,
                                 show_bullets: section.settings.show_bullets,
                                 grid_type: 'grid',
-                                is_in_main_collection_product_grid: true,
+                                is_in_main_collection_product_grid: false,
                                 show_pickup_availability: section.settings.show_pickup_availability
                               %}
                             {% endif %}
@@ -663,10 +500,22 @@
       "type": "select",
       "id": "desktop_columns",
       "options": [
-        { "value": "2", "label": "2" },
-        { "value": "3", "label": "3" },
-        { "value": "4", "label": "4" },
-        { "value": "5", "label": "5" }
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        }
       ],
       "default": "4",
       "label": "Desktop columns"
@@ -675,77 +524,17 @@
       "type": "select",
       "id": "mobile_columns",
       "options": [
-        { "value": "1", "label": "1" },
-        { "value": "2", "label": "2" }
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
       ],
       "default": "2",
       "label": "Mobile columns"
-    },
-    {
-      "type": "header",
-      "content": "Grid columns switcher"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_secondary_grid",
-      "default": false,
-      "label": "Enable secondary grid"
-    },
-    {
-      "type": "range",
-      "id": "secondary_products_per_page",
-      "min": 3,
-      "max": 48,
-      "step": 1,
-      "label": "Secondary products per page",
-      "default": 25
-    },
-    {
-      "type": "select",
-      "id": "secondary_grid_desktop_columns",
-      "options": [
-        { "value": "3", "label": "3" },
-        { "value": "4", "label": "4" },
-        { "value": "5", "label": "5" },
-        { "value": "6", "label": "6" }
-      ],
-      "default": "5",
-      "label": "Secondary desktop columns"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_preview_grid",
-      "default": false,
-      "label": "Enable preview grid"
-    },
-    {
-      "type": "range",
-      "id": "preview_products_per_page",
-      "min": 3,
-      "max": 48,
-      "step": 1,
-      "label": "Preview products per page",
-      "default": 40
-    },
-    {
-      "type": "range",
-      "id": "preview_grid_desktop_columns",
-      "min": 6,
-      "max": 12,
-      "step": 1,
-      "label": "Preview desktop columns",
-      "default": 10
-    },
-    {
-      "type": "select",
-      "id": "preview_grid_mobile_columns",
-      "options": [
-        { "value": "2", "label": "2" },
-        { "value": "3", "label": "3" },
-        { "value": "4", "label": "4" }
-      ],
-      "default": "4",
-      "label": "Preview mobile columns"
     },
     {
       "type": "header",
@@ -755,13 +544,34 @@
       "type": "select",
       "id": "hover_behavior",
       "options": [
-        { "value": "none", "label": "None" },
-        { "value": "image_zoom", "label": "Image zoom" },
-        { "value": "second_image", "label": "Second image" },
-        { "value": "second_image_zoom", "label": "Second image zoom" },
-        { "value": "slider", "label": "Slider" },
-        { "value": "autoplay_slider", "label": "Autoplay slider" },
-        { "value": "hover_slider", "label": "Hover slider" }
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "image_zoom",
+          "label": "Image zoom"
+        },
+        {
+          "value": "second_image",
+          "label": "Second image"
+        },
+        {
+          "value": "second_image_zoom",
+          "label": "Second image zoom"
+        },
+        {
+          "value": "slider",
+          "label": "Slider"
+        },
+        {
+          "value": "autoplay_slider",
+          "label": "Autoplay slider"
+        },
+        {
+          "value": "hover_slider",
+          "label": "Hover slider"
+        }
       ],
       "default": "image_zoom",
       "label": "Hover behavior"
@@ -786,9 +596,18 @@
       "type": "select",
       "id": "desktop_options",
       "options": [
-        { "value": "disable", "label": "Disable" },
-        { "value": "enable", "label": "Enable" },
-        { "value": "on_hover", "label": "On hover" }
+        {
+          "value": "disable",
+          "label": "Disable"
+        },
+        {
+          "value": "enable",
+          "label": "Enable"
+        },
+        {
+          "value": "on_hover",
+          "label": "On hover"
+        }
       ],
       "default": "enable",
       "label": "Desktop options"
@@ -797,8 +616,14 @@
       "type": "select",
       "id": "mobile_options",
       "options": [
-        { "value": "disable", "label": "Disable" },
-        { "value": "enable", "label": "Enable" }
+        {
+          "value": "disable",
+          "label": "Disable"
+        },
+        {
+          "value": "enable",
+          "label": "Enable"
+        }
       ],
       "default": "enable",
       "label": "Mobile options"
@@ -807,8 +632,14 @@
       "type": "select",
       "id": "card_content_style",
       "options": [
-        { "value": "regular", "label": "Regular" },
-        { "value": "small", "label": "Small" }
+        {
+          "value": "regular",
+          "label": "Regular"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        }
       ],
       "default": "regular",
       "label": "Card content style"
@@ -817,9 +648,18 @@
       "type": "select",
       "id": "quick_buy",
       "options": [
-        { "value": "disable", "label": "Disable" },
-        { "value": "on_desktop", "label": "Desktop only" },
-        { "value": "enable", "label": "Enable" }
+        {
+          "value": "disable",
+          "label": "Disable"
+        },
+        {
+          "value": "on_desktop",
+          "label": "Desktop only"
+        },
+        {
+          "value": "enable",
+          "label": "Enable"
+        }
       ],
       "default": "enable",
       "label": "Quick buy"
@@ -828,9 +668,18 @@
       "type": "select",
       "id": "price_position",
       "options": [
-        { "value": "top", "label": "Top" },
-        { "value": "bottom", "label": "Bottom" },
-        { "value": "with_title", "label": "With title" }
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "with_title",
+          "label": "With title"
+        }
       ],
       "default": "bottom",
       "label": "Price position"
@@ -839,8 +688,14 @@
       "type": "select",
       "id": "options_position",
       "options": [
-        { "value": "top", "label": "Top" },
-        { "value": "bottom", "label": "Bottom" }
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
       ],
       "default": "bottom",
       "label": "Options position"
@@ -849,9 +704,18 @@
       "type": "select",
       "id": "show_vendor",
       "options": [
-        { "value": "disable", "label": "Disable" },
-        { "value": "text", "label": "Text" },
-        { "value": "image", "label": "Image" }
+        {
+          "value": "disable",
+          "label": "Disable"
+        },
+        {
+          "value": "text",
+          "label": "Text"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        }
       ],
       "default": "text",
       "label": "Show vendor"
@@ -906,9 +770,18 @@
       "type": "select",
       "id": "grid_style",
       "options": [
-        { "value": "page", "label": "Page" },
-        { "value": "secondary", "label": "Secondary" },
-        { "value": "alternative", "label": "Alternative" }
+        {
+          "value": "page",
+          "label": "Page"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "alternative",
+          "label": "Alternative"
+        }
       ],
       "default": "page",
       "label": "Grid style"
@@ -924,78 +797,6 @@
       "id": "disable_grid_gaps",
       "default": false,
       "label": "Disable grid gaps"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_bottom_line",
-      "default": false,
-      "label": "Show bottom line"
-    },
-    {
-      "type": "header",
-      "content": "Secondary layout"
-    },
-    {
-      "type": "checkbox",
-      "id": "secondary_full_width",
-      "default": true,
-      "label": "Secondary full width"
-    },
-    {
-      "type": "select",
-      "id": "secondary_grid_style",
-      "options": [
-        { "value": "page", "label": "Page" },
-        { "value": "secondary", "label": "Secondary" },
-        { "value": "alternative", "label": "Alternative" }
-      ],
-      "default": "secondary",
-      "label": "Secondary grid style"
-    },
-    {
-      "type": "checkbox",
-      "id": "secondary_disable_max_width",
-      "default": true,
-      "label": "Disable secondary max width"
-    },
-    {
-      "type": "checkbox",
-      "id": "secondary_disable_grid_gaps",
-      "default": false,
-      "label": "Disable secondary grid gaps"
-    },
-    {
-      "type": "header",
-      "content": "Preview layout"
-    },
-    {
-      "type": "checkbox",
-      "id": "preview_full_width",
-      "default": true,
-      "label": "Preview full width"
-    },
-    {
-      "type": "select",
-      "id": "preview_grid_style",
-      "options": [
-        { "value": "page", "label": "Page" },
-        { "value": "secondary", "label": "Secondary" },
-        { "value": "alternative", "label": "Alternative" }
-      ],
-      "default": "secondary",
-      "label": "Preview grid style"
-    },
-    {
-      "type": "checkbox",
-      "id": "preview_disable_max_width",
-      "default": true,
-      "label": "Disable preview max width"
-    },
-    {
-      "type": "checkbox",
-      "id": "preview_disable_grid_gaps",
-      "default": true,
-      "label": "Disable preview grid gaps"
     },
     {
       "type": "header",
@@ -1071,8 +872,12 @@
     {
       "name": "HP Program Tabs Grid",
       "blocks": [
-        { "type": "tab" },
-        { "type": "tab" }
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        }
       ]
     }
   ]
