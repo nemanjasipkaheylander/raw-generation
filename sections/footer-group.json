@@ -11,6 +11,32 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "hl_hp_hero_kang7f": {
+      "type": "hl-hp-hero",
+      "name": "HP Hero",
+      "settings": {
+        "section_target": "",
+        "bg_color": "",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "padding_top_desk": "",
+        "padding_bottom_desk": "",
+        "hero_review_text_one": "4.45/5",
+        "hero_review_text_two": "10,000+ happy customers",
+        "hero_tagline": "Designed By a Holistic Nutritionist",
+        "hero_title": "Juice Cleanses, Cold Pressed Juices & Wellness Programs for You",
+        "hero_subtitle": "Nutritious raw juices and juice cleanses to help you reset and feel lighter WITHOUT calorie counting.",
+        "hero_button_one_url": "#",
+        "hero_button_one_text": "Which Solution Is Perfect For Me?",
+        "hero_button_two_url": "#",
+        "hero_button_two_text": "Shop Cleanses",
+        "hero_button_three_url": "#",
+        "hero_button_three_text": "Shop Wellness programs",
+        "hero_image": "shopify://shop_images/Hero_V2_1.jpg"
+      }
+    },
     "hl_hp_instagram_a44YF4": {
       "type": "hl-hp-instagram",
       "blocks": {
@@ -374,6 +400,7 @@
     }
   },
   "order": [
+    "hl_hp_hero_kang7f",
     "hl_hp_instagram_a44YF4",
     "advantages_EnUYzd",
     "footer",
