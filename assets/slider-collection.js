@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       600: {
         slidesPerView: 3.4,
       },
-      1200: {
+      1400: {
         slidesPerView: 4.4,
       }
     }
