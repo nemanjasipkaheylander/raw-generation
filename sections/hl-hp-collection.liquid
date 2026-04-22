@@ -246,6 +246,9 @@
   #shopify-section-{{ section.id }} .custom-popup__header-wrapper {
     text-align: center;
   }
+  .custom-popup__header-wrapper{
+    margin:40px 0;
+  }
 
   #shopify-section-{{ section.id }} .custom-popup__title {
     margin: 0;
@@ -279,10 +282,16 @@
   }
 
     @media screen and (max-width: 768px) {
+        .custom-popup__header-wrapper{
+    margin-top:24px;
+    margin-bottom:35px;
+  }
+  #shopify-section-{{ section.id }} .cp-program-tabs__button {
     font-size: 16px;
-
     min-width: 164px;
     min-height: 42px;
+  }
+
      }
 
   #shopify-section-{{ section.id }} .cp-program-tabs__button.is-active {
