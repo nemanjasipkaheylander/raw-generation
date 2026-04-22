@@ -11,6 +11,86 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "hl_hp_collection_eyemtF": {
+      "type": "hl-hp-collection",
+      "blocks": {
+        "tab_eqqFPQ": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Juice Cleanses",
+            "tab_heading": "",
+            "tab_subtitle": "<p>Find your perfect 3-10 day reset. Targeted raw juice cleanses designed to help you feel lighter and support natural detoxification and energy levels.</p>",
+            "collection": "juice-cleanses"
+          }
+        },
+        "tab_z9xAUL": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Wellness Programs",
+            "tab_heading": "Lose Up to 10 Pounds in 10 Days*",
+            "tab_subtitle": "<p>Achieve your goals every week by shedding up to 3 pounds consistently. These programs help you develop healthy eating habits, overcome cravings, and shed body weight for lasting long-term results—all backed by expert support.</p>",
+            "collection": "wellness-programs"
+          }
+        }
+      },
+      "block_order": [
+        "tab_eqqFPQ",
+        "tab_z9xAUL"
+      ],
+      "name": "HP Program Tabs Grid",
+      "settings": {
+        "custom_title_one": "Choose Your",
+        "custom_title_two": "Program",
+        "custom_title_three": "",
+        "custom_subtitle": "",
+        "custom_quiz": "Not sure what solution is right for you?",
+        "custom_quiz_button_link": "#",
+        "custom_quiz_button_text": "Take our 60-second quiz and find out",
+        "products_per_page": 15,
+        "desktop_columns": "4",
+        "mobile_columns": "2",
+        "enable_secondary_grid": false,
+        "secondary_products_per_page": 25,
+        "secondary_grid_desktop_columns": "5",
+        "enable_preview_grid": false,
+        "preview_products_per_page": 40,
+        "preview_grid_desktop_columns": 10,
+        "preview_grid_mobile_columns": "4",
+        "hover_behavior": "image_zoom",
+        "show_bullets": true,
+        "autoplay_speed": 3,
+        "desktop_options": "enable",
+        "mobile_options": "enable",
+        "card_content_style": "regular",
+        "quick_buy": "enable",
+        "price_position": "bottom",
+        "options_position": "bottom",
+        "show_vendor": "text",
+        "show_title": true,
+        "max_product_name_characters": 100,
+        "show_rating": true,
+        "show_short_description": true,
+        "show_pickup_availability": false,
+        "show_product_card_border": false,
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "disable_grid_gaps": false,
+        "show_bottom_line": false,
+        "secondary_full_width": true,
+        "secondary_grid_style": "secondary",
+        "secondary_disable_max_width": true,
+        "secondary_disable_grid_gaps": false,
+        "preview_full_width": true,
+        "preview_grid_style": "secondary",
+        "preview_disable_max_width": true,
+        "preview_disable_grid_gaps": true,
+        "color_scheme": "",
+        "product_card_color_scheme": "",
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    },
     "hl_hp_hero_kang7f": {
       "type": "hl-hp-hero",
       "name": "HP Hero",
@@ -401,6 +481,7 @@
     }
   },
   "order": [
+    "hl_hp_collection_eyemtF",
     "hl_hp_hero_kang7f",
     "hl_hp_instagram_a44YF4",
     "advantages_EnUYzd",
