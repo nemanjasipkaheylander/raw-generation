@@ -40,11 +40,22 @@
   gap:70px;
   justify-content:center;
   color:#fff;
+   flex-direction:column;
+
 }
 .hl-hp-instagram__social-wrapper a{
   text-transform:uppercase;
   font-weight:600;
+  font-size:14px;
+}
+
+@media (min-width: 600px) {
+.hl-hp-instagram__social-wrapper a{
   font-size:16px;
+}
+.hl-hp-instagram__social-wrapper{
+ flex-direction:row;
+}
 }
 {% endstyle %}
 
