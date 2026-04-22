@@ -488,9 +488,29 @@ button.cp-program-tabs__button {
               </div>
 
               {% if tab_collection != blank and tab_collection.products_count > 0 %}
-                <div class="collection__grid-container {%- if full_width == false %} {{ grid_style }}-grid {% if disable_max_width %} disable-max-width {% endif %}{% else %} collection-{{ grid_style }}-grid {% endif -%}">
-                  <div id="ProductGridContainer--{{ section.id }}-{{ block.id }}" class="product__grid-container {% if full_width == false %}side-margins{% endif %}">
-                            <div class="collection {% if section.settings.enable_filtering and section.settings.filter_type != 'vertical' and full_width == false %}side-margins{% endif %} {% if full_width %} disable-margins{% endif %}">
+          <div
+            id="ProductGridContainer--{{ section.id }}"
+            class="product__grid-container {% if section.settings.enable_filtering == false and full_width == false %}side-margins{% endif %}"
+          >
+            {%- paginate collection.products by products_per_page -%}
+              {%- if collection.products.size == 0 -%}
+                <h2
+                  id="product-grid--{{ section.id }}"
+                  data-id="{{ section.id }}"
+                  class="
+                    collection collection--empty body-font{% if settings.uppercase_body %} uppercase{% endif %}
+                    {% if section.settings.enable_filtering and section.settings.filter_type != 'vertical' %} side-margins{% endif %}
+                  "
+                >
+                  {{ 'collection.no_products_found' | t -}}
+                  <br>
+                  {{
+                    'collection.use_fewer_filters_html'
+                    | t: link: collection.url, class: 'collection--empty link link-underline'
+                  }}
+                </h2>
+              {%- else -%}
+                <div class="collection {% if section.settings.enable_filtering and section.settings.filter_type != 'vertical' and full_width == false %}side-margins{% endif %} {% if full_width %} disable-margins{% endif %}">
                   <div class="l-right">
                     <div class="swiper product-swiper" id="product-swiper--{{ section.id }}">
                       <div class="swiper-wrapper">
@@ -633,8 +653,9 @@ button.cp-program-tabs__button {
                     {%- endif %}
                   {%- endif -%}
                 </div>
-                  </div>
-                </div>
+              {%- endif -%}
+            {%- endpaginate -%}
+          </div>
               {% else %}
                 <div class="collection__empty-grid body-font side-margins">
                   <div class="collection__empty-grid-wrapper {{ grid_style }}-grid{% if disable_max_width %} disable-max-width{% endif %}">
