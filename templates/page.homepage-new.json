@@ -9,8 +9,14 @@
  */
 {
   "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
     "main-page": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_style": "section-heading",
@@ -28,18 +34,109 @@
         "bottom_spacing": 1
       }
     },
-    "shogun-helper": {
-      "type": "shogun-helper",
-      "settings": {}
-    },
     "shogun-optimizer": {
       "type": "shogun-optimizer",
+      "disabled": true,
       "settings": {}
+    },
+    "prod_custom_review_XNitar": {
+      "type": "prod-custom-review",
+      "blocks": {
+        "text_K67ij8": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"I loved how this made me feel! I lost over 10 pounds!! My bloating decreased, my energy increased, and I felt full.”",
+            "review_img": "shopify://shop_images/f4ae03c1-85be-4d28-a256-5a01fc442f0c.avif",
+            "review_type": "Protein Cleanse",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.jpg"
+          }
+        },
+        "text_CmWjef": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"I loved how this made me feel! I lost over 10 pounds!! My bloating decreased, my energy increased, and I felt full.”",
+            "review_img": "shopify://shop_images/f4ae03c1-85be-4d28-a256-5a01fc442f0c.avif",
+            "review_type": "Protein Cleanse",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.jpg"
+          }
+        },
+        "text_xFgxRc": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"I loved how this made me feel! I lost over 10 pounds!! My bloating decreased, my energy increased, and I felt full.”",
+            "review_img": "shopify://shop_images/f4ae03c1-85be-4d28-a256-5a01fc442f0c.avif",
+            "review_type": "Protein Cleanse",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.jpg"
+          }
+        },
+        "text_egq63P": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"I loved how this made me feel! I lost over 10 pounds!! My bloating decreased, my energy increased, and I felt full.”",
+            "review_img": "shopify://shop_images/f4ae03c1-85be-4d28-a256-5a01fc442f0c.avif",
+            "review_type": "Protein Cleanse",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.jpg"
+          }
+        },
+        "text_b8KDQq": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"I loved how this made me feel! I lost over 10 pounds!! My bloating decreased, my energy increased, and I felt full.”",
+            "review_img": "shopify://shop_images/f4ae03c1-85be-4d28-a256-5a01fc442f0c.avif",
+            "review_type": "Protein Cleanse",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.jpg"
+          }
+        },
+        "text_zJaPtL": {
+          "type": "text",
+          "settings": {
+            "review_author": "Victoria R.",
+            "review_verified": "Verified Customer",
+            "review_text": "\"I loved how this made me feel! I lost over 10 pounds!! My bloating decreased, my energy increased, and I felt full.”",
+            "review_img": "shopify://shop_images/f4ae03c1-85be-4d28-a256-5a01fc442f0c.avif",
+            "review_type": "Protein Cleanse",
+            "review_type_img": "shopify://shop_images/SkinnyCleanse-18PK-AI_1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_K67ij8",
+        "text_CmWjef",
+        "text_xFgxRc",
+        "text_egq63P",
+        "text_b8KDQq",
+        "text_zJaPtL"
+      ],
+      "name": "Custom review",
+      "settings": {
+        "section_target": "",
+        "bg_color": "#f5e2ff",
+        "bg_gradient_1": "",
+        "bg_gradient_2": "",
+        "padding_top": "40",
+        "padding_bottom": "40",
+        "padding_top_desk": "64",
+        "padding_bottom_desk": "64",
+        "section_title_one": "What Our",
+        "section_title_two": "Customers",
+        "section_title_three": "Say"
+      }
     }
   },
   "order": [
     "shogun-helper",
     "main-page",
-    "shogun-optimizer"
+    "shogun-optimizer",
+    "prod_custom_review_XNitar"
   ]
 }
