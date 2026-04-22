@@ -73,6 +73,16 @@
     padding:13px;
     color:#fff;
     background:#A200F9;
+        border-radius:5px;
+
+  }
+  .hl-hp-hero__button-secondary{
+    width:100%;
+    padding:13px;
+    color:#A200F9;
+    background:#fff;
+    border:1px solid #A200F9;
+    border-radius:5px;
   }
     @media (min-width: 768px) {
         .hl-hp-hero__left-side{
@@ -91,8 +101,10 @@
     .hl-hp-hero__button-primary{
     width:auto;
     padding:13px 24px;
-    color:#fff;
-    background:#A200F9;
+  }
+    .hl-hp-hero__button-secondary{
+    width:auto;
+    padding:13px 24px;
   }
   }
 {% endstyle %}
@@ -137,12 +149,12 @@
               {% if section.settings.hero_button_two_url != blank  or section.settings.hero_button_three_url%}
                 <div class="hl-hp-hero__secondary-button-wrapper">
                  <a href="{{ section.settings.hero_button_two_url }}" title="{{ section.settings.hero_button_two_text }}">
-                   <div class="hl-hp-hero__button-primary">
+                   <div class="hl-hp-hero__button-secondary">
                          {{ section.settings.hero_button_two_text }}
                    </div>
                  </a>  
                  <a href="{{ section.settings.hero_button_three_url }}" title="{{ section.settings.hero_button_three_text }}">
-                   <div class="hl-hp-hero__button-primary">
+                   <div class="hl-hp-hero__button-secondary">
                          {{ section.settings.hero_button_three_text }}
                    </div>
                  </a>  
