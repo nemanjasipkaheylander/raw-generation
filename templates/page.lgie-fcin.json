@@ -1,1 +1,868 @@
-{"sections":{"main-page":{"type":"main-page","disabled":true,"settings":{"heading":"","heading_style":"section-heading","hide_heading":false,"center_text":true,"rte_heading_style":"page-title","page_style":"body-font","content_width":"regular","grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","top_spacing":1,"bottom_spacing":1}},"image_banner_BBnJaN":{"type":"image-banner","blocks":{"heading_FJU6y3":{"type":"heading","settings":{"heading":"Look Great in Everything","heading_style":"page-title","heading_tag":"h1"}},"text_FngL3D":{"type":"text","settings":{"text":"<p>... or nothing. Shed pounds and inches with the Skinny Cleanse and finally feel good in your body.<\/p>","text_style":"body-font"}},"button_8dJVpV":{"type":"button","settings":{"button_label":"CLEANSE NOW","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/products\/best-juice-cleanse-for-weight-loss","target_blank":false,"button_style":"solid","use_main_button":true}}},"block_order":["heading_FJU6y3","text_FngL3D","button_8dJVpV"],"name":"t:sections.image-banner.name","settings":{"link":"","target_blank":false,"overlap":"disable","content_on_hover":false,"first_image":"shopify:\/\/shop_images\/Screenshot_2025-05-29_134605.jpg","desktop_height_type":"pixels","desktop_pixels_height":600,"center_text":true,"vertical_content_position":"center","horizontal_content_position":"center","content_width":"regular","fill_content":false,"overlay_opacity":50,"mobile_overlay_opacity":50,"mobile_height_type":"pixels","mobile_pixels_height":200,"content_under_image":false,"only_first_image":false,"full_width":true,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","banner_color_scheme":"","overlapped_header_color_scheme":"","logo_style":"overlapped","mobile_color_scheme":"","mobile_banner_color_scheme":"","mobile_overlapped_header_color_scheme":"","mobile_logo_style":"overlapped","section_framing":"disable","enable_sticky_content":false,"sticky_offset":120,"top_spacing":1,"bottom_spacing":1}},"multicolumn_Nz8Kx4":{"type":"multicolumn","blocks":{"text_haLzRc":{"type":"text","settings":{"link":"","block_target_blank":false,"heading":"Show off your slimmer arms, abs, back, & legs.","heading_style":"secondary-heading","text":"<p>No more hiding behind baggy clothes. Wear what you want and feel great either fully dressed or in nothing at all. <\/p>","text_style":"body-font","text_alignment":"center","button_label":"Discover","button_icon":"","swap_button_icon":false,"button_link":"","target_blank":false,"button_style":"solid","color_scheme":"background-3"}},"text_GUQQXP":{"type":"text","settings":{"link":"","block_target_blank":false,"heading":"Feel younger & more energetic.","heading_style":"secondary-heading","text":"<p>Cleansing gives your body everything it needs to work better so you sleep better and have more energy to burn throughout the day.<\/p>","text_style":"body-font","text_alignment":"center","button_label":"Discover","button_icon":"","swap_button_icon":false,"button_link":"","target_blank":false,"button_style":"solid","color_scheme":"background-3"}},"text_xWn87P":{"type":"text","settings":{"link":"","block_target_blank":false,"heading":"Get rid of cravings for junk food.","heading_style":"secondary-heading","text":"<p>It only takes a few days to get rid of unhealthy cravings that are keeping your weight from budging. <\/p>","text_style":"body-font","text_alignment":"center","button_label":"Discover","button_icon":"","swap_button_icon":false,"button_link":"","target_blank":false,"button_style":"solid","color_scheme":"background-3"}}},"block_order":["text_haLzRc","text_GUQQXP","text_xWn87P"],"name":"t:sections.multicolumn.name","settings":{"subheading":"Whole-Body Transformation","subheading_style":"section-heading","subheading_tag":"h2","heading":"A juice cleanse is designed to give your body everything it needs to give you a transformation that you can see and feel in just a few days.","heading_style":"body-font","heading_tag":"p","center_text":true,"desktop_columns":"3","mobile_columns":"1","enable_masonry":true,"media_radius":"default","full_width":false,"grid_style":"page","disable_max_width":false,"disable_grid_gaps":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","top_spacing":1,"bottom_spacing":1}},"rich_text_6TyigC":{"type":"rich-text","blocks":{"button_X79FQb":{"type":"button","settings":{"button_label":"Cleanse Now","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/products\/best-juice-cleanse-for-weight-loss","target_blank":false,"button_style":"solid","use_main_button":true}}},"block_order":["button_X79FQb"],"name":"t:sections.rich-text.name","settings":{"center_text":true,"content_width":"wide","grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","top_spacing":0,"bottom_spacing":0}},"media_with_text_w7xaay":{"type":"media-with-text","blocks":{"heading_erTicK":{"type":"heading","settings":{"heading":"Lose 5+ pounds in a few days.*","heading_style":"section-heading","heading_tag":"h2"}},"text_MUbqgc":{"type":"text","settings":{"text":"<p>A juice cleanse gives your body exactly what it needs to shed pounds and inches quickly. No deprivation, insane workouts, or extreme dieting. Just results.<\/p>","text_style":"body-font"}},"button_w7JmPj":{"type":"button","settings":{"button_label":"CLEANSE NOW","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/products\/best-juice-cleanse-for-weight-loss","target_blank":false,"button_style":"solid","use_main_button":false}}},"block_order":["heading_erTicK","text_MUbqgc","button_w7JmPj"],"name":"t:sections.media-with-text.name","settings":{"image":"shopify:\/\/shop_images\/angelina-6WG73LXvs78-unsplash.jpg","media_ratio":"auto","mobile_media_ratio":"auto","link":"","target_blank":false,"focal_point":"center center","enable_mute":false,"enable_pause":false,"control_horizontal_position":"flex-end","swap_media_position":true,"media_size":"half","content_width":"regular","vertical_text_alignment":"center","horizontal_text_alignment":"left","full_width":false,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","enable_sticky_content":true,"sticky_offset":120,"top_spacing":0,"bottom_spacing":0}},"media_with_text_nhEeYY":{"type":"media-with-text","blocks":{"heading_WXQmcd":{"type":"heading","settings":{"heading":"Detoxify your entire body.","heading_style":"section-heading","heading_tag":"h2"}},"text_JG9jXG":{"type":"text","settings":{"text":"<p>Cleansing is designed to help your body detoxify the old junk that is keeping you sluggish and tired. In just a few days you can reset your body by nourishing from within. <\/p>","text_style":"body-font"}},"button_j9VtUx":{"type":"button","settings":{"button_label":"CLEANSE NOW","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/products\/best-juice-cleanse-for-weight-loss","target_blank":false,"button_style":"solid","use_main_button":false}}},"block_order":["heading_WXQmcd","text_JG9jXG","button_j9VtUx"],"name":"t:sections.media-with-text.name","settings":{"image":"shopify:\/\/shop_images\/apostolos-vamvouras-k9x2sIOrbf4-unsplash.jpg","media_ratio":"auto","mobile_media_ratio":"auto","link":"","target_blank":false,"focal_point":"center center","enable_mute":false,"enable_pause":false,"control_horizontal_position":"flex-end","swap_media_position":false,"media_size":"half","content_width":"regular","vertical_text_alignment":"center","horizontal_text_alignment":"left","full_width":false,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","enable_sticky_content":true,"sticky_offset":120,"top_spacing":0,"bottom_spacing":0}},"how_it_works_TKxDEz":{"type":"how-it-works","blocks":{"text_LgeWnX":{"type":"text","settings":{"number":"1","card-title":"ORDER YOUR CLEANSE","detail":"<p>The Skinny Cleanse will be delivered to your door fast so you can start seeing and feeling the benefits. <\/p>"}},"text_YqbPrX":{"type":"text","settings":{"number":"2","card-title":"EAT AS MUCH AS YOU WANT","detail":"<p>In addition to drinking the juices, you can eat as much fresh fruit and vegetables as you desire each day.<\/p>"}},"text_mU6tGz":{"type":"text","settings":{"number":"3","card-title":"WATCH THE TRANSFORMATION","detail":"<p>Notice the changes to your body as you live your life... the cleanse works no matter what life throws at you.<\/p>"}}},"block_order":["text_LgeWnX","text_YqbPrX","text_mU6tGz"],"name":"How It Works","settings":{"redirect_section_id":"","title":"How It Works","subtitle":"This program is designed for healthy weight loss fast, while also providing you with the tools and knowledge to keep the weight off permanently.","color":"#ffffff","padding_top":40,"padding_bottom":52,"padding_left":0,"padding_right":0}},"featured_product_QcBQty":{"type":"featured-product","blocks":{"title_with_vendor_JeeKEE":{"type":"title_with_vendor","settings":{"heading_style":"section-heading","heading_tag":"h1","uppercase":false,"bolder_font":false,"show_vendor":"image","vendor_image_height":28,"text_style":"body-font","vendor_uppercase":false,"vendor_bolder_font":false,"top_spacing":1,"mobile_top_spacing":1}},"description_3bxwa9":{"type":"description","settings":{"text_style":"body-font","top_spacing":1,"mobile_top_spacing":1}},"variant_picker_ieVzH4":{"type":"variant_picker","settings":{"label_style":"caption-font","label_uppercase":true,"label_bolder_font":false,"text_style":"subheading-font","text_uppercase":false,"text_bolder_font":true,"variant_size_label":"Size","show_ruler":true,"variant_size_text":"","variant_size_text_style":"caption-font","variant_size_page":"","rte_heading_style":"section-heading","popup_style":"popover","popup_width":"regular","top_spacing":1,"mobile_top_spacing":1}},"price_MMdJpe":{"type":"price","settings":{"price_style":"body-font","price_bolder_font":false,"text_style":"body-font","show_price":true,"compare_at_price_color":"sale","show_badges":true,"hide_shipping_note":false,"top_spacing":1,"mobile_top_spacing":1}},"buy_buttons_xB84GP":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":false,"style":"show_quantity","hide_pickup_availability":false,"button_radius":"3px","use_main_button":true,"top_spacing":1,"mobile_top_spacing":1}}},"block_order":["title_with_vendor_JeeKEE","description_3bxwa9","variant_picker_ieVzH4","price_MMdJpe","buy_buttons_xB84GP"],"name":"t:sections.featured-product.name","settings":{"product":"best-juice-cleanse-for-weight-loss","enable_sticky_content":true,"sticky_offset":110,"media_position":"left","gallery_style":"alternative_2","gallery_size":6,"grid_gap":2,"organize_images":true,"show_media_attached_to_variant":true,"desktop_media_ratio":"4\/5","mobile_media_ratio":"4\/5","focal_point":"center center","fit_media_inside_container":false,"container_inner_spacing":10,"media_radius":"0px","enable_video_autoplay":true,"image_zoom":"disable","desktop_width":100,"mobile_width":100,"zoom_media_ratio":"auto","zoom_focal_point":"center center","show_arrow_in_mobile":false,"enable_slideshow_zoom_in":true,"show_thumbnails":"on_top","sticky_thumbnails":true,"thumbnails_width":40,"thumbnails_gap":0,"thumbnails_media_ratio":"auto","thumbnails_focal_point":"center center","thumbnails_radius":"0px","show_thumbnails_on_mobile":false,"mobile_thumbnails_width":80,"mobile_thumbnails_gap":10,"mobile_thumbnails_media_ratio":"1\/1","mobile_thumbnails_focal_point":"center center","mobile_thumbnails_radius":"0px","container_paddings":36,"content_layout":"first_and_second_stretched","first_container_alignment":"flex-start","first_container_padding":0,"second_container_alignment":"flex-start","second_container_padding":24,"top_container_on_mobile":"first","full_width":true,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","gallery_color_scheme":"","top_spacing":0,"bottom_spacing":0}},"image_banner_CLpNjG":{"type":"image-banner","name":"t:sections.image-banner.name","settings":{"link":"","target_blank":false,"overlap":"disable","content_on_hover":false,"first_image":"shopify:\/\/shop_images\/yoann-boyer-VZfREM_1fx4-unsplash.jpg","desktop_height_type":"pixels","desktop_pixels_height":600,"center_text":true,"vertical_content_position":"center","horizontal_content_position":"center","content_width":"regular","fill_content":false,"overlay_opacity":0,"mobile_overlay_opacity":50,"mobile_height_type":"pixels","mobile_pixels_height":200,"content_under_image":false,"only_first_image":false,"full_width":true,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","banner_color_scheme":"","overlapped_header_color_scheme":"","logo_style":"overlapped","mobile_color_scheme":"","mobile_banner_color_scheme":"","mobile_overlapped_header_color_scheme":"","mobile_logo_style":"overlapped","section_framing":"disable","enable_sticky_content":false,"sticky_offset":120,"top_spacing":0,"bottom_spacing":0}},"rich_text_eJdEBj":{"type":"rich-text","blocks":{"heading_r6FQCe":{"type":"heading","settings":{"heading":"Helping Women Lose Weight Since 2012","heading_style":"section-heading","heading_tag":"h2"}},"text_mw9H9z":{"type":"text","settings":{"text":"<p>Women's bodies have unique needs. That's why when we do the same \"diet\" or workout routine as our man, they lose way more weight than we do. This cleanse was designed by a woman who struggled to lose weight- until she found the power within plants that unlocked effortless weight loss. No more deprivation, strict dieting, or insane workout routines to lose weight. <\/p>","richtext_heading_style":"section-heading","text_style":"body-font"}},"button_UyLftm":{"type":"button","settings":{"button_label":"Discover","button_icon":"","swap_button_icon":false,"button_link":"","target_blank":false,"button_style":"solid","use_main_button":false}}},"block_order":["heading_r6FQCe","text_mw9H9z","button_UyLftm"],"name":"t:sections.rich-text.name","settings":{"center_text":true,"content_width":"wide","grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","top_spacing":0.4,"bottom_spacing":1}},"testimonials_Mtq9KB":{"type":"testimonials","blocks":{"testimonial_aCAerM":{"type":"testimonial","settings":{"stars":5,"heading":"I have done many different cleanses before and I have lost weight but I have never kept it off. This cleanse is different…. I lost 6 pounds when on the cleanse and I have kept it off.  Also while doing the cleanse I felt amazing. The drinks were delicious and my easy to drink.  I highly recommend Raw Generation!","heading_style":"section-heading","heading_tag":"h2","text":"","text_style":"body-font","author_name":"","author_position":"<p><br\/>Kristine C- <em>Verified customer<\/em><\/p>","page":"","rte_heading_style":"section-heading","popup_style":"popover","popup_width":"wide"}},"testimonial_HJfNf4":{"type":"testimonial","settings":{"stars":5,"heading":"Hello ENERGY, bye-bye CRAVINGS! While doing the 3 day cleanse I dropped 8lbs!","heading_style":"section-heading","heading_tag":"h2","text":"","text_style":"body-font","author_name":"","author_position":"<p><br\/>Anonymous -<em> Verified customer<\/em><\/p>","page":"","rte_heading_style":"section-heading","popup_style":"popover","popup_width":"wide"}},"testimonial_EbwUTi":{"type":"testimonial","settings":{"stars":5,"heading":"I’ve done the RG Skinny Cleanse multiple times now & it never ceases to amaze me how great I feel both during & after my cleanse. Everything improves…skin, digestion, reduced bloating, and energy levels. I’m a huge fan!","heading_style":"section-heading","heading_tag":"h2","text":"","text_style":"body-font","author_name":"","author_position":"<p>Adrienne B -<em>Verified customer<\/em><\/p>","page":"","rte_heading_style":"section-heading","popup_style":"popover","popup_width":"wide"}},"testimonial_mxWchw":{"type":"testimonial","settings":{"stars":5,"heading":"Not only did I lose 9 pounds in 1 week, with just normal activity, but I never felt hungry. The tatse of each bottle was delicious and easy to swallow, whereas other brands in the past, for me, was not.","heading_style":"section-heading","heading_tag":"h2","text":"","text_style":"body-font","author_name":"","author_position":"<p>Jon J - <em>Verified customer<\/em><\/p>","page":"","rte_heading_style":"section-heading","popup_style":"popover","popup_width":"wide"}}},"block_order":["testimonial_aCAerM","testimonial_HJfNf4","testimonial_EbwUTi","testimonial_mxWchw"],"name":"t:sections.testimonials.name","settings":{"show_rating":true,"heading":"What our clients say","heading_style":"page-title","heading_tag":"h2","button_label":"","button_icon":"","swap_button_icon":false,"button_link":"","target_blank":false,"button_style":"solid","testimonial_label":"Show full review","center_text":true,"media_ratio":"1\/1","image_radius":"default","desktop_item_width":3,"alignment_fewer_items":"center","mobile_item_min_width":210,"show_arrows":true,"show_scrollbar":true,"full_width":true,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","top_spacing":2,"bottom_spacing":2}},"image_banner_atUYdY":{"type":"image-banner","blocks":{"heading_9XYjfc":{"type":"heading","settings":{"heading":"","heading_style":"section-heading","heading_tag":"h2"}},"text_mNYRf9":{"type":"text","settings":{"text":"","text_style":"body-font"}}},"block_order":["heading_9XYjfc","text_mNYRf9"],"name":"t:sections.image-banner.name","settings":{"link":"","target_blank":false,"overlap":"disable","content_on_hover":false,"first_image":"shopify:\/\/shop_images\/faruk-tokluoglu-4amdXIgdFDg-unsplash.jpg","desktop_height_type":"pixels","desktop_pixels_height":600,"center_text":true,"vertical_content_position":"center","horizontal_content_position":"center","content_width":"regular","fill_content":false,"overlay_opacity":50,"mobile_overlay_opacity":50,"mobile_height_type":"pixels","mobile_pixels_height":200,"content_under_image":false,"only_first_image":false,"full_width":true,"grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","banner_color_scheme":"","overlapped_header_color_scheme":"","logo_style":"overlapped","mobile_color_scheme":"","mobile_banner_color_scheme":"","mobile_overlapped_header_color_scheme":"","mobile_logo_style":"overlapped","section_framing":"disable","enable_sticky_content":false,"sticky_offset":120,"top_spacing":0,"bottom_spacing":0}},"rich_text_yy6Ngf":{"type":"rich-text","blocks":{"heading_pBWBfV":{"type":"heading","settings":{"heading":"Get Down to Your Right Size","heading_style":"section-heading","heading_tag":"h2"}},"text_TN9QF9":{"type":"text","settings":{"text":"<p>With the right nourishment, your body will respond and start shedding pounds and inches. A juice cleanse is one of the fastest (and healthiest) ways to get down to your right size. <\/p><p><strong>No more frustration.<\/strong><\/p><p><strong>No more feeling stuck.<\/strong><\/p><p><strong>No more wishing your clothes fit better.<\/strong><\/p><p><strong>No more feeling uncomfortable in your body.<\/strong><\/p>","richtext_heading_style":"section-heading","text_style":"body-font"}},"button_W6QCeK":{"type":"button","settings":{"button_label":"START TODAY","button_icon":"","swap_button_icon":false,"button_link":"shopify:\/\/products\/best-juice-cleanse-for-weight-loss","target_blank":false,"button_style":"solid","use_main_button":false}}},"block_order":["heading_pBWBfV","text_TN9QF9","button_W6QCeK"],"name":"t:sections.rich-text.name","settings":{"center_text":true,"content_width":"wide","grid_style":"page","disable_max_width":false,"show_bottom_line":false,"color_scheme":"","section_framing":"disable","top_spacing":1,"bottom_spacing":1}}},"order":["main-page","image_banner_BBnJaN","multicolumn_Nz8Kx4","rich_text_6TyigC","media_with_text_w7xaay","media_with_text_nhEeYY","how_it_works_TKxDEz","featured_product_QcBQty","image_banner_CLpNjG","rich_text_eJdEBj","testimonials_Mtq9KB","image_banner_atUYdY","rich_text_yy6Ngf"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_style": "section-heading",
+        "hide_heading": false,
+        "center_text": true,
+        "rte_heading_style": "page-title",
+        "page_style": "body-font",
+        "content_width": "regular",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    },
+    "image_banner_BBnJaN": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_FJU6y3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Look Great in Everything",
+            "heading_style": "page-title",
+            "heading_tag": "h1"
+          }
+        },
+        "text_FngL3D": {
+          "type": "text",
+          "settings": {
+            "text": "<p>... or nothing. Shed pounds and inches with the Skinny Cleanse and finally feel good in your body.</p>",
+            "text_style": "body-font"
+          }
+        },
+        "button_8dJVpV": {
+          "type": "button",
+          "settings": {
+            "button_label": "CLEANSE NOW",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://products/best-juice-cleanse",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_FJU6y3",
+        "text_FngL3D",
+        "button_8dJVpV"
+      ],
+      "name": "t:sections.image-banner.name",
+      "settings": {
+        "link": "",
+        "target_blank": false,
+        "overlap": "disable",
+        "content_on_hover": false,
+        "first_image": "shopify://shop_images/Screenshot_2025-05-29_134605.jpg",
+        "desktop_height_type": "pixels",
+        "desktop_pixels_height": 600,
+        "center_text": true,
+        "vertical_content_position": "center",
+        "horizontal_content_position": "center",
+        "content_width": "regular",
+        "fill_content": false,
+        "overlay_opacity": 50,
+        "mobile_overlay_opacity": 50,
+        "mobile_height_type": "pixels",
+        "mobile_pixels_height": 200,
+        "content_under_image": false,
+        "only_first_image": false,
+        "full_width": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "banner_color_scheme": "",
+        "overlapped_header_color_scheme": "",
+        "logo_style": "overlapped",
+        "mobile_color_scheme": "",
+        "mobile_banner_color_scheme": "",
+        "mobile_overlapped_header_color_scheme": "",
+        "mobile_logo_style": "overlapped",
+        "section_framing": "disable",
+        "enable_sticky_content": false,
+        "sticky_offset": 120,
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    },
+    "multicolumn_Nz8Kx4": {
+      "type": "multicolumn",
+      "blocks": {
+        "text_haLzRc": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "block_target_blank": false,
+            "heading": "Show off your slimmer arms, abs, back, & legs.",
+            "heading_style": "secondary-heading",
+            "text": "<p>No more hiding behind baggy clothes. Wear what you want and feel great either fully dressed or in nothing at all. </p>",
+            "text_style": "body-font",
+            "text_alignment": "center",
+            "button_label": "Discover",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "solid",
+            "color_scheme": "background-3"
+          }
+        },
+        "text_GUQQXP": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "block_target_blank": false,
+            "heading": "Feel younger & more energetic.",
+            "heading_style": "secondary-heading",
+            "text": "<p>Cleansing gives your body everything it needs to work better so you sleep better and have more energy to burn throughout the day.</p>",
+            "text_style": "body-font",
+            "text_alignment": "center",
+            "button_label": "Discover",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "solid",
+            "color_scheme": "background-3"
+          }
+        },
+        "text_xWn87P": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "block_target_blank": false,
+            "heading": "Get rid of cravings for junk food.",
+            "heading_style": "secondary-heading",
+            "text": "<p>It only takes a few days to get rid of unhealthy cravings that are keeping your weight from budging. </p>",
+            "text_style": "body-font",
+            "text_alignment": "center",
+            "button_label": "Discover",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "solid",
+            "color_scheme": "background-3"
+          }
+        }
+      },
+      "block_order": [
+        "text_haLzRc",
+        "text_GUQQXP",
+        "text_xWn87P"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "subheading": "Whole-Body Transformation",
+        "subheading_style": "section-heading",
+        "subheading_tag": "h2",
+        "heading": "A juice cleanse is designed to give your body everything it needs to give you a transformation that you can see and feel in just a few days.",
+        "heading_style": "body-font",
+        "heading_tag": "p",
+        "center_text": true,
+        "desktop_columns": "3",
+        "mobile_columns": "1",
+        "enable_masonry": true,
+        "media_radius": "default",
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "disable_grid_gaps": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    },
+    "rich_text_6TyigC": {
+      "type": "rich-text",
+      "blocks": {
+        "button_X79FQb": {
+          "type": "button",
+          "settings": {
+            "button_label": "Cleanse Now",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://products/best-juice-cleanse",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": true
+          }
+        }
+      },
+      "block_order": [
+        "button_X79FQb"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "center_text": true,
+        "content_width": "wide",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "media_with_text_w7xaay": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_erTicK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Lose 5+ pounds in a few days.*",
+            "heading_style": "section-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "text_MUbqgc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A juice cleanse gives your body exactly what it needs to shed pounds and inches quickly. No deprivation, insane workouts, or extreme dieting. Just results.</p>",
+            "text_style": "body-font"
+          }
+        },
+        "button_w7JmPj": {
+          "type": "button",
+          "settings": {
+            "button_label": "CLEANSE NOW",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://products/best-juice-cleanse",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_erTicK",
+        "text_MUbqgc",
+        "button_w7JmPj"
+      ],
+      "name": "t:sections.media-with-text.name",
+      "settings": {
+        "image": "shopify://shop_images/angelina-6WG73LXvs78-unsplash.jpg",
+        "media_ratio": "auto",
+        "mobile_media_ratio": "auto",
+        "link": "",
+        "target_blank": false,
+        "focal_point": "center center",
+        "enable_mute": false,
+        "enable_pause": false,
+        "control_horizontal_position": "flex-end",
+        "swap_media_position": true,
+        "media_size": "half",
+        "content_width": "regular",
+        "vertical_text_alignment": "center",
+        "horizontal_text_alignment": "left",
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "enable_sticky_content": true,
+        "sticky_offset": 120,
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "media_with_text_nhEeYY": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_WXQmcd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Detoxify your entire body.",
+            "heading_style": "section-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "text_JG9jXG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cleansing is designed to help your body detoxify the old junk that is keeping you sluggish and tired. In just a few days you can reset your body by nourishing from within. </p>",
+            "text_style": "body-font"
+          }
+        },
+        "button_j9VtUx": {
+          "type": "button",
+          "settings": {
+            "button_label": "CLEANSE NOW",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://products/best-juice-cleanse",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_WXQmcd",
+        "text_JG9jXG",
+        "button_j9VtUx"
+      ],
+      "name": "t:sections.media-with-text.name",
+      "settings": {
+        "image": "shopify://shop_images/apostolos-vamvouras-k9x2sIOrbf4-unsplash.jpg",
+        "media_ratio": "auto",
+        "mobile_media_ratio": "auto",
+        "link": "",
+        "target_blank": false,
+        "focal_point": "center center",
+        "enable_mute": false,
+        "enable_pause": false,
+        "control_horizontal_position": "flex-end",
+        "swap_media_position": false,
+        "media_size": "half",
+        "content_width": "regular",
+        "vertical_text_alignment": "center",
+        "horizontal_text_alignment": "left",
+        "full_width": false,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "enable_sticky_content": true,
+        "sticky_offset": 120,
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "how_it_works_TKxDEz": {
+      "type": "how-it-works",
+      "blocks": {
+        "text_LgeWnX": {
+          "type": "text",
+          "settings": {
+            "number": "1",
+            "card-title": "ORDER YOUR CLEANSE",
+            "detail": "<p>The Skinny Cleanse will be delivered to your door fast so you can start seeing and feeling the benefits. </p>"
+          }
+        },
+        "text_YqbPrX": {
+          "type": "text",
+          "settings": {
+            "number": "2",
+            "card-title": "EAT AS MUCH AS YOU WANT",
+            "detail": "<p>In addition to drinking the juices, you can eat as much fresh fruit and vegetables as you desire each day.</p>"
+          }
+        },
+        "text_mU6tGz": {
+          "type": "text",
+          "settings": {
+            "number": "3",
+            "card-title": "WATCH THE TRANSFORMATION",
+            "detail": "<p>Notice the changes to your body as you live your life... the cleanse works no matter what life throws at you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_LgeWnX",
+        "text_YqbPrX",
+        "text_mU6tGz"
+      ],
+      "name": "How It Works",
+      "settings": {
+        "redirect_section_id": "",
+        "title": "How It Works",
+        "subtitle": "This program is designed for healthy weight loss fast, while also providing you with the tools and knowledge to keep the weight off permanently.",
+        "color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_left": 0,
+        "padding_right": 0
+      }
+    },
+    "featured_product_QcBQty": {
+      "type": "featured-product",
+      "blocks": {
+        "title_with_vendor_JeeKEE": {
+          "type": "title_with_vendor",
+          "settings": {
+            "heading_style": "section-heading",
+            "heading_tag": "h1",
+            "uppercase": false,
+            "bolder_font": false,
+            "show_vendor": "image",
+            "vendor_image_height": 28,
+            "text_style": "body-font",
+            "vendor_uppercase": false,
+            "vendor_bolder_font": false,
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "description_3bxwa9": {
+          "type": "description",
+          "settings": {
+            "text_style": "body-font",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "variant_picker_ieVzH4": {
+          "type": "variant_picker",
+          "settings": {
+            "label_style": "caption-font",
+            "label_uppercase": true,
+            "label_bolder_font": false,
+            "text_style": "subheading-font",
+            "text_uppercase": false,
+            "text_bolder_font": true,
+            "variant_size_label": "Size",
+            "show_ruler": true,
+            "variant_size_text": "",
+            "variant_size_text_style": "caption-font",
+            "variant_size_page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "regular",
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "price_MMdJpe": {
+          "type": "price",
+          "settings": {
+            "price_style": "body-font",
+            "price_bolder_font": false,
+            "text_style": "body-font",
+            "show_price": true,
+            "compare_at_price_color": "sale",
+            "show_badges": true,
+            "hide_shipping_note": false,
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        },
+        "buy_buttons_xB84GP": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "style": "show_quantity",
+            "hide_pickup_availability": false,
+            "button_radius": "3px",
+            "use_main_button": true,
+            "top_spacing": 1,
+            "mobile_top_spacing": 1
+          }
+        }
+      },
+      "block_order": [
+        "title_with_vendor_JeeKEE",
+        "description_3bxwa9",
+        "variant_picker_ieVzH4",
+        "price_MMdJpe",
+        "buy_buttons_xB84GP"
+      ],
+      "name": "t:sections.featured-product.name",
+      "settings": {
+        "product": "best-juice-cleanse",
+        "enable_sticky_content": true,
+        "sticky_offset": 110,
+        "media_position": "left",
+        "gallery_style": "alternative_2",
+        "gallery_size": 6,
+        "grid_gap": 2,
+        "organize_images": true,
+        "show_media_attached_to_variant": true,
+        "desktop_media_ratio": "4/5",
+        "mobile_media_ratio": "4/5",
+        "focal_point": "center center",
+        "fit_media_inside_container": false,
+        "container_inner_spacing": 10,
+        "media_radius": "0px",
+        "enable_video_autoplay": true,
+        "image_zoom": "disable",
+        "desktop_width": 100,
+        "mobile_width": 100,
+        "zoom_media_ratio": "auto",
+        "zoom_focal_point": "center center",
+        "show_arrow_in_mobile": false,
+        "enable_slideshow_zoom_in": true,
+        "show_thumbnails": "on_top",
+        "sticky_thumbnails": true,
+        "thumbnails_width": 40,
+        "thumbnails_gap": 0,
+        "thumbnails_media_ratio": "auto",
+        "thumbnails_focal_point": "center center",
+        "thumbnails_radius": "0px",
+        "show_thumbnails_on_mobile": false,
+        "mobile_thumbnails_width": 80,
+        "mobile_thumbnails_gap": 10,
+        "mobile_thumbnails_media_ratio": "1/1",
+        "mobile_thumbnails_focal_point": "center center",
+        "mobile_thumbnails_radius": "0px",
+        "container_paddings": 36,
+        "content_layout": "first_and_second_stretched",
+        "first_container_alignment": "flex-start",
+        "first_container_padding": 0,
+        "second_container_alignment": "flex-start",
+        "second_container_padding": 24,
+        "top_container_on_mobile": "first",
+        "full_width": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "gallery_color_scheme": "",
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "image_banner_CLpNjG": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.name",
+      "settings": {
+        "link": "",
+        "target_blank": false,
+        "overlap": "disable",
+        "content_on_hover": false,
+        "first_image": "shopify://shop_images/yoann-boyer-VZfREM_1fx4-unsplash.jpg",
+        "desktop_height_type": "pixels",
+        "desktop_pixels_height": 600,
+        "center_text": true,
+        "vertical_content_position": "center",
+        "horizontal_content_position": "center",
+        "content_width": "regular",
+        "fill_content": false,
+        "overlay_opacity": 0,
+        "mobile_overlay_opacity": 50,
+        "mobile_height_type": "pixels",
+        "mobile_pixels_height": 200,
+        "content_under_image": false,
+        "only_first_image": false,
+        "full_width": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "banner_color_scheme": "",
+        "overlapped_header_color_scheme": "",
+        "logo_style": "overlapped",
+        "mobile_color_scheme": "",
+        "mobile_banner_color_scheme": "",
+        "mobile_overlapped_header_color_scheme": "",
+        "mobile_logo_style": "overlapped",
+        "section_framing": "disable",
+        "enable_sticky_content": false,
+        "sticky_offset": 120,
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "rich_text_eJdEBj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_r6FQCe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Helping Women Lose Weight Since 2012",
+            "heading_style": "section-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "text_mw9H9z": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Women's bodies have unique needs. That's why when we do the same \"diet\" or workout routine as our man, they lose way more weight than we do. This cleanse was designed by a woman who struggled to lose weight- until she found the power within plants that unlocked effortless weight loss. No more deprivation, strict dieting, or insane workout routines to lose weight. </p>",
+            "richtext_heading_style": "section-heading",
+            "text_style": "body-font"
+          }
+        },
+        "button_UyLftm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_r6FQCe",
+        "text_mw9H9z",
+        "button_UyLftm"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "center_text": true,
+        "content_width": "wide",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 0.4,
+        "bottom_spacing": 1
+      }
+    },
+    "testimonials_Mtq9KB": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_aCAerM": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "I have done many different cleanses before and I have lost weight but I have never kept it off. This cleanse is different…. I lost 6 pounds when on the cleanse and I have kept it off.  Also while doing the cleanse I felt amazing. The drinks were delicious and my easy to drink.  I highly recommend Raw Generation!",
+            "heading_style": "section-heading",
+            "heading_tag": "h2",
+            "text": "",
+            "text_style": "body-font",
+            "author_name": "",
+            "author_position": "<p><br/>Kristine C- <em>Verified customer</em></p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_HJfNf4": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "Hello ENERGY, bye-bye CRAVINGS! While doing the 3 day cleanse I dropped 8lbs!",
+            "heading_style": "section-heading",
+            "heading_tag": "h2",
+            "text": "",
+            "text_style": "body-font",
+            "author_name": "",
+            "author_position": "<p><br/>Anonymous -<em> Verified customer</em></p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_EbwUTi": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "I’ve done the RG Skinny Cleanse multiple times now & it never ceases to amaze me how great I feel both during & after my cleanse. Everything improves…skin, digestion, reduced bloating, and energy levels. I’m a huge fan!",
+            "heading_style": "section-heading",
+            "heading_tag": "h2",
+            "text": "",
+            "text_style": "body-font",
+            "author_name": "",
+            "author_position": "<p>Adrienne B -<em>Verified customer</em></p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        },
+        "testimonial_mxWchw": {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "heading": "Not only did I lose 9 pounds in 1 week, with just normal activity, but I never felt hungry. The tatse of each bottle was delicious and easy to swallow, whereas other brands in the past, for me, was not.",
+            "heading_style": "section-heading",
+            "heading_tag": "h2",
+            "text": "",
+            "text_style": "body-font",
+            "author_name": "",
+            "author_position": "<p>Jon J - <em>Verified customer</em></p>",
+            "page": "",
+            "rte_heading_style": "section-heading",
+            "popup_style": "popover",
+            "popup_width": "wide"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_aCAerM",
+        "testimonial_HJfNf4",
+        "testimonial_EbwUTi",
+        "testimonial_mxWchw"
+      ],
+      "name": "t:sections.testimonials.name",
+      "settings": {
+        "show_rating": true,
+        "heading": "What our clients say",
+        "heading_style": "page-title",
+        "heading_tag": "h2",
+        "button_label": "",
+        "button_icon": "",
+        "swap_button_icon": false,
+        "button_link": "",
+        "target_blank": false,
+        "button_style": "solid",
+        "testimonial_label": "Show full review",
+        "center_text": true,
+        "media_ratio": "1/1",
+        "image_radius": "default",
+        "desktop_item_width": 3,
+        "alignment_fewer_items": "center",
+        "mobile_item_min_width": 210,
+        "show_arrows": true,
+        "show_scrollbar": true,
+        "full_width": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 2,
+        "bottom_spacing": 2
+      }
+    },
+    "image_banner_atUYdY": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_9XYjfc": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_style": "section-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "text_mNYRf9": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body-font"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9XYjfc",
+        "text_mNYRf9"
+      ],
+      "name": "t:sections.image-banner.name",
+      "settings": {
+        "link": "",
+        "target_blank": false,
+        "overlap": "disable",
+        "content_on_hover": false,
+        "first_image": "shopify://shop_images/faruk-tokluoglu-4amdXIgdFDg-unsplash.jpg",
+        "desktop_height_type": "pixels",
+        "desktop_pixels_height": 600,
+        "center_text": true,
+        "vertical_content_position": "center",
+        "horizontal_content_position": "center",
+        "content_width": "regular",
+        "fill_content": false,
+        "overlay_opacity": 50,
+        "mobile_overlay_opacity": 50,
+        "mobile_height_type": "pixels",
+        "mobile_pixels_height": 200,
+        "content_under_image": false,
+        "only_first_image": false,
+        "full_width": true,
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "banner_color_scheme": "",
+        "overlapped_header_color_scheme": "",
+        "logo_style": "overlapped",
+        "mobile_color_scheme": "",
+        "mobile_banner_color_scheme": "",
+        "mobile_overlapped_header_color_scheme": "",
+        "mobile_logo_style": "overlapped",
+        "section_framing": "disable",
+        "enable_sticky_content": false,
+        "sticky_offset": 120,
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    },
+    "rich_text_yy6Ngf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pBWBfV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Down to Your Right Size",
+            "heading_style": "section-heading",
+            "heading_tag": "h2"
+          }
+        },
+        "text_TN9QF9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With the right nourishment, your body will respond and start shedding pounds and inches. A juice cleanse is one of the fastest (and healthiest) ways to get down to your right size. </p><p><strong>No more frustration.</strong></p><p><strong>No more feeling stuck.</strong></p><p><strong>No more wishing your clothes fit better.</strong></p><p><strong>No more feeling uncomfortable in your body.</strong></p>",
+            "richtext_heading_style": "section-heading",
+            "text_style": "body-font"
+          }
+        },
+        "button_W6QCeK": {
+          "type": "button",
+          "settings": {
+            "button_label": "START TODAY",
+            "button_icon": "",
+            "swap_button_icon": false,
+            "button_link": "shopify://products/best-juice-cleanse",
+            "target_blank": false,
+            "button_style": "solid",
+            "use_main_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pBWBfV",
+        "text_TN9QF9",
+        "button_W6QCeK"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "center_text": true,
+        "content_width": "wide",
+        "grid_style": "page",
+        "disable_max_width": false,
+        "show_bottom_line": false,
+        "color_scheme": "",
+        "section_framing": "disable",
+        "top_spacing": 1,
+        "bottom_spacing": 1
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "image_banner_BBnJaN",
+    "multicolumn_Nz8Kx4",
+    "rich_text_6TyigC",
+    "media_with_text_w7xaay",
+    "media_with_text_nhEeYY",
+    "how_it_works_TKxDEz",
+    "featured_product_QcBQty",
+    "image_banner_CLpNjG",
+    "rich_text_eJdEBj",
+    "testimonials_Mtq9KB",
+    "image_banner_atUYdY",
+    "rich_text_yy6Ngf"
+  ]
+}
