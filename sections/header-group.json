@@ -252,7 +252,7 @@
         "product_hRUqNp": {
           "type": "product",
           "settings": {
-            "mmo_product": "stay-skinny-method",
+            "mmo_product": "stay-skinny-method-old",
             "mmo_label_text": "Best Value",
             "mmo_label_color": "#16a249",
             "mmo_product_title": "Skinny Method",
@@ -263,7 +263,7 @@
         "product_bKN3V6": {
           "type": "product",
           "settings": {
-            "mmo_product": "protein-method",
+            "mmo_product": "protein-method-old",
             "mmo_label_text": "Best Value",
             "mmo_label_color": "#16a249",
             "mmo_product_title": "Protein Method",

@@ -82,7 +82,7 @@
         "upsell_product_wyHjiq": {
           "type": "upsell_product",
           "settings": {
-            "product": "protein-method",
+            "product": "protein-method-old",
             "heading": "",
             "description": "Post-cleanse workout support program.",
             "button_text": "Add To Cart"
