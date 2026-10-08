@@ -130,10 +130,10 @@
       "name": "t:sections.featured-products.name",
       "settings": {
         "products": [
-          "skinny-cleanse-stay-skinny-method-bundle",
+          "skinny-cleanse-stay-skinny-method-bundle-old",
           "best-juice-cleanse-old",
           "protein-juice-cleanse-old",
-          "deep-detox-cleanse",
+          "deep-detox-cleanse-old",
           "cleanse-for-2-old"
         ],
         "heading": "",
