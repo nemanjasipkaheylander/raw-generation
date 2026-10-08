@@ -177,7 +177,7 @@
         "product_XzmKPA": {
           "type": "product",
           "settings": {
-            "mmo_product": "best-juice-cleanse",
+            "mmo_product": "best-juice-cleanse-old",
             "mmo_label_text": "Bestseller",
             "mmo_label_color": "#16a249",
             "mmo_product_title": "Skinny Cleanse",
@@ -188,7 +188,7 @@
         "product_7zFxbE": {
           "type": "product",
           "settings": {
-            "mmo_product": "protein-juice-cleanse",
+            "mmo_product": "protein-juice-cleanse-old",
             "mmo_label_text": "Active",
             "mmo_label_color": "#f43b85",
             "mmo_product_title": "Protein Cleanse",

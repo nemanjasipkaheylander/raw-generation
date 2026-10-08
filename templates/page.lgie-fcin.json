@@ -53,7 +53,7 @@
             "button_label": "CLEANSE NOW",
             "button_icon": "",
             "swap_button_icon": false,
-            "button_link": "shopify://products/best-juice-cleanse",
+            "button_link": "shopify://products/best-juice-cleanse-old",
             "target_blank": false,
             "button_style": "solid",
             "use_main_button": true
@@ -203,7 +203,7 @@
             "button_label": "Cleanse Now",
             "button_icon": "",
             "swap_button_icon": false,
-            "button_link": "shopify://products/best-juice-cleanse",
+            "button_link": "shopify://products/best-juice-cleanse-old",
             "target_blank": false,
             "button_style": "solid",
             "use_main_button": true
@@ -250,7 +250,7 @@
             "button_label": "CLEANSE NOW",
             "button_icon": "",
             "swap_button_icon": false,
-            "button_link": "shopify://products/best-juice-cleanse",
+            "button_link": "shopify://products/best-juice-cleanse-old",
             "target_blank": false,
             "button_style": "solid",
             "use_main_button": false
@@ -314,7 +314,7 @@
             "button_label": "CLEANSE NOW",
             "button_icon": "",
             "swap_button_icon": false,
-            "button_link": "shopify://products/best-juice-cleanse",
+            "button_link": "shopify://products/best-juice-cleanse-old",
             "target_blank": false,
             "button_style": "solid",
             "use_main_button": false
@@ -484,7 +484,7 @@
       ],
       "name": "t:sections.featured-product.name",
       "settings": {
-        "product": "best-juice-cleanse",
+        "product": "best-juice-cleanse-old",
         "enable_sticky_content": true,
         "sticky_offset": 110,
         "media_position": "left",
@@ -824,7 +824,7 @@
             "button_label": "START TODAY",
             "button_icon": "",
             "swap_button_icon": false,
-            "button_link": "shopify://products/best-juice-cleanse",
+            "button_link": "shopify://products/best-juice-cleanse-old",
             "target_blank": false,
             "button_style": "solid",
             "use_main_button": false
