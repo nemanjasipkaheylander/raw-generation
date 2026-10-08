@@ -460,9 +460,9 @@
       "name": "t:sections.featured-products.name",
       "settings": {
         "products": [
-          "skinny-cleanse-stay-skinny-method-bundle",
+          "skinny-cleanse-stay-skinny-method-bundle-old",
           "best-juice-cleanse-old",
-          "stay-skinny-method-old"
+          "stay-skinny-method"
         ],
         "heading": "",
         "heading_style": "section-heading",
