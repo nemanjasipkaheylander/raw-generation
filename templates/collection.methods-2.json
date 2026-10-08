@@ -130,10 +130,10 @@
       "name": "t:sections.featured-products.name",
       "settings": {
         "products": [
-          "skinny-cleanse-stay-skinny-method-bundle",
+          "skinny-cleanse-stay-skinny-method-bundle-old",
           "stay-skinny-method-old",
           "protein-method-old",
-          "detox-method"
+          "detox-method-old"
         ],
         "heading": "",
         "heading_style": "section-heading",

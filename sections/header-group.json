@@ -241,7 +241,7 @@
         "product_NndfVm": {
           "type": "product",
           "settings": {
-            "mmo_product": "skinny-cleanse-stay-skinny-method-bundle",
+            "mmo_product": "skinny-cleanse-stay-skinny-method-bundle-old",
             "mmo_label_text": "Best Value",
             "mmo_label_color": "#16a249",
             "mmo_product_title": "Skinny Cleanse & Method Bundle",
@@ -274,7 +274,7 @@
         "product_TrMjhb": {
           "type": "product",
           "settings": {
-            "mmo_product": "detox-method",
+            "mmo_product": "detox-method-old",
             "mmo_label_text": "Best Value",
             "mmo_label_color": "#16a249",
             "mmo_product_title": "Detox Method",
