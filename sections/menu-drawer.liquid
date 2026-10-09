@@ -135,7 +135,7 @@
                                         endif
                                             assign link_style = section.settings.link_style
                                     %}
-                                    {% render 'drawer-menu', menu: linklists[link_handle], horizontal_alignment: horizontal_alignment: 'flex-start', object_type: section, event_type: 'click', blocks: section.blocks, show_nested: true, link_style: section.settings.link_style, uppercase: uppercase, bolder_font: bolder_font, child_menu: true %}
+                                    {% render 'drawer-menu', menu: linklists[link_handle], horizontal_alignment: horizontal_alignment, object_type: section, event_type: 'click', blocks: section.blocks, show_nested: true, link_style: section.settings.link_style, uppercase: uppercase, bolder_font: bolder_font, child_menu: true %}
                                 {% endfor %}
                             {% endif %}
                         </div>
@@ -2367,4 +2367,19 @@
             }
         ]
     }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'drawer-menu', menu: linklists[link_handle], horizontal_alignment:
+    horizontal_alignment: 'flex-start', object_type: section, event_type: 'click',
+    blocks: section.blocks, show_nested: true, link_style: section.settings.link_style,
+    uppercase: uppercase, bolder_font: bolder_font, child_menu: true %}"
+  to: "{% render 'drawer-menu', menu: linklists[link_handle], horizontal_alignment:
+    horizontal_alignment, object_type: section, event_type: 'click', blocks: section.blocks,
+    show_nested: true, link_style: section.settings.link_style, uppercase: uppercase,
+    bolder_font: bolder_font, child_menu: true %}"
+  position: 8812..9105
+{%- endcomment -%}
